@@ -4,121 +4,94 @@
 
 ### Key assumptions
 
-- EV demand becomes more price-sensitive and competitive intensity stays high.
-- Automotive margin recovery remains weak even if deliveries stabilize.
-- Autonomy and robotics remain mostly narrative with limited monetization.
-- Energy growth helps, but not enough to offset weaker automotive economics.
+- Adoption, margins, or monetization lag while capex stays elevated.
+- Competitive or regulatory pressure weakens returns.
 
 ### Revenue and EBITDA path
 
-Revenue grows modestly, but EBITDA stays pressured by pricing, mix, and capex needs.
+- Source-backed numeric extraction still pending; downside case assumes weaker operating leverage or weaker market conditions.
 
 ### Market size path
 
-EV market growth continues, but Tesla captures less incremental share and pricing power than expected.
+- Addressable demand grows slower or becomes less profitable than bullish narratives assume.
 
 ### Business-line contribution
 
-Automotive dominates but contributes lower profitability; energy improves without fully changing the group profile.
+- Core lines remain important but adjacencies contribute less than hoped.
 
 ### Catalysts
 
-- More price cuts.
-- Weak delivery growth.
-- Slower FSD monetization.
-- Margin disappointment in quarterly results.
+- Weak demand, pricing pressure, regulation, or execution misses.
 
 ### Disconfirming evidence
 
-- Sustained storage margin expansion.
-- Clear autonomy monetization traction.
-- Material automotive margin recovery without sacrificing growth.
+- Stronger margins, better product/market fit, or faster deployment than expected.
 
 ### Signposts to monitor
 
-- Automotive gross margin.
-- Delivery growth versus ASP.
-- FSD adoption quality.
-- Storage deployment and margin mix.
+- Metrics to monitor: Tesla, TSLA, EV, Optimus.
+- Confirm with investor materials, filings, and product updates.
 
 ## Normal thesis
 
 ### Key assumptions
 
-- Automotive remains cyclical but broadly stable.
-- Energy storage scales into a meaningful second engine.
-- Autonomy supports valuation narrative, but near-term economics remain modest.
-- Tesla preserves enough brand, manufacturing, and software advantage to stay strategically relevant.
+- Core business remains strategically relevant and linked adjacencies add optionality gradually.
+- Evidence improves incrementally rather than all at once.
 
 ### Revenue and EBITDA path
 
-Revenue grows with mixed automotive performance offset by stronger energy and services contribution; EBITDA improves gradually rather than sharply.
+- Base case assumes strategic relevance persists while monetization improves in steps rather than a straight line.
 
 ### Market size path
 
-EV and stationary storage markets both expand, with storage outgrowing auto on a percentage basis.
+- Linked markets grow, but bottlenecks and competition keep the path uneven.
 
 ### Business-line contribution
 
-Automotive stays largest, energy becomes increasingly material, and software/services remain supporting rather than dominant.
+- Core business stays dominant while optionality remains additive rather than fully proven.
 
 ### Catalysts
 
-- Stable deliveries.
-- Strong Megapack deployment.
-- Moderate cost-down progress.
-- Incremental FSD improvements.
+- Execution consistency, capex discipline, and evidence-backed product progress.
 
 ### Disconfirming evidence
 
-- Severe auto pricing pressure.
-- Storage conversion slowdown.
-- Regulatory setbacks in autonomy.
+- Faster-than-expected margin erosion or weaker adoption.
 
 ### Signposts to monitor
 
-- Energy revenue mix.
-- Auto margin ex-credits.
-- Capex discipline.
-- Evidence-based autonomy progress.
+- Metrics to monitor: Tesla, TSLA, EV, Optimus.
+- Confirm with investor materials, filings, and product updates.
 
 ## Bullish thesis
 
 ### Key assumptions
 
-- Tesla reaccelerates profitable growth through energy, software, and selective automotive recovery.
-- Storage scales faster than consensus expects.
-- Autonomy monetization becomes more credible and economically visible.
-- Robotics optionality gains evidence without requiring immediate full commercialization.
+- Linked markets inflect in Tesla's favor and operating leverage becomes visible.
+- Strategic optionality converts into durable revenue or margin upside.
 
 ### Revenue and EBITDA path
 
-Revenue and EBITDA grow materially as energy, software, and higher utilization improve the margin profile.
+- Upside case assumes operating leverage and adjacent-market monetization become source-backed and durable.
 
 ### Market size path
 
-Tesla benefits from large EV and storage markets while opening new optionality in autonomy-linked services.
+- End-market growth and share capture both beat conservative assumptions.
 
 ### Business-line contribution
 
-Energy and software become significant contributors to both growth and valuation support.
+- Higher-value adjacencies contribute more to growth and margins than the market currently credits.
 
 ### Catalysts
 
-- Better-than-expected storage deployment.
-- Verified autonomy progress.
-- Margin recovery from cost reductions and improved mix.
-- Strong capital allocation discipline.
+- Major partnerships, product milestones, falling input costs, or better-than-expected deployment data.
 
 ### Disconfirming evidence
 
-- Repeated execution misses.
-- Narrative expansion without matching revenue evidence.
-- Supplier or regulatory bottlenecks that delay autonomy or energy growth.
+- Bottlenecks persist or narrative outpaces measurable economics.
 
 ### Signposts to monitor
 
-- Energy backlog conversion.
-- Software/FSD monetization evidence.
-- Margin trajectory.
-- Evidence of real autonomy operating leverage.
+- Metrics to monitor: Tesla, TSLA, EV, Optimus.
+- Confirm with investor materials, filings, and product updates.

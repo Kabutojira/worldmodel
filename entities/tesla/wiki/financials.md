@@ -1,13 +1,11 @@
 # Tesla Financials
 
-## What to monitor
+## Reporting structure / KPI lens
 
-- Revenue split across automotive, energy, and services.
-- Automotive gross margin and operating margin.
-- Free cash flow and capex intensity.
-- Inventory, working capital, and price-cut effects.
-- Storage deployment growth and profitability.
+- Automotive; Energy generation and storage; Services and software.
+- Key KPIs: deliveries, automotive gross margin ex-credits, storage deployments, FSD/robotaxi evidence, capex.
 
-## Valuation anchors
+## Forecast row status
 
-Tesla valuation remains unusually sensitive to narrative assumptions around autonomy, robotics, and long-duration growth beyond current automotive earnings power.
+- Global estimate row created for `tesla` with TBD numeric values pending source-backed extraction.
+- Primary source queue starts with: - <a href="https://www.tesla.com/">Tesla official page</a> (official site)

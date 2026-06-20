@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+176c0c7c246846d9,uranium,Uranium official page,Uranium,official_site,https://world-nuclear.org/information-library/nuclear-fuel-cycle/uranium-resources/uranium-and-depleted-uranium,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,176c0c7c246846d9f57e2f08d3576a25141b01e2a6f4f096ccfa83c492f74278,Bootstrap source queue; verify dates and extract facts in later daily runs.

@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+b227a7278a38a018,defense_space,Defense space market official page,Defense space market,official_site,https://www.spaceforce.mil/,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,b227a7278a38a018b4fd5016d66c4291bc774e05c9cd17332a191d2fc2e99828,Bootstrap source queue; verify dates and extract facts in later daily runs.

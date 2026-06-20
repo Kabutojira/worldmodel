@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+9f83468289217193,telecom_market,Telecom market official page,Telecom market,official_site,https://www.itu.int/en/ITU-D/Statistics/,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,9f8346828921719349325ff74f2842d5ce4793201475c57457e27fa49777bc75,Bootstrap source queue; verify dates and extract facts in later daily runs.

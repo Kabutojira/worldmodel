@@ -1,0 +1,20 @@
+# Apple Market
+
+## Market map
+
+- Reporting lens: iPhone, Mac, iPad, Wearables/Home/Accessories, Services.
+- Key KPIs: services margin, device refresh cycle, Apple Intelligence adoption, silicon roadmap.
+
+## Linked entities
+
+- Arm: Arm is a strategically relevant peer, supplier, customer, or dependency that changes Apple economics and optionality.
+- TSMC: TSMC is a strategically relevant peer, supplier, customer, or dependency that changes Apple economics and optionality.
+- Google / Alphabet: Google / Alphabet is a strategically relevant peer, supplier, customer, or dependency that changes Apple economics and optionality.
+- AI consumer devices: AI consumer devices shapes Apple demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+
+## Sources
+
+- <a href="https://www.apple.com/">Apple official page</a> (official site)
+- <a href="https://investor.apple.com/">Apple investor relations</a> (investor relations)
+- <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Apple&owner=exclude&count=40">Apple filings</a> (filings)
+- <a href="https://seekingalpha.com/symbol/AAPL/earnings/transcripts">Apple earnings transcript page</a> (earnings transcript)

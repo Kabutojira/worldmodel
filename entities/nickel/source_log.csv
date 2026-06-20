@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+4afe7602621492a4,nickel,Nickel official page,Nickel,official_site,https://www.iea.org/reports/global-critical-minerals-outlook-2025,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,4afe7602621492a4954915ddc605eb4fee161325d09638f4f3c224d6096f79ac,Bootstrap source queue; verify dates and extract facts in later daily runs.

@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+66dfe638d6570472,sundar_pichai,Sundar Pichai official page,Sundar Pichai,official_site,https://abc.xyz/investor/other/google-management-team/,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,66dfe638d6570472567471765ce246053c2779f79508cb205689677bdec0f8bc,Bootstrap source queue; verify dates and extract facts in later daily runs.

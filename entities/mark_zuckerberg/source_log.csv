@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+0ec9a3ca59437938,mark_zuckerberg,Mark Zuckerberg official page,Mark Zuckerberg,official_site,https://about.meta.com/media-gallery/executives/mark-zuckerberg/,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,0ec9a3ca594379381b0c9e775f66a21bff5f096e45376e853b4d3fe23684a381,Bootstrap source queue; verify dates and extract facts in later daily runs.

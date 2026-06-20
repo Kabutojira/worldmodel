@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+462124ca6d7bef96,space_launch_market,Space launch market official page,Space launch market,official_site,https://www.faa.gov/space,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,462124ca6d7bef969ed27282066ea11e1ae850a44053474e875ae3d2c023a7ca,Bootstrap source queue; verify dates and extract facts in later daily runs.

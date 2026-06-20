@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+8082bf08c278f0da,rare_earths,Rare earths official page,Rare earths,official_site,https://www.iea.org/reports/global-critical-minerals-outlook-2025,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,8082bf08c278f0da28d1784ef9490524a57e94069540f3acbc492e9e2734181b,Bootstrap source queue; verify dates and extract facts in later daily runs.

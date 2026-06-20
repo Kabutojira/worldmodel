@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+3ad4ecb2ede506d3,charging_infrastructure,EV charging infrastructure official page,EV charging infrastructure,official_site,https://afdc.energy.gov/fuels/electricity_infrastructure,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,3ad4ecb2ede506d3a7ac887344adf009467f72ffda95dfca3545d73c0a8c32b2,Bootstrap source queue; verify dates and extract facts in later daily runs.

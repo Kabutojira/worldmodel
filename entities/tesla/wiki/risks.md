@@ -1,10 +1,12 @@
 # Tesla Risks
 
-## Core risks
+## Major risks
 
-- Automotive price competition erodes margins faster than volume gains help.
-- EV demand growth slows or becomes more promotion-dependent.
-- Autonomy promises outrun regulatory approval and real-world evidence.
-- Battery supply, lithium pricing, or geopolitical issues hit cost or output.
-- Key-person concentration around Elon Musk creates governance and narrative volatility.
-- Energy storage execution falls short of current optionality expectations.
+- Execution risk versus thesis expectations.
+- Regulatory, commodity, supply-chain, or demand-cycle shifts through connected entities.
+- Narrative expansion without matching source-backed evidence.
+
+## Open questions
+
+- Which source in the bootstrap queue most likely changes the thesis first?
+- Which connected entity creates the largest second-order surprise risk?

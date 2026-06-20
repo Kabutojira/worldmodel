@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+47736f1b1e786061,ecommerce,E-commerce market official page,E-commerce market,official_site,https://www.census.gov/retail/ecommerce.html,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,47736f1b1e786061d0d206b0c1fc5ee7a7f491019040a79602ccf28f3cb94790,Bootstrap source queue; verify dates and extract facts in later daily runs.

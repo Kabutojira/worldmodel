@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+864a118b8e9ba53c,jeff_bezos,Jeff Bezos official page,Jeff Bezos,official_site,https://www.aboutamazon.com/about-us/leadership/jeff-bezos,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,864a118b8e9ba53c709ae5a1e9403858856a32df5e098cc937e596984ea49c75,Bootstrap source queue; verify dates and extract facts in later daily runs.

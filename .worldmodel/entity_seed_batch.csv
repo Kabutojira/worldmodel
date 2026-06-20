@@ -1,0 +1,109 @@
+entity_id,type,priority,name,keywords,connected_entities,connection_rationale,bootstrap_depth
+tesla,company,P0,Tesla,"Tesla; TSLA; EV; Optimus; FSD; robotaxi; megapack; energy storage","ev_market; automotive_market; lithium; battery_storage; humanoid_robots; robotaxi_autonomy; solar; energy; elon_musk; nvidia; panasonic_energy; catl","Core anchor entity already implemented; links autos, energy, AI, robotics, batteries",2
+spacex,private_company,P0,SpaceX,"SpaceX; Starship; Falcon; Starlink; launch market; reusable rockets","starlink; space_launch_market; satellite_internet; amazon_kuiper; rocket_lab; elon_musk","Private space infrastructure anchor; linked to launch costs, satellite internet, defense, Mars optionality",2
+starlink,private_company,P1,Starlink,"Starlink; satellite broadband; LEO internet; direct to cell","spacex; satellite_internet; amazon_kuiper; telecom_market","SpaceX revenue engine and global communications infrastructure",1
+xai,private_company,P0,xAI,"xAI; Grok; Colossus; AI training cluster; inference","tesla; nvidia; datacenters; energy; openai; anthropic; google; meta; elon_musk","Elon-linked AI company; possible Tesla/robotics/data-center synergies",2
+neuralink,private_company,P2,Neuralink,"Neuralink; BCI; brain computer interface; implants","elon_musk; ai_healthcare; robotics","Long-duration optionality; less direct to Tesla but part of Elon ecosystem",1
+
+nvidia,company,P0,Nvidia,"Nvidia; NVDA; GPU; H100; H200; B100; Blackwell; CUDA; AI accelerator","semiconductors; tsmc; sk_hynix; micron; datacenters; openai; anthropic; google; meta; amazon; microsoft; dell; supermicro; broadcom","Core AI infrastructure bottleneck and valuation anchor",2
+tsmc,company,P0,TSMC,"TSMC; Taiwan Semiconductor; advanced node; CoWoS; foundry","nvidia; apple; amd; broadcom; asml; semiconductors; china_taiwan_risk","Critical semiconductor manufacturing bottleneck",2
+asml,company,P0,ASML,"ASML; EUV; lithography; High-NA EUV","tsmc; samsung_electronics; intel; semiconductors; us_china_chip_controls","Semiconductor capital equipment bottleneck",1
+amd,company,P1,AMD,"AMD; MI300; MI350; EPYC; AI GPU","nvidia; tsmc; microsoft; datacenters; semiconductors","Nvidia challenger and AI compute pricing pressure",1
+broadcom,company,P1,Broadcom,"Broadcom; AVGO; custom ASIC; networking; VMware","google; meta; openai; datacenters; semiconductors; arista","Custom AI silicon and networking exposure",1
+arm,company,P1,Arm,"Arm; ARM; CPU IP; mobile processors; datacenter CPU","nvidia; apple; amazon; semiconductors","CPU architecture and edge/mobile AI exposure",1
+micron,company,P1,Micron,"Micron; HBM; DRAM; NAND; memory cycle","nvidia; sk_hynix; samsung_electronics; semiconductors","AI memory bottleneck and cyclical supply-demand signal",1
+sk_hynix,company,P1,SK hynix,"SK hynix; HBM; DRAM; memory","nvidia; micron; samsung_electronics; semiconductors","HBM supplier and AI hardware bottleneck",1
+samsung_electronics,company,P1,Samsung Electronics,"Samsung; memory; foundry; HBM; NAND","nvidia; sk_hynix; micron; tsmc; semiconductors","Memory, foundry, mobile, and AI hardware exposure",1
+intel,company,P2,Intel,"Intel; foundry; Gaudi; x86; advanced packaging","tsmc; asml; semiconductors; amd; nvidia","Turnaround/strategic foundry optionality",1
+cadence,company,P2,Cadence,"Cadence; EDA; chip design software","synopsys; semiconductors; nvidia; broadcom; tsmc","EDA picks-and-shovels for chip design",1
+synopsys,company,P2,Synopsys,"Synopsys; EDA; chip design; IP","cadence; semiconductors; nvidia; broadcom; tsmc","EDA picks-and-shovels for chip design",1
+
+openai,private_company,P0,OpenAI,"OpenAI; ChatGPT; GPT; inference; AI agents; Sora","microsoft; nvidia; datacenters; energy; anthropic; google; meta; xai","Core AI model/platform entity",2
+anthropic,private_company,P0,Anthropic,"Anthropic; Claude; constitutional AI; enterprise AI","amazon; google; nvidia; datacenters; openai; energy","Core frontier AI model competitor",2
+google,company,P0,Google / Alphabet,"Google; Alphabet; GOOG; GOOGL; Gemini; DeepMind; TPU; search ads; Waymo","openai; anthropic; nvidia; tsmc; datacenters; energy; waymo; digital_ads; cloud_market","AI, search, cloud, TPU, autonomy, ads",2
+meta,company,P0,Meta,"Meta; Facebook; Instagram; Llama; Reality Labs; AI ads","openai; google; nvidia; datacenters; energy; digital_ads; vr_ar_market","Open-source AI, ads, social distribution, compute capex",2
+amazon,company,P0,Amazon,"Amazon; AWS; Trainium; Inferentia; ecommerce; Kuiper","aws; anthropic; nvidia; datacenters; energy; amazon_kuiper; logistics_automation","Cloud, AI infrastructure, logistics, satellite internet",2
+aws,company,P1,AWS,"AWS; Amazon Web Services; cloud; Trainium; Inferentia","amazon; anthropic; nvidia; cloud_market; datacenters; energy","Amazon's cloud and AI infra engine",1
+microsoft,company,P0,Microsoft,"Microsoft; Azure; Copilot; OpenAI; cloud; AI agents","openai; nvidia; datacenters; energy; cloud_market; github","OpenAI distribution, enterprise AI, cloud capex",2
+oracle,company,P1,Oracle,"Oracle Cloud; OCI; AI infrastructure; database","nvidia; openai; datacenters; cloud_market; energy","AI cloud capacity supplier and enterprise database platform",1
+apple,company,P1,Apple,"Apple; iPhone; Apple Intelligence; edge AI; silicon","arm; tsmc; google; ai_consumer_devices","Consumer AI distribution and custom silicon",1
+
+datacenters,infrastructure,P0,AI data centers,"AI data centers; hyperscale; GPU clusters; power usage; inference capacity","nvidia; amazon; google; meta; microsoft; openai; anthropic; energy; electricity_grid; natural_gas; nuclear_power; battery_storage; transformers","Physical bottleneck for AI scaling; bridges compute and energy",2
+cloud_market,market,P1,Cloud infrastructure market,"cloud market; hyperscaler; IaaS; PaaS; GPU cloud","amazon; microsoft; google; oracle; datacenters; nvidia","Tracks cloud share, AI workloads, capex, pricing",1
+ai_agents,technology,P1,AI agents,"AI agents; autonomous agents; workflow automation; tool use","openai; anthropic; google; microsoft; meta; xai","Software demand layer for model providers",1
+ai_inference_economics,market,P1,AI inference economics,"inference cost; tokens; GPU utilization; model serving; AI margins","openai; anthropic; nvidia; datacenters; energy","Key variable for AI monetization and infrastructure demand",1
+us_china_chip_controls,regulation,P1,US-China chip controls,"chip export controls; China AI chips; Huawei; sanctions; HBM restrictions","nvidia; asml; tsmc; china_taiwan_risk; semiconductors","Regulatory constraint on AI hardware supply and demand",1
+china_taiwan_risk,regulation,P1,China-Taiwan geopolitical risk,"Taiwan risk; China Taiwan; semiconductor supply chain; invasion risk","tsmc; asml; nvidia; semiconductors","Tail risk for global semiconductor supply",1
+
+humanoid_robots,sector,P0,Humanoid robots,"humanoid robots; general purpose robots; embodied AI; robot labor","tesla; figure_ai; agility_robotics; apptronik; unitree_robotics; boston_dynamics; nvidia; robot_actuators; robot_sensors","Major long-term labor automation theme",2
+robotaxi_autonomy,technology,P0,Robotaxi and autonomy,"robotaxi; autonomous driving; FSD; self-driving; AV market","tesla; waymo; zoox; automotive_market; ai_inference_economics","Potential winner-take-most transportation platform",2
+waymo,company,P1,Waymo,"Waymo; robotaxi; autonomous driving; self-driving cars","google; robotaxi_autonomy; tesla; automotive_market","Leading robotaxi benchmark for Tesla autonomy",1
+zoox,private_company,P2,Zoox,"Zoox; autonomous vehicles; robotaxi","amazon; robotaxi_autonomy; waymo; tesla","Amazon-linked autonomous mobility entity",1
+figure_ai,private_company,P1,Figure AI,"Figure AI; Figure 01; Figure 02; humanoid robot; Helix","humanoid_robots; openai; nvidia; tesla","Important private humanoid competitor",1
+agility_robotics,private_company,P1,Agility Robotics,"Agility Robotics; Digit robot; warehouse robot","humanoid_robots; amazon; logistics_automation","Warehouse humanoid/commercial robot deployment signal",1
+apptronik,private_company,P1,Apptronik,"Apptronik; Apollo robot; humanoid robot","humanoid_robots; logistics_automation; nvidia","Humanoid competitor and industrial deployment signal",1
+unitree_robotics,private_company,P1,Unitree Robotics,"Unitree; G1; H1; humanoid robot; quadruped robot","humanoid_robots; china_robotics; robot_actuators","Low-cost Chinese robotics signal",1
+boston_dynamics,private_company,P2,Boston Dynamics,"Boston Dynamics; Atlas; Stretch; Spot","humanoid_robots; logistics_automation; hyundai","Robotics benchmark and commercial automation signal",1
+fanuc,company,P2,FANUC,"FANUC; industrial robots; factory automation","industrial_automation; humanoid_robots; automotive_market","Incumbent robotics automation exposure",1
+abb_robotics,company,P2,ABB Robotics,"ABB Robotics; industrial automation; robots","industrial_automation; energy; automotive_market","Industrial automation and electrification exposure",1
+rockwell_automation,company,P2,Rockwell Automation,"Rockwell Automation; factory automation; industrial software","industrial_automation; humanoid_robots; automotive_market","Industrial automation software/hardware incumbent",1
+siemens,company,P2,Siemens,"Siemens; industrial automation; grid; digital industries","industrial_automation; electricity_grid; energy","Industrial automation and grid infrastructure",1
+robot_actuators,technology,P1,Robot actuators,"robot actuators; harmonic drives; motors; reducers; servos","humanoid_robots; tesla; unitree_robotics; industrial_automation","Critical hardware bottleneck for robots",1
+robot_sensors,technology,P2,Robot sensors,"robot sensors; tactile sensors; lidar; vision sensors; force torque sensors","humanoid_robots; robotaxi_autonomy; nvidia","Robot perception and manipulation bottleneck",1
+logistics_automation,market,P1,Logistics automation,"warehouse automation; fulfillment robots; logistics robots","amazon; agility_robotics; apptronik; industrial_automation","Near-term commercial robotics market",1
+industrial_automation,sector,P1,Industrial automation,"factory automation; robotics; PLC; industrial software","fanuc; abb_robotics; rockwell_automation; siemens; humanoid_robots","Incumbent baseline for robot disruption",1
+
+ev_market,market,P0,Electric vehicle market,"EV market; electric vehicles; BEV; EV adoption; EV sales","tesla; byd; automotive_market; battery_storage; lithium; charging_infrastructure","Core Tesla demand pool",2
+automotive_market,market,P0,Automotive market,"global auto market; vehicle sales; ICE; EV; hybrids","tesla; byd; toyota; volkswagen; robotaxi_autonomy; oil","Tracks EV share shift and legacy automaker pressure",1
+byd,company,P1,BYD,"BYD; electric vehicles; batteries; China EV","tesla; ev_market; catl; lithium; automotive_market","Tesla's most important EV and battery competitor",1
+toyota,company,P2,Toyota,"Toyota; hybrid vehicles; solid state batteries; auto market","automotive_market; ev_market; battery_storage","Legacy auto benchmark and hybrid counter-thesis",1
+volkswagen,company,P2,Volkswagen,"Volkswagen; VW; EV transition; auto market","automotive_market; ev_market; battery_storage","Legacy auto transition benchmark",1
+charging_infrastructure,infrastructure,P1,EV charging infrastructure,"EV charging; Supercharger; NACS; fast charging; charging stations","tesla; ev_market; electricity_grid; energy","EV adoption bottleneck and Tesla network asset",1
+
+battery_storage,sector,P0,Battery energy storage,"battery storage; BESS; grid storage; Megapack; LFP; sodium ion","tesla; lithium; catl; byd; lg_energy_solution; panasonic_energy; energy; electricity_grid; solar","Core bridge between Tesla energy, grid, and renewables",2
+catl,company,P0,CATL,"CATL; batteries; LFP; sodium ion; EV battery","tesla; byd; lithium; battery_storage; ev_market","Dominant battery supplier and chemistry signal",1
+panasonic_energy,company,P1,Panasonic Energy,"Panasonic Energy; 4680; Tesla battery supplier","tesla; battery_storage; lithium; ev_market","Tesla-linked battery supplier",1
+lg_energy_solution,company,P1,LG Energy Solution,"LG Energy Solution; EV batteries; battery storage","tesla; gm; battery_storage; lithium; ev_market","Major global battery supplier",1
+samsung_sdi,company,P2,Samsung SDI,"Samsung SDI; EV batteries; battery cells","battery_storage; lithium; ev_market","Battery supplier benchmark",1
+albemarle,company,P1,Albemarle,"Albemarle; lithium producer; lithium carbonate; lithium hydroxide","lithium; tesla; battery_storage; ev_market","Lithium producer and commodity-cycle signal",1
+sqm,company,P1,SQM,"SQM; lithium; Chile; lithium carbonate","lithium; battery_storage; ev_market","Lithium producer and supply-side signal",1
+lithium,commodity,P0,Lithium,"lithium; lithium carbonate; lithium hydroxide; brine; spodumene","tesla; catl; albemarle; sqm; battery_storage; ev_market","Core battery commodity",2
+nickel,commodity,P1,Nickel,"nickel; battery nickel; class 1 nickel; NMC batteries","battery_storage; ev_market; tesla","Battery and stainless commodity; chemistry shift indicator",1
+graphite,commodity,P1,Graphite,"graphite; battery anode; synthetic graphite; natural graphite","battery_storage; ev_market; china_supply_chain","Battery anode bottleneck and China exposure",1
+cobalt,commodity,P2,Cobalt,"cobalt; DRC cobalt; battery cathode; NMC","battery_storage; ev_market; nickel","Battery commodity with ethical/supply risk",1
+rare_earths,commodity,P1,Rare earths,"rare earths; neodymium; magnets; permanent magnets","ev_market; humanoid_robots; wind_power; china_supply_chain","Motors, robotics, wind, and China supply-chain risk",1
+
+energy,sector,P0,Energy,"energy market; electricity; oil; gas; renewables; power demand","solar; oil; natural_gas; nuclear_power; electricity_grid; datacenters; battery_storage","Macro umbrella for AI, EVs, storage, and commodities",2
+electricity_grid,infrastructure,P0,Electricity grid,"electric grid; transmission; grid congestion; interconnection queue; transformers","datacenters; energy; solar; wind_power; nuclear_power; natural_gas; battery_storage; copper; transformers","AI and electrification bottleneck",2
+solar,sector,P0,Solar energy,"solar; photovoltaics; PV; solar modules; inverters; utility solar","energy; battery_storage; electricity_grid; silver; copper","Renewable supply side for storage and AI electricity demand",1
+wind_power,sector,P2,Wind power,"wind power; offshore wind; onshore wind; turbines","energy; electricity_grid; rare_earths; copper","Renewable generation comparison to solar",1
+nuclear_power,sector,P1,Nuclear power,"nuclear; SMR; uranium; baseload; data center power","energy; uranium; datacenters; electricity_grid","Firm clean power option for AI data centers",1
+uranium,commodity,P1,Uranium,"uranium; U3O8; nuclear fuel; enrichment","nuclear_power; energy; datacenters","Fuel input for nuclear power thesis",1
+natural_gas,commodity,P1,Natural gas,"natural gas; LNG; gas turbines; power generation","energy; datacenters; electricity_grid; oil","Flexible power source for data-center load growth",1
+oil,commodity,P0,Oil,"oil; crude; Brent; WTI; OPEC; gasoline; diesel","energy; automotive_market; ev_market; natural_gas","Tracks EV displacement, macro, and transport energy",1
+copper,commodity,P0,Copper,"copper; electrification; grid copper; data center copper","electricity_grid; solar; battery_storage; datacenters; ev_market","Electrification bottleneck commodity",1
+silver,commodity,P2,Silver,"silver; solar silver; PV paste; industrial silver","solar; energy; commodities","Solar input and monetary/industrial crossover",1
+aluminum,commodity,P2,Aluminum,"aluminum; lightweighting; power cables; auto aluminum","ev_market; solar; electricity_grid","EV, grid, and solar input",1
+steel,commodity,P2,Steel,"steel; automotive steel; electrical steel; transformers","automotive_market; wind_power; transformers; electricity_grid","Infrastructure and transformer input",1
+transformers,infrastructure,P1,Power transformers,"power transformers; grid transformers; electrical steel; transformer shortage","electricity_grid; datacenters; copper; steel; energy","Grid expansion bottleneck",1
+
+space_launch_market,market,P1,Space launch market,"space launch; reusable rockets; launch cost; orbital payload","spacex; rocket_lab; satellite_internet; defense_space","SpaceX core external market",1
+satellite_internet,market,P1,Satellite internet,"satellite internet; LEO broadband; broadband access; direct to cell","starlink; amazon_kuiper; spacex; telecom_market","SpaceX/Starlink market context",1
+amazon_kuiper,private_company,P1,Amazon Kuiper,"Project Kuiper; Amazon satellite internet; LEO broadband","amazon; starlink; satellite_internet; spacex","Starlink competitor",1
+rocket_lab,company,P1,Rocket Lab,"Rocket Lab; RKLB; launch; Neutron; space systems","space_launch_market; spacex; satellite_internet","Public comparable for space launch and systems",1
+defense_space,market,P2,Defense space market,"defense space; military satellites; national security launch","spacex; rocket_lab; satellite_internet","Space demand and geopolitical tailwind",1
+telecom_market,market,P2,Telecom market,"telecom; wireless; broadband; satellite direct to cell","starlink; amazon_kuiper; satellite_internet","Connectivity TAM and substitution risk",1
+
+digital_ads,market,P1,Digital advertising market,"digital ads; search ads; social ads; ad pricing; performance ads","google; meta; amazon; ai_agents","Revenue pool for Google, Meta, Amazon",1
+ecommerce,market,P2,E-commerce market,"ecommerce; online retail; marketplace; logistics","amazon; logistics_automation; digital_ads","Amazon commerce and logistics baseline",1
+vr_ar_market,market,P2,VR/AR market,"VR; AR; mixed reality; headsets; spatial computing","meta; apple; ai_consumer_devices","Meta optionality and Apple comparison",1
+ai_consumer_devices,market,P2,AI consumer devices,"AI devices; edge AI; AI smartphone; wearables","apple; google; meta; arm; tsmc","Consumer distribution layer for AI",1
+
+elon_musk,person,P0,Elon Musk,"Elon Musk; Tesla; SpaceX; xAI; Optimus; Starship","tesla; spacex; xai; neuralink","Key person risk and strategic connector",1
+jensen_huang,person,P1,Jensen Huang,"Jensen Huang; Nvidia; AI chips; GPUs","nvidia; semiconductors; datacenters","Key person for AI hardware strategy",1
+sam_altman,person,P1,Sam Altman,"Sam Altman; OpenAI; AI infrastructure; Stargate","openai; microsoft; datacenters; energy","Key person for OpenAI and AI infrastructure strategy",1
+dario_amodei,person,P1,Dario Amodei,"Dario Amodei; Anthropic; Claude; AI safety","anthropic; amazon; google; openai","Key person for Anthropic strategy",1
+mark_zuckerberg,person,P1,Mark Zuckerberg,"Mark Zuckerberg; Meta; Llama; AI; Reality Labs","meta; digital_ads; datacenters","Key person for Meta AI and metaverse strategy",1
+jeff_bezos,person,P2,Jeff Bezos,"Jeff Bezos; Amazon; Blue Origin; Kuiper","amazon; amazon_kuiper; space_launch_market","Amazon/space strategic influence",1
+sundar_pichai,person,P1,Sundar Pichai,"Sundar Pichai; Google; Gemini; cloud AI","google; openai; datacenters","Key person for Google AI strategy",1
+lisa_su,person,P2,Lisa Su,"Lisa Su; AMD; AI chips; EPYC","amd; nvidia; semiconductors","Key person for AMD execution",1

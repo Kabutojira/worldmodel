@@ -1,0 +1,2 @@
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+4d1fe4bedc5fb551,ai_inference_economics,AI inference economics official page,AI inference economics,official_site,https://www.anthropic.com/engineering,,,2026-06-20T21:36:24Z,0.85,0.50,0.85,false,,4d1fe4bedc5fb551af9eb5c2b115b0b84cf4e0d2ddd9681c3ae009c6b8521811,Bootstrap source queue; verify dates and extract facts in later daily runs.

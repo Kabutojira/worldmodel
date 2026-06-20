@@ -2,59 +2,72 @@
 
 ## Entity summary
 
-Tesla combines a large automotive business with increasingly important energy-storage exposure and a market narrative heavily influenced by autonomy and robotics optionality.
+Tesla is tracked because Core anchor entity already implemented; links autos, energy, AI, robotics, batteries. Bootstrap content stays concise and source-backed so daily runs can replace placeholders with dated evidence.
 
 ## Business lines
 
-| Business line | Current role | What matters now |
-|---|---|---|
-| Automotive | Core revenue pool | Deliveries, ASP, gross margin, incentives, financing conditions |
-| Energy generation and storage | Highest-conviction adjacent growth vector | Megapack deployments, backlog conversion, margin profile |
-| Services and software | Supporting economics and ecosystem stickiness | FSD take rate, service profitability, Supercharging monetization |
+- Automotive; Energy generation and storage; Services and software.
+- Key KPIs: deliveries, automotive gross margin ex-credits, storage deployments, FSD/robotaxi evidence, capex.
 
 ## Latest financials
 
-This seed report intentionally avoids asserting current figures without source-backed retrieval. Use daily runs to replace placeholders with dated evidence.
+- This bootstrap avoids inventing current figures where direct extraction was not completed. Use the linked annual/quarterly materials to replace placeholders with dated numbers.
+- Priority KPIs: Tesla, TSLA, EV, Optimus, FSD.
 
 ## Forecast table
 
-| Scenario | Revenue path | EBITDA path | Market size path | Confidence |
+| Scenario | Revenue path | EBITDA / operating path | Market size path | Confidence |
 |---|---|---|---|---|
-| Bearish | Automotive revenue under pressure; energy helps but cannot fully offset | EBITDA compressed by pricing and capex | EV grows, but Tesla share/pricing disappoint | Low |
-| Normal | Moderate consolidated growth led by storage and stable auto base | Gradual EBITDA recovery | EV and storage both expand | Medium |
-| Bullish | Strong energy scaling and credible autonomy monetization | EBITDA inflects higher on mix and utilization | Tesla captures optionality beyond auto | Low |
+| Bearish | Pressure on adoption, pricing, or mix | Lower leverage / higher capex burden | Slower or less profitable growth | Low |
+| Base | Strategic relevance persists, measured execution | Gradual improvement | Moderate structural growth | Medium |
+| Bullish | Strong monetization and cleaner scaling | Better leverage and returns | Large adjacent-market upside | Low |
 
 ## Valuation framing
 
-Tesla is valued partly on existing industrial earnings and partly on expectations for autonomy, AI, robotics, and energy-system scale.
+- Track how much of the current narrative is already embedded versus what still needs evidence from source-backed execution.
 
 ## Market expectations
 
-The key analytical problem is separating what is already embedded in valuation from what is still unsupported by source-backed evidence.
+- The most important question is which linked market or bottleneck changes economics first.
 
 ## Possible mispricing
 
-- Storage growth may be underappreciated if markets remain overly focused on auto margins.
-- Autonomy optionality may be overcapitalized if evidence remains narrative-heavy.
-- Supplier and commodity inputs may shift economics faster than consensus models update.
+- Bottleneck relief or worsening could move this entity faster than consensus models update.
+- Narrative-heavy optionality may be under- or over-capitalized depending on proof of deployment.
 
 ## Major risks
 
-- Price competition.
-- Key-person concentration.
-- Regulatory and execution risk in autonomy.
-- Commodity and battery supply-chain volatility.
+- Execution slippage.
+- Input-cost / regulatory / infrastructure bottlenecks.
+- Competitive intensity and capital discipline.
 
 ## Connected-entity implications
 
-Tesla should be read alongside lithium, EV demand, storage-market growth, autonomy compute, and BYD competition.
+- Electric vehicle market: Electric vehicle market shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+- Automotive market: Automotive market shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+- Lithium: Lithium affects Tesla cost, supply security, or pricing through critical material exposure and procurement risk.
+- Battery energy storage: Battery energy storage shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+- Humanoid robots: Humanoid robots shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+- Robotaxi and autonomy: Robotaxi and autonomy drives Tesla product capability, monetization, and valuation through software, compute, or platform dependence.
+- Solar energy: Solar energy shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+- Energy: Energy shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
+- Elon Musk: Elon Musk influences Tesla strategy, governance, narrative, capital allocation, and execution risk.
+- Nvidia: Nvidia is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
+- Panasonic Energy: Panasonic Energy is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
+- CATL: CATL is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
+- BYD: BYD is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
+- xAI: xAI is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
+- EV charging infrastructure: EV charging infrastructure is a physical bottleneck or enabling network that influences Tesla scaling, utilization, and returns.
+- LG Energy Solution: LG Energy Solution is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
 
 ## Open questions
 
-- How durable is storage margin expansion?
-- What evidence would demonstrate real FSD/robotaxi economic progress?
-- How much of Tesla's valuation already assumes robotics optionality?
+- Which upcoming official filing or update most likely changes the thesis?
+- Which connected entity creates the biggest unpriced risk or upside?
 
 ## Sources
 
-- Seeded from project plan and AGENTS; replace with dated URLs during retrieval runs.
+- <a href="https://www.tesla.com/">Tesla official page</a> (official site)
+- <a href="https://ir.tesla.com/">Tesla investor relations</a> (investor relations)
+- <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Tesla&owner=exclude&count=40">Tesla filings</a> (filings)
+- <a href="https://seekingalpha.com/symbol/TSLA/earnings/transcripts">Tesla earnings transcript page</a> (earnings transcript)
