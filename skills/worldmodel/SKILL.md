@@ -99,6 +99,10 @@ Edit `data/relationships.csv` and the relevant `index.md` connection notes. Ever
 
 ### 9. Generate daily report
 
+```bash
+python3 bin/worldmodel_generate_report.py --selected .worldmodel/selected.json
+```
+
 Create:
 
 - `reports/daily/report_YYYY-MM-DD.md`

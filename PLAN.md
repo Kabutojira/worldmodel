@@ -62,6 +62,7 @@ Create this initial structure:
 │   ├── worldmodel_retrieve.py
 │   ├── worldmodel_rank_sources.py
 │   ├── worldmodel_update_csv.py
+│   ├── worldmodel_generate_report.py
 │   ├── worldmodel_render_site.py
 │   ├── worldmodel_maintenance.py
 │   └── worldmodel_commit.py
@@ -153,6 +154,18 @@ Required behavior:
 - preserve manually entered notes;
 - validate forecast scenario fields;
 - write atomically.
+
+### `bin/worldmodel_generate_report.py`
+
+Purpose: generate deterministic global and per-entity daily report skeletons from ranked source output.
+
+Required behavior:
+
+- read ranked selection JSON;
+- generate `reports/daily/report_YYYY-MM-DD.md`;
+- generate `entities/<slug>/daily_reports/report_YYYY-MM-DD.md` for ranked entities;
+- include selected sources, skipped sources, modified-file links, and issue/inefficiency notes;
+- fail loudly when ranked input is missing or malformed.
 
 ### `bin/worldmodel_render_site.py`
 
@@ -308,6 +321,7 @@ Implement and test the daily run:
 python3 bin/worldmodel_retrieve.py --all-active --since-last-report --out .worldmodel/candidates.json
 python3 bin/worldmodel_rank_sources.py --in .worldmodel/candidates.json --out .worldmodel/selected.json --limit-per-entity 10
 # Hermes LLM step: read selected sources, update wiki/thesis/reports/relationships.
+python3 bin/worldmodel_generate_report.py --selected .worldmodel/selected.json
 python3 bin/worldmodel_update_csv.py --validate --merge-all
 python3 bin/worldmodel_maintenance.py --strict
 python3 bin/worldmodel_render_site.py
@@ -434,6 +448,12 @@ When maintenance changes are needed:
 
 - Maintenance detects drift before it corrupts data.
 - Maintenance findings are visible in daily reports.
+
+## Next steps to make the project better
+
+- Add dynamic SEC/IR document discovery so retrieval finds the latest 10-K, 10-Q, earnings release, investor presentation, and delivery update without relying on static Tesla seed URLs.
+- Promote Discord ingestion from a template watchlist into a validated tracked config plus maintenance checks for stale or malformed watchlist entries.
+- Track source-processing state separately from source-discovery state so the workflow can distinguish `already_logged`, `selected`, and `fully synthesized` items without ambiguity.
 
 ## Initial `index.md` seed
 

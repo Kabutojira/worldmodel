@@ -62,6 +62,7 @@ Use scripts for deterministic work and LLM reasoning only where synthesis, class
 │   ├── worldmodel_retrieve.py
 │   ├── worldmodel_rank_sources.py
 │   ├── worldmodel_update_csv.py
+│   ├── worldmodel_generate_report.py
 │   ├── worldmodel_render_site.py
 │   ├── worldmodel_maintenance.py
 │   └── worldmodel_commit.py
@@ -336,6 +337,8 @@ Look for:
 Every new or changed relationship must include a `why_connected` explanation and an evidence URL.
 
 ### 6. Generate daily report
+
+Use `python3 bin/worldmodel_generate_report.py --selected .worldmodel/selected.json` to build the deterministic report skeleton before any LLM-written thesis/fact narrative is added.
 
 Generate one global file:
 

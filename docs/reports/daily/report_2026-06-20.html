@@ -24,17 +24,25 @@
 <h2>Selected sources</h2>
 
 <ul>
-<li>&lt;a href="https://ir.tesla.com/"&gt;Tesla Investor Relations&lt;/a&gt; (investor_relations, score 0.98)</li>
-<li>&lt;a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json"&gt;Tesla SEC companyfacts&lt;/a&gt; (sec_companyfacts, score 0.945)</li>
-<li>&lt;a href="https://www.sec.gov/edgar/browse?CIK=1318605&amp;owner=exclude"&gt;Tesla SEC filings&lt;/a&gt; (filing_index, score 0.945)</li>
-<li>&lt;a href="https://www.tesla.com/AI"&gt;Tesla AI&lt;/a&gt; (official_site, score 0.935)</li>
-<li>&lt;a href="https://www.tesla.com/supercharger"&gt;Tesla Supercharger&lt;/a&gt; (official_site, score 0.935)</li>
+<li>&lt;a href="https://ir.tesla.com/"&gt;Tesla Investor Relations&lt;/a&gt; (investor_relations, score 0.900)</li>
+<li>&lt;a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json"&gt;Tesla SEC companyfacts&lt;/a&gt; (sec_companyfacts, score 0.865)</li>
+<li>&lt;a href="https://www.sec.gov/edgar/browse?CIK=1318605&amp;owner=exclude"&gt;Tesla SEC filings&lt;/a&gt; (filing_index, score 0.865)</li>
+<li>&lt;a href="https://www.tesla.com/AI"&gt;Tesla AI&lt;/a&gt; (official_site, score 0.855)</li>
+<li>&lt;a href="https://www.tesla.com/supercharger"&gt;Tesla Supercharger&lt;/a&gt; (official_site, score 0.855)</li>
+<li>&lt;a href="https://seekingalpha.com/symbol/TSLA/earnings/transcripts"&gt;Seeking Alpha TSLA earnings call transcripts&lt;/a&gt; (earnings_transcript, score 0.795)</li>
+<li>&lt;a href="https://seekingalpha.com/symbol/TSLA"&gt;Seeking Alpha TSLA symbol page&lt;/a&gt; (seeking_alpha, score 0.705)</li>
+<li>&lt;a href="https://seekingalpha.com/symbol/TSLA/analysis"&gt;Seeking Alpha TSLA analysis&lt;/a&gt; (seeking_alpha, score 0.705)</li>
+<li>&lt;a href="https://www.youtube.com/watch?v=3Amlu4y94Ho"&gt;World's First Trillionaire, Anthropic Fable Banned, The New Oligarchs, Iran Peace Deal&lt;/a&gt; (youtube_video, score 0.672)</li>
+<li>&lt;a href="https://www.youtube.com/watch?v=_afLPYkXln0"&gt;OpenAI’s CFO Teases Their First Device&lt;/a&gt; (youtube_video, score 0.672)</li>
 </ul>
 
 <h2>Skipped sources</h2>
 
 <ul>
-<li>None. The current deterministic retrieval only surfaced five seed candidates.</li>
+<li>&lt;a href="https://www.youtube.com/watch?v=gH4FTjDm9FQ"&gt;Anthropic's Fable Backlash, Nationalizing AI, Inflation Heats Up &amp; California’s Broken Elections&lt;/a&gt; (limit_per_entity=10)</li>
+<li>&lt;a href="https://www.youtube.com/watch?v=oyjpF7xPiC4"&gt;Do Not Buy This Model Y?  4680 '8L' Battery Pack Investigated&lt;/a&gt; (limit_per_entity=10)</li>
+<li>&lt;a href="https://www.youtube.com/watch?v=TyMn7wknYTU"&gt;The Fully Dry 4680 // Too little too late?&lt;/a&gt; (limit_per_entity=10)</li>
+<li>&lt;a href="https://www.youtube.com/watch?v=vgyMjVCDbAY"&gt;CATL Tech Day 2026 // What The Hype Missed&lt;/a&gt; (limit_per_entity=10)</li>
 </ul>
 
 <h2>Modified files</h2>
@@ -47,55 +55,70 @@
 <li><a href=""></a></li>
 <li><a href=""></a></li>
 <li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
 </ul>
 
 <h2>Facts added</h2>
 
 <ul>
-<li>No new fundamental facts were added. This run performed retrieval, ranking, source logging, and report generation only.</li>
+<li>No deterministic fact extraction is performed here. Use the selected source set for LLM-backed evidence extraction.</li>
 </ul>
 
 <h2>Thesis changes</h2>
 
 <ul>
-<li>None. No thesis sections were changed because selected sources were not yet read and synthesized.</li>
+<li>None in this deterministic stage. Update after source reading and thesis synthesis.</li>
 </ul>
 
 <h2>CSV updates</h2>
 
 <ul>
-<li>Updated <code></code> with <code></code>, <code></code>, and <code></code> for Tesla.</li>
-<li>Logged 5 selected sources into both global and entity source logs.</li>
-<li>Added one entry to <code></code>.</li>
+<li>tesla: 10 selected / 4 skipped</li>
+<li>Review <code></code> and source logs for the finalized run record.</li>
 </ul>
 
 <h2>Relationship changes</h2>
 
 <ul>
-<li>None.</li>
+<li>None in this deterministic stage.</li>
 </ul>
 
 <h2>Mispricing / tendency signals</h2>
 
 <ul>
-<li>*Evidence:* Tesla Energy, autonomy, and charging remain explicit research priorities in the selected source set.</li>
-<li>*Inference:* The current repository still relies too heavily on narrative placeholders; it cannot yet distinguish priced optionality from source-backed changes.</li>
+<li>*Evidence:* Primary sources and ranked external research are now assembled for review.</li>
+<li>*Inference:* Mispricing detection still depends on the subsequent synthesis step; this script only improves run visibility and issue reporting.</li>
+</ul>
+
+<h2>Issues / inefficiencies</h2>
+
+<ul>
+<li>YouTube transcript fetch is blocked or unavailable for 3 videos, so channel ingestion falls back to metadata only.</li>
+<li>Selected YouTube items do not have transcript text attached, which reduces their synthesis value.</li>
+<li>Seeking Alpha support is currently endpoint-based; it does not yet discover newly published article URLs automatically.</li>
 </ul>
 
 <h2>Open questions</h2>
 
 <ul>
-<li>Which current Tesla IR / SEC documents should become the first source-backed baseline for financials and thesis sections?</li>
-<li>Should <code></code> sources be skipped on future runs, or only sources that were actually source-read and synthesized?</li>
-<li>Should retrieval expand beyond seed URLs to fetch the latest 10-K, 10-Q, earnings release, transcript, and investor presentation deterministically?</li>
+<li>Which selected sources should become the next source-backed baseline for thesis and estimates?</li>
+<li>Should retrieval treat already-logged-but-unused sources differently from already-processed sources?</li>
+<li>Which additional source adapters would most improve source diversity for this entity?</li>
 </ul>
 
 <h2>Next actions</h2>
 
 <ul>
-<li>Read the selected primary sources.</li>
-<li>Replace placeholder Tesla financial/thesis content with dated evidence.</li>
-<li>Upgrade retrieval adapters so the run is not limited to static seed URLs.</li>
+<li>Read and synthesize the selected sources.</li>
+<li>Update wiki, thesis, estimates, and relationships from source-backed evidence.</li>
+<li>Re-run maintenance, then commit and push the resulting repository changes.</li>
 </ul>
 
 </body>

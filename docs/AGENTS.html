@@ -79,6 +79,7 @@
 │   ├── worldmodel_retrieve.py
 │   ├── worldmodel_rank_sources.py
 │   ├── worldmodel_update_csv.py
+│   ├── worldmodel_generate_report.py
 │   ├── worldmodel_render_site.py
 │   ├── worldmodel_maintenance.py
 │   └── worldmodel_commit.py
@@ -377,6 +378,8 @@ final_score = quality_score * 0.45 + relevance_score * 0.35 + recency_score * 0.
 <p>Every new or changed relationship must include a <code></code> explanation and an evidence URL.</p>
 
 <h3>6. Generate daily report</h3>
+
+<p>Use <code></code> to build the deterministic report skeleton before any LLM-written thesis/fact narrative is added.</p>
 
 <p>Generate one global file:</p>
 
