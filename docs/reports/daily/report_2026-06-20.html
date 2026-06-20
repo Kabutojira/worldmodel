@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>report_2026-06-20</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+    code, pre { background: #f4f4f4; }
+    code { padding: 0.1rem 0.25rem; }
+    pre { padding: 1rem; overflow-x: auto; }
+    a { color: #0645ad; }
+  </style>
+</head>
+<body>
+<h1>Daily Report 2026-06-20</h1>
+
+<ul>
+<li>Run ID: worldmodel-20260620-203446z</li>
+<li>Run date: 2026-06-20</li>
+<li>Entities processed: tesla</li>
+</ul>
+
+<h2>Selected sources</h2>
+
+<ul>
+<li>&lt;a href="https://ir.tesla.com/"&gt;Tesla Investor Relations&lt;/a&gt; (investor_relations, score 0.98)</li>
+<li>&lt;a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json"&gt;Tesla SEC companyfacts&lt;/a&gt; (sec_companyfacts, score 0.945)</li>
+<li>&lt;a href="https://www.sec.gov/edgar/browse?CIK=1318605&amp;owner=exclude"&gt;Tesla SEC filings&lt;/a&gt; (filing_index, score 0.945)</li>
+<li>&lt;a href="https://www.tesla.com/AI"&gt;Tesla AI&lt;/a&gt; (official_site, score 0.935)</li>
+<li>&lt;a href="https://www.tesla.com/supercharger"&gt;Tesla Supercharger&lt;/a&gt; (official_site, score 0.935)</li>
+</ul>
+
+<h2>Skipped sources</h2>
+
+<ul>
+<li>None. The current deterministic retrieval only surfaced five seed candidates.</li>
+</ul>
+
+<h2>Modified files</h2>
+
+<ul>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+</ul>
+
+<h2>Facts added</h2>
+
+<ul>
+<li>No new fundamental facts were added. This run performed retrieval, ranking, source logging, and report generation only.</li>
+</ul>
+
+<h2>Thesis changes</h2>
+
+<ul>
+<li>None. No thesis sections were changed because selected sources were not yet read and synthesized.</li>
+</ul>
+
+<h2>CSV updates</h2>
+
+<ul>
+<li>Updated <code></code> with <code></code>, <code></code>, and <code></code> for Tesla.</li>
+<li>Logged 5 selected sources into both global and entity source logs.</li>
+<li>Added one entry to <code></code>.</li>
+</ul>
+
+<h2>Relationship changes</h2>
+
+<ul>
+<li>None.</li>
+</ul>
+
+<h2>Mispricing / tendency signals</h2>
+
+<ul>
+<li>*Evidence:* Tesla Energy, autonomy, and charging remain explicit research priorities in the selected source set.</li>
+<li>*Inference:* The current repository still relies too heavily on narrative placeholders; it cannot yet distinguish priced optionality from source-backed changes.</li>
+</ul>
+
+<h2>Open questions</h2>
+
+<ul>
+<li>Which current Tesla IR / SEC documents should become the first source-backed baseline for financials and thesis sections?</li>
+<li>Should <code></code> sources be skipped on future runs, or only sources that were actually source-read and synthesized?</li>
+<li>Should retrieval expand beyond seed URLs to fetch the latest 10-K, 10-Q, earnings release, transcript, and investor presentation deterministically?</li>
+</ul>
+
+<h2>Next actions</h2>
+
+<ul>
+<li>Read the selected primary sources.</li>
+<li>Replace placeholder Tesla financial/thesis content with dated evidence.</li>
+<li>Upgrade retrieval adapters so the run is not limited to static seed URLs.</li>
+</ul>
+
+</body>
+</html>

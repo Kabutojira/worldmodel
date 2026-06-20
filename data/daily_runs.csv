@@ -1,1 +1,2 @@
 run_id,run_date,started_at,finished_at,status,entities_processed,sources_selected,files_changed,commit_sha,notes
+worldmodel-20260620-203446z,2026-06-20,2026-06-20T20:34:46Z,2026-06-20T20:34:46Z,completed,tesla,5,,,"Bootstrap daily run executed by Hermes; retrieval/ranking completed, no source-reading synthesis yet."

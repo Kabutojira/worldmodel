@@ -44,6 +44,6 @@ This file is the canonical registry of tracked entities, search keywords, and co
   - BYD: EV competitor, battery competitor, and China demand benchmark.
   - Nvidia: AI compute/autonomy benchmark and possible dependency signal.
   - Elon Musk: key-person, governance, brand, and market narrative influence.
-- Last retrieval:
-- Last report:
+- Last retrieval: 2026-06-20T20:34:46Z
+- Last report: 2026-06-20
 - Notes: Initial seed entity. Track automotive, energy, autonomy, robotics, battery supply, and key-person narrative.
