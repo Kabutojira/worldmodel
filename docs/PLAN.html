@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLAN</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+    code, pre { background: #f4f4f4; }
+    code { padding: 0.1rem 0.25rem; }
+    pre { padding: 1rem; overflow-x: auto; }
+    a { color: #0645ad; }
+  </style>
+</head>
+<body>
+<h1>PLAN.md</h1>
+
+<h2>Project: WorldModel</h2>
+
+<p>Goal: build a Hermes-maintained research repository that tracks companies, sectors, markets, people, commodities, technologies, and their relationships. The system must retrieve high-quality sources daily, update llm-wiki knowledge bases, maintain structured CSV estimates, detect thesis changes and market mispricing signals, generate daily reports, render Markdown to GitHub Pages, and commit/push changes to <code></code>.</p>
+
+<h2>Operating assumptions</h2>
+
+<ul>
+<li>Repository: <code></code>.</li>
+<li>First active entity: Tesla.</li>
+<li>Hermes profile has access to the repository checkout and Git credentials.</li>
+<li>The repository is the source of truth.</li>
+<li>Google Sheets is used as a view/editor over CSV exports, not as the source of truth.</li>
+<li>Markdown and CSV files remain human-readable and diff-friendly.</li>
+<li>Full copyrighted articles are not stored; only metadata, short summaries, extracted facts, and source URLs are retained.</li>
+<li>Scripts perform deterministic work; LLMs perform synthesis and judgment.</li>
+</ul>
+
+<h2>Target repository state</h2>
+
+<p>Create this initial structure:</p>
+
+<pre><code>
+/
+├── AGENTS.md
+├── PLAN.md
+├── index.md
+├── data/
+│   ├── entities.csv
+│   ├── relationships.csv
+│   ├── estimates.csv
+│   ├── source_log.csv
+│   └── daily_runs.csv
+├── templates/
+│   ├── entity.md
+│   ├── financial_report.md
+│   ├── thesis.md
+│   ├── daily_report.md
+│   └── entity_row.csv
+├── entities/
+│   └── tesla/
+│       ├── wiki/
+│       │   ├── index.md
+│       │   ├── business.md
+│       │   ├── market.md
+│       │   ├── financials.md
+│       │   ├── technology.md
+│       │   ├── people.md
+│       │   ├── risks.md
+│       │   └── sources.md
+│       ├── thesis.md
+│       ├── financial_report.md
+│       ├── estimates.csv
+│       ├── source_log.csv
+│       └── daily_reports/
+├── reports/
+│   └── daily/
+├── skills/
+│   └── worldmodel/
+│       └── SKILL.md
+├── bin/
+│   ├── worldmodel_init_entity.py
+│   ├── worldmodel_retrieve.py
+│   ├── worldmodel_rank_sources.py
+│   ├── worldmodel_update_csv.py
+│   ├── worldmodel_render_site.py
+│   ├── worldmodel_maintenance.py
+│   └── worldmodel_commit.py
+└── docs/
+</code></pre>
+
+<h2>Milestone 1 — Bootstrap repository conventions</h2>
+
+<h3>Tasks</h3>
+
+<p>1. Add <code></code> with project rules, file contracts, daily workflow, entity workflow, source rules, and done criteria.</p>
+<p>2. Add <code></code> with this implementation plan.</p>
+<p>3. Create <code></code> with a Tesla entry and initial connected entities.</p>
+<p>4. Create <code></code> CSV files with headers only, plus Tesla seed rows where safe.</p>
+<p>5. Create <code></code> files for entity wiki, thesis, financial report, daily report, and CSV row examples.</p>
+<p>6. Create <code></code> directory and all required seed files.</p>
+<p>7. Create empty <code></code> and <code></code> directories, preserving them with <code></code> if needed.</p>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li><code></code> contains Tesla with search keywords and explained connected entities.</li>
+<li>All CSV files have stable headers.</li>
+<li>Tesla has a complete entity directory.</li>
+<li>Required templates exist.</li>
+<li><code></code> and <code></code> match the repository layout.</li>
+</ul>
+
+<h2>Milestone 2 — Implement deterministic scripts</h2>
+
+<h3><code></code></h3>
+
+<p>Purpose: create a new entity from templates.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>accept <code></code>, <code></code>, <code></code>, <code></code>, <code></code>;</li>
+<li>create <code></code>;</li>
+<li>create wiki pages from templates;</li>
+<li>append row to <code></code> if missing;</li>
+<li>refuse duplicate slugs;</li>
+<li>optionally add seed relationships.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Purpose: collect candidate source metadata for each active entity.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>parse <code></code> and <code></code>;</li>
+<li>determine last retrieval/report time;</li>
+<li>search configured source families;</li>
+<li>collect candidate URLs and metadata;</li>
+<li>deduplicate by canonical URL and hash;</li>
+<li>store source metadata only;</li>
+<li>emit JSON for LLM processing.</li>
+</ul>
+
+<p>Initial source adapters:</p>
+
+<ul>
+<li>generic web search adapter;</li>
+<li>investor-relations discovery adapter;</li>
+<li>SEC/EDGAR adapter for US-listed companies;</li>
+<li>RSS/feed adapter where available;</li>
+<li>manual URL ingestion adapter.</li>
+</ul>
+
+<p>Optional adapters:</p>
+
+<ul>
+<li>Seeking Alpha adapter, subject to available credentials and terms;</li>
+<li>X adapter, subject to available API or export access.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Purpose: rank candidate sources before LLM reading.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>score quality, recency, relevance;</li>
+<li>select maximum 10 sources per entity since last report;</li>
+<li>prefer primary sources;</li>
+<li>output selected and skipped sources with reasons.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Purpose: safely update structured CSVs.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>validate schemas;</li>
+<li>merge entity-level estimates into <code></code>;</li>
+<li>sort rows deterministically;</li>
+<li>preserve manually entered notes;</li>
+<li>validate forecast scenario fields;</li>
+<li>write atomically.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Purpose: render Markdown files to GitHub Pages HTML under <code></code>.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>generate site index;</li>
+<li>generate entity pages;</li>
+<li>generate daily report pages;</li>
+<li>generate estimates and relationships pages;</li>
+<li>preserve source links;</li>
+<li>avoid manual-only state in generated files.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Purpose: detect repository drift and maintenance needs.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>check missing files;</li>
+<li>check malformed CSV;</li>
+<li>check broken internal Markdown links;</li>
+<li>check relationships missing explanations;</li>
+<li>check estimates missing bearish/normal/bullish fields;</li>
+<li>check duplicate sources;</li>
+<li>check reports missing source links or modified-file links;</li>
+<li>output actionable maintenance findings.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Purpose: commit and push deterministic changes.</p>
+
+<p>Required behavior:</p>
+
+<ul>
+<li>show status;</li>
+<li>refuse empty commit unless <code></code>;</li>
+<li>use standardized commit messages;</li>
+<li>push to configured remote;</li>
+<li>return non-zero on failure.</li>
+</ul>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>Scripts run without LLM access.</li>
+<li>Scripts are idempotent.</li>
+<li>Scripts can be called by Hermes skills and cron jobs.</li>
+<li>Scripts fail loudly on invalid schemas.</li>
+</ul>
+
+<h2>Milestone 3 — Create Hermes skill</h2>
+
+<p>Create <code></code>.</p>
+
+<p>The skill must expose these operations:</p>
+
+<p>1. initialize entity;</p>
+<p>2. retrieve daily sources;</p>
+<p>3. rank sources;</p>
+<p>4. process selected sources with LLM;</p>
+<p>5. update wiki pages;</p>
+<p>6. update thesis;</p>
+<p>7. update estimates CSV;</p>
+<p>8. update relationships;</p>
+<p>9. generate daily report;</p>
+<p>10. render GitHub Pages;</p>
+<p>11. run maintenance;</p>
+<p>12. commit and push.</p>
+
+<p>The skill must instruct the agent to:</p>
+
+<ul>
+<li>use scripts before LLM reasoning;</li>
+<li>keep full articles out of the repository;</li>
+<li>cite sources with URLs;</li>
+<li>cap reading to 10 sources per entity per daily run;</li>
+<li>explicitly distinguish evidence from inference;</li>
+<li>keep bullish, normal, and bearish scenarios aligned across Markdown and CSV;</li>
+<li>update relationships after entity changes;</li>
+<li>save daily reports as <code></code>;</li>
+<li>include Markdown links to modified files and HTML links to sources.</li>
+</ul>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>Hermes can run the daily workflow from the skill alone.</li>
+<li>Skill references the exact scripts and file paths.</li>
+<li>Skill includes recovery instructions for partial failures.</li>
+</ul>
+
+<h2>Milestone 4 — Seed Tesla</h2>
+
+<h3>Tesla files to create</h3>
+
+<pre><code>
+entities/tesla/wiki/index.md
+entities/tesla/wiki/business.md
+entities/tesla/wiki/market.md
+entities/tesla/wiki/financials.md
+entities/tesla/wiki/technology.md
+entities/tesla/wiki/people.md
+entities/tesla/wiki/risks.md
+entities/tesla/wiki/sources.md
+entities/tesla/thesis.md
+entities/tesla/financial_report.md
+entities/tesla/estimates.csv
+entities/tesla/source_log.csv
+</code></pre>
+
+<h3>Tesla initial source discovery</h3>
+
+<p>Search and seed from:</p>
+
+<ul>
+<li>Tesla Investor Relations;</li>
+<li>latest annual report;</li>
+<li>latest quarterly report;</li>
+<li>latest earnings release;</li>
+<li>latest earnings-call transcript;</li>
+<li>latest investor presentation if available;</li>
+<li>delivery and production releases;</li>
+<li>energy storage deployment disclosures;</li>
+<li>major FSD/robotaxi public materials;</li>
+<li>Optimus public materials;</li>
+<li>battery supply and lithium materials;</li>
+<li>high-quality independent deep dives.</li>
+</ul>
+
+<h3>Tesla initial connected entities</h3>
+
+<p>Add and explain at least these relationships:</p>
+
+<ul>
+<li>Tesla → lithium: battery input cost and supply availability affect EV and storage margins.</li>
+<li>Tesla → automotive market: core revenue pool and cyclical demand benchmark.</li>
+<li>Tesla → EV market: adoption curve, policy incentives, and competition directly affect growth.</li>
+<li>Tesla → battery storage market: Megapack and grid storage growth drive Tesla Energy optionality.</li>
+<li>Tesla → autonomous driving / robotaxi: major optionality and valuation narrative.</li>
+<li>Tesla → humanoid robotics / Optimus: long-term optionality and AI/robotics narrative.</li>
+<li>Tesla → charging infrastructure: ecosystem moat, network effects, and service revenue.</li>
+<li>Tesla → Panasonic: historical battery supplier relationship.</li>
+<li>Tesla → CATL: battery supply and chemistry benchmark.</li>
+<li>Tesla → LG Energy Solution: battery supply relationship.</li>
+<li>Tesla → BYD: EV competitor and battery competitor.</li>
+<li>Tesla → Nvidia: AI compute/autonomy benchmark and possible dependency signal.</li>
+<li>Tesla → Elon Musk: key-person, governance, capital-market narrative, and brand influence.</li>
+</ul>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>Tesla appears in <code></code> and <code></code>.</li>
+<li>Tesla has a populated wiki skeleton.</li>
+<li>Tesla has a first <code></code> with bearish, normal, and bullish sections.</li>
+<li>Tesla has a first <code></code>.</li>
+<li>Tesla relationships are present in <code></code> with mechanisms and evidence placeholders or links.</li>
+</ul>
+
+<h2>Milestone 5 — Daily run workflow</h2>
+
+<p>Implement and test the daily run:</p>
+
+<pre><code>
+python3 bin/worldmodel_retrieve.py --all-active --since-last-report --out .worldmodel/candidates.json
+python3 bin/worldmodel_rank_sources.py --in .worldmodel/candidates.json --out .worldmodel/selected.json --limit-per-entity 10
+# Hermes LLM step: read selected sources, update wiki/thesis/reports/relationships.
+python3 bin/worldmodel_update_csv.py --validate --merge-all
+python3 bin/worldmodel_maintenance.py --strict
+python3 bin/worldmodel_render_site.py
+python3 bin/worldmodel_commit.py --message "Update worldmodel daily report $(date -I)"
+</code></pre>
+
+<h3>Daily report contract</h3>
+
+<p>Global report path:</p>
+
+<pre><code>
+reports/daily/report_YYYY-MM-DD.md
+</code></pre>
+
+<p>Per-entity report path:</p>
+
+<pre><code>
+entities/&lt;slug&gt;/daily_reports/report_YYYY-MM-DD.md
+</code></pre>
+
+<p>Each report must include:</p>
+
+<ul>
+<li>run date;</li>
+<li>entities processed;</li>
+<li>selected sources with HTML links;</li>
+<li>skipped sources with reasons;</li>
+<li>modified files with Markdown links;</li>
+<li>facts added;</li>
+<li>thesis changes;</li>
+<li>CSV updates;</li>
+<li>relationship changes;</li>
+<li>mispricing/tendency signals;</li>
+<li>open questions;</li>
+<li>next actions.</li>
+</ul>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>Running the workflow twice without new sources does not create noisy diffs.</li>
+<li>A source already processed is skipped on the next run.</li>
+<li>The report contains source links and modified-file links.</li>
+<li>The site renders.</li>
+<li>Commit and push work from the Hermes environment.</li>
+</ul>
+
+<h2>Milestone 6 — Recursive entity expansion</h2>
+
+<p>When Tesla source processing identifies a material dependency, create related entities recursively only when the connection has direct thesis impact.</p>
+
+<p>Priority expansion candidates:</p>
+
+<p>1. lithium;</p>
+<p>2. automotive market;</p>
+<p>3. EV market;</p>
+<p>4. battery storage market;</p>
+<p>5. autonomous driving / robotaxi;</p>
+<p>6. humanoid robotics;</p>
+<p>7. BYD;</p>
+<p>8. CATL;</p>
+<p>9. Panasonic;</p>
+<p>10. LG Energy Solution;</p>
+<p>11. Nvidia;</p>
+<p>12. Elon Musk.</p>
+
+<p>Expansion rules:</p>
+
+<ul>
+<li>Add no more than 3 new active entities per daily run unless manually requested.</li>
+<li>New entities may start as <code></code> if they are useful context but not yet tracked daily.</li>
+<li>Every new entity must have at least one relationship explaining why it exists.</li>
+<li>Do not track weakly related entities.</li>
+</ul>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>Related entities are added deliberately, not explosively.</li>
+<li>Every active entity has keywords, source priority, relationships, and file skeletons.</li>
+</ul>
+
+<h2>Milestone 7 — GitHub Pages publishing</h2>
+
+<p>Use <code></code> as the static site output directory.</p>
+
+<p>Required pages:</p>
+
+<ul>
+<li>home page with entity list;</li>
+<li>entity pages;</li>
+<li>relationships page;</li>
+<li>estimates page;</li>
+<li>daily reports page;</li>
+<li>source-log page or summarized source index.</li>
+</ul>
+
+<p>Rendering requirements:</p>
+
+<ul>
+<li>deterministic output;</li>
+<li>internal links preserved;</li>
+<li>external source links preserved;</li>
+<li>no generated page should require manual editing;</li>
+<li>generated files may be committed.</li>
+</ul>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>GitHub Pages can publish from <code></code>.</li>
+<li>Local Markdown remains the editing source of truth.</li>
+<li>Generated HTML includes report navigation.</li>
+</ul>
+
+<h2>Milestone 8 — Maintenance loop</h2>
+
+<p>Add a maintenance run after daily updates.</p>
+
+<p>Maintenance must check:</p>
+
+<ul>
+<li><code></code> and <code></code> still match actual structure;</li>
+<li>scripts match CSV schemas;</li>
+<li>templates include all fields used by scripts;</li>
+<li>daily report format is valid;</li>
+<li>entity directories are complete;</li>
+<li>source logs are deduplicated;</li>
+<li>links work;</li>
+<li>generated site is current.</li>
+</ul>
+
+<p>When maintenance changes are needed:</p>
+
+<p>1. create or update scripts/templates/docs;</p>
+<p>2. add a maintenance section to the daily report;</p>
+<p>3. commit with message <code></code> or include maintenance in the daily commit.</p>
+
+<h3>Acceptance criteria</h3>
+
+<ul>
+<li>Maintenance detects drift before it corrupts data.</li>
+<li>Maintenance findings are visible in daily reports.</li>
+</ul>
+
+<h2>Initial <code></code> seed</h2>
+
+<pre><code>
+# WorldModel Entity Index
+
+This file is the canonical registry of tracked entities, search keywords, and connected entities.
+
+## Tesla
+
+- Slug: tesla
+- Type: company
+- Status: active
+- Priority: 1
+- Search keywords:
+  - "Tesla investor relations"
+  - "Tesla 10-K"
+  - "Tesla 10-Q"
+  - "Tesla earnings call transcript"
+  - "Tesla vehicle deliveries"
+  - "Tesla automotive gross margin"
+  - "Tesla energy storage deployments"
+  - "Tesla Megapack backlog"
+  - "Tesla FSD robotaxi"
+  - "Tesla Optimus humanoid robot"
+  - "Tesla lithium supply"
+  - "Tesla battery suppliers"
+- Source priority:
+  - investor relations
+  - filings
+  - earnings calls
+  - investor presentations
+  - delivery reports
+  - Seeking Alpha deep dives
+  - X high-signal posts
+  - trade publications
+- Connected entities:
+  - Lithium: battery input cost and supply availability affect Tesla EV and storage margins.
+  - Automotive market: Tesla automotive revenue depends on global light-vehicle demand, pricing, and financing conditions.
+  - EV market: adoption curve, incentives, charging infrastructure, and EV competition affect Tesla growth.
+  - Battery storage market: Megapack and grid storage growth affect Tesla Energy revenue and margin potential.
+  - Autonomous driving / robotaxi: FSD and robotaxi expectations are central to Tesla optionality and valuation narrative.
+  - Humanoid robotics / Optimus: long-duration optionality linked to robotics, manufacturing automation, and AI.
+  - Charging infrastructure: Supercharger network affects ecosystem lock-in, service revenue, and EV adoption.
+  - Panasonic: historical battery supplier and production partner.
+  - CATL: battery supplier/benchmark for cost, chemistry, and supply chain.
+  - LG Energy Solution: battery supplier and cell technology peer.
+  - BYD: EV competitor, battery competitor, and China demand benchmark.
+  - Nvidia: AI compute/autonomy benchmark and possible dependency signal.
+  - Elon Musk: key-person, governance, brand, and market narrative influence.
+- Last retrieval:
+- Last report:
+- Notes: Initial seed entity. Track automotive, energy, autonomy, robotics, battery supply, and key-person narrative.
+</code></pre>
+
+<h2>Initial CSV headers</h2>
+
+<h3><code></code></h3>
+
+<pre><code>
+entity_id,slug,name,type,status,priority,ticker,exchange,currency,geography,sector,industry,business_lines,description,search_keywords,connected_entities,last_retrieval_at,last_report_date,last_source_count,confidence,owner_notes
+</code></pre>
+
+<h3><code></code></h3>
+
+<pre><code>
+source_slug,target_slug,relationship_type,direction,importance,mechanism,why_connected,evidence_url,last_reviewed_at,confidence
+</code></pre>
+
+<h3><code></code></h3>
+
+<pre><code>
+entity_slug,entity_name,type,business_line,metric,unit,currency,actual_or_estimate,year,base_value,bearish_forecast,normal_forecast,bullish_forecast,bearish_thesis,normal_thesis,bullish_thesis,source_url,source_date,updated_at,confidence,notes
+</code></pre>
+
+<h3><code></code></h3>
+
+<pre><code>
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+</code></pre>
+
+<h3><code></code></h3>
+
+<pre><code>
+run_id,run_date,started_at,finished_at,status,entities_processed,sources_selected,files_changed,commit_sha,notes
+</code></pre>
+
+<h2>Commit plan</h2>
+
+<p>After bootstrap:</p>
+
+<pre><code>
+git add AGENTS.md PLAN.md index.md data templates entities reports skills bin docs
+git commit -m "Bootstrap worldmodel project"
+git push
+</code></pre>
+
+<p>After Tesla seeding:</p>
+
+<pre><code>
+git add index.md data entities/tesla reports docs
+git commit -m "Seed Tesla entity"
+git push
+</code></pre>
+
+<p>After daily runs:</p>
+
+<pre><code>
+git add index.md data entities reports docs
+git commit -m "Update worldmodel daily report YYYY-MM-DD"
+git push
+</code></pre>
+
+<h2>Definition of done</h2>
+
+<p>The project is operational when:</p>
+
+<ul>
+<li>Tesla is seeded as the first active entity;</li>
+<li>all required directories and files exist;</li>
+<li>CSV schemas are stable;</li>
+<li>the Hermes skill can run retrieval and update steps;</li>
+<li>deterministic scripts handle non-LLM tasks;</li>
+<li>daily report generation works;</li>
+<li>GitHub Pages rendering works;</li>
+<li>daily commits are pushed to <code></code>;</li>
+<li>maintenance checks run after daily updates.</li>
+</ul>
+
+</body>
+</html>

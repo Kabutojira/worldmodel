@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>entity</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+    code, pre { background: #f4f4f4; }
+    code { padding: 0.1rem 0.25rem; }
+    pre { padding: 1rem; overflow-x: auto; }
+    a { color: #0645ad; }
+  </style>
+</head>
+<body>
+<h1>{{ entity_name }}</h1>
+
+<ul>
+<li>Slug: {{ slug }}</li>
+<li>Type: {{ type }}</li>
+<li>Status: {{ status }}</li>
+<li>Priority: {{ priority }}</li>
+<li>Ticker: {{ ticker }}</li>
+</ul>
+
+<h2>Tracking rationale</h2>
+
+<p>Why this entity is tracked and which thesis it supports.</p>
+
+<h2>Search keywords</h2>
+
+<ul>
+<li>"{{ entity_name }} investor relations"</li>
+<li>"{{ entity_name }} annual report"</li>
+</ul>
+
+<h2>Connected entities</h2>
+
+<ul>
+<li>{{ connected_entity }}: why this connection matters.</li>
+</ul>
+
+</body>
+</html>

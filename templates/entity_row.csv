@@ -1,0 +1,2 @@
+entity_id,slug,name,type,status,priority,ticker,exchange,currency,geography,sector,industry,business_lines,description,search_keywords,connected_entities,last_retrieval_at,last_report_date,last_source_count,confidence,owner_notes
+entity_example,example,Example Co,company,paused,3,EXM,NYSE,USD,US,Example Sector,Example Industry,"Line A|Line B","One-line description.","Example investor relations|Example 10-K","input-commodity|customer-segment",,,0,0.50,"Example notes."

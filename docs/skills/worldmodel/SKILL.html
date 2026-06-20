@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKILL</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+    code, pre { background: #f4f4f4; }
+    code { padding: 0.1rem 0.25rem; }
+    pre { padding: 1rem; overflow-x: auto; }
+    a { color: #0645ad; }
+  </style>
+</head>
+<body>
+<p>---</p>
+<p>name: worldmodel</p>
+<p>description: "Operate the WorldModel repository: initialize entities, retrieve sources, rank, update structured data, render docs, and commit deterministic changes."</p>
+<p>version: 0.1.0</p>
+<p>author: Hermes Agent</p>
+<p>license: MIT</p>
+<p>---</p>
+
+<h1>WorldModel</h1>
+
+<p>Use this skill when working inside the <code></code> repository.</p>
+
+<h2>Principles</h2>
+
+<ul>
+<li>The repository is the source of truth.</li>
+<li>Use deterministic scripts before LLM reasoning.</li>
+<li>Do not store full copyrighted articles.</li>
+<li>Cite sources with URLs.</li>
+<li>Read at most 10 new sources per entity per daily run.</li>
+<li>Separate evidence from inference.</li>
+<li>Keep bearish, normal, and bullish scenarios aligned across Markdown and CSV.</li>
+<li>Update relationships after entity changes.</li>
+<li>Save daily reports as <code></code>.</li>
+<li>Include Markdown links to modified files and HTML links to sources.</li>
+</ul>
+
+<h2>Commands</h2>
+
+<p>Run from repository root.</p>
+
+<h3>1. Initialize entity</h3>
+
+<pre><code>
+python3 bin/worldmodel_init_entity.py --name "Entity Name" --slug entity-slug --type company --ticker TICK --priority 3
+</code></pre>
+
+<h3>2. Retrieve daily sources</h3>
+
+<pre><code>
+python3 bin/worldmodel_retrieve.py --all-active --since-last-report --out .worldmodel/candidates.json
+</code></pre>
+
+<h3>3. Rank sources</h3>
+
+<pre><code>
+python3 bin/worldmodel_rank_sources.py --in .worldmodel/candidates.json --out .worldmodel/selected.json --limit-per-entity 10
+</code></pre>
+
+<h3>4. Process selected sources with LLM</h3>
+
+<p>1. Read <code></code>.</p>
+<p>2. Open the linked primary sources first.</p>
+<p>3. Extract evidence, affected metrics, thesis implications, and related entities.</p>
+<p>4. Update the entity wiki pages before thesis/report summaries.</p>
+
+<h3>5. Update wiki pages</h3>
+
+<ul>
+<li><code></code></li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code></code></li>
+</ul>
+
+<h3>6. Update thesis</h3>
+
+<p>Keep the three scenario sections synchronized with any estimate changes.</p>
+
+<h3>7. Update estimates CSV</h3>
+
+<pre><code>
+python3 bin/worldmodel_update_csv.py --validate --merge-all
+</code></pre>
+
+<h3>8. Update relationships</h3>
+
+<p>Edit <code></code> and the relevant <code></code> connection notes. Every relationship needs mechanism, why_connected, and evidence_url.</p>
+
+<h3>9. Generate daily report</h3>
+
+<p>Create:</p>
+
+<ul>
+<li><code></code></li>
+<li><code></code> for changed entities.</li>
+</ul>
+
+<p>Required sections:</p>
+
+<ul>
+<li>run date;</li>
+<li>entities processed;</li>
+<li>selected sources with HTML links;</li>
+<li>skipped sources with reasons;</li>
+<li>modified files with Markdown links;</li>
+<li>facts added;</li>
+<li>thesis changes;</li>
+<li>CSV updates;</li>
+<li>relationship changes;</li>
+<li>mispricing/tendency signals;</li>
+<li>open questions;</li>
+<li>next actions.</li>
+</ul>
+
+<h3>10. Render GitHub Pages</h3>
+
+<pre><code>
+python3 bin/worldmodel_render_site.py
+</code></pre>
+
+<h3>11. Run maintenance</h3>
+
+<pre><code>
+python3 bin/worldmodel_maintenance.py --strict
+</code></pre>
+
+<h3>12. Commit and push</h3>
+
+<pre><code>
+python3 bin/worldmodel_commit.py --message "Update worldmodel daily report $(date -I)"
+</code></pre>
+
+<h2>Recovery guidance</h2>
+
+<ul>
+<li>If retrieval fails, inspect network/API access and rerun retrieval only.</li>
+<li>If ranking fails, validate <code></code> first.</li>
+<li>If CSV validation fails, fix schemas before changing wiki/report text.</li>
+<li>If rendering fails, repair markdown links or malformed front matter before committing.</li>
+<li>If maintenance fails in strict mode, resolve the listed findings or document why the run is intentionally partial.</li>
+</ul>
+
+</body>
+</html>

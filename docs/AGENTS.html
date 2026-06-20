@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AGENTS</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+    code, pre { background: #f4f4f4; }
+    code { padding: 0.1rem 0.25rem; }
+    pre { padding: 1rem; overflow-x: auto; }
+    a { color: #0645ad; }
+  </style>
+</head>
+<body>
+<h1>AGENTS.md</h1>
+
+<h2>Project: WorldModel</h2>
+
+<p>WorldModel is a Hermes project for tracking companies, sectors, markets, people, technologies, and commodities as connected entities. The repository is both a research memory and a recurring market-monitoring workflow.</p>
+
+<p>The system must maintain:</p>
+
+<ul>
+<li>a canonical entity registry in <code></code>;</li>
+<li>normalized CSV datasets for current facts, historical estimates, and future scenarios;</li>
+<li>one llm-wiki-style knowledge base per entity;</li>
+<li>one maintained financial report per entity;</li>
+<li>daily reports for new information and changed files;</li>
+<li>a generated GitHub Pages site rendered from the Markdown repository.</li>
+</ul>
+
+<p>Use scripts for deterministic work and LLM reasoning only where synthesis, classification, thesis updates, or judgment are required.</p>
+
+<h2>Repository layout</h2>
+
+<pre><code>
+/
+├── AGENTS.md
+├── PLAN.md
+├── index.md
+├── data/
+│   ├── entities.csv
+│   ├── relationships.csv
+│   ├── estimates.csv
+│   ├── source_log.csv
+│   └── daily_runs.csv
+├── templates/
+│   ├── entity.md
+│   ├── financial_report.md
+│   ├── thesis.md
+│   ├── daily_report.md
+│   └── entity_row.csv
+├── entities/
+│   └── &lt;entity_slug&gt;/
+│       ├── wiki/
+│       │   ├── index.md
+│       │   ├── business.md
+│       │   ├── market.md
+│       │   ├── financials.md
+│       │   ├── technology.md
+│       │   ├── people.md
+│       │   ├── risks.md
+│       │   └── sources.md
+│       ├── thesis.md
+│       ├── financial_report.md
+│       ├── estimates.csv
+│       ├── source_log.csv
+│       └── daily_reports/
+│           └── report_YYYY-MM-DD.md
+├── reports/
+│   └── daily/
+│       └── report_YYYY-MM-DD.md
+├── skills/
+│   └── worldmodel/
+│       └── SKILL.md
+├── bin/
+│   ├── worldmodel_init_entity.py
+│   ├── worldmodel_retrieve.py
+│   ├── worldmodel_rank_sources.py
+│   ├── worldmodel_update_csv.py
+│   ├── worldmodel_render_site.py
+│   ├── worldmodel_maintenance.py
+│   └── worldmodel_commit.py
+└── docs/
+    └── generated GitHub Pages output
+</code></pre>
+
+<h2>Canonical files</h2>
+
+<h3><code></code></h3>
+
+<p><code></code> is the canonical human-readable registry of tracked entities.</p>
+
+<p>Each entity entry must contain:</p>
+
+<pre><code>
+## &lt;Entity Name&gt;
+
+- Slug: &lt;entity_slug&gt;
+- Type: company | sector | market | person | commodity | technology | geography | supplier | customer | regulator | other
+- Status: active | paused | archived
+- Priority: 1-5
+- Search keywords:
+  - "keyword 1"
+  - "keyword 2"
+- Source priority:
+  - investor relations
+  - filings
+  - earnings calls
+  - Seeking Alpha
+  - X
+  - trade publications
+  - research reports
+- Connected entities:
+  - &lt;Other Entity&gt;: &lt;why connected, direction of influence, evidence&gt;
+- Last retrieval: YYYY-MM-DDTHH:MM:SSZ
+- Last report: YYYY-MM-DD
+- Notes: &lt;short tracking rationale&gt;
+</code></pre>
+
+<p>Rules:</p>
+
+<ul>
+<li>Keep connection explanations explicit. Do not list connected entities without explaining the economic, operational, technological, supply-chain, competitive, or narrative link.</li>
+<li>Keep search keywords narrow enough to retrieve relevant sources and broad enough to discover adjacent entities.</li>
+<li>Prefer stable names and ticker symbols where available.</li>
+<li>Preserve historical tracking context instead of rewriting it away.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>One row per entity. This is the spreadsheet-friendly overview file and should be importable into Google Sheets.</p>
+
+<p>Required columns:</p>
+
+<pre><code>
+entity_id,slug,name,type,status,priority,ticker,exchange,currency,geography,sector,industry,business_lines,description,search_keywords,connected_entities,last_retrieval_at,last_report_date,last_source_count,confidence,owner_notes
+</code></pre>
+
+<h3><code></code></h3>
+
+<p>One row per directed relationship.</p>
+
+<p>Required columns:</p>
+
+<pre><code>
+source_slug,target_slug,relationship_type,direction,importance,mechanism,why_connected,evidence_url,last_reviewed_at,confidence
+</code></pre>
+
+<p><code></code> examples: supplier, customer, competitor, substitute, demand_driver, cost_input, technology_dependency, regulatory_dependency, capital_market_proxy, macro_driver, person_affiliation.</p>
+
+<h3><code></code></h3>
+
+<p>One row per entity, business line, metric, and year. This is the main market-sizing and mispricing dataset.</p>
+
+<p>Required columns:</p>
+
+<pre><code>
+entity_slug,entity_name,type,business_line,metric,unit,currency,actual_or_estimate,year,base_value,bearish_forecast,normal_forecast,bullish_forecast,bearish_thesis,normal_thesis,bullish_thesis,source_url,source_date,updated_at,confidence,notes
+</code></pre>
+
+<p>Supported metrics:</p>
+
+<ul>
+<li>revenue;</li>
+<li>EBITDA;</li>
+<li>EBIT;</li>
+<li>free cash flow;</li>
+<li>gross margin;</li>
+<li>operating margin;</li>
+<li>market size;</li>
+<li>market share;</li>
+<li>unit volume;</li>
+<li>ASP;</li>
+<li>capex;</li>
+<li>installed base;</li>
+<li>TAM/SAM/SOM;</li>
+<li>commodity price;</li>
+<li>production capacity.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Keep metadata, not full copyrighted articles.</p>
+
+<p>Required columns:</p>
+
+<pre><code>
+source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+</code></pre>
+
+<p>Do not store complete article bodies. Store URLs, metadata, short summaries, and citations.</p>
+
+<h2>Entity directory contract</h2>
+
+<p>Each tracked entity must have <code></code>.</p>
+
+<h3><code></code></h3>
+
+<p>Use llm-wiki style: structured, stable pages with incremental updates. Do not dump raw notes.</p>
+
+<p>Minimum pages:</p>
+
+<ul>
+<li><code></code> — overview, key facts, current thesis, source map;</li>
+<li><code></code> — business model, segments, pricing power, unit economics;</li>
+<li><code></code> — market size, growth, competitive landscape;</li>
+<li><code></code> — revenue, EBITDA, cash flow, balance sheet, valuation anchors;</li>
+<li><code></code> — technical moat, dependencies, bottlenecks;</li>
+<li><code></code> — executives, founders, major shareholders, key public figures;</li>
+<li><code></code> — technical, regulatory, execution, market, financing, geopolitical risks;</li>
+<li><code></code> — curated source index and source quality notes.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Maintain three explicit scenarios:</p>
+
+<ul>
+<li>bearish thesis;</li>
+<li>normal thesis;</li>
+<li>bullish thesis.</li>
+</ul>
+
+<p>Each scenario must include:</p>
+
+<ul>
+<li>key assumptions;</li>
+<li>revenue and EBITDA path;</li>
+<li>market size path;</li>
+<li>business-line contribution;</li>
+<li>catalysts;</li>
+<li>disconfirming evidence;</li>
+<li>signposts to monitor.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Maintain a current report with:</p>
+
+<ul>
+<li>entity summary;</li>
+<li>business lines;</li>
+<li>latest financials;</li>
+<li>forecast table;</li>
+<li>valuation framing;</li>
+<li>market expectations;</li>
+<li>possible mispricing;</li>
+<li>major risks;</li>
+<li>connected-entity implications;</li>
+<li>open questions;</li>
+<li>source links.</li>
+</ul>
+
+<h3><code></code></h3>
+
+<p>Entity-specific daily report. Use uppercase <code></code> only if the existing repository convention uses uppercase; otherwise use lowercase <code></code>. File names must use ISO dates.</p>
+
+<h2>Daily workflow</h2>
+
+<p>A Hermes cron or scheduled skill run must execute this pipeline once per day.</p>
+
+<h3>1. Load registry</h3>
+
+<p>Use scripts to parse:</p>
+
+<ul>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li>each entity <code></code>;</li>
+<li><code></code>.</li>
+</ul>
+
+<p>Determine <code></code> and <code></code> for every active entity.</p>
+
+<h3>2. Retrieve candidate sources</h3>
+
+<p>For each active entity, retrieve candidate sources using its search keywords and connected entities.</p>
+
+<p>Default source families:</p>
+
+<ul>
+<li>investor relations pages;</li>
+<li>SEC/EDGAR or local regulator filings where applicable;</li>
+<li>annual reports;</li>
+<li>quarterly reports;</li>
+<li>earnings-call transcripts;</li>
+<li>investor presentations;</li>
+<li>Seeking Alpha articles and deep dives;</li>
+<li>X posts and threads from high-signal accounts;</li>
+<li>trade publications;</li>
+<li>specialist research;</li>
+<li>company blogs;</li>
+<li>credible interviews;</li>
+<li>conference presentations.</li>
+</ul>
+
+<p>Rules:</p>
+
+<ul>
+<li>Read maximum 10 new articles/items per entity since the last report time.</li>
+<li>Rank by quality first, then recency, then relevance.</li>
+<li>Prefer primary sources over commentary.</li>
+<li>Prefer long-form, data-rich, thesis-changing sources over short news items.</li>
+<li>Do not keep full article bodies after extraction.</li>
+<li>Keep source metadata and short summaries in <code></code>.</li>
+</ul>
+
+<p>Suggested deterministic ranking:</p>
+
+<pre><code>
+final_score = quality_score * 0.45 + relevance_score * 0.35 + recency_score * 0.20
+</code></pre>
+
+<p>Quality-score guidance:</p>
+
+<ul>
+<li>1.0: primary filings, official financial releases, official investor presentations;</li>
+<li>0.9: earnings transcripts, management interviews, credible datasets;</li>
+<li>0.8: specialist industry research, high-quality trade publications;</li>
+<li>0.7: Seeking Alpha deep dives with clear financial model or primary-source references;</li>
+<li>0.5: generic news;</li>
+<li>0.3: unsourced X posts;</li>
+<li>0.1: promotional or low-signal content.</li>
+</ul>
+
+<h3>3. Extract and classify</h3>
+
+<p>For every selected source, extract:</p>
+
+<ul>
+<li>entity/entities mentioned;</li>
+<li>business line affected;</li>
+<li>metric affected;</li>
+<li>forecast implication;</li>
+<li>thesis impact;</li>
+<li>related entities;</li>
+<li>source confidence;</li>
+<li>whether it updates wiki, thesis, CSV, financial report, or relationships.</li>
+</ul>
+
+<h3>4. Update wiki, thesis, CSV, and report</h3>
+
+<p>Use LLM reasoning for synthesis. Use scripts for CSV writes, validation, duplicate checks, link checks, date handling, and report rendering.</p>
+
+<p>Update order:</p>
+
+<p>1. entity wiki pages;</p>
+<p>2. entity <code></code>;</p>
+<p>3. entity <code></code>;</p>
+<p>4. global <code></code>;</p>
+<p>5. entity <code></code>;</p>
+<p>6. <code></code>;</p>
+<p>7. <code></code> connection notes;</p>
+<p>8. daily reports.</p>
+
+<h3>5. Update synergies and connections</h3>
+
+<p>After entity updates, review relationships across all changed entities.</p>
+
+<p>Look for:</p>
+
+<ul>
+<li>shared suppliers;</li>
+<li>shared customers;</li>
+<li>commodity dependencies;</li>
+<li>regulatory dependencies;</li>
+<li>technology platform dependencies;</li>
+<li>substitutive or complementary markets;</li>
+<li>shared demand drivers;</li>
+<li>capital-market narrative links;</li>
+<li>people links;</li>
+<li>geopolitical links.</li>
+</ul>
+
+<p>Every new or changed relationship must include a <code></code> explanation and an evidence URL.</p>
+
+<h3>6. Generate daily report</h3>
+
+<p>Generate one global file:</p>
+
+<pre><code>
+reports/daily/report_YYYY-MM-DD.md
+</code></pre>
+
+<p>Also generate one per-entity file when that entity changed:</p>
+
+<pre><code>
+entities/&lt;entity_slug&gt;/daily_reports/report_YYYY-MM-DD.md
+</code></pre>
+
+<p>Daily report must include:</p>
+
+<ul>
+<li>date and run ID;</li>
+<li>entities processed;</li>
+<li>sources read, with HTML source links;</li>
+<li>sources skipped and why;</li>
+<li>modified files with Markdown links;</li>
+<li>new facts;</li>
+<li>thesis changes;</li>
+<li>CSV changes;</li>
+<li>relationship changes;</li>
+<li>market mispricing/tendency signals;</li>
+<li>open questions;</li>
+<li>next retrieval hints.</li>
+</ul>
+
+<h3>7. Render GitHub Pages</h3>
+
+<p>Render Markdown to static HTML in <code></code>.</p>
+
+<p>Rules:</p>
+
+<ul>
+<li>preserve Markdown source links;</li>
+<li>generate index pages for entities, reports, relationships, and estimates;</li>
+<li>keep generated pages deterministic;</li>
+<li>do not manually edit generated files.</li>
+</ul>
+
+<h3>8. Maintenance</h3>
+
+<p>Run maintenance when scripts, templates, AGENTS.md, PLAN.md, or skills are inconsistent with observed workflow needs.</p>
+
+<p>Maintenance tasks:</p>
+
+<ul>
+<li>validate CSV schemas;</li>
+<li>detect missing entity files;</li>
+<li>detect stale source logs;</li>
+<li>detect broken internal Markdown links;</li>
+<li>detect repeated sources;</li>
+<li>detect missing relationship explanations;</li>
+<li>detect missing bullish/normal/bearish forecast fields;</li>
+<li>propose changes to skills/scripts/templates;</li>
+<li>update docs when conventions change.</li>
+</ul>
+
+<h3>9. Commit and push</h3>
+
+<p>When the daily run produces changes:</p>
+
+<pre><code>
+git status --short
+git add AGENTS.md PLAN.md index.md data templates entities reports skills bin docs
+git commit -m "Update worldmodel daily report YYYY-MM-DD"
+git push
+</code></pre>
+
+<p>For entity seeding:</p>
+
+<pre><code>
+git commit -m "Seed &lt;entity&gt; entity"
+</code></pre>
+
+<p>For maintenance:</p>
+
+<pre><code>
+git commit -m "Maintain worldmodel automation"
+</code></pre>
+
+<p>Remote target:</p>
+
+<pre><code>
+https://github.com/Kabutojira/worldmodel
+</code></pre>
+
+<h2>Entity addition workflow</h2>
+
+<p>When a new entity is added:</p>
+
+<p>1. create the entity entry in <code></code>;</p>
+<p>2. add a row to <code></code>;</p>
+<p>3. create <code></code> from templates;</p>
+<p>4. search primary sources first:</p>
+<p>   - investor relations;</p>
+<p>   - filings;</p>
+<p>   - annual reports;</p>
+<p>   - quarterly reports;</p>
+<p>   - investor presentations;</p>
+<p>   - earnings-call transcripts;</p>
+<p>   - official blogs or technical reports;</p>
+<p>5. search in-depth external research;</p>
+<p>6. seed wiki pages;</p>
+<p>7. seed <code></code> with bearish/normal/bullish scenarios;</p>
+<p>8. seed <code></code>;</p>
+<p>9. create initial estimates rows;</p>
+<p>10. identify connected entities;</p>
+<p>11. rank connected entities by importance;</p>
+<p>12. recursively seed the most important connected entities when they materially affect the original thesis.</p>
+
+<p>Do not recursively explode the graph. Add only entities with clear thesis impact.</p>
+
+<h2>Initial entity: Tesla</h2>
+
+<p>Seed <code></code> as the first company entity.</p>
+
+<p>Suggested slug:</p>
+
+<pre><code>
+tesla
+</code></pre>
+
+<p>Suggested type:</p>
+
+<pre><code>
+company
+</code></pre>
+
+<p>Suggested search keywords:</p>
+
+<ul>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>;</li>
+<li><code></code>.</li>
+</ul>
+
+<p>Initial connected entities to consider:</p>
+
+<ul>
+<li>lithium — battery input cost and supply constraint;</li>
+<li>automotive market — core revenue pool and competitive benchmark;</li>
+<li>EV market — demand growth and adoption curve;</li>
+<li>battery storage market — Tesla Energy growth driver;</li>
+<li>autonomous driving / robotaxi — optionality and valuation narrative;</li>
+<li>humanoid robotics / Optimus — long-duration optionality;</li>
+<li>charging infrastructure — ecosystem moat and service revenue;</li>
+<li>Panasonic — historical battery supplier;</li>
+<li>CATL — battery supply and chemistry benchmark;</li>
+<li>LG Energy Solution — battery supply;</li>
+<li>BYD — EV competitor and battery competitor;</li>
+<li>Nvidia — AI compute dependency and autonomy benchmark;</li>
+<li>Elon Musk — key-person, governance, brand, and capital-market narrative link.</li>
+</ul>
+
+<p>Each connected entity must be justified in <code></code> and <code></code> before being tracked as active.</p>
+
+<h2>Script rules</h2>
+
+<p>Write Python scripts for deterministic work:</p>
+
+<ul>
+<li>parsing <code></code>;</li>
+<li>validating CSV schemas;</li>
+<li>fetching source metadata;</li>
+<li>deduplicating URLs by canonical URL and content hash;</li>
+<li>scoring source recency;</li>
+<li>scoring source quality by configured source type;</li>
+<li>generating blank entity directories from templates;</li>
+<li>merging entity estimates into global CSV;</li>
+<li>rendering Markdown to HTML;</li>
+<li>checking links;</li>
+<li>creating commits.</li>
+</ul>
+
+<p>Do not use LLMs for:</p>
+
+<ul>
+<li>CSV formatting;</li>
+<li>sorting;</li>
+<li>date parsing;</li>
+<li>schema validation;</li>
+<li>file discovery;</li>
+<li>duplicate detection;</li>
+<li>HTML rendering;</li>
+<li>Git operations.</li>
+</ul>
+
+<p>Use LLMs for:</p>
+
+<ul>
+<li>source understanding;</li>
+<li>source relevance classification;</li>
+<li>thesis changes;</li>
+<li>relationship reasoning;</li>
+<li>market mispricing detection;</li>
+<li>entity discovery;</li>
+<li>report synthesis;</li>
+<li>maintenance recommendations.</li>
+</ul>
+
+<h2>Source and copyright rules</h2>
+
+<ul>
+<li>Do not store full copyrighted articles.</li>
+<li>Keep source URL, title, author, publication date, retrieval date, short summary, and extracted facts.</li>
+<li>Quote only short snippets when necessary.</li>
+<li>Prefer paraphrase with source link.</li>
+<li>Mark paywalled or access-limited sources in <code></code>.</li>
+<li>Keep enough metadata to re-find the source later.</li>
+</ul>
+
+<h2>Data-quality rules</h2>
+
+<p>Every non-obvious fact in a report must have a source URL.</p>
+
+<p>Every estimate must include:</p>
+
+<ul>
+<li>source URL or explicit model note;</li>
+<li>scenario type;</li>
+<li>year;</li>
+<li>unit;</li>
+<li>confidence;</li>
+<li>updated date.</li>
+</ul>
+
+<p>Every relationship must include:</p>
+
+<ul>
+<li>mechanism;</li>
+<li>why it matters;</li>
+<li>evidence URL;</li>
+<li>last reviewed date.</li>
+</ul>
+
+<p>When evidence conflicts, preserve both views and mark uncertainty.</p>
+
+<h2>Mispricing and tendency detection</h2>
+
+<p>Daily reports should explicitly identify possible market mispricing or emerging tendency signals.</p>
+
+<p>Examples:</p>
+
+<ul>
+<li>market size growing faster than consensus narrative;</li>
+<li>margin pressure not reflected in valuation;</li>
+<li>supplier bottleneck not priced into dependent company;</li>
+<li>commodity cost trend improving or worsening unit economics;</li>
+<li>adjacent entity signal that changes another entity’s thesis;</li>
+<li>optionality narrative expanding without corresponding revenue evidence;</li>
+<li>earnings estimate revision risk.</li>
+</ul>
+
+<p>Use cautious language. Separate evidence from inference.</p>
+
+<h2>Maintenance triggers</h2>
+
+<p>Run maintenance when any of these occur:</p>
+
+<ul>
+<li>script failure;</li>
+<li>malformed CSV;</li>
+<li>missing required entity files;</li>
+<li>repeated source URLs;</li>
+<li>stale report date;</li>
+<li>relationship without explanation;</li>
+<li>estimates without scenario fields;</li>
+<li>daily report missing modified-file links;</li>
+<li>skill instructions diverge from actual repo layout;</li>
+<li>templates are missing fields used by scripts;</li>
+<li>GitHub Pages render fails.</li>
+</ul>
+
+<h2>Done criteria for a daily run</h2>
+
+<p>A daily run is complete only when:</p>
+
+<ul>
+<li>all active entities were checked or explicitly skipped with reason;</li>
+<li>maximum 10 selected new sources per entity were processed;</li>
+<li>source metadata was logged;</li>
+<li>wiki/thesis/CSV/report files were updated when needed;</li>
+<li>relationships were reviewed;</li>
+<li>daily reports were generated;</li>
+<li>GitHub Pages output was rendered;</li>
+<li>maintenance checks passed or maintenance issues were reported;</li>
+<li>changes were committed and pushed.</li>
+</ul>
+
+</body>
+</html>
