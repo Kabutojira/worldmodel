@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "title": "Tesla discussion thread in a public or exported Discord source",
+      "url": "https://discord.com/channels/<guild>/<channel>/<message>",
+      "keywords": ["tesla", "tsla", "robotaxi", "fsd"]
+    }
+  ]
+}

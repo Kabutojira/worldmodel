@@ -56,6 +56,28 @@ python3 bin/worldmodel_init_entity.py --name "Entity Name" --slug entity-slug --
 python3 bin/worldmodel_retrieve.py --all-active --since-last-report --out .worldmodel/candidates.json
 </code></pre>
 
+<p>Current adapters include:</p>
+
+<ul>
+<li>investor relations / official pages;</li>
+<li>SEC filings and companyfacts for Tesla seed;</li>
+<li>deterministic Seeking Alpha symbol / analysis / transcript endpoints by ticker;</li>
+<li>optional Discord watchlist ingestion from <code></code> (template: <code></code>);</li>
+<li>YouTube channel metadata candidates sourced from:</li>
+</ul>
+<p>  - All-In Podcast;</p>
+<p>  - The Limiting Factor.</p>
+
+<h3>2b. Fetch local YouTube transcript cache</h3>
+
+<p>Keep full transcripts out of the git-tracked repository. Cache them under <code></code> for LLM reading and citation extraction.</p>
+
+<pre><code>
+python3 bin/worldmodel_youtube_transcripts.py --channel all-in --channel the-limiting-factor --max-videos 3 --keywords "Tesla,TSLA,Elon,FSD,robotaxi,4680,Megapack,Supercharger"
+</code></pre>
+
+<p>Run transcript fetch before retrieval if you want <code></code> to see cached transcript paths.</p>
+
 <h3>3. Rank sources</h3>
 
 <pre><code>

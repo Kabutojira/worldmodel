@@ -14,6 +14,11 @@ SOURCE_QUALITY = {
     "investor_presentation": 0.95,
     "trade_publication": 0.8,
     "deep_dive": 0.7,
+    "seeking_alpha": 0.7,
+    "youtube_transcript": 0.75,
+    "youtube_video": 0.55,
+    "discord_public": 0.35,
+    "discord_watchlist": 0.45,
     "news": 0.5,
     "x_post": 0.3,
 }
@@ -22,18 +27,25 @@ SOURCE_QUALITY = {
 def score_relevance(candidate: dict[str, object], entity_name: str) -> float:
     title = str(candidate.get("title", "")).lower()
     url = str(candidate.get("url", "")).lower()
+    source_type = str(candidate.get("source_type", ""))
     score = 0.6
     if entity_name.lower() in title:
         score += 0.2
     if entity_name.lower() in url:
         score += 0.1
-    if any(token in title for token in ["investor", "sec", "ai", "supercharger"]):
+    if any(token in title for token in ["investor", "sec", "ai", "supercharger", "tesla", "elon", "robotaxi", "battery"]):
         score += 0.1
+    if source_type == "youtube_transcript":
+        score += 0.05
     return min(score, 1.0)
 
 
 def score_recency(candidate: dict[str, object]) -> float:
-    return 0.5 if candidate.get("already_logged") else 0.9
+    if candidate.get("already_processed"):
+        return 0.2
+    if candidate.get("already_logged"):
+        return 0.5
+    return 0.9
 
 
 def main() -> int:
@@ -69,8 +81,8 @@ def main() -> int:
                 skipped.append(item)
                 continue
             seen_hashes.add(item["hash"])
-            if item.get("already_logged"):
-                item["skip_reason"] = "already in source log"
+            if item.get("already_processed"):
+                item["skip_reason"] = "already used in update"
                 skipped.append(item)
                 continue
             if len(selected) >= args.limit_per_entity:
