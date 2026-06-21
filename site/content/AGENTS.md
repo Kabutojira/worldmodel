@@ -19,6 +19,7 @@ Use scripts for deterministic work and LLM reasoning only where synthesis, class
 
 ```text
 /
+├── README.md
 ├── AGENTS.md
 ├── PLAN.md
 ├── index.md
@@ -27,6 +28,8 @@ Use scripts for deterministic work and LLM reasoning only where synthesis, class
 │   ├── relationships.csv
 │   ├── estimates.csv
 │   ├── source_log.csv
+│   ├── source_history.csv
+│   ├── source_registry.csv
 │   └── daily_runs.csv
 ├── templates/
 │   ├── entity.md
@@ -181,6 +184,30 @@ source_id,entity_slug,title,source_name,source_type,url,author,published_at,retr
 
 Do not store complete article bodies. Store URLs, metadata, short summaries, and citations.
 
+### `source_history.csv`
+
+Deterministic source-state memory across daily runs.
+
+Required columns:
+
+```csv
+history_key,source_id,entity_slug,title,source_name,source_type,url,first_seen_at,last_seen_at,last_selected_at,last_used_at,times_seen,times_selected,times_used,current_state,notes
+```
+
+Use this to avoid repeatedly treating the same source as new work.
+
+### `source_registry.csv`
+
+Systematic watchlist of recurring sources to scan.
+
+Required columns:
+
+```csv
+source_id,platform,name,url,priority,entities,source_type,quality_notes,bias_notes,retrieval_frequency
+```
+
+Use this file for YouTube channels, Substacks, X accounts, and other recurring feeds/pages that should be checked on a schedule.
+
 ## Entity directory contract
 
 Each tracked entity must have `entities/<entity_slug>/`.
@@ -249,6 +276,8 @@ Use scripts to parse:
 - `index.md`;
 - `data/entities.csv`;
 - each entity `source_log.csv`;
+- `data/source_history.csv`;
+- `data/source_registry.csv`;
 - `data/daily_runs.csv`.
 
 Determine `last_report_date` and `last_retrieval_at` for every active entity.
@@ -271,7 +300,8 @@ Default source families:
 - specialist research;
 - company blogs;
 - credible interviews;
-- conference presentations.
+- conference presentations;
+- recurring sources listed in `data/source_registry.csv`.
 
 Rules:
 

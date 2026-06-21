@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T09:39:10Z",
+  "generated_at": "2026-06-21T12:33:42Z",
   "nodes": [
     {
       "id": "abb_robotics",
@@ -11186,6 +11186,14 @@
       "exists": true
     },
     {
+      "id": "worldmodel_graph.json",
+      "label": "worldmodel_graph.json",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/worldmodel_graph.json/",
+      "exists": false
+    },
+    {
       "id": "xai",
       "label": "xAI",
       "type": "private_company",
@@ -15208,8 +15216,8 @@
       "target": "battery_storage",
       "type": "demand_driver",
       "importance": "high",
-      "why": "Battery energy storage shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.",
-      "evidence_url": "https://www.iea.org/reports/energy-and-ai"
+      "why": "Large AI loads create reliability problems in addition to raw demand growth, which makes storage more economically relevant as a buffering and control layer rather than just a renewables accessory.",
+      "evidence_url": "https://www.volts.wtf/p/why-is-nerc-so-worried-about-data"
     },
     {
       "source": "datacenters",
@@ -15272,8 +15280,8 @@
       "target": "electricity_grid",
       "type": "technology_dependency",
       "importance": "high",
-      "why": "Electricity grid is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.",
-      "evidence_url": "https://www.iea.org/reports/energy-and-ai"
+      "why": "The bottleneck shifted from generic AI demand toward site-specific time-to-power, long-lead electrical equipment, and grid reliability management.",
+      "evidence_url": "https://newsletter.semianalysis.com/p/stop-saying-half-of-2026-us-datacenter"
     },
     {
       "source": "datacenters",
@@ -15400,8 +15408,8 @@
       "target": "natural_gas",
       "type": "cost_input",
       "importance": "high",
-      "why": "Natural gas affects AI data centers cost, supply security, or pricing through critical material exposure and procurement risk.",
-      "evidence_url": "https://www.iea.org/reports/energy-and-ai"
+      "why": "Brownfield and co-located gas solutions can shorten time-to-power when transmission, interconnection, or clean-firm alternatives are too slow.",
+      "evidence_url": "https://www.construction-physics.com/p/converting-coal-plants-to-natural"
     },
     {
       "source": "datacenters",
@@ -15528,8 +15536,8 @@
       "target": "transformers",
       "type": "technology_dependency",
       "importance": "high",
-      "why": "Power transformers is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.",
-      "evidence_url": "https://www.iea.org/reports/energy-and-ai"
+      "why": "Procurement discipline around electrical equipment is separating real buildout from headline capacity because these components are being reserved much earlier in project timelines.",
+      "evidence_url": "https://newsletter.semianalysis.com/p/stop-saying-half-of-2026-us-datacenter"
     },
     {
       "source": "datacenters",
@@ -15864,8 +15872,8 @@
       "target": "battery_storage",
       "type": "demand_driver",
       "importance": "high",
-      "why": "Battery energy storage shapes Electricity grid demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.",
-      "evidence_url": "https://www.energy.gov/gdo/grid-deployment-office"
+      "why": "NERC's concern is not only capacity growth but sudden large load changes, which raises the value of assets that smooth disturbances and improve reliability.",
+      "evidence_url": "https://www.volts.wtf/p/why-is-nerc-so-worried-about-data"
     },
     {
       "source": "electricity_grid",
@@ -15928,8 +15936,8 @@
       "target": "datacenters",
       "type": "technology_dependency",
       "importance": "high",
-      "why": "AI data centers is a physical bottleneck or enabling network that influences Electricity grid scaling, utilization, and returns.",
-      "evidence_url": "https://www.energy.gov/gdo/grid-deployment-office"
+      "why": "Very large computational loads can ramp down by hundreds of megawatts in moments, creating frequency and voltage management problems that utilities and reliability bodies must plan around.",
+      "evidence_url": "https://www.volts.wtf/p/why-is-nerc-so-worried-about-data"
     },
     {
       "source": "electricity_grid",
@@ -15937,14 +15945,6 @@
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "electricity_grid",
-      "target": "electricity_grid",
-      "type": "related",
-      "importance": "",
-      "why": "Derived from markdown link between generated site pages.",
       "evidence_url": ""
     },
     {
@@ -15984,8 +15984,8 @@
       "target": "natural_gas",
       "type": "cost_input",
       "importance": "high",
-      "why": "Natural gas affects Electricity grid cost, supply security, or pricing through critical material exposure and procurement risk.",
-      "evidence_url": "https://www.energy.gov/gdo/grid-deployment-office"
+      "why": "Existing coal sites with interconnection, water access, and transmission links can be converted faster than entirely new projects, making gas a practical bridge in the AI-power buildout.",
+      "evidence_url": "https://www.construction-physics.com/p/converting-coal-plants-to-natural"
     },
     {
       "source": "electricity_grid",
@@ -16080,8 +16080,8 @@
       "target": "transformers",
       "type": "technology_dependency",
       "importance": "high",
-      "why": "Power transformers is a physical bottleneck or enabling network that influences Electricity grid scaling, utilization, and returns.",
-      "evidence_url": "https://www.energy.gov/gdo/grid-deployment-office"
+      "why": "Even when capital and generation plans exist, long-lead electrical equipment slows practical grid expansion and data-center energization.",
+      "evidence_url": "https://www.apricitas.io/p/americas-electricity-gap"
     },
     {
       "source": "electricity_grid",
@@ -18894,6 +18894,14 @@
     {
       "source": "google",
       "target": "xai",
+      "type": "wikilink",
+      "importance": "",
+      "why": "Derived from wikilink between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "graph",
+      "target": "worldmodel_graph.json",
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
@@ -37041,6 +37049,14 @@
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "tsmc",
+      "target": "tsmc",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
       "evidence_url": ""
     },
     {

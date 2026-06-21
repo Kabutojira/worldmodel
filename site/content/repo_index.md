@@ -77,9 +77,9 @@ This file is the canonical registry of tracked entities, search keywords, and co
   - Nuclear power: Nuclear power shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
   - Battery energy storage: Battery energy storage shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
   - Power transformers: Power transformers is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.
-- Last retrieval: 2026-06-21T09:58:46Z
+- Last retrieval: 2026-06-21T12:13:16Z
 - Last report: 2026-06-21
-- Notes: Physical bottleneck for AI scaling; bridges compute and energy. Latest daily update: thesis shifted further from generic AI demand toward power, transformer, gas, and grid bottlenecks.
+- Notes: Physical bottleneck for AI scaling; bridges compute and energy. Latest daily update: demand did not break, but the bottleneck thesis moved further toward time-to-power, transformer lead times, reliability management, and brownfield gas/storage bridges.
 
 ## ASML
 
@@ -357,9 +357,9 @@ This file is the canonical registry of tracked entities, search keywords, and co
   - Battery energy storage: Battery energy storage shapes Electricity grid demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
   - Copper: Copper affects Electricity grid cost, supply security, or pricing through critical material exposure and procurement risk.
   - Power transformers: Power transformers is a physical bottleneck or enabling network that influences Electricity grid scaling, utilization, and returns.
-- Last retrieval: 2026-06-20T21:36:24Z
-- Last report: 2026-06-20
-- Notes: AI and electrification bottleneck. Bootstrap depth 2; refine with daily runs and source-backed numeric extraction.
+- Last retrieval: 2026-06-21T12:13:16Z
+- Last report: 2026-06-21
+- Notes: AI and electrification bottleneck. Latest daily update: the node shifted from generic capacity shortage framing toward reliability risk from large AI loads, with transformers, storage, and gas repowering more central.
 
 ## Elon Musk
 

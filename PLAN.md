@@ -118,6 +118,10 @@ Required behavior:
 
 Purpose: collect candidate source metadata for each active entity.
 
+Completed improvement on 2026-06-21:
+
+- retrieval now only seeds synthetic investor-relations URLs for company-like entities (`company`, `private_company`, `supplier`, `customer`) so thematic nodes such as markets, sectors, people, and commodities are not polluted by fake IR placeholders.
+
 Required behavior:
 
 - parse `index.md` and `data/entities.csv`;
@@ -168,6 +172,10 @@ Required behavior:
 ### `bin/worldmodel_generate_report.py`
 
 Purpose: generate deterministic global and per-entity daily report skeletons from ranked source output.
+
+Completed improvement on 2026-06-21:
+
+- daily report scaffolds now quarantine operational and maintenance details in an appendix so the main body can be rewritten as content-first investment intelligence rather than a pipeline log.
 
 Required behavior:
 

@@ -2,67 +2,74 @@
 
 ## Entity summary
 
-The daily update strengthens a core WorldModel claim: AI demand is real, but the investable bottleneck is increasingly **electricity and power delivery**, not just chips. Data-center economics now need to be read through both TSMC/Nvidia and the grid/transformer/gas/storage stack.[^power-gap][^taiwan]
+The AI-data-center thesis still works, but the simplistic version got weaker. The investable map is less about a blanket "AI buildout boom" and more about **which projects can secure long-lead electrical equipment, interconnection, and stable power fast enough to turn demand into revenue**.[^semianalysis][^nerc][^coal-gas]
 
 ## Business lines
 
 - **Capacity buildout:** hyperscaler and frontier-lab training/inference clusters.
-- **Power stack:** generation access, backup/co-located power, storage, and interconnection.
-- **Infrastructure bottlenecks:** transformers, transmission, cooling, and site readiness.
+- **Power stack:** generation access, backup/co-located power, storage, grid-services capability, and interconnection.
+- **Infrastructure bottlenecks:** transformers, switchgear, transmission, cooling, and site readiness.
+- **Reliability / controls:** software, operational controls, and storage that reduce grid stress from abrupt AI-load swings.
 
 ## Latest operating facts
 
-- Apricitas reports US power consumption has risen more in the last two years than in the previous fifteen combined.[^power-gap]
-- The same piece says EIA projections imply only **4.6%** total generation growth over the next two years, still not enough to close the gap.[^power-gap]
-- It also states US solar generation rose **28% to 389 TWh** in 2025, yet power demand still outpaced infrastructure growth, with residential electricity prices up **more than 40% since 2020**.[^power-gap]
-- For the semiconductor side, Taiwan's GDP rose at a **23.6% annualized rate in Q4 2025**, gross exports exceeded **$63B/month**, and manufacturing neared **40%** of the economy as AI-chip demand surged through TSMC.[^taiwan]
+- SemiAnalysis argues the viral claim that half of 2026 US data-center capacity is being canceled is an overgeneralization built from weak synthesis rather than a disciplined review of individual project filings.[^semianalysis]
+- The same piece says hyperscalers increasingly lock in long-lead transformers and MV/LV switchgear early, which means bottleneck ownership and procurement discipline matter more than generic capex headlines.[^semianalysis]
+- Volts summarizes NERC's warning that giant AI computational loads can abruptly drop hundreds of megawatts in a blink, creating a new reliability problem beyond ordinary demand growth.[^nerc]
+- Construction Physics explains that coal-to-gas repowering can reuse existing interconnection and water access, making brownfield sites a practical route to faster dispatchable capacity in some regions.[^coal-gas]
+- Apricitas argues US power consumption rose more in the last two years than in the previous fifteen combined, while EIA projections imply only 4.6% total generation growth over the next two years.[^power-gap]
 
 ## Forecast table
 
-| Scenario | Revenue / utilization path | Return profile | What matters most | Confidence |
+| Scenario | Capacity / utilization path | Return profile | What matters most | Confidence |
 |---|---|---|---|---|
-| Bearish | Capacity additions lag power constraints | Returns compress on power cost and delays | Grid bottlenecks dominate | Medium |
-| Base | AI demand stays strong but unevenly monetized | Bottleneck owners outperform generic exposure | Power + TSMC remain core constraints | Medium-High |
-| Bullish | Capacity demand persists and scarcity pricing stays real | Infrastructure and select chip bottlenecks earn excess returns | Power access becomes the decisive moat | Medium |
+| Bearish | Demand stays high but projects slip on electrical and grid constraints | Operators overpay for land/power and monetize slowly | Transformer lead times, interconnection, reliability events | Medium |
+| Base | AI demand remains real; cancellations are overstated; energization becomes the real gate | Bottleneck owners and advantaged sites outperform generic AI exposure | Long-lead electrical equipment, gas/storage bridge assets, utility relationships | Medium-High |
+| Bullish | Demand persists and the best operators solve power/logistics faster than expected | Scarcity rents accrue to power-connected and procurement-disciplined builders | Time-to-power becomes the decisive moat | Medium |
 
 ## Valuation framing
 
 - Generic "AI infrastructure" exposure is too coarse.
-- The market may still be pricing GPUs more efficiently than it prices **time-to-power**.
+- The market may be better at pricing GPUs than **project energization risk**.
+- Operators with real power access and equipment procurement discipline deserve higher quality multiples than operators with only announced capacity.
 
 ## Market expectations
 
-- Consensus understands AI capex; it may not fully understand the timeline mismatch between load growth and power/grid buildout.
+- Consensus still tends to flatten the story into either "infinite AI demand" or "AI buildout is getting canceled."
+- The more practical read is that demand remains strong while project-level timing and electrical bottlenecks separate winners from losers.[^semianalysis]
 
 ## Possible mispricing
 
-- **Underappreciated winners:** transformers, battery storage, dispatchable gas, and high-quality power-connected sites.
-- **Underappreciated risk:** hyperscaler/lab capacity plans that assume faster grid buildout than local infrastructure allows.
-- **Second-order signal:** TSMC/Taiwan macro data suggest advanced-chip demand is so concentrated that geopolitical and supply-chain risk remains structurally underdiversified.[^taiwan]
+- **Underappreciated winners:** transformer suppliers, switchgear/electrical-equipment bottlenecks, brownfield sites with reusable interconnection, battery-storage systems that improve power quality, and dispatchable gas capacity in constrained regions.[^semianalysis][^nerc][^coal-gas]
+- **Underappreciated risk:** developers or tenants whose announced AI capacity assumes grid timelines and equipment availability that local systems cannot deliver.
+- **Narrative trap:** confusing project delays with demand destruction.
 
 ## Major risks
 
-- Policy distortion around tariffs, permits, or grid equipment worsens the bottleneck.[^power-gap]
+- Power and equipment bottlenecks ease faster than expected, compressing scarcity economics.
 - AI capex demand cools before infrastructure scarcity can be monetized.
-- Taiwan concentration becomes a harder constraint than currently modeled.
+- Regulatory pushback on gas-heavy bridging strategies slows the fastest path to power.
 
 ## Connected-entity implications
 
 - **Nvidia / TSMC / ASML:** still core upstream winners, but no longer the whole story.
-- **Electricity grid / transformers / natural gas / nuclear / battery storage:** rising from background context to primary thesis variables.
-- **Tesla / xAI / Amazon / Google / Microsoft / Meta / OpenAI / Anthropic:** all become partially power-procurement stories, not just software or compute stories.
+- **Electricity grid / transformers / natural gas / battery storage:** moved closer to the center of the thesis because reliability and energization now matter as much as aggregate demand.[^nerc]
+- **Tesla / xAI / Amazon / Google / Microsoft / Meta / OpenAI / Anthropic:** increasingly become power-procurement and load-management stories, not just model or compute stories.
 
 ## Open questions
 
-- Which regions can actually energize new AI capacity fastest?
-- Which companies control bottleneck equipment rather than merely demanding it?
-- How quickly can non-Taiwan advanced-node capacity reduce concentration risk?
+- Which listed operators truly control time-to-power rather than just leasing space?
+- Which utilities or regions are developing rules for abrupt AI-load swings fastest?
+- Which electrical-equipment bottlenecks remain hardest to substitute around?
 
 ## Sources
 
+- <a href="https://newsletter.semianalysis.com/p/stop-saying-half-of-2026-us-datacenter">SemiAnalysis: Stop Saying Half of 2026 US Datacenter Capacity Is Canceled</a>
+- <a href="https://www.volts.wtf/p/why-is-nerc-so-worried-about-data">Volts: Why is NERC so worried about data centers?</a>
+- <a href="https://www.construction-physics.com/p/converting-coal-plants-to-natural">Construction Physics: Converting Coal Plants to Natural Gas</a>
 - <a href="https://www.apricitas.io/p/americas-electricity-gap">Apricitas: America's Electricity Gap</a>
-- <a href="https://www.apricitas.io/p/taiwans-modern-miracle">Apricitas: Taiwan's Modern Miracle</a>
-- <a href="https://www.youtube.com/watch?v=IIwu1U8oepc">The Limiting Factor: Why is Elon's xAI Using Gas Generation Instead of Solar?</a>
 
+[^semianalysis]: SemiAnalysis, "Stop Saying Half of 2026 US Datacenter Capacity Is Canceled," 2026-06-18: https://newsletter.semianalysis.com/p/stop-saying-half-of-2026-us-datacenter
+[^nerc]: David Roberts, "Why is NERC so worried about data centers?" Volts, 2026-06-10: https://www.volts.wtf/p/why-is-nerc-so-worried-about-data
+[^coal-gas]: Brian Potter, "Converting Coal Plants to Natural Gas," Construction Physics, 2026-06-19: https://www.construction-physics.com/p/converting-coal-plants-to-natural
 [^power-gap]: Joseph Politano, "America's Electricity Gap," Apricitas, 2026-05-03: https://www.apricitas.io/p/americas-electricity-gap
-[^taiwan]: Joseph Politano, "Taiwan's Modern Miracle," Apricitas, 2026-03-05: https://www.apricitas.io/p/taiwans-modern-miracle

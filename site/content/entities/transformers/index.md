@@ -17,8 +17,8 @@ Power transformers is tracked as a system-level node because Grid expansion bott
 - [[entities/transformers/index|Power transformers]] → [[entities/electricity_grid/index|Electricity grid]]: Electricity grid is a physical bottleneck or enabling network that influences Power transformers scaling, utilization, and returns.
 - [[entities/transformers/index|Power transformers]] → [[entities/energy/index|Energy]]: Energy shapes Power transformers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
 - [[entities/transformers/index|Power transformers]] → [[entities/steel/index|Steel]]: Steel affects Power transformers cost, supply security, or pricing through critical material exposure and procurement risk.
-- [[entities/datacenters/index|AI data centers]] → [[entities/transformers/index|Power transformers]]: Power transformers is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.
-- [[entities/electricity_grid/index|Electricity grid]] → [[entities/transformers/index|Power transformers]]: Power transformers is a physical bottleneck or enabling network that influences Electricity grid scaling, utilization, and returns.
+- [[entities/datacenters/index|AI data centers]] → [[entities/transformers/index|Power transformers]]: Procurement discipline around electrical equipment is separating real buildout from headline capacity because these components are being reserved much earlier in project timelines.
+- [[entities/electricity_grid/index|Electricity grid]] → [[entities/transformers/index|Power transformers]]: Even when capital and generation plans exist, long-lead electrical equipment slows practical grid expansion and data-center energization.
 - [[entities/steel/index|Steel]] → [[entities/transformers/index|Power transformers]]: Power transformers is a physical bottleneck or enabling network that influences Steel scaling, utilization, and returns.
 
 ## Latest reports

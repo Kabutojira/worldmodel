@@ -16,8 +16,8 @@ Natural gas is tracked as a key input and pricing signal because Flexible power 
 - [[entities/natural_gas/index|Natural gas]] → [[entities/electricity_grid/index|Electricity grid]]: Electricity grid is a physical bottleneck or enabling network that influences Natural gas scaling, utilization, and returns.
 - [[entities/natural_gas/index|Natural gas]] → [[entities/energy/index|Energy]]: Energy shapes Natural gas demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
 - [[entities/natural_gas/index|Natural gas]] → [[entities/oil/index|Oil]]: Oil affects Natural gas cost, supply security, or pricing through critical material exposure and procurement risk.
-- [[entities/datacenters/index|AI data centers]] → [[entities/natural_gas/index|Natural gas]]: Natural gas affects AI data centers cost, supply security, or pricing through critical material exposure and procurement risk.
-- [[entities/electricity_grid/index|Electricity grid]] → [[entities/natural_gas/index|Natural gas]]: Natural gas affects Electricity grid cost, supply security, or pricing through critical material exposure and procurement risk.
+- [[entities/datacenters/index|AI data centers]] → [[entities/natural_gas/index|Natural gas]]: Brownfield and co-located gas solutions can shorten time-to-power when transmission, interconnection, or clean-firm alternatives are too slow.
+- [[entities/electricity_grid/index|Electricity grid]] → [[entities/natural_gas/index|Natural gas]]: Existing coal sites with interconnection, water access, and transmission links can be converted faster than entirely new projects, making gas a practical bridge in the AI-power buildout.
 - [[entities/energy/index|Energy]] → [[entities/natural_gas/index|Natural gas]]: Natural gas affects Energy cost, supply security, or pricing through critical material exposure and procurement risk.
 - [[entities/oil/index|Oil]] → [[entities/natural_gas/index|Natural gas]]: Natural gas affects Oil cost, supply security, or pricing through critical material exposure and procurement risk.
 

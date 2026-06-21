@@ -319,14 +319,17 @@ def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[st
     slug = str(entity["slug"])
     name = str(entity["name"])
     ticker = str(entity.get("ticker", "")).strip()
-    seeds: list[dict[str, object]] = [
-        {
-            "title": f"{name} Investor Relations",
-            "source_name": name,
-            "source_type": "investor_relations",
-            "url": f"https://www.{slug}.com/investor-relations" if slug != "tesla" else "https://ir.tesla.com",
-        },
-    ]
+    entity_type = str(entity.get("type", "")).strip().lower()
+    seeds: list[dict[str, object]] = []
+    if entity_type in {"company", "private_company", "supplier", "customer"}:
+        seeds.append(
+            {
+                "title": f"{name} Investor Relations",
+                "source_name": name,
+                "source_type": "investor_relations",
+                "url": f"https://www.{slug}.com/investor-relations" if slug != "tesla" else "https://ir.tesla.com",
+            }
+        )
     if slug == "tesla":
         seeds.extend([
             {"title": "Tesla SEC filings", "source_name": "SEC", "source_type": "filing_index", "url": "https://www.sec.gov/edgar/browse/?CIK=1318605&owner=exclude"},
