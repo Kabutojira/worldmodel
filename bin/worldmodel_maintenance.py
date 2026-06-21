@@ -117,9 +117,9 @@ def find_source_registry_gaps() -> list[str]:
         findings.append(f"missing source registry: {path}")
         return findings
     validate_header(path, SOURCE_REGISTRY_HEADER)
-    allowed_platforms = {"youtube", "substack", "x", "web", "filing", "investor_relations", "podcast"}
+    allowed_platforms = {"youtube", "substack", "x", "web", "website", "filing", "investor_relations", "podcast"}
     allowed_priorities = {"P0", "P1", "P2", "P3"}
-    allowed_frequencies = {"daily", "weekly", "monthly", "quarterly", "ad_hoc"}
+    allowed_frequencies = {"daily", "weekly", "monthly", "quarterly", "ad_hoc", "manual"}
     seen_ids = set()
     for row in read_csv(path):
         source_id = str(row.get("source_id", "")).strip()
