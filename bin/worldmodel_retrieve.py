@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import time
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -26,18 +27,22 @@ from worldmodel_common import (
     write_csv,
 )
 
-USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+USER_AGENT = "WorldModelBot/0.3 kabutojira@example.com"
 REQUEST_TIMEOUT = 20
 YT_NS = {"atom": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015", "media": "http://search.yahoo.com/mrss/"}
 YOUTUBE_FALLBACK_CHANNEL_IDS = {
     "https://www.youtube.com/@thelimitingfactor": "UCIFn7ONIJHyC-lMnb7Fm_jw",
     "https://www.youtube.com/@allin": "UCESLZhusAkFfsNsApnjF_Cg",
 }
+SEC_CACHE_DIR = ROOT / ".worldmodel" / "sec"
 
 
 def requests_session() -> requests.Session:
     session = requests.Session()
-    session.headers.update({"User-Agent": USER_AGENT})
+    session.headers.update({
+        "User-Agent": USER_AGENT,
+        "Accept-Encoding": "gzip, deflate",
+    })
     return session
 
 
@@ -45,6 +50,24 @@ def safe_get_text(url: str) -> str:
     resp = requests_session().get(url, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
     return resp.text
+
+
+def safe_get_json(url: str) -> dict[str, object] | list[object]:
+    resp = requests_session().get(url, timeout=REQUEST_TIMEOUT)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def cache_json(cache_path: Path, url: str, refresh_seconds: int = 86400) -> dict[str, object] | list[object]:
+    try:
+        if cache_path.exists() and time.time() - cache_path.stat().st_mtime <= refresh_seconds:
+            return json.loads(cache_path.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    data = safe_get_json(url)
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    return data
 
 
 def extract_actual_url(href: str) -> str:
@@ -83,6 +106,182 @@ def build_seeking_alpha_candidates(name: str, ticker: str) -> list[dict[str, obj
             "url": f"https://seekingalpha.com/symbol/{ticker}/earnings/transcripts",
         },
     ]
+
+
+def load_sec_ticker_map() -> dict[str, str]:
+    raw = cache_json(SEC_CACHE_DIR / "company_tickers.json", "https://www.sec.gov/files/company_tickers.json")
+    if not isinstance(raw, dict):
+        return {}
+    result: dict[str, str] = {}
+    for item in raw.values():
+        if not isinstance(item, dict):
+            continue
+        ticker = str(item.get("ticker", "")).strip().upper()
+        cik = str(item.get("cik_str", "")).strip()
+        if ticker and cik:
+            result[ticker] = cik.zfill(10)
+    return result
+
+
+def sec_cik_for_ticker(ticker: str) -> str:
+    ticker = ticker.strip().upper()
+    if not ticker or "." in ticker:
+        return ""
+    return load_sec_ticker_map().get(ticker, "")
+
+
+def sec_archive_base(cik: str, accession: str) -> str:
+    compact = accession.replace("-", "")
+    return f"https://www.sec.gov/Archives/edgar/data/{int(cik)}/{compact}"
+
+
+def sec_document_url(cik: str, accession: str, filename: str) -> str:
+    return f"{sec_archive_base(cik, accession)}/{filename}"
+
+
+def sec_recent_filings(cik: str) -> list[dict[str, str]]:
+    if not cik:
+        return []
+    data = cache_json(SEC_CACHE_DIR / f"submissions_{cik}.json", f"https://data.sec.gov/submissions/CIK{cik}.json", refresh_seconds=21600)
+    if not isinstance(data, dict):
+        return []
+    filings = data.get("filings", {})
+    if not isinstance(filings, dict):
+        return []
+    recent = filings.get("recent", {})
+    if not isinstance(recent, dict):
+        return []
+    keys = ["filingDate", "form", "accessionNumber", "primaryDocument", "primaryDocDescription"]
+    lists = [recent.get(key, []) for key in keys]
+    if not all(isinstance(items, list) for items in lists):
+        return []
+    length = min(len(items) for items in lists)
+    rows = []
+    for idx in range(length):
+        rows.append({
+            "filing_date": str(recent["filingDate"][idx]),
+            "form": str(recent["form"][idx]),
+            "accession": str(recent["accessionNumber"][idx]),
+            "primary_document": str(recent["primaryDocument"][idx]),
+            "description": str(recent["primaryDocDescription"][idx]),
+        })
+    return rows
+
+
+def latest_recent_form(filings: list[dict[str, str]], forms: set[str]) -> dict[str, str] | None:
+    for filing in filings:
+        if filing.get("form") in forms:
+            return filing
+    return None
+
+
+def sec_index_documents(cik: str, accession: str) -> list[dict[str, str]]:
+    if not cik or not accession:
+        return []
+    data = cache_json(
+        SEC_CACHE_DIR / f"index_{cik}_{accession.replace('-', '')}.json",
+        f"{sec_archive_base(cik, accession)}/index.json",
+        refresh_seconds=21600,
+    )
+    if not isinstance(data, dict):
+        return []
+    directory = data.get("directory", {})
+    if not isinstance(directory, dict):
+        return []
+    items = directory.get("item", [])
+    if not isinstance(items, list):
+        return []
+    return [item for item in items if isinstance(item, dict)]
+
+
+def sec_exhibit_text(cik: str, accession: str, filename: str) -> str:
+    if not cik or not accession or not filename:
+        return ""
+    cache_path = SEC_CACHE_DIR / f"exhibit_{cik}_{accession.replace('-', '')}_{filename}"
+    try:
+        if cache_path.exists() and time.time() - cache_path.stat().st_mtime <= 21600:
+            return cache_path.read_text(encoding="utf-8")
+    except Exception:
+        pass
+    text = safe_get_text(sec_document_url(cik, accession, filename))
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(text, encoding="utf-8")
+    return text
+
+
+def classify_sec_exhibit(filename: str, text: str) -> tuple[str, str]:
+    lower = f"{filename} {text[:4000]}".lower()
+    if "production, deliveries" in lower or ("deliveries" in lower and "production" in lower):
+        return "delivery_update", "delivery update"
+    if "financial results" in lower or "financial summary" in lower or "results of operations" in lower:
+        if "update" in lower or "key metrics" in lower or "operational summary" in lower:
+            return "investor_presentation", "quarterly update deck"
+        return "earnings_release", "earnings release"
+    if "presentation" in lower or "shareholder" in lower or "key metrics" in lower or "operational summary" in lower:
+        return "investor_presentation", "investor presentation"
+    return "official_site", "8-K exhibit"
+
+
+def build_sec_candidates(entity: dict[str, object]) -> list[dict[str, object]]:
+    ticker = str(entity.get("ticker", "")).strip().upper()
+    cik = sec_cik_for_ticker(ticker)
+    if not cik:
+        return []
+    name = str(entity.get("name", "")).strip() or ticker
+    filings = sec_recent_filings(cik)
+    results: list[dict[str, object]] = [
+        {
+            "title": f"{name} SEC submissions",
+            "source_name": "SEC",
+            "source_type": "filing_index",
+            "url": f"https://data.sec.gov/submissions/CIK{cik}.json",
+        },
+        {
+            "title": f"{name} SEC companyfacts",
+            "source_name": "SEC",
+            "source_type": "sec_companyfacts",
+            "url": f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json",
+        },
+    ]
+    for form in ["10-K", "10-Q"]:
+        filing = latest_recent_form(filings, {form})
+        if not filing:
+            continue
+        results.append({
+            "title": f"{name} latest {form} ({filing['filing_date']})",
+            "source_name": "SEC",
+            "source_type": "sec_filing",
+            "url": sec_document_url(cik, filing["accession"], filing["primary_document"]),
+            "published_at": filing["filing_date"],
+            "notes": f"Dynamic SEC discovery from submissions feed; form={form}",
+        })
+    recent_8k = [filing for filing in filings if filing.get("form") == "8-K"][:4]
+    for filing in recent_8k:
+        results.append({
+            "title": f"{name} 8-K ({filing['filing_date']})",
+            "source_name": "SEC",
+            "source_type": "sec_filing",
+            "url": sec_document_url(cik, filing["accession"], filing["primary_document"]),
+            "published_at": filing["filing_date"],
+            "notes": f"Dynamic SEC discovery from submissions feed; form=8-K; {filing.get('description', '')}".strip(),
+        })
+        for item in sec_index_documents(cik, filing["accession"]):
+            filename = str(item.get("name", "")).strip()
+            if not filename.lower().endswith((".htm", ".html", ".txt")):
+                continue
+            if "ex99" not in filename.lower() and "exhibit99" not in filename.lower():
+                continue
+            text = sec_exhibit_text(cik, filing["accession"], filename)
+            source_type, label = classify_sec_exhibit(filename, text)
+            results.append({
+                "title": f"{name} {label} ({filing['filing_date']})",
+                "source_name": "SEC",
+                "source_type": source_type,
+                "url": sec_document_url(cik, filing["accession"], filename),
+                "published_at": filing["filing_date"],
+                "notes": f"Dynamic SEC exhibit discovery from 8-K accession {filing['accession']}",
+            })
+    return results
 
 
 def normalize_substack_feed_url(feed_url: str) -> str:
@@ -332,11 +531,10 @@ def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[st
         )
     if slug == "tesla":
         seeds.extend([
-            {"title": "Tesla SEC filings", "source_name": "SEC", "source_type": "filing_index", "url": "https://www.sec.gov/edgar/browse/?CIK=1318605&owner=exclude"},
-            {"title": "Tesla SEC companyfacts", "source_name": "SEC", "source_type": "sec_companyfacts", "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json"},
             {"title": "Tesla AI", "source_name": "Tesla", "source_type": "official_site", "url": "https://www.tesla.com/AI"},
             {"title": "Tesla Supercharger", "source_name": "Tesla", "source_type": "official_site", "url": "https://www.tesla.com/supercharger"},
         ])
+    seeds.extend(build_sec_candidates(entity))
     if ticker or name:
         seeds.extend(build_seeking_alpha_candidates(name, ticker))
     seeds.extend(build_registry_profile_candidates(entity, registry_rows))

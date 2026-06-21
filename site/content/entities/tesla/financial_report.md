@@ -54,6 +54,7 @@ Tesla's latest source-backed update improved the durability argument, not the fu
 - **Battery storage / energy / charging infrastructure:** more important than before because the AI-power bottleneck is becoming investable, not theoretical.[^power-gap]
 - **CATL / BYD:** increasing pressure on battery and charging leadership claims.[^catl-tech-day]
 - **xAI / data centers / natural gas:** if AI buildout prioritizes speed-to-power over ideal power mix, Tesla's energy thesis may matter sooner than its robotaxi thesis.[^xai-gas]
+- **EV charging / home energy competition:** GM's new Energy Pass plus bidirectional charging push validates the home-energy / VPP adjacency that Tesla bulls care about, but it also weakens the assumption that Tesla will own this stack uncontested.[^gm-energy]
 
 ## Open questions
 
@@ -66,11 +67,13 @@ Tesla's latest source-backed update improved the durability argument, not the fu
 - <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json">Tesla SEC companyfacts</a>
 - <a href="https://www.sec.gov/edgar/browse?CIK=1318605&owner=exclude">Tesla SEC filings index</a>
 - <a href="https://www.apricitas.io/p/americas-electricity-gap">Apricitas: America's Electricity Gap</a>
+- <a href="https://www.volts.wtf/p/americas-flagship-automaker-enters">Volts: America's flagship automaker enters the home energy market</a>
 - <a href="https://www.youtube.com/watch?v=vgyMjVCDbAY">The Limiting Factor: CATL Tech Day 2026 // What The Hype Missed</a>
 - <a href="https://www.youtube.com/watch?v=TyMn7wknYTU">The Limiting Factor: The Fully Dry 4680 // Too little too late?</a>
 - <a href="https://www.youtube.com/watch?v=IIwu1U8oepc">The Limiting Factor: Why is Elon's xAI Using Gas Generation Instead of Solar?</a>
 
 [^tesla-companyfacts]: SEC companyfacts for Tesla, accessed 2026-06-21: https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json
 [^power-gap]: Joseph Politano, "America's Electricity Gap," Apricitas, 2026-05-03: https://www.apricitas.io/p/americas-electricity-gap
+[^gm-energy]: David Roberts, "America's flagship automaker enters the home energy market," Volts, 2026-06-19: https://www.volts.wtf/p/americas-flagship-automaker-enters
 [^catl-tech-day]: The Limiting Factor, "CATL Tech Day 2026 // What The Hype Missed," YouTube, 2026-05-20: https://www.youtube.com/watch?v=vgyMjVCDbAY
 [^xai-gas]: The Limiting Factor, "Why is Elon's xAI Using Gas Generation Instead of Solar?" YouTube, 2026-04-20. Used as metadata-level weak signal only because transcript retrieval failed from this environment: https://www.youtube.com/watch?v=IIwu1U8oepc

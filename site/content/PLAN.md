@@ -118,9 +118,10 @@ Required behavior:
 
 Purpose: collect candidate source metadata for each active entity.
 
-Completed improvement on 2026-06-21:
+Completed improvements on 2026-06-21:
 
 - retrieval now only seeds synthetic investor-relations URLs for company-like entities (`company`, `private_company`, `supplier`, `customer`) so thematic nodes such as markets, sectors, people, and commodities are not polluted by fake IR placeholders.
+- retrieval now resolves SEC CIKs dynamically for US tickers and discovers the latest 10-K, 10-Q, recent 8-Ks, and exhibit-driven quarterly update / delivery documents from `data.sec.gov` instead of relying on static Tesla-only filing URLs.
 
 Required behavior:
 
@@ -202,6 +203,10 @@ Required behavior:
 ### `bin/worldmodel_maintenance.py`
 
 Purpose: detect repository drift and maintenance needs.
+
+Completed improvement on 2026-06-21:
+
+- maintenance now verifies source-state consistency between `data/source_log.csv`, per-entity `source_log.csv` files, `data/source_history.csv` references in the latest global daily report, and the existence of the latest global report artifact.
 
 Required behavior:
 
@@ -470,9 +475,8 @@ When maintenance changes are needed:
 
 ## Next steps to make the project better
 
-- Add dynamic SEC/IR document discovery so retrieval finds the latest 10-K, 10-Q, earnings release, investor presentation, and delivery update without relying on static Tesla seed URLs.
-- Extend maintenance to verify source-state consistency across `data/source_log.csv`, entity source logs, `data/source_history.csv`, and the daily report artifacts.
 - Add direct X/Twitter post retrieval or a compliant import path so high-signal accounts can provide more than profile-level candidate URLs.
+- Add issuer-website IR discovery for access-controlled or non-SEC companies so retrieval can find fresh press releases and presentation pages even when investor-relations homepages do not expose stable URLs.
 
 ## Initial `index.md` seed
 

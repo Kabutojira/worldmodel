@@ -3,8 +3,14 @@
 ## Market map
 
 - Demand drivers: hyperscaler AI training and inference capex, enterprise GPU cloud demand, model-size growth.
-- Constraints: grid interconnection, transformers, power density, cooling, GPU/HBM availability.
+- Constraints: grid interconnection, energization timing, HVDC/converter equipment, transformers, power density, cooling, GPU/HBM availability.
 - Pricing mechanisms: colocation rents, cloud instance pricing, power cost, utilization rates.
+
+## Latest evidence
+
+- SemiAnalysis argues the widely repeated claim that roughly half of 2026 US data-center capacity is getting delayed or canceled is overstated; the better framing is that site-by-site utility, permitting, and equipment constraints create uneven timing risk rather than a uniform collapse in planned capacity.<a href="https://newsletter.semianalysis.com/p/stop-saying-half-of-2026-us-datacenter">source</a>
+- SemiAnalysis also argues reinforcement-learning infrastructure is becoming a separate demand layer on top of pretraining and inference, which increases the value of balanced trainer/generator throughput and raises the capital intensity of model iteration for frontier labs.<a href="https://newsletter.semianalysis.com/p/rl-systems-mind-the-gap-matching">source</a>
+- Implication: the demand thesis is intact, but bottlenecks shift from generic "AI bubble" skepticism toward grid connection quality, power electronics, and workload mix.
 
 ## Linked entities
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T12:33:42Z",
+  "generated_at": "2026-06-21T15:11:36Z",
   "nodes": [
     {
       "id": "abb_robotics",
@@ -610,6 +610,22 @@
       "exists": false
     },
     {
+      "id": "reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py",
+      "label": "reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
+      "label": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../bin/worldmodel_retrieve.py/",
+      "exists": false
+    },
+    {
       "id": "reports/daily/reports/daily/../../data/daily_runs.csv",
       "label": "reports/daily/reports/daily/../../data/daily_runs.csv",
       "type": "page",
@@ -623,6 +639,14 @@
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/reports/daily/../../data/entities.csv/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/../../data/source_history.csv",
+      "label": "reports/daily/reports/daily/../../data/source_history.csv",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../data/source_history.csv/",
       "exists": false
     },
     {
@@ -674,11 +698,43 @@
       "exists": false
     },
     {
+      "id": "reports/daily/reports/daily/../../entities/datacenters/wiki/market",
+      "label": "reports/daily/reports/daily/../../entities/datacenters/wiki/market",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/datacenters/wiki/market/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/../../entities/electricity_grid/wiki/market",
+      "label": "reports/daily/reports/daily/../../entities/electricity_grid/wiki/market",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/electricity_grid/wiki/market/",
+      "exists": false
+    },
+    {
       "id": "reports/daily/reports/daily/../../entities/tesla/daily_reports/report_2026-06-20",
       "label": "reports/daily/reports/daily/../../entities/tesla/daily_reports/report_2026-06-20",
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/tesla/daily_reports/report_2026-06-20/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/../../entities/tesla/financial_report",
+      "label": "reports/daily/reports/daily/../../entities/tesla/financial_report",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/tesla/financial_report/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/../../entities/tesla/wiki/technology",
+      "label": "reports/daily/reports/daily/../../entities/tesla/wiki/technology",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/tesla/wiki/technology/",
       "exists": false
     },
     {
@@ -695,6 +751,14 @@
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/reports/daily/report_2026-06-20/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/report_2026-06-21",
+      "label": "reports/daily/reports/daily/report_2026-06-21",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/report_2026-06-21/",
       "exists": false
     },
     {
@@ -15262,6 +15326,14 @@
     {
       "source": "datacenters",
       "target": "datacenters",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "datacenters",
+      "target": "datacenters",
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
@@ -15945,6 +16017,14 @@
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "electricity_grid",
+      "target": "electricity_grid",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
       "evidence_url": ""
     },
     {
@@ -23766,6 +23846,86 @@
     {
       "source": "reports/daily/report_2026-06-20",
       "target": "reports/daily/reports/daily/report_2026-06-20",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../PLAN",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../data/source_history.csv",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../data/source_log.csv",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../entities/datacenters/wiki/market",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../entities/electricity_grid/wiki/market",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../entities/tesla/financial_report",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../entities/tesla/wiki/technology",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/report_2026-06-21",
       "type": "related",
       "importance": "",
       "why": "Derived from markdown link between generated site pages.",

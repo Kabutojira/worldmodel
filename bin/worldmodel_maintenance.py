@@ -10,6 +10,7 @@ from worldmodel_common import (
     SOURCE_HISTORY_HEADER,
     SOURCE_REGISTRY_HEADER,
     SUBSTACK_WATCHLIST_HEADER,
+    canonicalize_url,
     ENTITIES_DIR,
     ENTITIES_HEADER,
     ESTIMATES_HEADER,
@@ -171,6 +172,58 @@ def find_source_history_gaps() -> list[str]:
     return findings
 
 
+def find_source_state_consistency_gaps() -> list[str]:
+    findings = []
+    global_rows = read_csv(ROOT / "data" / "source_log.csv")
+    global_by_id = {}
+    global_by_entity_url = {}
+    seen_global_urls = {}
+
+    for row in global_rows:
+        source_id = str(row.get("source_id", "")).strip()
+        entity_slug = str(row.get("entity_slug", "")).strip()
+        url = str(row.get("url", "")).strip()
+        canonical = canonicalize_url(url)
+        if source_id:
+            global_by_id[source_id] = row
+        if entity_slug and canonical:
+            global_by_entity_url[(entity_slug, canonical)] = row
+        if entity_slug and canonical:
+            dedupe_key = (entity_slug, canonical)
+            prior = seen_global_urls.get(dedupe_key)
+            if prior and prior != (source_id or canonical):
+                findings.append(f"global source_log duplicate canonical url within entity {entity_slug}: {canonical}")
+            seen_global_urls[dedupe_key] = source_id or canonical
+
+    for path in ENTITIES_DIR.glob("*/source_log.csv"):
+        slug = path.parent.name
+        for row in read_csv(path):
+            row_slug = str(row.get("entity_slug", "")).strip()
+            source_id = str(row.get("source_id", "")).strip()
+            url = str(row.get("url", "")).strip()
+            canonical = canonicalize_url(url)
+            if row_slug != slug:
+                findings.append(f"entity source_log slug mismatch in {path}: expected {slug}, got {row_slug or '<blank>'}")
+            match = global_by_id.get(source_id) if source_id else None
+            if not match and canonical:
+                match = global_by_entity_url.get((slug, canonical))
+            if not match:
+                findings.append(f"entity source_log row missing from global source_log: {path} :: {source_id or canonical or '<blank>'}")
+
+    report_paths = sorted((ROOT / "reports" / "daily").glob("report_*.md"))
+    if not report_paths:
+        findings.append("missing global daily reports under reports/daily/")
+        return findings
+
+    latest_report = report_paths[-1]
+    report_text = latest_report.read_text(encoding="utf-8")
+    for required_ref in ("data/source_log.csv", "data/source_history.csv"):
+        if required_ref not in report_text:
+            findings.append(f"latest global daily report missing source-state artifact reference: {latest_report} -> {required_ref}")
+
+    return findings
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check WorldModel repository maintenance invariants.")
     parser.add_argument("--strict", action="store_true")
@@ -191,6 +244,7 @@ def main() -> int:
     findings.extend(find_substack_watchlist_gaps())
     findings.extend(find_source_registry_gaps())
     findings.extend(find_source_history_gaps())
+    findings.extend(find_source_state_consistency_gaps())
     if not (ROOT / "AGENTS.md").exists() or not (ROOT / "PLAN.md").exists():
         findings.append("AGENTS.md or PLAN.md missing")
     if not (ROOT / "README.md").exists():
