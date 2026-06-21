@@ -12,12 +12,12 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
-    cdnCaching: true
+    fontOrigin: local
+    cdnCaching: false
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: system-ui
+      body: system-ui
+      code: ui-monospace
     colors:
       lightMode:
         light: "#f8fafc"
@@ -98,7 +98,7 @@ plugins:
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
-    enabled: true
+    enabled: false
   - source: github:quartz-community/content-page
     enabled: true
   - source: github:quartz-community/folder-page

@@ -38,6 +38,9 @@ jobs:
           cache: "npm"
           cache-dependency-path: "site/package-lock.json"
 
+      - name: Set up Pages
+        uses: actions/configure-pages@v5
+
       - name: Prepare Quartz content
         run: python3 bin/worldmodel_render_site.py --clean --strict
 

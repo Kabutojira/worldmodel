@@ -86,6 +86,15 @@ def main() -> int:
         findings.append("site/ missing; add Quartz project files")
     if not SITE_CONTENT_DIR.exists():
         findings.append("site/content missing; run render script")
+    for required in [
+        SITE_DIR / "package.json",
+        SITE_DIR / "quartz.config.yaml",
+        SITE_DIR / "quartz.layout.ts",
+        ROOT / ".github" / "workflows" / "pages.yml",
+        ROOT / "SITE.md",
+    ]:
+        if not required.exists():
+            findings.append(f"missing site build file: {required}")
     print("maintenance findings:")
     if findings:
         for finding in findings:
