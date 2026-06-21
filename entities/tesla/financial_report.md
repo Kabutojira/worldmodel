@@ -2,72 +2,75 @@
 
 ## Entity summary
 
-Tesla is tracked because Core anchor entity already implemented; links autos, energy, AI, robotics, batteries. Bootstrap content stays concise and source-backed so daily runs can replace placeholders with dated evidence.
+Tesla's latest source-backed update improved the durability argument, not the full bull case. Q1 2026 revenue, operating income, and operating cash flow all improved sharply year over year, but profitability is still modest relative to Tesla's valuation narrative and strategic ambition.[^tesla-companyfacts]
 
 ## Business lines
 
-- Automotive; Energy generation and storage; Services and software.
-- Key KPIs: deliveries, automotive gross margin ex-credits, storage deployments, FSD/robotaxi evidence, capex.
+- **Automotive:** still the dominant revenue driver and the main determinant of near-term valuation swings.
+- **Energy generation and storage:** likely the cleanest incremental upside lever if AI-driven grid stress increases the value of storage and charging infrastructure.[^power-gap]
+- **Services / software / autonomy:** important to upside, but still need measured monetization evidence.
 
 ## Latest financials
 
-- This bootstrap avoids inventing current figures where direct extraction was not completed. Use the linked annual/quarterly materials to replace placeholders with dated numbers.
-- Priority KPIs: Tesla, TSLA, EV, Optimus, FSD.
+- **Q1 2026 revenue:** **$22.387B** vs **$19.335B** in Q1 2025 (**+15.8% YoY**).[^tesla-companyfacts]
+- **Q1 2026 operating income:** **$941M** vs **$399M** in Q1 2025 (**+135.8% YoY**).[^tesla-companyfacts]
+- **Q1 2026 operating margin:** roughly **4.2%** vs roughly **2.1%** a year earlier.[^tesla-companyfacts]
+- **Q1 2026 operating cash flow:** **$3.937B** vs **$2.156B** in Q1 2025 (**+82.6% YoY**).[^tesla-companyfacts]
+- **Q1 2026 capex:** **$2.493B** vs **$1.492B** in Q1 2025 (**+67.1% YoY**).[^tesla-companyfacts]
+- **FY 2025 revenue:** **$94.827B**.
+- **FY 2025 operating income:** **$4.355B**, implying an operating margin of roughly **4.6%**.[^tesla-companyfacts]
 
 ## Forecast table
 
 | Scenario | Revenue path | EBITDA / operating path | Market size path | Confidence |
 |---|---|---|---|---|
-| Bearish | Pressure on adoption, pricing, or mix | Lower leverage / higher capex burden | Slower or less profitable growth | Low |
-| Base | Strategic relevance persists, measured execution | Gradual improvement | Moderate structural growth | Medium |
-| Bullish | Strong monetization and cleaner scaling | Better leverage and returns | Large adjacent-market upside | Low |
+| Bearish | Growth continues but remains incentive- or mix-driven | Margin remains stuck near low single digits | EV growth is real but less lucrative | Medium |
+| Base | Mid-teens growth with gradual margin repair | Cash flow funds optionality; margin recovery is partial | EV + storage expand, autonomy remains optionality | Medium |
+| Bullish | Revenue compounds across auto + storage + software layers | Margin recovery becomes obvious from today's low base | Tesla captures more of power + autonomy TAM than consensus expects | Low-Medium |
 
 ## Valuation framing
 
-- Track how much of the current narrative is already embedded versus what still needs evidence from source-backed execution.
+- The equity still prices more than autos. The live question is whether Tesla can earn the right to be valued as a multi-market infrastructure and autonomy platform.
+- Today's evidence supports **funding resilience**, not yet **full optionality monetization**.
 
 ## Market expectations
 
-- The most important question is which linked market or bottleneck changes economics first.
+- The market remains split between "low-margin car company" and "future autonomy/robotics platform."
+- The latest filing data narrows the downside funding case, but it does not resolve the monetization case.
 
 ## Possible mispricing
 
-- Bottleneck relief or worsening could move this entity faster than consensus models update.
-- Narrative-heavy optionality may be under- or over-capitalized depending on proof of deployment.
+- **Potential underpricing:** the market may be underestimating how valuable Tesla Energy and charging become if AI/data-center load worsens grid stress and power flexibility becomes scarce.[^power-gap]
+- **Potential overpricing:** the market may still capitalize autonomy/robotics upside faster than Tesla is proving revenue reality.
 
 ## Major risks
 
-- Execution slippage.
-- Input-cost / regulatory / infrastructure bottlenecks.
-- Competitive intensity and capital discipline.
+- Automotive margin remains structurally lower than old bull models assumed.
+- Battery/charging competition from CATL, BYD, and ecosystem peers keeps technology differentiation contested.[^catl-tech-day]
+- Elon Musk attention bandwidth and xAI overlap can either create synergy or governance drag.
 
 ## Connected-entity implications
 
-- Electric vehicle market: Electric vehicle market shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Automotive market: Automotive market shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Lithium: Lithium affects Tesla cost, supply security, or pricing through critical material exposure and procurement risk.
-- Battery energy storage: Battery energy storage shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Humanoid robots: Humanoid robots shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Robotaxi and autonomy: Robotaxi and autonomy drives Tesla product capability, monetization, and valuation through software, compute, or platform dependence.
-- Solar energy: Solar energy shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Energy: Energy shapes Tesla demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Elon Musk: Elon Musk influences Tesla strategy, governance, narrative, capital allocation, and execution risk.
-- Nvidia: Nvidia is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
-- Panasonic Energy: Panasonic Energy is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
-- CATL: CATL is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
-- BYD: BYD is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
-- xAI: xAI is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
-- EV charging infrastructure: EV charging infrastructure is a physical bottleneck or enabling network that influences Tesla scaling, utilization, and returns.
-- LG Energy Solution: LG Energy Solution is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
+- **Battery storage / energy / charging infrastructure:** more important than before because the AI-power bottleneck is becoming investable, not theoretical.[^power-gap]
+- **CATL / BYD:** increasing pressure on battery and charging leadership claims.[^catl-tech-day]
+- **xAI / data centers / natural gas:** if AI buildout prioritizes speed-to-power over ideal power mix, Tesla's energy thesis may matter sooner than its robotaxi thesis.[^xai-gas]
 
 ## Open questions
 
-- Which upcoming official filing or update most likely changes the thesis?
-- Which connected entity creates the biggest unpriced risk or upside?
+- How much of Tesla's next profit leg comes from energy versus autos?
+- Does Tesla disclose enough about 4680 cost/yield to move the battery debate from creator analysis to primary evidence?
+- When does robotaxi progress become measurable in revenue, utilization, or regulatory scope?
 
 ## Sources
 
-- <a href="https://www.tesla.com/">Tesla official page</a> (official site)
-- <a href="https://ir.tesla.com/">Tesla investor relations</a> (investor relations)
-- <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=Tesla&owner=exclude&count=40">Tesla filings</a> (filings)
-- <a href="https://seekingalpha.com/symbol/TSLA/earnings/transcripts">Tesla earnings transcript page</a> (earnings transcript)
+- <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json">Tesla SEC companyfacts</a>
+- <a href="https://www.sec.gov/edgar/browse?CIK=1318605&owner=exclude">Tesla SEC filings index</a>
+- <a href="https://www.apricitas.io/p/americas-electricity-gap">Apricitas: America's Electricity Gap</a>
+- <a href="https://www.youtube.com/watch?v=vgyMjVCDbAY">The Limiting Factor: CATL Tech Day 2026 // What The Hype Missed</a>
+- <a href="https://www.youtube.com/watch?v=TyMn7wknYTU">The Limiting Factor: The Fully Dry 4680 // Too little too late?</a>
+- <a href="https://www.youtube.com/watch?v=IIwu1U8oepc">The Limiting Factor: Why is Elon's xAI Using Gas Generation Instead of Solar?</a>
+
+[^tesla-companyfacts]: SEC companyfacts for Tesla, accessed 2026-06-21: https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json
+[^power-gap]: Joseph Politano, "America's Electricity Gap," Apricitas, 2026-05-03: https://www.apricitas.io/p/americas-electricity-gap
+[^catl-tech-day]: The Limiting Factor, "CATL Tech Day 2026 // What The Hype Missed," YouTube, 2026-05-20: https://www.youtube.com/watch?v=vgyMjVCDbAY
+[^xai-gas]: The Limiting Factor, "Why is Elon's xAI Using Gas Generation Instead of Solar?" YouTube, 2026-04-20. Used as metadata-level weak signal only because transcript retrieval failed from this environment: https://www.youtube.com/watch?v=IIwu1U8oepc

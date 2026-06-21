@@ -514,6 +514,10 @@
 
 | Metric | Year | Base | Bearish | Normal | Bullish | Confidence | Source |
 |---|---:|---|---|---|---|---|---|
+| capex | 2025 | 8.527 |  |  |  | 0.95 | [source](https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json) |
+| free cash flow | 2025 | 6.220 |  |  |  | 0.90 | [source](https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json) |
+| operating margin | 2025 | 4.59 |  |  |  | 0.90 | [source](https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json) |
+| revenue | 2025 | 94.827 |  |  |  | 0.95 | [source](https://data.sec.gov/api/xbrl/companyfacts/CIK0001318605.json) |
 | revenue | 2026 |  | TBD | TBD | TBD | 0.30 | [source](https://www.tesla.com/) |
 
 ## [[entities/toyota/index|Toyota]]

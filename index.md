@@ -41,9 +41,9 @@ This file is the canonical registry of tracked entities, search keywords, and co
   - xAI: xAI is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
   - EV charging infrastructure: EV charging infrastructure is a physical bottleneck or enabling network that influences Tesla scaling, utilization, and returns.
   - LG Energy Solution: LG Energy Solution is a strategically relevant peer, supplier, customer, or dependency that changes Tesla economics and optionality.
-- Last retrieval: 2026-06-20T21:36:24Z
-- Last report: 2026-06-20
-- Notes: Core anchor entity already implemented; links autos, energy, AI, robotics, batteries. Bootstrap depth 2; refine with daily runs and source-backed numeric extraction.
+- Last retrieval: 2026-06-21T09:58:46Z
+- Last report: 2026-06-21
+- Notes: Core anchor entity already implemented; links autos, energy, AI, robotics, batteries. Latest daily update: Q1 2026 revenue/cash flow improved, but margins remain low and battery/power optionality still needs primary-source proof.
 
 ## AI data centers
 
@@ -77,9 +77,9 @@ This file is the canonical registry of tracked entities, search keywords, and co
   - Nuclear power: Nuclear power shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
   - Battery energy storage: Battery energy storage shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
   - Power transformers: Power transformers is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.
-- Last retrieval: 2026-06-20T21:36:24Z
-- Last report: 2026-06-20
-- Notes: Physical bottleneck for AI scaling; bridges compute and energy. Bootstrap depth 2; refine with daily runs and source-backed numeric extraction.
+- Last retrieval: 2026-06-21T09:58:46Z
+- Last report: 2026-06-21
+- Notes: Physical bottleneck for AI scaling; bridges compute and energy. Latest daily update: thesis shifted further from generic AI demand toward power, transformer, gas, and grid bottlenecks.
 
 ## ASML
 
@@ -807,9 +807,9 @@ This file is the canonical registry of tracked entities, search keywords, and co
   - Broadcom: Broadcom is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
   - ASML: ASML is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
   - China-Taiwan geopolitical risk: China-Taiwan geopolitical risk changes TSMC supply, market access, or capex decisions through policy and geopolitical constraints.
-- Last retrieval: 2026-06-20T21:36:24Z
-- Last report: 2026-06-20
-- Notes: Critical semiconductor manufacturing bottleneck. Bootstrap depth 2; refine with daily runs and source-backed numeric extraction.
+- Last retrieval: 2026-06-21T09:58:46Z
+- Last report: 2026-06-21
+- Notes: Critical semiconductor manufacturing bottleneck. Latest daily update: Taiwan macro strength reinforced AI-demand concentration and kept geopolitical concentration risk front-and-center.
 
 ## xAI
 

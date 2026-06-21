@@ -4,94 +4,99 @@
 
 ### Key assumptions
 
-- Adoption, margins, or monetization lag while capex stays elevated.
-- Competitive or regulatory pressure weakens returns.
+- AI demand remains strong, but geopolitical concentration and export controls create valuation drag or operational friction.
+- Customers push for diversification faster than TSMC can defend premium economics outside Taiwan.
 
 ### Revenue and EBITDA path
 
-- Source-backed numeric extraction still pending; downside case assumes weaker operating leverage or weaker market conditions.
+- Revenue still grows, but the market derates the multiple because concentration risk dominates fundamentals.
 
 ### Market size path
 
-- Addressable demand grows slower or becomes less profitable than bullish narratives assume.
+- Advanced-node demand remains large, but a larger share of the narrative value accrues to resilience spending rather than pure growth.
 
 ### Business-line contribution
 
-- Core lines remain important but adjacencies contribute less than hoped.
+- Leading-edge foundry stays central, but geopolitical insurance costs rise.
 
 ### Catalysts
 
-- Weak demand, pricing pressure, regulation, or execution misses.
+- Escalating US-China trade friction, export-control tightening, or signs of customer diversification away from Taiwan.
 
 ### Disconfirming evidence
 
-- Stronger margins, better product/market fit, or faster deployment than expected.
+- Smoother overseas ramp execution and continued proof that TSMC pricing power survives geopolitical noise.
 
 ### Signposts to monitor
 
-- Metrics to monitor: TSMC, Taiwan Semiconductor, advanced node, CoWoS.
-- Confirm with investor materials, filings, and product updates.
+- Taiwan export concentration.
+- Advanced packaging constraints.
+- Geopolitical headlines that move from rhetoric to policy.
 
 ## Normal thesis
 
 ### Key assumptions
 
-- Core business remains strategically relevant and linked adjacencies add optionality gradually.
-- Evidence improves incrementally rather than all at once.
+- TSMC remains the critical AI manufacturing choke point and keeps strong utilization, but the market increasingly prices both demand strength and concentration risk.
+- Taiwan macro data remain a useful proxy for how extreme AI chip pull still is.[^taiwan]
 
 ### Revenue and EBITDA path
 
-- Base case assumes strategic relevance persists while monetization improves in steps rather than a straight line.
+- Base case is continued strength in advanced-node and packaging demand with healthy, but not limitless, pricing power.
 
 ### Market size path
 
-- Linked markets grow, but bottlenecks and competition keep the path uneven.
+- AI silicon demand keeps expanding faster than effective diversification capacity.
 
 ### Business-line contribution
 
-- Core business stays dominant while optionality remains additive rather than fully proven.
+- Leading-edge logic and advanced packaging remain the main economic engines.
 
 ### Catalysts
 
-- Execution consistency, capex discipline, and evidence-backed product progress.
+- Strong AI customer demand, better CoWoS/advanced packaging throughput, and orderly capacity expansion.
 
 ### Disconfirming evidence
 
-- Faster-than-expected margin erosion or weaker adoption.
+- A faster normalization in AI accelerator demand or margin erosion from customer concentration.
 
 ### Signposts to monitor
 
-- Metrics to monitor: TSMC, Taiwan Semiconductor, advanced node, CoWoS.
-- Confirm with investor materials, filings, and product updates.
+- Taiwan GDP/export data.
+- TSMC node-mix and packaging commentary.
+- Customer capex intensity from Nvidia, AMD, Broadcom, and hyperscalers.
 
 ## Bullish thesis
 
 ### Key assumptions
 
-- Linked markets inflect in TSMC's favor and operating leverage becomes visible.
-- Strategic optionality converts into durable revenue or margin upside.
+- The market still underestimates how long TSMC remains supply-constrained in the AI buildout.
+- Demand concentration in Taiwan persists longer than consensus expects, preserving strategic scarcity.[^taiwan]
 
 ### Revenue and EBITDA path
 
-- Upside case assumes operating leverage and adjacent-market monetization become source-backed and durable.
+- Revenue and margin surprise to the upside as customers pay for certainty and speed.
 
 ### Market size path
 
-- End-market growth and share capture both beat conservative assumptions.
+- AI infrastructure demand continues to broaden while the foundry bottleneck stays narrow.
 
 ### Business-line contribution
 
-- Higher-value adjacencies contribute more to growth and margins than the market currently credits.
+- Advanced node and packaging exposure become even more valuable because alternative capacity does not catch up in time.
 
 ### Catalysts
 
-- Major partnerships, product milestones, falling input costs, or better-than-expected deployment data.
+- Another leg up in AI accelerator demand, better pricing, or persistent packaging scarcity.
 
 ### Disconfirming evidence
 
-- Bottlenecks persist or narrative outpaces measurable economics.
+- Material diversification away from Taiwan, or clear signs that AI demand is slowing faster than supply is loosening.
 
 ### Signposts to monitor
 
-- Metrics to monitor: TSMC, Taiwan Semiconductor, advanced node, CoWoS.
-- Confirm with investor materials, filings, and product updates.
+- Taiwan exports tied to electronics.
+- TSMC gross margin and capex.
+- Overseas fab ramp versus customer willingness to shift.
+
+[^taiwan]: Joseph Politano, "Taiwan's Modern Miracle," Apricitas, 2026-03-05: https://www.apricitas.io/p/taiwans-modern-miracle

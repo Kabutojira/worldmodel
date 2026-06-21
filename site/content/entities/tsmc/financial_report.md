@@ -2,61 +2,63 @@
 
 ## Entity summary
 
-TSMC is tracked because Critical semiconductor manufacturing bottleneck. Bootstrap content stays concise and source-backed so daily runs can replace placeholders with dated evidence.
+The latest update strengthens the case that TSMC remains the key public-market bottleneck in the AI hardware stack. Accessible macro evidence from Taiwan shows AI-linked semiconductor demand is large enough to drive outsized GDP and export effects, which supports the scarcity thesis while also underscoring concentration risk.[^taiwan]
 
 ## Business lines
 
-- Reporting lens: wafer revenue by platform and by technology node; advanced packaging / CoWoS is strategically important.
-- Key KPIs: N3/N5 mix, CoWoS capacity, gross margin, capex, leading-edge customer concentration.
+- Leading-edge foundry capacity
+- Advanced packaging / CoWoS-like bottlenecks
+- AI customer concentration management
 
-## Latest financials
+## Latest operating context
 
-- This bootstrap avoids inventing current figures where direct extraction was not completed. Use the linked annual/quarterly materials to replace placeholders with dated numbers.
-- Priority KPIs: TSMC, Taiwan Semiconductor, advanced node, CoWoS, foundry.
+- Taiwan's GDP grew at a **23.6% annualized rate in Q4 2025** and more than **12% YoY**.[^taiwan]
+- Gross exports rose above **$63B per month**, roughly double pre-COVID levels.[^taiwan]
+- Manufacturing approached **40% of the economy**, the highest share since the mid-1980s, with AI-chip demand the dominant driver in the article's framing.[^taiwan]
 
 ## Forecast table
 
-| Scenario | Revenue path | EBITDA / operating path | Market size path | Confidence |
+| Scenario | Demand path | Margin / return path | What matters most | Confidence |
 |---|---|---|---|---|
-| Bearish | Pressure on adoption, pricing, or mix | Lower leverage / higher capex burden | Slower or less profitable growth | Low |
-| Base | Strategic relevance persists, measured execution | Gradual improvement | Moderate structural growth | Medium |
-| Bullish | Strong monetization and cleaner scaling | Better leverage and returns | Large adjacent-market upside | Low |
+| Bearish | Demand remains good but concentration risk dominates | Multiple pressure outweighs earnings strength | Geopolitics and diversification | Medium |
+| Base | AI demand stays strong and scarcity persists | Healthy economics, mixed valuation debate | Packaging + node leadership | Medium-High |
+| Bullish | AI demand and scarcity both exceed expectations | Pricing power and utilization stay exceptionally strong | TSMC remains irreplaceable longer | Medium |
 
 ## Valuation framing
 
-- Track how much of the current narrative is already embedded versus what still needs evidence from source-backed execution.
+- TSMC is no longer just a semiconductor cyclical. It is an AI infrastructure toll booth with geopolitical concentration attached.
 
 ## Market expectations
 
-- The most important question is which linked market or bottleneck changes economics first.
+- The market understands TSMC's quality; the harder question is whether it fully prices how persistent Taiwan concentration still is.
 
 ## Possible mispricing
 
-- Bottleneck relief or worsening could move this entity faster than consensus models update.
-- Narrative-heavy optionality may be under- or over-capitalized depending on proof of deployment.
+- **Potential underpricing:** the duration of TSMC's AI scarcity economics.
+- **Potential overpricing:** the assumption that geopolitical concentration can be diversified away quickly enough to reduce tail risk.
 
 ## Major risks
 
-- Execution slippage.
-- Input-cost / regulatory / infrastructure bottlenecks.
-- Competitive intensity and capital discipline.
+- China-Taiwan escalation or harsher policy controls.
+- Customer attempts to diversify capacity or bargaining power.
+- AI capex slowdown feeding into node/package utilization.
 
 ## Connected-entity implications
 
-- Nvidia: Nvidia is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
-- Apple: Apple is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
-- AMD: AMD is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
-- Broadcom: Broadcom is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
-- ASML: ASML is a strategically relevant peer, supplier, customer, or dependency that changes TSMC economics and optionality.
-- China-Taiwan geopolitical risk: China-Taiwan geopolitical risk changes TSMC supply, market access, or capex decisions through policy and geopolitical constraints.
+- **Nvidia / AMD / Broadcom / hyperscalers:** continued demand strength supports TSMC leverage.
+- **AI data centers:** data-center demand still ultimately collapses into a Taiwan manufacturing bottleneck.[^taiwan]
+- **ASML:** TSMC's ceiling remains intertwined with lithography and tool-chain execution.
 
 ## Open questions
 
-- Which upcoming official filing or update most likely changes the thesis?
-- Which connected entity creates the biggest unpriced risk or upside?
+- How long does AI packaging scarcity remain tighter than wafer scarcity?
+- What evidence would prove overseas diversification is materially reducing Taiwan concentration risk?
+- Which customers are most exposed if TSMC capacity remains the limiting reagent?
 
 ## Sources
 
-- <a href="https://www.tsmc.com/">TSMC official page</a> (official site)
-- <a href="https://investor.tsmc.com/english">TSMC investor relations</a> (investor relations)
-- <a href="https://seekingalpha.com/symbol/TSM/earnings/transcripts">TSMC earnings transcript page</a> (earnings transcript)
+- <a href="https://www.apricitas.io/p/taiwans-modern-miracle">Apricitas: Taiwan's Modern Miracle</a>
+- <a href="https://investor.tsmc.com/english">TSMC investor relations</a>
+- <a href="https://seekingalpha.com/symbol/TSM/earnings/transcripts">TSMC earnings transcript page</a>
+
+[^taiwan]: Joseph Politano, "Taiwan's Modern Miracle," Apricitas, 2026-03-05: https://www.apricitas.io/p/taiwans-modern-miracle

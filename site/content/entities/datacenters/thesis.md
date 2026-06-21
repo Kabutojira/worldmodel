@@ -4,94 +4,104 @@
 
 ### Key assumptions
 
-- Demand underwhelms or bottlenecks persist longer than expected.
-- Capital spending slows before supply catches up.
+- Power delivery becomes a harder bottleneck than GPU supply, delaying monetization and forcing inefficient capital deployment.
+- Electricity prices, transformer shortages, and policy frictions compress returns for both operators and model builders.[^power-gap]
+- Chip concentration in Taiwan creates geopolitical fragility that the market treats as a tail risk until it is too late.[^taiwan]
 
 ### Revenue and EBITDA path
 
-- Source-backed numeric extraction still pending; downside case assumes weaker operating leverage or weaker market conditions.
+- Capacity grows, but returns disappoint because power and interconnection costs rise faster than utilization gains.
 
 ### Market size path
 
-- Addressable demand grows slower or becomes less profitable than bullish narratives assume.
+- AI demand is large, but economically usable capacity expands slower than headline capex implies.
 
 ### Business-line contribution
 
-- Core lines remain important but adjacencies contribute less than hoped.
+- Data-center value leaks downstream to utilities, gas, transformers, and storage vendors rather than staying with model/platform players.
 
 ### Catalysts
 
-- Weak demand, pricing pressure, regulation, or execution misses.
+- Delayed energization timelines, rising power prices, or export-control/geopolitical friction around Taiwan.
 
 ### Disconfirming evidence
 
-- Stronger margins, better product/market fit, or faster deployment than expected.
+- Faster-than-expected grid buildout, power cost moderation, or major diversification away from Taiwan bottlenecks.
 
 ### Signposts to monitor
 
-- Metrics to monitor: AI data centers, hyperscale, GPU clusters, power usage.
-- Track leading indicators, capex announcements, utilization, and regulatory milestones.
+- Utility load-growth forecasts.
+- Transformer lead times.
+- Gas turbine / storage deployment rates.
+- TSMC and Taiwan export concentration.
 
 ## Normal thesis
 
 ### Key assumptions
 
-- Structural demand grows but constraints and pricing cycles keep progress uneven.
-- Incumbents preserve share while new entrants pressure returns.
+- AI demand remains structurally strong, but the investment edge shifts from generic AI exposure to specific bottlenecks.
+- The main causal chain is now **AI demand -> data-center capex -> power/grid/transformers -> selective commodity and storage demand**.[^power-gap]
 
 ### Revenue and EBITDA path
 
-- Base case assumes strategic relevance persists while monetization improves in steps rather than a straight line.
+- Operators keep building, but returns are uneven and depend heavily on who has power access and who does not.
 
 ### Market size path
 
-- Linked markets grow, but bottlenecks and competition keep the path uneven.
+- The market keeps expanding, but monetization belongs disproportionately to the bottleneck owners.
 
 ### Business-line contribution
 
-- Core business stays dominant while optionality remains additive rather than fully proven.
+- GPUs remain necessary, but power flexibility and siting quality rise toward equal importance.
 
 ### Catalysts
 
-- Execution consistency, capex discipline, and evidence-backed product progress.
+- Incremental grid/storage buildout, faster utility approvals, and durable hyperscaler capex.
 
 ### Disconfirming evidence
 
-- Faster-than-expected margin erosion or weaker adoption.
+- AI workloads normalize faster than expected or grid investment closes the gap quickly enough to remove scarcity pricing.
 
 ### Signposts to monitor
 
-- Metrics to monitor: AI data centers, hyperscale, GPU clusters, power usage.
-- Track leading indicators, capex announcements, utilization, and regulatory milestones.
+- Commercial electricity demand growth.
+- Solar + battery deployment pace.
+- Co-located gas generation and storage announcements.
+- Taiwan export and GDP data as a proxy for advanced-chip pull.
 
 ## Bullish thesis
 
 ### Key assumptions
 
-- Demand accelerates, bottlenecks loosen selectively, and pricing power stays supportive.
-- This node becomes more central to adjacent entity economics than consensus expects.
+- Scarcity remains real enough that infrastructure owners, selected semiconductor nodes, and storage suppliers retain pricing power.
+- Power availability becomes the dominant screening variable for AI capacity buildout.
+- The market still underestimates how broad the second-order winners are across batteries, grid equipment, natural gas, and nuclear optionality.[^power-gap][^taiwan]
 
 ### Revenue and EBITDA path
 
-- Upside case assumes operating leverage and adjacent-market monetization become source-backed and durable.
+- The most advantaged ecosystems compound because they can secure both compute and power faster than peers.
 
 ### Market size path
 
-- End-market growth and share capture both beat conservative assumptions.
+- AI capacity demand keeps surprising upward, and bottlenecks persist longer than consensus expects.
 
 ### Business-line contribution
 
-- Higher-value adjacencies contribute more to growth and margins than the market currently credits.
+- Economic value accrues not only to AI labs and chip vendors, but to the energy and infrastructure stack that makes clusters usable.
 
 ### Catalysts
 
-- Major partnerships, product milestones, falling input costs, or better-than-expected deployment data.
+- Continued hyperscaler spend, stronger utility demand guidance, and persistent transformer/interconnection shortages.
 
 ### Disconfirming evidence
 
-- Bottlenecks persist or narrative outpaces measurable economics.
+- A sudden collapse in AI capex intensity, or major evidence that power supply is catching up rapidly.
 
 ### Signposts to monitor
 
-- Metrics to monitor: AI data centers, hyperscale, GPU clusters, power usage.
-- Track leading indicators, capex announcements, utilization, and regulatory milestones.
+- US generation growth versus load growth.
+- AI-linked commercial power demand.
+- Taiwan's export concentration in AI chips.
+
+[^power-gap]: Joseph Politano, "America's Electricity Gap," Apricitas, 2026-05-03: https://www.apricitas.io/p/americas-electricity-gap
+[^taiwan]: Joseph Politano, "Taiwan's Modern Miracle," Apricitas, 2026-03-05: https://www.apricitas.io/p/taiwans-modern-miracle

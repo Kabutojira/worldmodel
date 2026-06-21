@@ -2,68 +2,67 @@
 
 ## Entity summary
 
-AI data centers is tracked as a system-level node because Physical bottleneck for AI scaling; bridges compute and energy. The bootstrap focuses on demand drivers, bottlenecks, pricing, and linked entities.
+The daily update strengthens a core WorldModel claim: AI demand is real, but the investable bottleneck is increasingly **electricity and power delivery**, not just chips. Data-center economics now need to be read through both TSMC/Nvidia and the grid/transformer/gas/storage stack.[^power-gap][^taiwan]
 
 ## Business lines
 
-- Demand drivers: hyperscaler AI training and inference capex, enterprise GPU cloud demand, model-size growth.
-- Constraints: grid interconnection, transformers, power density, cooling, GPU/HBM availability.
-- Pricing mechanisms: colocation rents, cloud instance pricing, power cost, utilization rates.
+- **Capacity buildout:** hyperscaler and frontier-lab training/inference clusters.
+- **Power stack:** generation access, backup/co-located power, storage, and interconnection.
+- **Infrastructure bottlenecks:** transformers, transmission, cooling, and site readiness.
 
-## Latest financials
+## Latest operating facts
 
-- This bootstrap avoids inventing current figures where direct extraction was not completed. Use the linked annual/quarterly materials to replace placeholders with dated numbers.
-- Priority KPIs: AI data centers, hyperscale, GPU clusters, power usage, inference capacity.
+- Apricitas reports US power consumption has risen more in the last two years than in the previous fifteen combined.[^power-gap]
+- The same piece says EIA projections imply only **4.6%** total generation growth over the next two years, still not enough to close the gap.[^power-gap]
+- It also states US solar generation rose **28% to 389 TWh** in 2025, yet power demand still outpaced infrastructure growth, with residential electricity prices up **more than 40% since 2020**.[^power-gap]
+- For the semiconductor side, Taiwan's GDP rose at a **23.6% annualized rate in Q4 2025**, gross exports exceeded **$63B/month**, and manufacturing neared **40%** of the economy as AI-chip demand surged through TSMC.[^taiwan]
 
 ## Forecast table
 
-| Scenario | Revenue path | EBITDA / operating path | Market size path | Confidence |
+| Scenario | Revenue / utilization path | Return profile | What matters most | Confidence |
 |---|---|---|---|---|
-| Bearish | Pressure on adoption, pricing, or mix | Lower leverage / higher capex burden | Slower or less profitable growth | Low |
-| Base | Strategic relevance persists, measured execution | Gradual improvement | Moderate structural growth | Medium |
-| Bullish | Strong monetization and cleaner scaling | Better leverage and returns | Large adjacent-market upside | Low |
+| Bearish | Capacity additions lag power constraints | Returns compress on power cost and delays | Grid bottlenecks dominate | Medium |
+| Base | AI demand stays strong but unevenly monetized | Bottleneck owners outperform generic exposure | Power + TSMC remain core constraints | Medium-High |
+| Bullish | Capacity demand persists and scarcity pricing stays real | Infrastructure and select chip bottlenecks earn excess returns | Power access becomes the decisive moat | Medium |
 
 ## Valuation framing
 
-- Track how much of the current narrative is already embedded versus what still needs evidence from source-backed execution.
+- Generic "AI infrastructure" exposure is too coarse.
+- The market may still be pricing GPUs more efficiently than it prices **time-to-power**.
 
 ## Market expectations
 
-- The most important question is which linked market or bottleneck changes economics first.
+- Consensus understands AI capex; it may not fully understand the timeline mismatch between load growth and power/grid buildout.
 
 ## Possible mispricing
 
-- Bottleneck relief or worsening could move this entity faster than consensus models update.
-- Narrative-heavy optionality may be under- or over-capitalized depending on proof of deployment.
+- **Underappreciated winners:** transformers, battery storage, dispatchable gas, and high-quality power-connected sites.
+- **Underappreciated risk:** hyperscaler/lab capacity plans that assume faster grid buildout than local infrastructure allows.
+- **Second-order signal:** TSMC/Taiwan macro data suggest advanced-chip demand is so concentrated that geopolitical and supply-chain risk remains structurally underdiversified.[^taiwan]
 
 ## Major risks
 
-- Execution slippage.
-- Input-cost / regulatory / infrastructure bottlenecks.
-- Competitive intensity and capital discipline.
+- Policy distortion around tariffs, permits, or grid equipment worsens the bottleneck.[^power-gap]
+- AI capex demand cools before infrastructure scarcity can be monetized.
+- Taiwan concentration becomes a harder constraint than currently modeled.
 
 ## Connected-entity implications
 
-- Nvidia: Nvidia is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- Amazon: Amazon is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- Google / Alphabet: Google / Alphabet is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- Meta: Meta is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- Microsoft: Microsoft is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- OpenAI: OpenAI is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- Anthropic: Anthropic is a strategically relevant peer, supplier, customer, or dependency that changes AI data centers economics and optionality.
-- Energy: Energy shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Electricity grid: Electricity grid is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.
-- Natural gas: Natural gas affects AI data centers cost, supply security, or pricing through critical material exposure and procurement risk.
-- Nuclear power: Nuclear power shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Battery energy storage: Battery energy storage shapes AI data centers demand, pricing, market share, or capital allocation through adoption, competition, and cycle conditions.
-- Power transformers: Power transformers is a physical bottleneck or enabling network that influences AI data centers scaling, utilization, and returns.
+- **Nvidia / TSMC / ASML:** still core upstream winners, but no longer the whole story.
+- **Electricity grid / transformers / natural gas / nuclear / battery storage:** rising from background context to primary thesis variables.
+- **Tesla / xAI / Amazon / Google / Microsoft / Meta / OpenAI / Anthropic:** all become partially power-procurement stories, not just software or compute stories.
 
 ## Open questions
 
-- Which upcoming official filing or update most likely changes the thesis?
-- Which connected entity creates the biggest unpriced risk or upside?
+- Which regions can actually energize new AI capacity fastest?
+- Which companies control bottleneck equipment rather than merely demanding it?
+- How quickly can non-Taiwan advanced-node capacity reduce concentration risk?
 
 ## Sources
 
-- <a href="https://www.iea.org/reports/energy-and-ai">AI data centers official page</a> (official site)
-- <a href="https://www.energy.gov/articles/energy-department-announces-initiatives-support-data-center-energy-demand">AI data centers reference source</a> (research)
+- <a href="https://www.apricitas.io/p/americas-electricity-gap">Apricitas: America's Electricity Gap</a>
+- <a href="https://www.apricitas.io/p/taiwans-modern-miracle">Apricitas: Taiwan's Modern Miracle</a>
+- <a href="https://www.youtube.com/watch?v=IIwu1U8oepc">The Limiting Factor: Why is Elon's xAI Using Gas Generation Instead of Solar?</a>
+
+[^power-gap]: Joseph Politano, "America's Electricity Gap," Apricitas, 2026-05-03: https://www.apricitas.io/p/americas-electricity-gap
+[^taiwan]: Joseph Politano, "Taiwan's Modern Miracle," Apricitas, 2026-03-05: https://www.apricitas.io/p/taiwans-modern-miracle
