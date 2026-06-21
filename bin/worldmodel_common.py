@@ -38,8 +38,8 @@ DAILY_RUNS_HEADER = [
     "run_id","run_date","started_at","finished_at","status","entities_processed","sources_selected",
     "files_changed","commit_sha","notes",
 ]
-DISCORD_WATCHLIST_HEADER = [
-    "title","url","keywords","status","last_checked_at","notes",
+SUBSTACK_WATCHLIST_HEADER = [
+    "publication","feed_url","keywords","status","last_checked_at","notes",
 ]
 WIKI_PAGES = ["index.md", "business.md", "market.md", "financials.md", "technology.md", "people.md", "risks.md", "sources.md"]
 

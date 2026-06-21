@@ -44,7 +44,7 @@ Current adapters include:
 - investor relations / official pages;
 - SEC filings and companyfacts for Tesla seed;
 - deterministic Seeking Alpha symbol / analysis / transcript endpoints by ticker;
-- optional Discord watchlist ingestion from tracked config `data/discord_watchlist.csv`; active rows require semicolon-delimited keywords and fresh `last_checked_at` dates;
+- curated Substack RSS watchlist ingestion from tracked config `data/substack_watchlist.csv`; active rows require semicolon-delimited keywords and fresh `last_checked_at` dates;
 - YouTube channel metadata candidates sourced from:
   - All-In Podcast;
   - The Limiting Factor.

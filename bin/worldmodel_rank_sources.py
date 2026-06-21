@@ -15,10 +15,10 @@ SOURCE_QUALITY = {
     "trade_publication": 0.8,
     "deep_dive": 0.7,
     "seeking_alpha": 0.7,
+    "substack_post": 0.75,
+    "substack_feed_error": 0.1,
     "youtube_transcript": 0.75,
     "youtube_video": 0.55,
-    "discord_public": 0.35,
-    "discord_watchlist": 0.45,
     "news": 0.5,
     "x_post": 0.3,
 }

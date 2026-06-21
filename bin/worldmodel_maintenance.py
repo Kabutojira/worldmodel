@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 from worldmodel_common import (
     DAILY_RUNS_HEADER,
-    DISCORD_WATCHLIST_HEADER,
+    SUBSTACK_WATCHLIST_HEADER,
     ENTITIES_DIR,
     ENTITIES_HEADER,
     ESTIMATES_HEADER,
@@ -68,43 +68,43 @@ def find_relationship_gaps() -> list[str]:
     return findings
 
 
-def find_discord_watchlist_gaps() -> list[str]:
+def find_substack_watchlist_gaps() -> list[str]:
     findings = []
-    watchlist_path = ROOT / "data" / "discord_watchlist.csv"
+    watchlist_path = ROOT / "data" / "substack_watchlist.csv"
     if not watchlist_path.exists():
-        findings.append(f"missing Discord watchlist config: {watchlist_path}")
+        findings.append(f"missing Substack watchlist config: {watchlist_path}")
         return findings
 
-    validate_header(watchlist_path, DISCORD_WATCHLIST_HEADER)
+    validate_header(watchlist_path, SUBSTACK_WATCHLIST_HEADER)
     stale_cutoff = dt.date.today() - dt.timedelta(days=30)
     for row in read_csv(watchlist_path):
-        title = str(row.get("title", "")).strip()
-        url = str(row.get("url", "")).strip()
+        publication = str(row.get("publication", "")).strip()
+        feed_url = str(row.get("feed_url", "")).strip()
         status = str(row.get("status", "active")).strip().lower()
         last_checked = str(row.get("last_checked_at", "")).strip()
         keywords = [part.strip() for part in str(row.get("keywords", "")).split(";") if part.strip()]
-        row_label = title or url or "<blank row>"
+        row_label = publication or feed_url or "<blank row>"
 
-        if not title:
-            findings.append(f"Discord watchlist entry missing title: {row_label}")
-        parsed = urlparse(url)
+        if not publication:
+            findings.append(f"Substack watchlist entry missing publication: {row_label}")
+        parsed = urlparse(feed_url)
         if parsed.scheme not in {"http", "https"} or not parsed.netloc:
-            findings.append(f"Discord watchlist entry has malformed url: {row_label}")
+            findings.append(f"Substack watchlist entry has malformed feed_url: {row_label}")
         if not keywords:
-            findings.append(f"Discord watchlist entry missing keywords: {row_label}")
+            findings.append(f"Substack watchlist entry missing keywords: {row_label}")
         if status not in {"active", "paused", "archived"}:
-            findings.append(f"Discord watchlist entry has invalid status '{status}': {row_label}")
+            findings.append(f"Substack watchlist entry has invalid status '{status}': {row_label}")
         if status == "active":
             if not last_checked:
-                findings.append(f"Discord watchlist entry missing last_checked_at: {row_label}")
+                findings.append(f"Substack watchlist entry missing last_checked_at: {row_label}")
             else:
                 try:
                     checked_date = dt.date.fromisoformat(last_checked)
                 except ValueError:
-                    findings.append(f"Discord watchlist entry has invalid last_checked_at '{last_checked}': {row_label}")
+                    findings.append(f"Substack watchlist entry has invalid last_checked_at '{last_checked}': {row_label}")
                 else:
                     if checked_date < stale_cutoff:
-                        findings.append(f"Discord watchlist entry is stale (>30d): {row_label}")
+                        findings.append(f"Substack watchlist entry is stale (>30d): {row_label}")
     return findings
 
 
@@ -123,7 +123,7 @@ def main() -> int:
     findings.extend(find_missing_entity_files())
     findings.extend(find_broken_links())
     findings.extend(find_relationship_gaps())
-    findings.extend(find_discord_watchlist_gaps())
+    findings.extend(find_substack_watchlist_gaps())
     if not (ROOT / "AGENTS.md").exists() or not (ROOT / "PLAN.md").exists():
         findings.append("AGENTS.md or PLAN.md missing")
     if not SITE_DIR.exists():

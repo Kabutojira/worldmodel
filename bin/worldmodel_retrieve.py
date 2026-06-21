@@ -6,12 +6,13 @@ import json
 import os
 import re
 import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
 import requests
 
-from worldmodel_common import DISCORD_WATCHLIST_HEADER, ROOT, canonicalize_url, iso_date, now_utc, parse_index_entities, read_csv, stable_hash, validate_header
+from worldmodel_common import SUBSTACK_WATCHLIST_HEADER, ROOT, canonicalize_url, iso_date, now_utc, parse_index_entities, read_csv, stable_hash, validate_header
 
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
 REQUEST_TIMEOUT = 20
@@ -56,7 +57,7 @@ def extract_actual_url(href: str) -> str:
     return href
 
 
-def build_seeking_alpha_candidates(name: str, ticker: str) -> list[dict[str, str]]:
+def build_seeking_alpha_candidates(name: str, ticker: str) -> list[dict[str, object]]:
     ticker = ticker.strip().upper()
     if not ticker:
         return []
@@ -82,29 +83,76 @@ def build_seeking_alpha_candidates(name: str, ticker: str) -> list[dict[str, str
     ]
 
 
-def load_discord_watchlist_candidates(entity: dict[str, object]) -> list[dict[str, str]]:
-    watchlist_path = ROOT / "data" / "discord_watchlist.csv"
+def normalize_substack_feed_url(feed_url: str) -> str:
+    feed_url = feed_url.strip()
+    if not feed_url:
+        return ""
+    if not feed_url.startswith(("http://", "https://")):
+        feed_url = "https://" + feed_url.lstrip("/")
+    parsed = urlparse(feed_url)
+    if parsed.netloc.endswith("substack.com") and not parsed.path.endswith("/feed"):
+        path = parsed.path.rstrip("/")
+        if "/p/" not in path:
+            feed_url = f"{parsed.scheme}://{parsed.netloc}{path}/feed"
+    return canonicalize_url(feed_url)
+
+
+def parse_substack_pubdate(value: str) -> str:
+    value = value.strip()
+    if not value:
+        return ""
+    try:
+        return parsedate_to_datetime(value).astimezone().isoformat()
+    except Exception:
+        return value
+
+
+def load_substack_watchlist_candidates(entity: dict[str, object], limit_per_feed: int = 3) -> list[dict[str, object]]:
+    watchlist_path = ROOT / "data" / "substack_watchlist.csv"
     if not watchlist_path.exists():
         return []
-    validate_header(watchlist_path, DISCORD_WATCHLIST_HEADER)
+    validate_header(watchlist_path, SUBSTACK_WATCHLIST_HEADER)
     terms = entity_terms(entity)
-    results: list[dict[str, str]] = []
+    results: list[dict[str, object]] = []
     for item in read_csv(watchlist_path):
         if str(item.get("status", "active")).strip().lower() not in {"active", ""}:
             continue
-        title = str(item.get("title", "")).strip()
-        url = str(item.get("url", "")).strip()
-        keywords = [part.strip().lower() for part in str(item.get("keywords", "")).split(";") if part.strip()]
-        haystack = f"{title} {url} {' '.join(keywords)}".lower()
-        if not any(term in haystack for term in terms):
+        publication = str(item.get("publication", "")).strip()
+        feed_url = normalize_substack_feed_url(str(item.get("feed_url", "")).strip())
+        row_keywords = [part.strip().lower() for part in str(item.get("keywords", "")).split(";") if part.strip()]
+        row_terms = set(row_keywords) | ({publication.lower()} if publication else set())
+        if not any(term in row_terms for term in terms) and not any(term in terms for term in row_terms):
             continue
-        results.append({
-            "title": title or url,
-            "source_name": "Discord",
-            "source_type": "discord_watchlist",
-            "url": url,
-            "notes": str(item.get("notes", "")).strip(),
-        })
+        try:
+            root = ET.fromstring(safe_get_text(feed_url))
+        except Exception as exc:
+            results.append({
+                "title": f"{publication or feed_url} feed fetch failed",
+                "source_name": publication or "Substack",
+                "source_type": "substack_feed_error",
+                "url": feed_url,
+                "notes": f"feed fetch failed: {exc}",
+            })
+            continue
+        selected_here = 0
+        for entry in root.findall("./channel/item"):
+            if selected_here >= limit_per_feed:
+                break
+            title = (entry.findtext("title") or "").strip()
+            link = canonicalize_url((entry.findtext("link") or "").strip())
+            description = (entry.findtext("description") or "").strip()
+            haystack = f"{publication} {title} {description} {' '.join(row_keywords)}".lower()
+            if not any(term in haystack for term in terms):
+                continue
+            results.append({
+                "title": title or link,
+                "source_name": publication or "Substack",
+                "source_type": "substack_post",
+                "url": link,
+                "published_at": parse_substack_pubdate(entry.findtext("pubDate") or ""),
+                "notes": str(item.get("notes", "")).strip(),
+            })
+            selected_here += 1
     return results
 
 
@@ -187,7 +235,7 @@ def build_seed_candidates(entity: dict[str, object]) -> list[dict[str, object]]:
     slug = str(entity["slug"])
     name = str(entity["name"])
     ticker = str(entity.get("ticker", "")).strip()
-    seeds = [
+    seeds: list[dict[str, object]] = [
         {"title": f"{name} Investor Relations", "source_name": name, "source_type": "investor_relations", "url": f"https://www.{slug}.com/investor-relations" if slug != "tesla" else "https://ir.tesla.com"},
     ]
     if slug == "tesla":
@@ -199,7 +247,7 @@ def build_seed_candidates(entity: dict[str, object]) -> list[dict[str, object]]:
         ])
     if ticker or name:
         seeds.extend(build_seeking_alpha_candidates(name, ticker))
-        seeds.extend(load_discord_watchlist_candidates(entity))
+    seeds.extend(load_substack_watchlist_candidates(entity))
     return seeds
 
 
