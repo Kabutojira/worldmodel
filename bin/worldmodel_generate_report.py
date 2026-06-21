@@ -5,68 +5,71 @@ import argparse
 import json
 import os
 import subprocess
+from collections import Counter
 from pathlib import Path
 
 from worldmodel_common import DAILY_RUNS_HEADER, ENTITIES_DIR, ROOT, ensure_dir, iso_date, now_utc, read_csv, write_csv
 
 
-REPORT_TEMPLATE = """# Daily Report {run_date}
+REPORT_TEMPLATE = """# WorldModel Intelligence Report {run_date}
 
 - Run ID: {run_id}
 - Run date: {run_date}
 - Entities processed: {entities_processed}
+- Sources selected: {sources_selected_count}
 
-## Selected sources
+## Executive view
 
-{selected_sources}
+{executive_view}
 
-## Skipped sources
+## Global thesis impact
 
-{skipped_sources}
+{global_thesis_impact}
 
-## Modified files
+## Entity changes to review
 
-{modified_files}
+{entity_changes}
 
-## Facts added
+## Connection changes to review
 
-{facts_added}
+{connection_changes}
 
-## Thesis changes
+## New discoveries and weak signals
 
-{thesis_changes}
+{new_discoveries}
 
-## CSV updates
-
-{csv_updates}
-
-## Relationship changes
-
-{relationship_changes}
-
-## Mispricing / tendency signals
+## Mispricing / investment signals
 
 {mispricing_signals}
 
-## Issues / inefficiencies
+## Source impact map
 
-{issues}
+{source_impact_map}
 
-## Open questions
+## Open questions for investment work
 
 {open_questions}
 
-## Next actions
+## Next research actions
 
 {next_actions}
+
+## Appendix: selected sources
+
+{selected_sources}
+
+## Appendix: skipped sources
+
+{skipped_sources}
+
+## Appendix: operational notes
+
+{operational_notes}
+
+## Appendix: modified files
+
+{modified_files}
 """
-
-
-def latest_run_id() -> str:
-    rows = read_csv(ROOT / "data" / "daily_runs.csv")
-    if not rows:
-        return f"worldmodel-{now_utc().replace(':', '').replace('-', '').lower()}"
-    return rows[-1].get("run_id") or f"worldmodel-{now_utc().replace(':', '').replace('-', '').lower()}"
 
 
 def create_run_id() -> str:
@@ -89,7 +92,7 @@ def update_daily_runs(run_id: str, run_date: str, entities: list[dict[str, objec
         "sources_selected": str(selected_count),
         "files_changed": "",
         "commit_sha": "",
-        "notes": "Deterministic daily pipeline completed through report generation/render preparation.",
+        "notes": "Daily intelligence report generated; LLM synthesis should replace placeholders with thesis, relationship, and mispricing impact.",
     }
     replaced = False
     for idx, existing in enumerate(rows):
@@ -117,30 +120,32 @@ def git_modified_paths() -> list[str]:
     return paths
 
 
-def html_source_line(item: dict[str, object]) -> str:
-    title = str(item.get("title", "Untitled"))
-    url = str(item.get("url", ""))
-    source_type = str(item.get("source_type", "unknown"))
-    discovery_state = str(item.get("discovery_state", "unknown"))
-    processing_state = str(item.get("processing_state", "unknown"))
-    score = item.get("final_score")
-    score_text = f", score {score:.3f}" if isinstance(score, (int, float)) else ""
-    state_text = f", discovery={discovery_state}, processing={processing_state}"
-    return f'- <a href="{url}">{title}</a> ({source_type}{score_text}{state_text})'
-
-
-def bullet_list(items: list[str], empty_message: str) -> str:
-    return "\n".join(items) if items else f"- {empty_message}"
-
-
 def object_list(value: object) -> list[dict[str, object]]:
     if not isinstance(value, list):
         return []
     return [item for item in value if isinstance(item, dict)]
 
 
+def bullet_list(items: list[str], empty_message: str) -> str:
+    return "\n".join(items) if items else f"- {empty_message}"
+
+
+def html_source_line(item: dict[str, object]) -> str:
+    title = str(item.get("title", "Untitled"))
+    url = str(item.get("url", ""))
+    source_type = str(item.get("source_type", "unknown"))
+    source_name = str(item.get("source_name", "unknown"))
+    score = item.get("final_score")
+    score_text = f", score {score:.3f}" if isinstance(score, (int, float)) else ""
+    return f'- <a href="{url}">{title}</a> ({source_name}; {source_type}{score_text})'
+
+
+def selected_items(entity: dict[str, object]) -> list[dict[str, object]]:
+    return object_list(entity.get("selected"))
+
+
 def summarize_selected(entity: dict[str, object]) -> str:
-    selected = [html_source_line(item) for item in object_list(entity.get("selected"))]
+    selected = [html_source_line(item) for item in selected_items(entity)]
     return bullet_list(selected, "No selected sources.")
 
 
@@ -164,123 +169,204 @@ def summarize_modified_files(report_path: Path, extra_paths: list[str]) -> str:
     return bullet_list(lines, "No modified files detected.")
 
 
-def summarize_csv_updates(entity: dict[str, object]) -> str:
-    selected = object_list(entity.get("selected"))
-    new_candidates = sum(1 for item in selected if item.get("discovery_state") == "new_candidate")
-    logged_unprocessed = sum(1 for item in selected if item.get("processing_state") == "logged_unprocessed")
-    lines = [
-        f'- Selected {len(selected)} sources for `{entity.get("slug", "unknown")}`.',
-        f'- Discovery state split: {new_candidates} new candidate(s) and {len(selected) - new_candidates} already-logged candidate(s).',
-        f'- Processing state split: {logged_unprocessed} logged-but-unsynthesized candidate(s) remain visible separately from fully synthesized items.',
-        f'- `data/entities.csv` should reflect refreshed retrieval metadata for `{entity.get("slug", "unknown")}`.',
-        f'- `data/source_log.csv` and `entities/{entity.get("slug", "unknown")}/source_log.csv` should be updated during the daily run when sources are processed.',
-    ]
-    return "\n".join(lines)
+def infer_source_themes(items: list[dict[str, object]]) -> Counter[str]:
+    themes: Counter[str] = Counter()
+    theme_keywords = {
+        "AI infrastructure / compute": ["nvidia", "gpu", "ai", "datacenter", "data center", "compute", "semiconductor", "tsmc"],
+        "Power / grid bottlenecks": ["electricity", "power", "grid", "energy", "nuclear", "gas", "transformer"],
+        "Autonomy / robotics optionality": ["robotaxi", "fsd", "autonomy", "robot", "humanoid", "waymo"],
+        "EV / battery supply chain": ["tesla", "ev", "battery", "lithium", "megapack", "charging"],
+        "Platform strategy / distribution": ["google", "meta", "microsoft", "amazon", "apple", "openai", "anthropic"],
+        "Macro / geopolitics": ["taiwan", "china", "tariff", "rates", "macro", "supply chain"],
+        "Space / connectivity": ["spacex", "starlink", "satellite", "space", "launch"],
+    }
+    for item in items:
+        haystack = f"{item.get('title', '')} {item.get('source_name', '')} {item.get('url', '')} {item.get('notes', '')}".lower()
+        for theme, keywords in theme_keywords.items():
+            if any(keyword in haystack for keyword in keywords):
+                themes[theme] += 1
+    return themes
 
 
-def summarize_issues(entity: dict[str, object], transcript_manifest: dict[str, object] | None) -> str:
-    issues: list[str] = []
-    selected = object_list(entity.get("selected"))
-    fresh = [item for item in selected if item.get("discovery_state") == "new_candidate"]
-    logged_unprocessed = [item for item in selected if item.get("processing_state") == "logged_unprocessed"]
-    if not fresh:
-        issues.append("- Retrieval surfaced no fresh candidate sources; the run is re-ranking already-logged material.")
-    if logged_unprocessed:
-        issues.append(f"- {len(logged_unprocessed)} selected source(s) are logged but not yet synthesized; the new state split makes that backlog explicit.")
-    if len(selected) <= 5:
-        issues.append("- Candidate diversity is still low; retrieval remains too dependent on static seed URLs.")
-    transcript_failures = []
-    if transcript_manifest:
-        for video in object_list(transcript_manifest.get("videos")):
-            if not video.get("transcript_available"):
-                transcript_failures.append(str(video.get("title", "unknown video")))
-    if transcript_failures:
-        issues.append(f"- YouTube transcript fetch is blocked or unavailable for {len(transcript_failures)} videos, so channel ingestion falls back to metadata only.")
-    if any(item.get("source_type") == "youtube_video" and not item.get("transcript_available") for item in selected):
-        issues.append("- Selected YouTube items do not have transcript text attached, which reduces their synthesis value.")
-    if any(item.get("source_type") == "seeking_alpha" for item in selected):
-        issues.append("- Seeking Alpha support is currently endpoint-based; it does not yet discover newly published article URLs automatically.")
-    return bullet_list(issues, "No major issues detected by deterministic checks.")
+def source_impact_lines(entity: dict[str, object]) -> list[str]:
+    lines = []
+    for item in selected_items(entity):
+        title = str(item.get("title", "Untitled"))
+        source_type = str(item.get("source_type", "unknown"))
+        url = str(item.get("url", ""))
+        themes = infer_source_themes([item])
+        theme_text = ", ".join(themes) if themes else "needs classification"
+        lines.append(
+            f'- `{entity.get("slug", "unknown")}`: <a href="{url}">{title}</a> ({source_type}) — likely touches **{theme_text}**. Synthesis required: extract evidence, affected thesis, impacted entities, and investable signal.'
+        )
+    return lines
 
 
-def report_context(entity: dict[str, object], run_date: str, run_id: str, transcript_manifest: dict[str, object] | None, report_path: Path) -> dict[str, str]:
+def content_context(entity: dict[str, object]) -> dict[str, str]:
+    slug = str(entity.get("slug", "unknown"))
+    selected = selected_items(entity)
+    themes = infer_source_themes(selected)
+    theme_summary = ", ".join(f"{theme} ({count})" for theme, count in themes.most_common()) or "no clear theme detected"
+    source_types = Counter(str(item.get("source_type", "unknown")) for item in selected)
+    source_type_summary = ", ".join(f"{kind}: {count}" for kind, count in source_types.most_common()) or "none"
+
+    return {
+        "executive_view": (
+            f"- `{slug}` has {len(selected)} selected source(s). Dominant source mix: {source_type_summary}.\n"
+            f"- Detected themes: {theme_summary}.\n"
+            "- Replace this scaffold with a concise investment judgment after reading sources: what changed, what did not change, and what matters for capital allocation."
+        ),
+        "global_thesis_impact": (
+            "- For each material source, state whether it strengthens, weakens, or leaves unchanged the global WorldModel thesis.\n"
+            "- Focus on AI → data centers → power/grid → semiconductors/commodities, Tesla optionality, autonomy/robotics, and platform distribution.\n"
+            "- Do not report infrastructure work here unless it changes research quality or source coverage."
+        ),
+        "entity_changes": (
+            f"- `{slug}`: classify changes as bullish/base/bearish/no-change. Include evidence-backed updates to wiki, thesis, estimates, or financial report.\n"
+            "- Mention new/paused entities only if a source changes their investment relevance."
+        ),
+        "connection_changes": (
+            "- Identify source-backed changes to relationships: supplier, bottleneck, competitor, substitute, demand driver, regulation, or key-person link.\n"
+            "- State the causal/financial mechanism and the direction of impact."
+        ),
+        "new_discoveries": (
+            "- List genuinely new facts, weak signals, or contradictions found in sources.\n"
+            "- Separate evidence from inference. Do not include repository plumbing changes."
+        ),
+        "mispricing_signals": (
+            "- Look for gaps between likely fundamentals and market narrative: underpriced bottlenecks, overhyped optionality, delayed capex constraints, margin pressure, or consensus blind spots.\n"
+            "- Mark each signal as evidence / inference / confidence / time horizon."
+        ),
+        "source_impact_map": bullet_list(source_impact_lines(entity), "No source impact map available."),
+        "open_questions": (
+            "- What source-backed fact would most change the current investment view?\n"
+            "- Which linked entity should be updated next because this source changes its economics?\n"
+            "- What metric or market price would confirm/disconfirm the signal?"
+        ),
+        "next_actions": (
+            "- Read selected sources and update content files, not just logs.\n"
+            "- Update thesis/relationships/estimates when evidence changes the view.\n"
+            "- Convert recurring weak signals into tracked metrics or new entity relationships."
+        ),
+    }
+
+
+def report_context(entity: dict[str, object], run_date: str, run_id: str, report_path: Path) -> dict[str, str]:
     slug = str(entity.get("slug", "unknown"))
     global_report = f"reports/daily/report_{run_date}.md"
     entity_report = f"entities/{slug}/daily_reports/report_{run_date}.md"
-    return {
+    ctx = content_context(entity)
+    ctx.update({
         "run_id": run_id,
         "run_date": run_date,
         "entities_processed": slug,
+        "sources_selected_count": str(len(selected_items(entity))),
         "selected_sources": summarize_selected(entity),
         "skipped_sources": summarize_skipped(entity),
         "modified_files": summarize_modified_files(report_path, [global_report, entity_report, "data/source_log.csv", f"entities/{slug}/source_log.csv", "data/entities.csv", "data/daily_runs.csv", "index.md"]),
-        "facts_added": "- No deterministic fact extraction is performed here. Use the selected source set for LLM-backed evidence extraction.",
-        "thesis_changes": "- None in this deterministic stage. Update after source reading and thesis synthesis.",
-        "csv_updates": summarize_csv_updates(entity),
-        "relationship_changes": "- None in this deterministic stage.",
-        "mispricing_signals": "- *Evidence:* Primary sources and ranked external research are now assembled for review.\n- *Inference:* Mispricing detection still depends on the subsequent synthesis step; this script only improves run visibility and issue reporting.",
-        "issues": summarize_issues(entity, transcript_manifest),
-        "open_questions": "- Which selected sources should become the next source-backed baseline for thesis and estimates?\n- Which additional source adapters would most improve source diversity for this entity?\n- Should the workflow persist `processing_state` history in a dedicated deterministic artifact beyond the ranked JSON output?",
-        "next_actions": "- Read and synthesize the selected sources.\n- Update wiki, thesis, estimates, and relationships from source-backed evidence.\n- Re-run maintenance, then commit and push the resulting repository changes.",
+        "operational_notes": "- Operational details are intentionally quarantined in this appendix. Promote only items that affect content quality, source coverage, or investment signal reliability.",
+    })
+    return ctx
+
+
+def combine_global_context(entities: list[dict[str, object]], run_date: str, run_id: str, global_report_path: Path) -> dict[str, str]:
+    all_selected = [item for entity in entities for item in selected_items(entity)]
+    themes = infer_source_themes(all_selected)
+    theme_summary = ", ".join(f"{theme} ({count})" for theme, count in themes.most_common()) or "no clear theme detected"
+    source_types = Counter(str(item.get("source_type", "unknown")) for item in all_selected)
+    source_type_summary = ", ".join(f"{kind}: {count}" for kind, count in source_types.most_common()) or "none"
+    entities_by_sources = sorted(((str(e.get("slug", "unknown")), len(selected_items(e))) for e in entities), key=lambda x: (-x[1], x[0]))
+    top_entities = ", ".join(f"`{slug}` ({count})" for slug, count in entities_by_sources[:15]) or "none"
+
+    entity_blocks = [f"- `{slug}`: {count} selected source(s); synthesize thesis/entity/connection impact." for slug, count in entities_by_sources if count]
+    source_lines = [line for entity in entities for line in source_impact_lines(entity)]
+    selected_lines = []
+    skipped_lines = []
+    for entity in entities:
+        slug = str(entity.get("slug", "unknown"))
+        for item in selected_items(entity):
+            selected_lines.append(f"- `{slug}` {html_source_line(item)[2:]}")
+        for item in object_list(entity.get("skipped"))[:5]:
+            title = str(item.get("title", "Untitled"))
+            reason = str(item.get("skip_reason", "skipped"))
+            url = str(item.get("url", ""))
+            skipped_lines.append(f'- `{slug}` <a href="{url}">{title}</a> ({reason})')
+
+    return {
+        "run_id": run_id,
+        "run_date": run_date,
+        "entities_processed": ", ".join(str(entity.get("slug", "unknown")) for entity in entities) or "none",
+        "sources_selected_count": str(len(all_selected)),
+        "executive_view": (
+            f"- Selected {len(all_selected)} source(s) across {len(entities)} entities.\n"
+            f"- Highest-activity entities: {top_entities}.\n"
+            f"- Source mix: {source_type_summary}.\n"
+            f"- Detected themes: {theme_summary}.\n"
+            "- The report must answer: what changed in the investable map, what connections matter more/less, and where market expectations may be wrong."
+        ),
+        "global_thesis_impact": (
+            "- Synthesize source-backed impact on the global map, especially AI infrastructure, power/grid constraints, semiconductors, Tesla/autonomy/robotics, space/connectivity, and platform distribution.\n"
+            "- Classify each impact: strengthens thesis / weakens thesis / adds uncertainty / no material change.\n"
+            "- Avoid reporting implementation details unless they materially improve source coverage."
+        ),
+        "entity_changes": bullet_list(entity_blocks, "No entity changes to review."),
+        "connection_changes": (
+            "- Review whether selected sources alter causal chains: AI demand → GPU/HBM/TSMC/ASML; data centers → electricity/grid/transformers/copper/natural gas/nuclear; Tesla → battery/lithium/robotaxi/humanoids/xAI/Nvidia.\n"
+            "- Add or revise relationships only with evidence URL, mechanism, and investment relevance."
+        ),
+        "new_discoveries": (
+            "- Extract new facts or weak signals from selected sources.\n"
+            "- Prioritize facts that update market size, margins, capex, capacity, regulation, adoption, or competitive positioning."
+        ),
+        "mispricing_signals": (
+            "- Identify potential mispricing signals from the source set: consensus blind spots, underappreciated bottlenecks, overcapitalized narratives, or cross-entity second-order effects.\n"
+            "- For each signal include evidence, inference, confidence, time horizon, and what would falsify it."
+        ),
+        "source_impact_map": bullet_list(source_lines, "No selected sources to map."),
+        "open_questions": (
+            "- Which thesis has the largest evidence gap?\n"
+            "- Which entity relationship is most likely to be mispriced by public markets?\n"
+            "- What metric/source should be tracked next to validate the signal?"
+        ),
+        "next_actions": (
+            "- Read the highest-scoring sources and update content pages with investment-relevant synthesis.\n"
+            "- Update relationships and estimates where evidence changes the causal model.\n"
+            "- Add new tracked metrics for recurring bottleneck or mispricing signals."
+        ),
+        "selected_sources": bullet_list(selected_lines, "No selected sources."),
+        "skipped_sources": bullet_list(skipped_lines, "None."),
+        "operational_notes": "- Operational details moved to appendix by design. The main report should be content intelligence, not infrastructure changelog.",
+        "modified_files": summarize_modified_files(global_report_path, [f"reports/daily/report_{run_date}.md", "data/source_log.csv", "data/entities.csv", "data/daily_runs.csv", "index.md"]),
     }
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate deterministic WorldModel daily report skeletons from ranked source output.")
+    parser = argparse.ArgumentParser(description="Generate WorldModel daily intelligence report scaffolds from ranked source output.")
     parser.add_argument("--selected", default=str(ROOT / ".worldmodel" / "selected.json"))
     parser.add_argument("--run-date", default=iso_date())
     parser.add_argument("--run-id", default="")
-    parser.add_argument("--transcript-manifest", default=str(ROOT / ".worldmodel" / "youtube_transcripts_index.json"))
     args = parser.parse_args()
 
     selected_path = Path(args.selected)
     data = json.loads(selected_path.read_text(encoding="utf-8"))
     run_id = args.run_id or create_run_id()
     run_date = args.run_date
-    transcript_manifest = None
-    transcript_path = Path(args.transcript_manifest)
-    if transcript_path.exists():
-        transcript_manifest = json.loads(transcript_path.read_text(encoding="utf-8"))
 
     global_report_path = ROOT / "reports" / "daily" / f"report_{run_date}.md"
     ensure_dir(global_report_path.parent)
 
-    entity_blocks = []
-    first_entity_context = None
     entities = object_list(data.get("entities"))
     for entity in entities:
-        entity_report_path = ENTITIES_DIR / str(entity.get("slug", "unknown")) / "daily_reports" / f"report_{run_date}.md"
-        context = report_context(entity, run_date, run_id, transcript_manifest, entity_report_path)
-        if first_entity_context is None:
-            first_entity_context = context
+        slug = str(entity.get("slug", "unknown"))
+        entity_report_path = ENTITIES_DIR / slug / "daily_reports" / f"report_{run_date}.md"
         ensure_dir(entity_report_path.parent)
+        context = report_context(entity, run_date, run_id, entity_report_path)
         entity_report_path.write_text(REPORT_TEMPLATE.format(**context), encoding="utf-8")
-        entity_blocks.append(f"- {entity.get('slug', 'unknown')}: {len(object_list(entity.get('selected')))} selected / {len(object_list(entity.get('skipped')))} skipped")
 
-    if first_entity_context is None:
-        first_entity_context = {
-            "run_id": run_id,
-            "run_date": run_date,
-            "entities_processed": "none",
-            "selected_sources": "- No entities were present in the selected source file.",
-            "skipped_sources": "- None.",
-            "modified_files": summarize_modified_files(global_report_path, [f"reports/daily/report_{run_date}.md"]),
-            "facts_added": "- None.",
-            "thesis_changes": "- None.",
-            "csv_updates": "- None.",
-            "relationship_changes": "- None.",
-            "mispricing_signals": "- None.",
-            "issues": "- No entities found in ranked source output.",
-            "open_questions": "- Why was the selected source file empty?",
-            "next_actions": "- Fix retrieval or ranking before the next run.",
-        }
-    global_context = dict(first_entity_context)
-    global_context["entities_processed"] = ", ".join(str(entity.get("slug", "unknown")) for entity in entities) or "none"
-    global_context["modified_files"] = summarize_modified_files(global_report_path, [f"reports/daily/report_{run_date}.md", "data/source_log.csv", "data/entities.csv", "data/daily_runs.csv", "index.md"])
-    global_context["csv_updates"] = bullet_list(entity_blocks, "No entity summary available.") + "\n- Review `data/daily_runs.csv` and source logs for the finalized run record."
+    global_context = combine_global_context(entities, run_date, run_id, global_report_path)
     global_report_path.write_text(REPORT_TEMPLATE.format(**global_context), encoding="utf-8")
     update_daily_runs(run_id, run_date, entities)
-    print(json.dumps({"global_report": str(global_report_path), "entities": len(entities), "run_id": run_id}))
+    print(json.dumps({"global_report": str(global_report_path), "entities": len(entities), "run_id": run_id, "selected_sources": global_context["sources_selected_count"]}))
     return 0
 
 

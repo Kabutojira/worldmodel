@@ -108,20 +108,20 @@ Create:
 - `reports/daily/report_YYYY-MM-DD.md`
 - `entities/<slug>/daily_reports/report_YYYY-MM-DD.md` for changed entities.
 
-Required sections:
+Required report focus:
 
-- run date;
-- entities processed;
-- selected sources with HTML links;
-- skipped sources with reasons;
-- modified files with Markdown links;
-- facts added;
-- thesis changes;
-- CSV updates;
-- relationship changes;
-- mispricing/tendency signals;
-- open questions;
-- next actions.
+- executive view of what changed in the investable map;
+- global thesis impact from the latest ingested sources;
+- thesis changes by entity, classified bullish/base/bearish/no-change;
+- connection changes with causal/financial mechanism;
+- entity changes, new entities, paused entities, and why they matter;
+- new discoveries, weak signals, and contradictions;
+- mispricing/tendency signals with evidence, inference, confidence, time horizon, and falsifier;
+- source impact map explaining how each material source affects the WorldModel graph;
+- open questions for investment work;
+- next research actions.
+
+Operational details such as modified files, scripts, commits, and maintenance findings belong in appendices only. Do not let infrastructure changes dominate the report unless they materially change source coverage or research reliability.
 
 ### 10. Render GitHub Pages
 

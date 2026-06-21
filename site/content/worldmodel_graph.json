@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T08:16:15Z",
+  "generated_at": "2026-06-21T09:10:12Z",
   "nodes": [
     {
       "id": "abb_robotics",
@@ -607,22 +607,6 @@
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/reports/daily/../../bin/worldmodel_generate_report.py/",
-      "exists": false
-    },
-    {
-      "id": "reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py",
-      "label": "reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py",
-      "type": "page",
-      "priority": "",
-      "url": "/worldmodel/entities/reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py/",
-      "exists": false
-    },
-    {
-      "id": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
-      "label": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
-      "type": "page",
-      "priority": "",
-      "url": "/worldmodel/entities/reports/daily/reports/daily/../../bin/worldmodel_retrieve.py/",
       "exists": false
     },
     {
@@ -11786,14 +11770,6 @@
       "exists": true
     },
     {
-      "id": "worldmodel_graph.json",
-      "label": "worldmodel_graph.json",
-      "type": "page",
-      "priority": "",
-      "url": "/worldmodel/entities/worldmodel_graph.json/",
-      "exists": false
-    },
-    {
       "id": "xai",
       "label": "xAI",
       "type": "private_company",
@@ -19516,14 +19492,6 @@
       "evidence_url": ""
     },
     {
-      "source": "graph",
-      "target": "worldmodel_graph.json",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
       "source": "graphite",
       "target": "battery_storage",
       "type": "demand_driver",
@@ -24397,31 +24365,7 @@
     },
     {
       "source": "reports/daily/report_2026-06-21",
-      "target": "reports/daily/reports/daily/../../PLAN",
-      "type": "related",
-      "importance": "",
-      "why": "Derived from markdown link between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports/daily/report_2026-06-21",
       "target": "reports/daily/reports/daily/../../bin/worldmodel_generate_report.py",
-      "type": "related",
-      "importance": "",
-      "why": "Derived from markdown link between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports/daily/report_2026-06-21",
-      "target": "reports/daily/reports/daily/../../bin/worldmodel_rank_sources.py",
-      "type": "related",
-      "importance": "",
-      "why": "Derived from markdown link between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports/daily/report_2026-06-21",
-      "target": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
       "type": "related",
       "importance": "",
       "why": "Derived from markdown link between generated site pages.",
@@ -25022,6 +24966,14 @@
     {
       "source": "reports/daily/report_2026-06-21",
       "target": "reports/daily/reports/daily/../../entities/xai/daily_reports/report_2026-06-21",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-21",
+      "target": "reports/daily/reports/daily/../../skills/worldmodel/SKILL",
       "type": "related",
       "importance": "",
       "why": "Derived from markdown link between generated site pages.",
