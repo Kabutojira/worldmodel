@@ -20,7 +20,7 @@ US-China chip controls is tracked because policy constraints can change supply, 
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/us_china_chip_controls/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

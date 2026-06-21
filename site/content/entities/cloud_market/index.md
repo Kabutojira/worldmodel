@@ -25,7 +25,7 @@ Cloud infrastructure market is tracked as a system-level node because Tracks clo
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/cloud_market/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

@@ -23,7 +23,7 @@ Natural gas is tracked as a key input and pricing signal because Flexible power 
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/natural_gas/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

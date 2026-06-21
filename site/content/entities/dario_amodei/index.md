@@ -19,7 +19,7 @@ Dario Amodei is tracked as a key-person and strategy connector because Key perso
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/dario_amodei/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

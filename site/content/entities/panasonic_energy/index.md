@@ -21,7 +21,7 @@ Panasonic Energy is tracked because Tesla-linked battery supplier. Bootstrap con
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/panasonic_energy/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

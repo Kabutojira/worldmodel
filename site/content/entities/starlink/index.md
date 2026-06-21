@@ -23,7 +23,7 @@ Starlink is tracked because SpaceX revenue engine and global communications infr
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/starlink/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

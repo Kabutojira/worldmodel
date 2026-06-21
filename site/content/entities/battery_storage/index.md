@@ -43,7 +43,7 @@ Battery energy storage is tracked as a system-level node because Core bridge bet
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/battery_storage/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

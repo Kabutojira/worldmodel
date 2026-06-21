@@ -19,7 +19,7 @@ SQM is tracked because Lithium producer and supply-side signal. Bootstrap conten
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/sqm/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

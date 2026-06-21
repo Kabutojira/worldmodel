@@ -21,7 +21,7 @@ Rocket Lab is tracked because Public comparable for space launch and systems. Bo
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/rocket_lab/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

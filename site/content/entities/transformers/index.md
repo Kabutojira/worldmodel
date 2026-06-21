@@ -23,7 +23,7 @@ Power transformers is tracked as a system-level node because Grid expansion bott
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/transformers/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

@@ -19,7 +19,7 @@ Sam Altman is tracked as a key-person and strategy connector because Key person 
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/sam_altman/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

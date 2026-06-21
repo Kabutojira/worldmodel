@@ -7,7 +7,7 @@ import os
 import subprocess
 from pathlib import Path
 
-from worldmodel_common import ENTITIES_DIR, ROOT, ensure_dir, iso_date, now_utc, read_csv
+from worldmodel_common import DAILY_RUNS_HEADER, ENTITIES_DIR, ROOT, ensure_dir, iso_date, now_utc, read_csv, write_csv
 
 
 REPORT_TEMPLATE = """# Daily Report {run_date}
@@ -67,6 +67,39 @@ def latest_run_id() -> str:
     if not rows:
         return f"worldmodel-{now_utc().replace(':', '').replace('-', '').lower()}"
     return rows[-1].get("run_id") or f"worldmodel-{now_utc().replace(':', '').replace('-', '').lower()}"
+
+
+def create_run_id() -> str:
+    return f"worldmodel-{now_utc().replace(':', '').replace('-', '').lower()}"
+
+
+def update_daily_runs(run_id: str, run_date: str, entities: list[dict[str, object]]) -> None:
+    path = ROOT / "data" / "daily_runs.csv"
+    rows = read_csv(path)
+    finished_at = now_utc()
+    entity_slugs = [str(entity.get("slug", "unknown")) for entity in entities]
+    selected_count = sum(len(object_list(entity.get("selected"))) for entity in entities)
+    row = {
+        "run_id": run_id,
+        "run_date": run_date,
+        "started_at": finished_at,
+        "finished_at": finished_at,
+        "status": "completed",
+        "entities_processed": ",".join(entity_slugs),
+        "sources_selected": str(selected_count),
+        "files_changed": "",
+        "commit_sha": "",
+        "notes": "Deterministic daily pipeline completed through report generation/render preparation.",
+    }
+    replaced = False
+    for idx, existing in enumerate(rows):
+        if existing.get("run_id") == run_id:
+            rows[idx] = {**existing, **row}
+            replaced = True
+            break
+    if not replaced:
+        rows.append(row)
+    write_csv(path, rows, DAILY_RUNS_HEADER)
 
 
 def git_modified_paths() -> list[str]:
@@ -192,7 +225,7 @@ def main() -> int:
 
     selected_path = Path(args.selected)
     data = json.loads(selected_path.read_text(encoding="utf-8"))
-    run_id = args.run_id or latest_run_id()
+    run_id = args.run_id or create_run_id()
     run_date = args.run_date
     transcript_manifest = None
     transcript_path = Path(args.transcript_manifest)
@@ -236,6 +269,7 @@ def main() -> int:
     global_context["modified_files"] = summarize_modified_files(global_report_path, [f"reports/daily/report_{run_date}.md", "data/source_log.csv", "data/entities.csv", "data/daily_runs.csv", "index.md"])
     global_context["csv_updates"] = bullet_list(entity_blocks, "No entity summary available.") + "\n- Review `data/daily_runs.csv` and source logs for the finalized run record."
     global_report_path.write_text(REPORT_TEMPLATE.format(**global_context), encoding="utf-8")
+    update_daily_runs(run_id, run_date, entities)
     print(json.dumps({"global_report": str(global_report_path), "entities": len(entities), "run_id": run_id}))
     return 0
 

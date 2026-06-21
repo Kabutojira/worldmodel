@@ -24,7 +24,7 @@ CATL is tracked because Dominant battery supplier and chemistry signal. Bootstra
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/catl/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

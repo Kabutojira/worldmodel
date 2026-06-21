@@ -39,7 +39,7 @@ Google / Alphabet is tracked because AI, search, cloud, TPU, autonomy, ads. Boot
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/google/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

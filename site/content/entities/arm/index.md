@@ -20,7 +20,7 @@ Arm is tracked because CPU architecture and edge/mobile AI exposure. Bootstrap c
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/arm/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

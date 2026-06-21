@@ -36,7 +36,7 @@ Amazon is tracked because Cloud, AI infrastructure, logistics, satellite interne
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/amazon/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

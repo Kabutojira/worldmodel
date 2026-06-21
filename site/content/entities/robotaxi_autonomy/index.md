@@ -25,7 +25,7 @@ Robotaxi and autonomy is tracked as a system-level node because Potential winner
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/robotaxi_autonomy/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

@@ -25,7 +25,7 @@ BYD is tracked because Tesla's most important EV and battery competitor. Bootstr
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/byd/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

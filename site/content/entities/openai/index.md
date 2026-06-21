@@ -38,7 +38,7 @@ OpenAI is tracked because Core AI model/platform entity. Bootstrap content stays
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/openai/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

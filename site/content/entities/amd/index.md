@@ -22,7 +22,7 @@ AMD is tracked because Nvidia challenger and AI compute pricing pressure. Bootst
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/amd/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

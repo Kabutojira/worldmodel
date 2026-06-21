@@ -460,7 +460,6 @@ When maintenance changes are needed:
 ## Next steps to make the project better
 
 - Add dynamic SEC/IR document discovery so retrieval finds the latest 10-K, 10-Q, earnings release, investor presentation, and delivery update without relying on static Tesla seed URLs.
-- Promote Discord ingestion from a template watchlist into a validated tracked config plus maintenance checks for stale or malformed watchlist entries.
 - Track source-processing state separately from source-discovery state so the workflow can distinguish `already_logged`, `selected`, and `fully synthesized` items without ambiguity.
 
 ## Initial `index.md` seed

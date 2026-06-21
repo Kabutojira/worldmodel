@@ -27,7 +27,7 @@ Solar energy is tracked as a system-level node because Renewable supply side for
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/solar/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

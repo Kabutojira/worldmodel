@@ -21,7 +21,7 @@ AI inference economics is tracked as a system-level node because Key variable fo
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/ai_inference_economics/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

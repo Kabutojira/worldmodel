@@ -23,7 +23,7 @@ def main() -> int:
     if not status.stdout.strip() and not args.allow_empty:
         print('refusing empty commit')
         return 1
-    add = run('git', 'add', 'AGENTS.md', 'PLAN.md', 'index.md', 'data', 'templates', 'entities', 'reports', 'skills', 'bin', 'docs')
+    add = run('git', 'add', 'AGENTS.md', 'PLAN.md', 'index.md', 'data', 'templates', 'entities', 'reports', 'skills', 'bin', 'docs', 'site')
     if add.returncode != 0:
         print(add.stderr, end='')
         return add.returncode

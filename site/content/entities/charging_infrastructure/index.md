@@ -21,7 +21,7 @@ EV charging infrastructure is tracked as a system-level node because EV adoption
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/charging_infrastructure/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

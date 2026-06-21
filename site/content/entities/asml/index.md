@@ -23,7 +23,7 @@ ASML is tracked because Semiconductor capital equipment bottleneck. Bootstrap co
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/asml/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

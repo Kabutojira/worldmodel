@@ -32,7 +32,7 @@ Meta is tracked because Open-source AI, ads, social distribution, compute capex.
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/meta/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

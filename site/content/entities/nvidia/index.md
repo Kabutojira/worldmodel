@@ -56,7 +56,7 @@ Nvidia is tracked because Core AI infrastructure bottleneck and valuation anchor
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/nvidia/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

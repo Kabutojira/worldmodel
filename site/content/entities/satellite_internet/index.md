@@ -26,7 +26,7 @@ Satellite internet is tracked as a system-level node because SpaceX/Starlink mar
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/satellite_internet/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

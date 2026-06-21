@@ -19,7 +19,7 @@ Nickel is tracked as a key input and pricing signal because Battery and stainles
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/nickel/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

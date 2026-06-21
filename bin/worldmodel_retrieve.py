@@ -11,7 +11,7 @@ from urllib.parse import parse_qs, unquote, urlparse
 
 import requests
 
-from worldmodel_common import ROOT, canonicalize_url, iso_date, now_utc, parse_index_entities, read_csv, stable_hash
+from worldmodel_common import DISCORD_WATCHLIST_HEADER, ROOT, canonicalize_url, iso_date, now_utc, parse_index_entities, read_csv, stable_hash, validate_header
 
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
 REQUEST_TIMEOUT = 20
@@ -83,16 +83,18 @@ def build_seeking_alpha_candidates(name: str, ticker: str) -> list[dict[str, str
 
 
 def load_discord_watchlist_candidates(entity: dict[str, object]) -> list[dict[str, str]]:
-    watchlist_path = ROOT / ".worldmodel" / "discord_sources.json"
+    watchlist_path = ROOT / "data" / "discord_watchlist.csv"
     if not watchlist_path.exists():
         return []
-    data = json.loads(watchlist_path.read_text(encoding="utf-8"))
+    validate_header(watchlist_path, DISCORD_WATCHLIST_HEADER)
     terms = entity_terms(entity)
     results: list[dict[str, str]] = []
-    for item in data.get("sources", []):
+    for item in read_csv(watchlist_path):
+        if str(item.get("status", "active")).strip().lower() not in {"active", ""}:
+            continue
         title = str(item.get("title", "")).strip()
         url = str(item.get("url", "")).strip()
-        keywords = [str(k).lower() for k in item.get("keywords", [])]
+        keywords = [part.strip().lower() for part in str(item.get("keywords", "")).split(";") if part.strip()]
         haystack = f"{title} {url} {' '.join(keywords)}".lower()
         if not any(term in haystack for term in terms):
             continue
@@ -101,6 +103,7 @@ def load_discord_watchlist_candidates(entity: dict[str, object]) -> list[dict[st
             "source_name": "Discord",
             "source_type": "discord_watchlist",
             "url": url,
+            "notes": str(item.get("notes", "")).strip(),
         })
     return results
 

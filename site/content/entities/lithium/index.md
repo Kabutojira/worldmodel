@@ -31,7 +31,7 @@ Lithium is tracked as a key input and pricing signal because Core battery commod
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/lithium/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

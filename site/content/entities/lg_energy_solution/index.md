@@ -21,7 +21,7 @@ LG Energy Solution is tracked because Major global battery supplier. Bootstrap c
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/lg_energy_solution/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

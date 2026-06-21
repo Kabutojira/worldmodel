@@ -20,7 +20,7 @@ China-Taiwan geopolitical risk is tracked because policy constraints can change 
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/china_taiwan_risk/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 

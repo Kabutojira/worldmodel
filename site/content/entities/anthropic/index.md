@@ -31,7 +31,7 @@ Anthropic is tracked because Core frontier AI model competitor. Bootstrap conten
 
 ## Latest reports
 
-- No entity daily reports yet.
+- [[entities/anthropic/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
 
