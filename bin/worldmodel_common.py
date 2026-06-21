@@ -41,6 +41,15 @@ DAILY_RUNS_HEADER = [
 SUBSTACK_WATCHLIST_HEADER = [
     "publication","feed_url","keywords","status","last_checked_at","notes",
 ]
+SOURCE_HISTORY_HEADER = [
+    "history_key","source_id","entity_slug","title","source_name","source_type","url",
+    "first_seen_at","last_seen_at","last_selected_at","last_used_at","times_seen",
+    "times_selected","times_used","current_state","notes",
+]
+SOURCE_REGISTRY_HEADER = [
+    "source_id","platform","name","url","priority","entities","source_type",
+    "quality_notes","bias_notes","retrieval_frequency",
+]
 WIKI_PAGES = ["index.md", "business.md", "market.md", "financials.md", "technology.md", "people.md", "risks.md", "sources.md"]
 
 

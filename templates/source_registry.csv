@@ -1,0 +1,2 @@
+source_id,platform,name,url,priority,entities,source_type,quality_notes,bias_notes,retrieval_frequency
+example_substack,substack,Example Research,https://example.substack.com/,P1,"tesla;nvidia",technical_research,"Short quality note","Bias or coverage note",weekly

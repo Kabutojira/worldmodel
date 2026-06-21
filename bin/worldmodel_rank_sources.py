@@ -5,6 +5,8 @@ import argparse
 import json
 from pathlib import Path
 
+from worldmodel_common import ROOT, SOURCE_HISTORY_HEADER, now_utc, read_csv, validate_header, write_csv
+
 SOURCE_QUALITY = {
     "investor_relations": 1.0,
     "filing_index": 1.0,
@@ -19,6 +21,8 @@ SOURCE_QUALITY = {
     "substack_feed_error": 0.1,
     "youtube_transcript": 0.75,
     "youtube_video": 0.55,
+    "technical_x": 0.45,
+    "data_x": 0.45,
     "news": 0.5,
     "x_post": 0.3,
 }
@@ -33,7 +37,7 @@ def score_relevance(candidate: dict[str, object], entity_name: str) -> float:
         score += 0.2
     if entity_name.lower() in url:
         score += 0.1
-    if any(token in title for token in ["investor", "sec", "ai", "supercharger", "tesla", "elon", "robotaxi", "battery"]):
+    if any(token in title for token in ["investor", "sec", "ai", "supercharger", "tesla", "elon", "robotaxi", "battery", "datacenter", "power", "grid", "semiconductor"]):
         score += 0.1
     if source_type == "youtube_transcript":
         score += 0.05
@@ -50,6 +54,48 @@ def score_recency(candidate: dict[str, object]) -> float:
     if discovery == "already_logged" or candidate.get("already_logged"):
         return 0.5
     return 0.9
+
+
+def load_source_history() -> dict[str, dict[str, str]]:
+    path = ROOT / "data" / "source_history.csv"
+    validate_header(path, SOURCE_HISTORY_HEADER)
+    return {str(row.get("history_key", "")).strip(): row for row in read_csv(path) if row.get("history_key")}
+
+
+def to_int(value: object) -> int:
+    try:
+        return int(str(value).strip() or "0")
+    except Exception:
+        return 0
+
+
+def update_history(history_rows: dict[str, dict[str, str]], ranked_entities: list[dict[str, object]]) -> None:
+    now = now_utc()
+    selected_keys = set()
+    for entity in ranked_entities:
+        raw_selected = entity.get("selected", [])
+        if not isinstance(raw_selected, list):
+            continue
+        for item in raw_selected:
+            if not isinstance(item, dict):
+                continue
+            key = str(item.get("source_history_key", "")).strip()
+            if not key:
+                continue
+            selected_keys.add(key)
+            row = dict(history_rows.get(key, {}))
+            row["times_selected"] = str(to_int(row.get("times_selected")) + 1)
+            row["last_selected_at"] = now
+            if str(row.get("current_state", "")).strip() != "fully_synthesized":
+                row["current_state"] = "selected_for_review"
+            history_rows[key] = row
+    for key, row in history_rows.items():
+        if key in selected_keys:
+            continue
+        if str(row.get("current_state", "")).strip() == "selected_for_review":
+            row["current_state"] = "logged_unprocessed"
+    ordered = sorted(history_rows.values(), key=lambda row: (row.get("entity_slug", ""), row.get("url", "")))
+    write_csv(ROOT / "data" / "source_history.csv", ordered, SOURCE_HISTORY_HEADER)
 
 
 def main() -> int:
@@ -109,6 +155,7 @@ def main() -> int:
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(ranked, indent=2, sort_keys=True), encoding="utf-8")
+    update_history(load_source_history(), ranked["entities"])
     print(f"wrote {out}")
     return 0
 

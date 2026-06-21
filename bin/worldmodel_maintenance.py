@@ -7,6 +7,8 @@ from urllib.parse import urlparse
 
 from worldmodel_common import (
     DAILY_RUNS_HEADER,
+    SOURCE_HISTORY_HEADER,
+    SOURCE_REGISTRY_HEADER,
     SUBSTACK_WATCHLIST_HEADER,
     ENTITIES_DIR,
     ENTITIES_HEADER,
@@ -108,6 +110,67 @@ def find_substack_watchlist_gaps() -> list[str]:
     return findings
 
 
+def find_source_registry_gaps() -> list[str]:
+    findings = []
+    path = ROOT / "data" / "source_registry.csv"
+    if not path.exists():
+        findings.append(f"missing source registry: {path}")
+        return findings
+    validate_header(path, SOURCE_REGISTRY_HEADER)
+    allowed_platforms = {"youtube", "substack", "x", "web", "filing", "investor_relations", "podcast"}
+    allowed_priorities = {"P0", "P1", "P2", "P3"}
+    allowed_frequencies = {"daily", "weekly", "monthly", "quarterly", "ad_hoc"}
+    seen_ids = set()
+    for row in read_csv(path):
+        source_id = str(row.get("source_id", "")).strip()
+        platform = str(row.get("platform", "")).strip().lower()
+        name = str(row.get("name", "")).strip()
+        url = str(row.get("url", "")).strip()
+        priority = str(row.get("priority", "")).strip().upper()
+        entities = [part.strip() for part in str(row.get("entities", "")).split(";") if part.strip()]
+        frequency = str(row.get("retrieval_frequency", "")).strip().lower()
+        label = source_id or name or url or "<blank row>"
+        if not source_id:
+            findings.append(f"source registry entry missing source_id: {label}")
+        elif source_id in seen_ids:
+            findings.append(f"source registry has duplicate source_id: {source_id}")
+        seen_ids.add(source_id)
+        if platform not in allowed_platforms:
+            findings.append(f"source registry entry has invalid platform '{platform}': {label}")
+        parsed = urlparse(url)
+        if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+            findings.append(f"source registry entry has malformed url: {label}")
+        if priority not in allowed_priorities:
+            findings.append(f"source registry entry has invalid priority '{priority}': {label}")
+        if not entities:
+            findings.append(f"source registry entry missing entities: {label}")
+        if frequency not in allowed_frequencies:
+            findings.append(f"source registry entry has invalid retrieval_frequency '{frequency}': {label}")
+    return findings
+
+
+def find_source_history_gaps() -> list[str]:
+    findings = []
+    path = ROOT / "data" / "source_history.csv"
+    if not path.exists():
+        findings.append(f"missing source history: {path}")
+        return findings
+    validate_header(path, SOURCE_HISTORY_HEADER)
+    seen_keys = set()
+    for row in read_csv(path):
+        key = str(row.get("history_key", "")).strip()
+        url = str(row.get("url", "")).strip()
+        if not key:
+            findings.append("source history row missing history_key")
+            continue
+        if key in seen_keys:
+            findings.append(f"duplicate source history key: {key}")
+        seen_keys.add(key)
+        if not url:
+            findings.append(f"source history row missing url: {key}")
+    return findings
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check WorldModel repository maintenance invariants.")
     parser.add_argument("--strict", action="store_true")
@@ -118,14 +181,20 @@ def main() -> int:
     validate_header(ROOT / "data" / "estimates.csv", ESTIMATES_HEADER)
     validate_header(ROOT / "data" / "source_log.csv", SOURCE_LOG_HEADER)
     validate_header(ROOT / "data" / "daily_runs.csv", DAILY_RUNS_HEADER)
+    validate_header(ROOT / "data" / "source_registry.csv", SOURCE_REGISTRY_HEADER)
+    validate_header(ROOT / "data" / "source_history.csv", SOURCE_HISTORY_HEADER)
 
     findings = []
     findings.extend(find_missing_entity_files())
     findings.extend(find_broken_links())
     findings.extend(find_relationship_gaps())
     findings.extend(find_substack_watchlist_gaps())
+    findings.extend(find_source_registry_gaps())
+    findings.extend(find_source_history_gaps())
     if not (ROOT / "AGENTS.md").exists() or not (ROOT / "PLAN.md").exists():
         findings.append("AGENTS.md or PLAN.md missing")
+    if not (ROOT / "README.md").exists():
+        findings.append("README.md missing")
     if not SITE_DIR.exists():
         findings.append("site/ missing; add Quartz project files")
     if not SITE_CONTENT_DIR.exists():

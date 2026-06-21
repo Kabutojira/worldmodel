@@ -21,6 +21,7 @@ Create this initial structure:
 
 ```text
 /
+├── README.md
 ├── AGENTS.md
 ├── PLAN.md
 ├── index.md
@@ -29,6 +30,8 @@ Create this initial structure:
 │   ├── relationships.csv
 │   ├── estimates.csv
 │   ├── source_log.csv
+│   ├── source_history.csv
+│   ├── source_registry.csv
 │   └── daily_runs.csv
 ├── templates/
 │   ├── entity.md
@@ -460,8 +463,8 @@ When maintenance changes are needed:
 ## Next steps to make the project better
 
 - Add dynamic SEC/IR document discovery so retrieval finds the latest 10-K, 10-Q, earnings release, investor presentation, and delivery update without relying on static Tesla seed URLs.
-- Persist source-processing history in a deterministic artifact so `new_candidate`, `logged_unprocessed`, and `fully_synthesized` status survives across runs without depending only on ranked JSON output.
-- Extend maintenance to verify source-state consistency across `data/source_log.csv`, entity source logs, and the daily report artifacts.
+- Extend maintenance to verify source-state consistency across `data/source_log.csv`, entity source logs, `data/source_history.csv`, and the daily report artifacts.
+- Add direct X/Twitter post retrieval or a compliant import path so high-signal accounts can provide more than profile-level candidate URLs.
 
 ## Initial `index.md` seed
 
@@ -541,6 +544,18 @@ entity_slug,entity_name,type,business_line,metric,unit,currency,actual_or_estima
 
 ```csv
 source_id,entity_slug,title,source_name,source_type,url,author,published_at,retrieved_at,quality_score,recency_score,relevance_score,used_in_update,summary_path,hash,notes
+```
+
+### `data/source_history.csv`
+
+```csv
+history_key,source_id,entity_slug,title,source_name,source_type,url,first_seen_at,last_seen_at,last_selected_at,last_used_at,times_seen,times_selected,times_used,current_state,notes
+```
+
+### `data/source_registry.csv`
+
+```csv
+source_id,platform,name,url,priority,entities,source_type,quality_notes,bias_notes,retrieval_frequency
 ```
 
 ### `data/daily_runs.csv`

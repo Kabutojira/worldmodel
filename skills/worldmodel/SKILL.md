@@ -44,10 +44,11 @@ Current adapters include:
 - investor relations / official pages;
 - SEC filings and companyfacts for Tesla seed;
 - deterministic Seeking Alpha symbol / analysis / transcript endpoints by ticker;
-- curated Substack RSS watchlist ingestion from tracked config `data/substack_watchlist.csv`; active rows require semicolon-delimited keywords and fresh `last_checked_at` dates;
-- YouTube channel metadata candidates sourced from:
-  - All-In Podcast;
-  - The Limiting Factor.
+- curated recurring source ingestion from `data/source_registry.csv` for:
+  - Substack feeds;
+  - YouTube channels;
+  - X profile watchlists;
+- deterministic source-state tracking in `data/source_history.csv` so already-seen and already-used sources are not repeatedly surfaced as new work.
 
 ### 2b. Fetch local YouTube transcript cache
 

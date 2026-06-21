@@ -1,0 +1,10 @@
+source_id,platform,name,url,priority,entities,source_type,quality_notes,bias_notes,retrieval_frequency
+the_limiting_factor_youtube,youtube,The Limiting Factor,https://www.youtube.com/@thelimitingfactor,P0,"tesla;battery_storage;lithium;catl;panasonic_energy;ev_market",technical_video,"Battery chemistry and manufacturing deep dives","Tesla/battery focused",weekly
+semianalysis_substack,substack,SemiAnalysis,https://newsletter.semianalysis.com/,P0,"nvidia;tsmc;asml;openai;anthropic;google;meta;amazon;datacenters",technical_research,"AI infra and semiconductor deep dives","Paid content; summarize metadata only",daily
+fabricated_knowledge_substack,substack,Fabricated Knowledge,https://www.fabricatedknowledge.com/,P0,"nvidia;intel;semiconductors;datacenters;ai_agents",technical_research,"Semiconductor and AI infrastructure analysis","Investment framing",weekly
+interconnects_substack,substack,Interconnects AI,https://www.interconnects.ai/,P0,"openai;anthropic;google;meta;ai_agents",technical_research,"Frontier AI labs and model ecosystem","AI-lab focused",daily
+volts_substack,substack,Volts,https://www.volts.wtf/,P0,"energy;solar;electricity_grid;battery_storage;datacenters",energy_research,"Grid, electrification, storage, data-center power demand","Policy angle",weekly
+commodity_context_substack,substack,Commodity Context,https://www.commoditycontext.com/,P0,"oil;natural_gas;energy",commodity_research,"Oil balances, OPEC, geopolitics, data decks","Commodity specialist",weekly
+greentheonly_x,x,green,https://x.com/greentheonly,P0,"tesla;robotaxi_autonomy",technical_x,"Tesla software and firmware reverse-engineering","Unofficial; verify with primary sources",daily
+troy_teslike_x,x,Troy Teslike,https://x.com/TroyTeslike,P0,"tesla;ev_market",data_x,"Tesla delivery and production estimates","Estimate source; track revisions",daily
+dylan_patel_x,x,Dylan Patel,https://x.com/dylan522p,P0,"nvidia;semiconductors;datacenters;openai;anthropic",technical_x,"Fast signal for AI infrastructure and semiconductors","Often links paid research",daily
