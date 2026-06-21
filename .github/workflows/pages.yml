@@ -1,0 +1,73 @@
+name: Build and deploy WorldModel site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: "site/package-lock.json"
+
+      - name: Prepare Quartz content
+        run: python3 bin/worldmodel_render_site.py --clean --strict
+
+      - name: Install Quartz dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Install Quartz plugins
+        working-directory: site
+        run: npx quartz plugin install --from-config
+
+      - name: Build Quartz site
+        working-directory: site
+        run: npx quartz build
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/public
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

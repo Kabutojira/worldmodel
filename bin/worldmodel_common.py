@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 ENTITIES_DIR = ROOT / "entities"
 DOCS_DIR = ROOT / "docs"
+SITE_DIR = ROOT / "site"
+SITE_CONTENT_DIR = SITE_DIR / "content"
+SITE_PUBLIC_DIR = SITE_DIR / "public"
 
 ENTITIES_HEADER = [
     "entity_id","slug","name","type","status","priority","ticker","exchange","currency",

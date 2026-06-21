@@ -1,0 +1,19 @@
+{
+  "name": "worldmodel-quartz-site",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "quartz": "./quartz/bootstrap-cli.mjs"
+  },
+  "scripts": {
+    "postinstall": "node ./scripts/sync-quartz.mjs",
+    "prepare-content": "python3 ../bin/worldmodel_render_site.py --clean --strict --content-dir ./content --graph-json ./content/worldmodel_graph.json",
+    "build": "quartz build",
+    "serve": "quartz build --serve"
+  },
+  "dependencies": {
+    "@jackyzha0/quartz": "github:jackyzha0/quartz#v5",
+    "@quartz-community/types": "github:quartz-community/types",
+    "@quartz-community/utils": "github:quartz-community/utils"
+  }
+}
