@@ -14,6 +14,8 @@ npm run build
 npm run serve
 ```
 
+`npm run build` applies the local Quartz folder-page compatibility patch before building so entity landing pages like `/entities/tesla/` render their body content correctly.
+
 ## GitHub Pages
 
 The site is deployed by `.github/workflows/pages.yml` on every push to `main`.

@@ -54,7 +54,7 @@ jobs:
 
       - name: Build Quartz site
         working-directory: site
-        run: npx quartz build
+        run: npm run build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
