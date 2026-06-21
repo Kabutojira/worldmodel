@@ -41,9 +41,13 @@ def score_relevance(candidate: dict[str, object], entity_name: str) -> float:
 
 
 def score_recency(candidate: dict[str, object]) -> float:
-    if candidate.get("already_processed"):
+    processing = str(candidate.get("processing_state", ""))
+    discovery = str(candidate.get("discovery_state", ""))
+    if processing == "fully_synthesized" or candidate.get("already_processed"):
         return 0.2
-    if candidate.get("already_logged"):
+    if processing == "logged_unprocessed":
+        return 0.6
+    if discovery == "already_logged" or candidate.get("already_logged"):
         return 0.5
     return 0.9
 
@@ -81,7 +85,7 @@ def main() -> int:
                 skipped.append(item)
                 continue
             seen_hashes.add(item["hash"])
-            if item.get("already_processed"):
+            if item.get("processing_state") == "fully_synthesized" or item.get("already_processed"):
                 item["skip_reason"] = "already used in update"
                 skipped.append(item)
                 continue
@@ -89,7 +93,11 @@ def main() -> int:
                 item["skip_reason"] = f"limit_per_entity={args.limit_per_entity}"
                 skipped.append(item)
                 continue
-            item["selection_reason"] = "top-ranked by quality/relevance/recency"
+            item["selection_reason"] = (
+                f"top-ranked by quality/relevance/recency; "
+                f"discovery_state={item.get('discovery_state', 'unknown')}; "
+                f"processing_state={item.get('processing_state', 'unknown')}"
+            )
             selected.append(item)
         ranked["entities"].append({
             "slug": entity.get("slug"),

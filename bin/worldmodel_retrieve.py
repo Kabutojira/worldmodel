@@ -251,6 +251,24 @@ def build_seed_candidates(entity: dict[str, object]) -> list[dict[str, object]]:
     return seeds
 
 
+def discovery_state(existing_row: dict[str, str]) -> str:
+    return "already_logged" if existing_row else "new_candidate"
+
+
+def processing_state(existing_row: dict[str, str]) -> str:
+    if not existing_row:
+        return "not_synthesized"
+    return "fully_synthesized" if str(existing_row.get("used_in_update", "")).lower() == "true" else "logged_unprocessed"
+
+
+def workflow_state(existing_row: dict[str, str]) -> str:
+    if not existing_row:
+        return "new_candidate"
+    if str(existing_row.get("used_in_update", "")).lower() == "true":
+        return "fully_synthesized"
+    return "logged_unprocessed"
+
+
 def dedupe_candidates(candidates: list[dict[str, object]], existing: dict[str, dict[str, str]]) -> list[dict[str, object]]:
     seen = set()
     deduped = []
@@ -265,6 +283,9 @@ def dedupe_candidates(candidates: list[dict[str, object]], existing: dict[str, d
         existing_row = existing.get(url, {})
         record["already_logged"] = url in existing
         record["already_processed"] = str(existing_row.get("used_in_update", "")).lower() == "true"
+        record["discovery_state"] = discovery_state(existing_row)
+        record["processing_state"] = processing_state(existing_row)
+        record["workflow_state"] = workflow_state(existing_row)
         record["published_at"] = str(record.get("published_at", ""))
         record["retrieved_at"] = now_utc()
         record["hash"] = stable_hash(str(record.get("entity_slug", "")), url, str(record.get("title", "")))

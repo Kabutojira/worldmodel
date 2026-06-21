@@ -460,7 +460,8 @@ When maintenance changes are needed:
 ## Next steps to make the project better
 
 - Add dynamic SEC/IR document discovery so retrieval finds the latest 10-K, 10-Q, earnings release, investor presentation, and delivery update without relying on static Tesla seed URLs.
-- Track source-processing state separately from source-discovery state so the workflow can distinguish `already_logged`, `selected`, and `fully synthesized` items without ambiguity.
+- Persist source-processing history in a deterministic artifact so `new_candidate`, `logged_unprocessed`, and `fully_synthesized` status survives across runs without depending only on ranked JSON output.
+- Extend maintenance to verify source-state consistency across `data/source_log.csv`, entity source logs, and the daily report artifacts.
 
 ## Initial `index.md` seed
 
