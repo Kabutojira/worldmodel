@@ -18,6 +18,7 @@ Sundar Pichai is tracked as a key-person and strategy connector because Key pers
 
 ## Latest reports
 
+- [[entities/sundar_pichai/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/sundar_pichai/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

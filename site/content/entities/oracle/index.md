@@ -21,6 +21,7 @@ Oracle is tracked because AI cloud capacity supplier and enterprise database pla
 
 ## Latest reports
 
+- [[entities/oracle/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/oracle/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

@@ -23,6 +23,7 @@ Apple is tracked because Consumer AI distribution and custom silicon. Bootstrap 
 
 ## Latest reports
 
+- [[entities/apple/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/apple/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

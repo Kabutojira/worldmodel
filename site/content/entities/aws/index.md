@@ -22,6 +22,7 @@ AWS is tracked because Amazon's cloud and AI infra engine. Bootstrap content sta
 
 ## Latest reports
 
+- [[entities/aws/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/aws/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

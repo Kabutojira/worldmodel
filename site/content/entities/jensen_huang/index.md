@@ -17,6 +17,7 @@ Jensen Huang is tracked as a key-person and strategy connector because Key perso
 
 ## Latest reports
 
+- [[entities/jensen_huang/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/jensen_huang/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

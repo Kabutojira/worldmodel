@@ -21,6 +21,7 @@ SK hynix is tracked because HBM supplier and AI hardware bottleneck. Bootstrap c
 
 ## Latest reports
 
+- [[entities/sk_hynix/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/sk_hynix/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

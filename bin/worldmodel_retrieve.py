@@ -8,7 +8,7 @@ import time
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import parse_qs, unquote, urljoin, urlparse
 
 import requests
 
@@ -35,6 +35,56 @@ YOUTUBE_FALLBACK_CHANNEL_IDS = {
     "https://www.youtube.com/@allin": "UCESLZhusAkFfsNsApnjF_Cg",
 }
 SEC_CACHE_DIR = ROOT / ".worldmodel" / "sec"
+ISSUER_SITE_OVERRIDES = {
+    "tesla": "https://www.tesla.com",
+    "amazon": "https://www.aboutamazon.com",
+    "anthropic": "https://www.anthropic.com",
+    "asml": "https://www.asml.com",
+    "byd": "https://www.byd.com",
+    "catl": "https://www.catl.com",
+    "google": "https://abc.xyz",
+    "lg_energy_solution": "https://www.lgensol.com",
+    "meta": "https://about.fb.com",
+    "microsoft": "https://www.microsoft.com",
+    "nvidia": "https://www.nvidia.com",
+    "openai": "https://openai.com",
+    "panasonic_energy": "https://www.panasonic.com/global/energy",
+    "spacex": "https://www.spacex.com",
+    "tsmc": "https://www.tsmc.com",
+    "xai": "https://x.ai",
+}
+ISSUER_LINK_KEYWORDS = (
+    "investor",
+    "investors",
+    "ir.",
+    "/ir",
+    "news",
+    "newsroom",
+    "press",
+    "blog",
+    "updates",
+    "presentation",
+    "presentations",
+    "events",
+    "quarterly",
+    "annual-report",
+    "shareholder",
+)
+ASSET_EXTENSIONS = (
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".gif",
+    ".svg",
+    ".webp",
+    ".ico",
+    ".css",
+    ".js",
+    ".json",
+    ".xml",
+    ".pdf",
+    ".zip",
+)
 
 
 def requests_session() -> requests.Session:
@@ -106,6 +156,142 @@ def build_seeking_alpha_candidates(name: str, ticker: str) -> list[dict[str, obj
             "url": f"https://seekingalpha.com/symbol/{ticker}/earnings/transcripts",
         },
     ]
+
+
+def slug_words(slug: str) -> list[str]:
+    return [part for part in re.split(r"[^a-z0-9]+", slug.lower()) if part]
+
+
+def title_case_slug(slug: str) -> str:
+    return " ".join(part.capitalize() for part in slug_words(slug))
+
+
+def homepage_url_candidates(entity: dict[str, object]) -> list[str]:
+    slug = str(entity.get("slug", "")).strip().lower()
+    name = str(entity.get("name", "")).strip()
+    candidates: list[str] = []
+    if slug in ISSUER_SITE_OVERRIDES:
+        candidates.append(ISSUER_SITE_OVERRIDES[slug])
+    if slug:
+        bases = [slug, slug.replace("_", ""), slug.replace("_", "-")]
+        for base in bases:
+            if not base:
+                continue
+            for tld in (".com", ".ai", ".org"):
+                candidates.append(f"https://www.{base}{tld}")
+                candidates.append(f"https://{base}{tld}")
+    if name:
+        compact = re.sub(r"[^a-z0-9]", "", name.lower())
+        if compact:
+            candidates.append(f"https://www.{compact}.com")
+            candidates.append(f"https://{compact}.com")
+    deduped: list[str] = []
+    seen = set()
+    for candidate in candidates:
+        canonical = canonicalize_url(candidate)
+        if canonical and canonical not in seen:
+            deduped.append(canonical)
+            seen.add(canonical)
+    return deduped[:10]
+
+
+def looks_like_issuer_link(url: str) -> bool:
+    parsed = urlparse(url)
+    lower = url.lower()
+    path = parsed.path.lower()
+    if any(path.endswith(ext) for ext in ASSET_EXTENSIONS):
+        return False
+    return any(keyword in lower for keyword in ISSUER_LINK_KEYWORDS)
+
+
+def source_type_for_issuer_url(url: str) -> str:
+    lower = url.lower()
+    if any(token in lower for token in ("investor", "shareholder", "annual-report", "quarterly", "presentation", "presentations")):
+        return "investor_relations"
+    return "official_site"
+
+
+def title_for_issuer_url(name: str, url: str) -> str:
+    lower = url.lower()
+    if "investor" in lower or "shareholder" in lower:
+        return f"{name} investor page"
+    if "presentation" in lower:
+        return f"{name} presentations page"
+    if "annual-report" in lower or "quarterly" in lower:
+        return f"{name} reports page"
+    if "newsroom" in lower:
+        return f"{name} newsroom"
+    if "press" in lower:
+        return f"{name} press page"
+    if "blog" in lower:
+        return f"{name} blog"
+    if "news" in lower:
+        return f"{name} news page"
+    return f"{name} official site"
+
+
+def extract_html_links(base_url: str, html: str) -> list[str]:
+    links: list[str] = []
+    for href in re.findall(r'href=["\']([^"\']+)["\']', html, flags=re.IGNORECASE):
+        actual = extract_actual_url(href.strip())
+        if not actual or actual.startswith(("mailto:", "javascript:", "tel:")):
+            continue
+        resolved = canonicalize_url(urljoin(base_url, actual))
+        if resolved:
+            links.append(resolved)
+    deduped: list[str] = []
+    seen = set()
+    for link in links:
+        if link not in seen:
+            deduped.append(link)
+            seen.add(link)
+    return deduped
+
+
+def discover_issuer_website_candidates(entity: dict[str, object], max_links: int = 6) -> list[dict[str, object]]:
+    entity_type = str(entity.get("type", "")).strip().lower()
+    if entity_type not in {"company", "private_company", "supplier", "customer"}:
+        return []
+    slug = str(entity.get("slug", "")).strip().lower()
+    name = str(entity.get("name", "")).strip() or title_case_slug(slug) or slug
+    session = requests_session()
+    results: list[dict[str, object]] = []
+    seen_urls = set()
+    for homepage in homepage_url_candidates(entity):
+        try:
+            response = session.get(homepage, timeout=REQUEST_TIMEOUT)
+            response.raise_for_status()
+        except Exception:
+            continue
+        final_url = canonicalize_url(response.url)
+        html = response.text
+        if final_url and final_url not in seen_urls:
+            results.append({
+                "title": f"{name} official site",
+                "source_name": name,
+                "source_type": "official_site",
+                "url": final_url,
+                "notes": "Issuer website discovery from homepage crawl",
+            })
+            seen_urls.add(final_url)
+        matched_here = 0
+        for link in extract_html_links(final_url or homepage, html):
+            if matched_here >= max_links:
+                break
+            if link in seen_urls or not looks_like_issuer_link(link):
+                continue
+            results.append({
+                "title": title_for_issuer_url(name, link),
+                "source_name": name,
+                "source_type": source_type_for_issuer_url(link),
+                "url": link,
+                "notes": "Issuer website discovery from homepage crawl",
+            })
+            seen_urls.add(link)
+            matched_here += 1
+        if results:
+            break
+    return results
 
 
 def load_sec_ticker_map() -> dict[str, str]:
@@ -521,14 +707,17 @@ def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[st
     entity_type = str(entity.get("type", "")).strip().lower()
     seeds: list[dict[str, object]] = []
     if entity_type in {"company", "private_company", "supplier", "customer"}:
-        seeds.append(
-            {
-                "title": f"{name} Investor Relations",
-                "source_name": name,
-                "source_type": "investor_relations",
-                "url": f"https://www.{slug}.com/investor-relations" if slug != "tesla" else "https://ir.tesla.com",
-            }
-        )
+        seeds.extend(discover_issuer_website_candidates(entity))
+        if not any(str(seed.get("source_type", "")) == "investor_relations" for seed in seeds):
+            seeds.append(
+                {
+                    "title": f"{name} Investor Relations",
+                    "source_name": name,
+                    "source_type": "investor_relations",
+                    "url": f"https://www.{slug}.com/investor-relations" if slug != "tesla" else "https://ir.tesla.com",
+                    "notes": "Fallback synthetic IR URL because homepage crawl did not find a stable investor page",
+                }
+            )
     if slug == "tesla":
         seeds.extend([
             {"title": "Tesla AI", "source_name": "Tesla", "source_type": "official_site", "url": "https://www.tesla.com/AI"},

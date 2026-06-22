@@ -123,6 +123,10 @@ Completed improvements on 2026-06-21:
 - retrieval now only seeds synthetic investor-relations URLs for company-like entities (`company`, `private_company`, `supplier`, `customer`) so thematic nodes such as markets, sectors, people, and commodities are not polluted by fake IR placeholders.
 - retrieval now resolves SEC CIKs dynamically for US tickers and discovers the latest 10-K, 10-Q, recent 8-Ks, and exhibit-driven quarterly update / delivery documents from `data.sec.gov` instead of relying on static Tesla-only filing URLs.
 
+Completed improvement on 2026-06-22:
+
+- retrieval now crawls issuer homepages for company-like entities, records official site / newsroom / investor links when discoverable, and only falls back to synthetic IR URLs when homepage discovery fails.
+
 Required behavior:
 
 - parse `index.md` and `data/entities.csv`;
@@ -476,7 +480,6 @@ When maintenance changes are needed:
 ## Next steps to make the project better
 
 - Add direct X/Twitter post retrieval or a compliant import path so high-signal accounts can provide more than profile-level candidate URLs.
-- Add issuer-website IR discovery for access-controlled or non-SEC companies so retrieval can find fresh press releases and presentation pages even when investor-relations homepages do not expose stable URLs.
 
 ## Initial `index.md` seed
 

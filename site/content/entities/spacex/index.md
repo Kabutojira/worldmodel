@@ -28,6 +28,7 @@ SpaceX is tracked because Private space infrastructure anchor; linked to launch 
 
 ## Latest reports
 
+- [[entities/spacex/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/spacex/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

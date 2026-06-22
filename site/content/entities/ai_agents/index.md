@@ -22,6 +22,7 @@ AI agents is tracked as a system-level node because Software demand layer for mo
 
 ## Latest reports
 
+- [[entities/ai_agents/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/ai_agents/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

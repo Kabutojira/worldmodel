@@ -20,6 +20,7 @@ Agility Robotics is tracked because Warehouse humanoid/commercial robot deployme
 
 ## Latest reports
 
+- [[entities/agility_robotics/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/agility_robotics/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

@@ -19,6 +19,7 @@ Rare earths is tracked as a key input and pricing signal because Motors, robotic
 
 ## Latest reports
 
+- [[entities/rare_earths/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/rare_earths/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

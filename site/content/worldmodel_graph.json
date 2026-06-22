@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T15:11:36Z",
+  "generated_at": "2026-06-22T04:19:16Z",
   "nodes": [
     {
       "id": "abb_robotics",
@@ -578,6 +578,14 @@
       "exists": false
     },
     {
+      "id": "reports/daily/report_2026-06-22",
+      "label": "reports/daily/report_2026-06-22",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/report_2026-06-22/",
+      "exists": false
+    },
+    {
       "id": "reports/daily/reports/daily/../..",
       "label": "reports/daily/reports/daily/../..",
       "type": "page",
@@ -706,11 +714,27 @@
       "exists": false
     },
     {
+      "id": "reports/daily/reports/daily/../../entities/electricity_grid/financial_report",
+      "label": "reports/daily/reports/daily/../../entities/electricity_grid/financial_report",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/electricity_grid/financial_report/",
+      "exists": false
+    },
+    {
       "id": "reports/daily/reports/daily/../../entities/electricity_grid/wiki/market",
       "label": "reports/daily/reports/daily/../../entities/electricity_grid/wiki/market",
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/electricity_grid/wiki/market/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/../../entities/nvidia/financial_report",
+      "label": "reports/daily/reports/daily/../../entities/nvidia/financial_report",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../entities/nvidia/financial_report/",
       "exists": false
     },
     {
@@ -738,6 +762,14 @@
       "exists": false
     },
     {
+      "id": "reports/daily/reports/daily/../../site/content/reports/daily/report_2026-06-22",
+      "label": "reports/daily/reports/daily/../../site/content/reports/daily/report_2026-06-22",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/../../site/content/reports/daily/report_2026-06-22/",
+      "exists": false
+    },
+    {
       "id": "reports/daily/reports/daily/../../skills/worldmodel/SKILL",
       "label": "reports/daily/reports/daily/../../skills/worldmodel/SKILL",
       "type": "page",
@@ -759,6 +791,14 @@
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/reports/daily/report_2026-06-21/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/reports/daily/report_2026-06-22",
+      "label": "reports/daily/reports/daily/report_2026-06-22",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/reports/daily/report_2026-06-22/",
       "exists": false
     },
     {
@@ -19533,6 +19573,14 @@
     },
     {
       "source": "index",
+      "target": "reports/daily/report_2026-06-22",
+      "type": "wikilink",
+      "importance": "",
+      "why": "Derived from wikilink between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "index",
       "target": "robotaxi_autonomy",
       "type": "wikilink",
       "importance": "",
@@ -23325,198 +23373,6 @@
     },
     {
       "source": "reports",
-      "target": "datacenters",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "digital_ads",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "electricity_grid",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "elon_musk",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "energy",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "ev_market",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "figure_ai",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "google",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "graphite",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "humanoid_robots",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "industrial_automation",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "jensen_huang",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "lg_energy_solution",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "lithium",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "logistics_automation",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "mark_zuckerberg",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "meta",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "micron",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "microsoft",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "natural_gas",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "nickel",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "nuclear_power",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "nvidia",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "oil",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
       "target": "openai",
       "type": "wikilink",
       "importance": "",
@@ -23558,6 +23414,14 @@
     {
       "source": "reports",
       "target": "reports/daily/report_2026-06-21",
+      "type": "wikilink",
+      "importance": "",
+      "why": "Derived from wikilink between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports",
+      "target": "reports/daily/report_2026-06-22",
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
@@ -23926,6 +23790,70 @@
     {
       "source": "reports/daily/report_2026-06-21",
       "target": "reports/daily/reports/daily/report_2026-06-21",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../PLAN",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../bin/worldmodel_retrieve.py",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../data/source_history.csv",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../data/source_log.csv",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../entities/electricity_grid/financial_report",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../entities/nvidia/financial_report",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/../../site/content/reports/daily/report_2026-06-22",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-22",
+      "target": "reports/daily/reports/daily/report_2026-06-22",
       "type": "related",
       "importance": "",
       "why": "Derived from markdown link between generated site pages.",

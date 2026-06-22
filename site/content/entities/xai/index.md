@@ -28,6 +28,7 @@ xAI is tracked because Elon-linked AI company; possible Tesla/robotics/data-cent
 
 ## Latest reports
 
+- [[entities/xai/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/xai/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths

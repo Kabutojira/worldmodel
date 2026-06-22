@@ -20,6 +20,7 @@ Apptronik is tracked because Humanoid competitor and industrial deployment signa
 
 ## Latest reports
 
+- [[entities/apptronik/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/apptronik/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
 ## Source repository paths
