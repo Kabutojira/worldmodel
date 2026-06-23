@@ -1,3 +1,7 @@
+---
+title: "Elon Musk People"
+---
+
 # Elon Musk People
 
 ## Key people / governance nodes

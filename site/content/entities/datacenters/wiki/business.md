@@ -1,3 +1,7 @@
+---
+title: "AI data centers Business"
+---
+
 # AI data centers Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Silver Market"
+---
+
 # Silver Market
 
 ## Market map

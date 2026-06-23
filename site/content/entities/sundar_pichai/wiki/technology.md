@@ -1,3 +1,7 @@
+---
+title: "Sundar Pichai Technology"
+---
+
 # Sundar Pichai Technology
 
 ## Technical / system bottlenecks

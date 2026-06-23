@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Financial Report"
+---
+
 # Dario Amodei Financial Report
 
 ## Entity summary

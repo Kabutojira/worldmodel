@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos Financial Report"
+---
+
 # Jeff Bezos Financial Report
 
 ## Entity summary

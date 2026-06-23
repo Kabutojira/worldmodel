@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Thesis"
+---
+
 # LG Energy Solution Thesis
 
 ## Bearish thesis

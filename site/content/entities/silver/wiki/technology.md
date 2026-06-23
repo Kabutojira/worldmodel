@@ -1,3 +1,7 @@
+---
+title: "Silver Technology"
+---
+
 # Silver Technology
 
 ## Technical / system bottlenecks

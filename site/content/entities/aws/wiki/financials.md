@@ -1,3 +1,7 @@
+---
+title: "AWS Financials"
+---
+
 # AWS Financials
 
 ## Reporting structure / KPI lens

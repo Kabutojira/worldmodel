@@ -1,3 +1,7 @@
+---
+title: "Cobalt Market"
+---
+
 # Cobalt Market
 
 ## Market map

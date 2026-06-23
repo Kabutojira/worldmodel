@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Market"
+---
+
 # AI inference economics Market
 
 ## Market map

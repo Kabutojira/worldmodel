@@ -1,3 +1,7 @@
+---
+title: "Silver Business"
+---
+
 # Silver Business
 
 ## Core model

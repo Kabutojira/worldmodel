@@ -1,3 +1,7 @@
+---
+title: "AI data centers Financials"
+---
+
 # AI data centers Financials
 
 ## Reporting structure / KPI lens

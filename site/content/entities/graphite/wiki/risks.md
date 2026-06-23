@@ -1,3 +1,7 @@
+---
+title: "Graphite Risks"
+---
+
 # Graphite Risks
 
 ## Major risks

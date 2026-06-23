@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Financial Report"
+---
+
 # Industrial automation Financial Report
 
 ## Entity summary

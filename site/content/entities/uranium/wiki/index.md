@@ -1,3 +1,7 @@
+---
+title: "Uranium"
+---
+
 # Uranium
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation People"
+---
+
 # Rockwell Automation People
 
 ## Key people / governance nodes

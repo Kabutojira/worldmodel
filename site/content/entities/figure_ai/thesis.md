@@ -1,3 +1,7 @@
+---
+title: "Figure AI Thesis"
+---
+
 # Figure AI Thesis
 
 ## Bearish thesis

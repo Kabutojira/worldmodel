@@ -1,3 +1,7 @@
+---
+title: "VR/AR market People"
+---
+
 # VR/AR market People
 
 ## Key people / governance nodes

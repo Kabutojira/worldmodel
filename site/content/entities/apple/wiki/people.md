@@ -1,3 +1,7 @@
+---
+title: "Apple People"
+---
+
 # Apple People
 
 ## Key people / governance nodes

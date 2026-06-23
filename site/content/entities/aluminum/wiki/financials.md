@@ -1,3 +1,7 @@
+---
+title: "Aluminum Financials"
+---
+
 # Aluminum Financials
 
 ## Reporting structure / KPI lens

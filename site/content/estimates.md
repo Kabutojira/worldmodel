@@ -1,3 +1,7 @@
+---
+title: "Estimates"
+---
+
 # Estimates
 
 ## [[entities/abb_robotics/index|ABB Robotics]]

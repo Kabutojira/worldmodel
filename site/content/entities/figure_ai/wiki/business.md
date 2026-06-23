@@ -1,3 +1,7 @@
+---
+title: "Figure AI Business"
+---
+
 # Figure AI Business
 
 ## Core model

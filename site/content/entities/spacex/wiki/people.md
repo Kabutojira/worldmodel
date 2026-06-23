@@ -1,3 +1,7 @@
+---
+title: "SpaceX People"
+---
+
 # SpaceX People
 
 ## Key people / governance nodes

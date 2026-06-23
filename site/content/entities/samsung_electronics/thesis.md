@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Thesis"
+---
+
 # Samsung Electronics Thesis
 
 ## Bearish thesis

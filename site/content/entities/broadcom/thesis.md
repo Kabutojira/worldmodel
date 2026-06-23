@@ -1,3 +1,7 @@
+---
+title: "Broadcom Thesis"
+---
+
 # Broadcom Thesis
 
 ## Bearish thesis

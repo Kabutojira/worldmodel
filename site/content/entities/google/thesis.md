@@ -1,3 +1,7 @@
+---
+title: "Google / Alphabet Thesis"
+---
+
 # Google / Alphabet Thesis
 
 ## Bearish thesis

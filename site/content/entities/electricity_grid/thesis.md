@@ -1,3 +1,7 @@
+---
+title: "Electricity grid Thesis"
+---
+
 # Electricity grid Thesis
 
 ## Bearish thesis

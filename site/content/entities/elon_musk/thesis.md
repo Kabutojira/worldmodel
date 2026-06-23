@@ -1,3 +1,7 @@
+---
+title: "Elon Musk Thesis"
+---
+
 # Elon Musk Thesis
 
 ## Bearish thesis

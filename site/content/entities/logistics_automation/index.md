@@ -1,3 +1,7 @@
+---
+title: "Logistics automation"
+---
+
 # Logistics automation
 
 ## Summary
@@ -24,6 +28,7 @@ Logistics automation is tracked as a system-level node because Near-term commerc
 
 ## Latest reports
 
+- [[entities/logistics_automation/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/logistics_automation/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/logistics_automation/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

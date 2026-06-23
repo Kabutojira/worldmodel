@@ -1,3 +1,7 @@
+---
+title: "Cobalt Business"
+---
+
 # Cobalt Business
 
 ## Core model

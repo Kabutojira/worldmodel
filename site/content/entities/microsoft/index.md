@@ -1,3 +1,7 @@
+---
+title: "Microsoft"
+---
+
 # Microsoft
 
 ## Summary
@@ -27,6 +31,7 @@ Microsoft is tracked because OpenAI distribution, enterprise AI, cloud capex. Bo
 
 ## Latest reports
 
+- [[entities/microsoft/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/microsoft/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/microsoft/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

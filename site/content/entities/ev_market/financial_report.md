@@ -1,3 +1,7 @@
+---
+title: "Electric vehicle market Financial Report"
+---
+
 # Electric vehicle market Financial Report
 
 ## Entity summary

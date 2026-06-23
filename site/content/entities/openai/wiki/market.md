@@ -1,3 +1,7 @@
+---
+title: "OpenAI Market"
+---
+
 # OpenAI Market
 
 ## Market map

@@ -1,3 +1,7 @@
+---
+title: "Meta People"
+---
+
 # Meta People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market Risks"
+---
+
 # Cloud infrastructure market Risks
 
 ## Major risks

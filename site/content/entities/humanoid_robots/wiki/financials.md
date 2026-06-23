@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Financials"
+---
+
 # Humanoid robots Financials
 
 ## Reporting structure / KPI lens

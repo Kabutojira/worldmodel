@@ -1,3 +1,7 @@
+---
+title: "Zoox Thesis"
+---
+
 # Zoox Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "Aluminum Sources"
+---
+
 # Aluminum Sources
 
 ## Bootstrap source list

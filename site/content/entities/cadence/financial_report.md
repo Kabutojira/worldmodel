@@ -1,3 +1,7 @@
+---
+title: "Cadence Financial Report"
+---
+
 # Cadence Financial Report
 
 ## Entity summary

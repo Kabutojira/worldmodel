@@ -1,3 +1,7 @@
+---
+title: "CATL Financial Report"
+---
+
 # CATL Financial Report
 
 ## Entity summary

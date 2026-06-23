@@ -1,3 +1,7 @@
+---
+title: "Satellite internet Thesis"
+---
+
 # Satellite internet Thesis
 
 ## Bearish thesis

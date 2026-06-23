@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Thesis"
+---
+
 # Panasonic Energy Thesis
 
 ## Bearish thesis

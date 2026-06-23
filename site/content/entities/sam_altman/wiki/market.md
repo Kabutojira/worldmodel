@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Market"
+---
+
 # Sam Altman Market
 
 ## Market map

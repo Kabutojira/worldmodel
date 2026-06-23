@@ -1,3 +1,7 @@
+---
+title: "Wind power Financials"
+---
+
 # Wind power Financials
 
 ## Reporting structure / KPI lens

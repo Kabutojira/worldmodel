@@ -1,3 +1,7 @@
+---
+title: "Uranium Financials"
+---
+
 # Uranium Financials
 
 ## Reporting structure / KPI lens

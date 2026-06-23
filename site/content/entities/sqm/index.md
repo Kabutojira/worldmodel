@@ -1,3 +1,7 @@
+---
+title: "SQM"
+---
+
 # SQM
 
 ## Summary
@@ -19,6 +23,7 @@ SQM is tracked because Lithium producer and supply-side signal. Bootstrap conten
 
 ## Latest reports
 
+- [[entities/sqm/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/sqm/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/sqm/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

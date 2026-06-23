@@ -1,3 +1,7 @@
+---
+title: "Nickel Thesis"
+---
+
 # Nickel Thesis
 
 ## Bearish thesis

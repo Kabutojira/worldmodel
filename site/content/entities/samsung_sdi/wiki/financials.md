@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Financials"
+---
+
 # Samsung SDI Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Market"
+---
+
 # Industrial automation Market
 
 ## Market map

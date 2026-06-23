@@ -1,3 +1,7 @@
+---
+title: "FANUC Business"
+---
+
 # FANUC Business
 
 ## Core model

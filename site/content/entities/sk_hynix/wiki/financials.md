@@ -1,3 +1,7 @@
+---
+title: "SK hynix Financials"
+---
+
 # SK hynix Financials
 
 ## Reporting structure / KPI lens

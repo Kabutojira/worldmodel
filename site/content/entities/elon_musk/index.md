@@ -1,3 +1,7 @@
+---
+title: "Elon Musk"
+---
+
 # Elon Musk
 
 ## Summary
@@ -23,6 +27,7 @@ Elon Musk is tracked as a key-person and strategy connector because Key person r
 
 ## Latest reports
 
+- [[entities/elon_musk/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/elon_musk/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/elon_musk/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

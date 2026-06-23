@@ -1,3 +1,7 @@
+---
+title: "Nvidia Thesis"
+---
+
 # Nvidia Thesis
 
 ## Bearish thesis

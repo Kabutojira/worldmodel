@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Business"
+---
+
 # Rockwell Automation Business
 
 ## Core model

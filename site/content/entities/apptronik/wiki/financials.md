@@ -1,3 +1,7 @@
+---
+title: "Apptronik Financials"
+---
+
 # Apptronik Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "AI data centers People"
+---
+
 # AI data centers People
 
 ## Key people / governance nodes

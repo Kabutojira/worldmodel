@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy"
+---
+
 # Panasonic Energy
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+title: "Battery energy storage Thesis"
+---
+
 # Battery energy storage Thesis
 
 ## Bearish thesis

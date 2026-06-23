@@ -1,3 +1,7 @@
+---
+title: "Battery energy storage People"
+---
+
 # Battery energy storage People
 
 ## Key people / governance nodes

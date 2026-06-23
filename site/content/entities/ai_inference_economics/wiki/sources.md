@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Sources"
+---
+
 # AI inference economics Sources
 
 ## Bootstrap source list

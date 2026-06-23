@@ -1,3 +1,7 @@
+---
+title: "OpenAI Business"
+---
+
 # OpenAI Business
 
 ## Core model

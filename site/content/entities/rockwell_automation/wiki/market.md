@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Market"
+---
+
 # Rockwell Automation Market
 
 ## Market map

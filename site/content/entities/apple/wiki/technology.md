@@ -1,3 +1,7 @@
+---
+title: "Apple Technology"
+---
+
 # Apple Technology
 
 ## Technical / system bottlenecks

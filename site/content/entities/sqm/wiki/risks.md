@@ -1,3 +1,7 @@
+---
+title: "SQM Risks"
+---
+
 # SQM Risks
 
 ## Major risks

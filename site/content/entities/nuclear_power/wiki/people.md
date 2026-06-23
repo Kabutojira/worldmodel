@@ -1,3 +1,7 @@
+---
+title: "Nuclear power People"
+---
+
 # Nuclear power People
 
 ## Key people / governance nodes

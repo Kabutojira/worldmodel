@@ -1,3 +1,7 @@
+---
+title: "AI data centers"
+---
+
 # AI data centers
 
 ## Overview

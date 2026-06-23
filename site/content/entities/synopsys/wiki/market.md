@@ -1,3 +1,7 @@
+---
+title: "Synopsys Market"
+---
+
 # Synopsys Market
 
 ## Market map

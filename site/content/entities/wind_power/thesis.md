@@ -1,3 +1,7 @@
+---
+title: "Wind power Thesis"
+---
+
 # Wind power Thesis
 
 ## Bearish thesis

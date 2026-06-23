@@ -1,3 +1,7 @@
+---
+title: "Microsoft Financials"
+---
+
 # Microsoft Financials
 
 ## Reporting structure / KPI lens

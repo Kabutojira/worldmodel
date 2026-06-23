@@ -1,3 +1,7 @@
+---
+title: "Rare earths People"
+---
+
 # Rare earths People
 
 ## Key people / governance nodes

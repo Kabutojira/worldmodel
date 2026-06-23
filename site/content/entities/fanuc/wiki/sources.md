@@ -1,3 +1,7 @@
+---
+title: "FANUC Sources"
+---
+
 # FANUC Sources
 
 ## Bootstrap source list

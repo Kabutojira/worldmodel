@@ -1,3 +1,7 @@
+---
+title: "SQM Technology"
+---
+
 # SQM Technology
 
 ## Technical / system bottlenecks

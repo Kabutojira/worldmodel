@@ -1,3 +1,7 @@
+---
+title: "Figure AI"
+---
+
 # Figure AI
 
 ## Summary
@@ -20,6 +24,7 @@ Figure AI is tracked because Important private humanoid competitor. Bootstrap co
 
 ## Latest reports
 
+- [[entities/figure_ai/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/figure_ai/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/figure_ai/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

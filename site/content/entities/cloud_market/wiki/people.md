@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market People"
+---
+
 # Cloud infrastructure market People
 
 ## Key people / governance nodes

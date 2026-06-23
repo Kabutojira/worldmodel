@@ -1,3 +1,7 @@
+---
+title: "ABB Robotics Financial Report"
+---
+
 # ABB Robotics Financial Report
 
 ## Entity summary

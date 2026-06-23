@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Financials"
+---
+
 # Industrial automation Financials
 
 ## Reporting structure / KPI lens

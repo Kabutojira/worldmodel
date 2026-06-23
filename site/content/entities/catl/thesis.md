@@ -1,3 +1,7 @@
+---
+title: "CATL Thesis"
+---
+
 # CATL Thesis
 
 ## Bearish thesis

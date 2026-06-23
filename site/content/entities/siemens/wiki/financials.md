@@ -1,3 +1,7 @@
+---
+title: "Siemens Financials"
+---
+
 # Siemens Financials
 
 ## Reporting structure / KPI lens

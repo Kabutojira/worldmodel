@@ -1,3 +1,7 @@
+---
+title: "SK hynix"
+---
+
 # SK hynix
 
 ## Overview

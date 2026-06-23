@@ -1,3 +1,7 @@
+---
+title: "Amazon Financial Report"
+---
+
 # Amazon Financial Report
 
 ## Entity summary

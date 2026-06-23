@@ -1,3 +1,7 @@
+---
+title: "Oracle Financials"
+---
+
 # Oracle Financials
 
 ## Reporting structure / KPI lens

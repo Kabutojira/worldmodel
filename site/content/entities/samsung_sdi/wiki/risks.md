@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Risks"
+---
+
 # Samsung SDI Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Financials"
+---
+
 # Dario Amodei Financials
 
 ## Reporting structure / KPI lens

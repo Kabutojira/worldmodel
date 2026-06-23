@@ -1,3 +1,7 @@
+---
+title: "Copper Thesis"
+---
+
 # Copper Thesis
 
 ## Bearish thesis

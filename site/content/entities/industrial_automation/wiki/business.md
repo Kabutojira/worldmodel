@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Business"
+---
+
 # Industrial automation Business
 
 ## Core model

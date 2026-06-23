@@ -1,3 +1,7 @@
+---
+title: "Apple Market"
+---
+
 # Apple Market
 
 ## Market map

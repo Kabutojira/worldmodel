@@ -1,3 +1,7 @@
+---
+title: "AWS People"
+---
+
 # AWS People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "ASML Technology"
+---
+
 # ASML Technology
 
 ## Technical / system bottlenecks

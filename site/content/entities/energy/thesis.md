@@ -1,3 +1,7 @@
+---
+title: "Energy Thesis"
+---
+
 # Energy Thesis
 
 ## Bearish thesis

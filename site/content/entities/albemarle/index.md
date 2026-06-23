@@ -1,3 +1,7 @@
+---
+title: "Albemarle"
+---
+
 # Albemarle
 
 ## Summary
@@ -20,6 +24,7 @@ Albemarle is tracked because Lithium producer and commodity-cycle signal. Bootst
 
 ## Latest reports
 
+- [[entities/albemarle/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/albemarle/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/albemarle/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

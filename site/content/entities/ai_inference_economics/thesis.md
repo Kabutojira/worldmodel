@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Thesis"
+---
+
 # AI inference economics Thesis
 
 ## Bearish thesis

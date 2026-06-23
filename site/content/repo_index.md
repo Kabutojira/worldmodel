@@ -1,3 +1,7 @@
+---
+title: "WorldModel Entity Index"
+---
+
 # WorldModel Entity Index
 
 This file is the canonical registry of tracked entities, search keywords, and connected entities.

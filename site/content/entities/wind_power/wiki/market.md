@@ -1,3 +1,7 @@
+---
+title: "Wind power Market"
+---
+
 # Wind power Market
 
 ## Market map

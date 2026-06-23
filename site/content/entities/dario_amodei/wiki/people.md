@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei People"
+---
+
 # Dario Amodei People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Technology"
+---
+
 # Panasonic Energy Technology
 
 ## Technical / system bottlenecks

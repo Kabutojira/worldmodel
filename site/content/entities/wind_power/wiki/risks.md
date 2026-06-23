@@ -1,3 +1,7 @@
+---
+title: "Wind power Risks"
+---
+
 # Wind power Risks
 
 ## Major risks

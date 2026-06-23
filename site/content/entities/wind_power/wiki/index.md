@@ -1,3 +1,7 @@
+---
+title: "Wind power"
+---
+
 # Wind power
 
 ## Overview

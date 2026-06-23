@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Financial Report"
+---
+
 # LG Energy Solution Financial Report
 
 ## Entity summary

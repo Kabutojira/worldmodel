@@ -1,3 +1,7 @@
+---
+title: "Nvidia People"
+---
+
 # Nvidia People
 
 ## Key people / governance nodes

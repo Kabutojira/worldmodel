@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Financial Report"
+---
+
 # Panasonic Energy Financial Report
 
 ## Entity summary

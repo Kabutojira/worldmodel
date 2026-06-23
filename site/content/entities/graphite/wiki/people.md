@@ -1,3 +1,7 @@
+---
+title: "Graphite People"
+---
+
 # Graphite People
 
 ## Key people / governance nodes

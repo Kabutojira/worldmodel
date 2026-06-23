@@ -1,3 +1,7 @@
+---
+title: "Nuclear power Thesis"
+---
+
 # Nuclear power Thesis
 
 ## Bearish thesis

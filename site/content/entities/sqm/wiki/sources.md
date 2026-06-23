@@ -1,3 +1,7 @@
+---
+title: "SQM Sources"
+---
+
 # SQM Sources
 
 ## Bootstrap source list

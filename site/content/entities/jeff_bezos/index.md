@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos"
+---
+
 # Jeff Bezos
 
 ## Summary

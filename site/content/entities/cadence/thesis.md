@@ -1,3 +1,7 @@
+---
+title: "Cadence Thesis"
+---
+
 # Cadence Thesis
 
 ## Bearish thesis

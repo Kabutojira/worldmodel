@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang Risks"
+---
+
 # Jensen Huang Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Risks"
+---
+
 # Samsung Electronics Risks
 
 ## Major risks

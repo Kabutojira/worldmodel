@@ -1,3 +1,7 @@
+---
+title: "OpenAI Financial Report"
+---
+
 # OpenAI Financial Report
 
 ## Entity summary

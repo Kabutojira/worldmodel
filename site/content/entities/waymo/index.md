@@ -1,3 +1,7 @@
+---
+title: "Waymo"
+---
+
 # Waymo
 
 ## Summary
@@ -22,6 +26,7 @@ Waymo is tracked because Leading robotaxi benchmark for Tesla autonomy. Bootstra
 
 ## Latest reports
 
+- [[entities/waymo/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/waymo/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/waymo/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

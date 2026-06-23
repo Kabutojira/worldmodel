@@ -1,3 +1,7 @@
+---
+title: "Rare earths Thesis"
+---
+
 # Rare earths Thesis
 
 ## Bearish thesis

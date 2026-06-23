@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Market"
+---
+
 # Logistics automation Market
 
 ## Market map

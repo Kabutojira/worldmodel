@@ -1,3 +1,7 @@
+---
+title: "Logistics automation People"
+---
+
 # Logistics automation People
 
 ## Key people / governance nodes

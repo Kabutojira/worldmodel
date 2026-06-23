@@ -1,3 +1,7 @@
+---
+title: "Cadence Financials"
+---
+
 # Cadence Financials
 
 ## Reporting structure / KPI lens

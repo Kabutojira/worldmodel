@@ -1,3 +1,7 @@
+---
+title: "Aluminum Thesis"
+---
+
 # Aluminum Thesis
 
 ## Bearish thesis

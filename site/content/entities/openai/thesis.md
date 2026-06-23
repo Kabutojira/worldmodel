@@ -1,3 +1,7 @@
+---
+title: "OpenAI Thesis"
+---
+
 # OpenAI Thesis
 
 ## Bearish thesis

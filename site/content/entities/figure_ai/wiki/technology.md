@@ -1,3 +1,7 @@
+---
+title: "Figure AI Technology"
+---
+
 # Figure AI Technology
 
 ## Technical / system bottlenecks

@@ -1,3 +1,7 @@
+---
+title: "Agility Robotics Financials"
+---
+
 # Agility Robotics Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Amazon Sources"
+---
+
 # Amazon Sources
 
 ## Bootstrap source list

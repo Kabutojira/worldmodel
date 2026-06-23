@@ -1,3 +1,7 @@
+---
+title: "SQM Thesis"
+---
+
 # SQM Thesis
 
 ## Bearish thesis

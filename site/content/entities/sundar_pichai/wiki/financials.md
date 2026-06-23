@@ -1,3 +1,7 @@
+---
+title: "Sundar Pichai Financials"
+---
+
 # Sundar Pichai Financials
 
 ## Reporting structure / KPI lens

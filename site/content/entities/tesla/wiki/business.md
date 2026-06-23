@@ -1,3 +1,7 @@
+---
+title: "Tesla Business"
+---
+
 # Tesla Business
 
 ## Core model

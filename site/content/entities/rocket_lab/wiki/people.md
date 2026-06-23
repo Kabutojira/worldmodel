@@ -1,3 +1,7 @@
+---
+title: "Rocket Lab People"
+---
+
 # Rocket Lab People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Sundar Pichai People"
+---
+
 # Sundar Pichai People
 
 ## Key people / governance nodes

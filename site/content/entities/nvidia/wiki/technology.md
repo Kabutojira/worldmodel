@@ -1,3 +1,7 @@
+---
+title: "Nvidia Technology"
+---
+
 # Nvidia Technology
 
 ## Technical / system bottlenecks

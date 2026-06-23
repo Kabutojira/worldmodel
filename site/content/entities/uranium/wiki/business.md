@@ -1,3 +1,7 @@
+---
+title: "Uranium Business"
+---
+
 # Uranium Business
 
 ## Core model

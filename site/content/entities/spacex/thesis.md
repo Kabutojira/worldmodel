@@ -1,3 +1,7 @@
+---
+title: "SpaceX Thesis"
+---
+
 # SpaceX Thesis
 
 ## Bearish thesis

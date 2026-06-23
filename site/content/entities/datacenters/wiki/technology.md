@@ -1,3 +1,7 @@
+---
+title: "AI data centers Technology"
+---
+
 # AI data centers Technology
 
 ## Technical / system bottlenecks

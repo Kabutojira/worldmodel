@@ -1,3 +1,7 @@
+---
+title: "CATL People"
+---
+
 # CATL People
 
 ## Key people / governance nodes

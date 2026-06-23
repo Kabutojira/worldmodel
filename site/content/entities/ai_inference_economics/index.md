@@ -1,3 +1,7 @@
+---
+title: "AI inference economics"
+---
+
 # AI inference economics
 
 ## Summary
@@ -21,6 +25,7 @@ AI inference economics is tracked as a system-level node because Key variable fo
 
 ## Latest reports
 
+- [[entities/ai_inference_economics/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/ai_inference_economics/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/ai_inference_economics/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

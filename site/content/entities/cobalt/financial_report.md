@@ -1,3 +1,7 @@
+---
+title: "Cobalt Financial Report"
+---
+
 # Cobalt Financial Report
 
 ## Entity summary

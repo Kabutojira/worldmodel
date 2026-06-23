@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices"
+---
+
 # AI consumer devices
 
 ## Summary

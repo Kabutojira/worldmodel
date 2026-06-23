@@ -1,3 +1,7 @@
+---
+title: "Uranium"
+---
+
 # Uranium
 
 ## Summary
@@ -19,6 +23,7 @@ Uranium is tracked as a key input and pricing signal because Fuel input for nucl
 
 ## Latest reports
 
+- [[entities/uranium/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/uranium/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/uranium/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

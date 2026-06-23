@@ -1,3 +1,7 @@
+---
+title: "Wind power People"
+---
+
 # Wind power People
 
 ## Key people / governance nodes

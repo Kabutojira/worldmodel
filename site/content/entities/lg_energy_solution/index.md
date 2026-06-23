@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution"
+---
+
 # LG Energy Solution
 
 ## Summary
@@ -21,6 +25,7 @@ LG Energy Solution is tracked because Major global battery supplier. Bootstrap c
 
 ## Latest reports
 
+- [[entities/lg_energy_solution/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/lg_energy_solution/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/lg_energy_solution/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

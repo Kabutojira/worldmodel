@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Risks"
+---
+
 # Panasonic Energy Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Energy Financial Report"
+---
+
 # Energy Financial Report
 
 ## Entity summary

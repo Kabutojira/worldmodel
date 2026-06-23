@@ -1,3 +1,7 @@
+---
+title: "Copper People"
+---
+
 # Copper People
 
 ## Key people / governance nodes

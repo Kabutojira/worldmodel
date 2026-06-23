@@ -1,3 +1,7 @@
+---
+title: "SpaceX Market"
+---
+
 # SpaceX Market
 
 ## Market map

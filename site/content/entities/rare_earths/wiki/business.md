@@ -1,3 +1,7 @@
+---
+title: "Rare earths Business"
+---
+
 # Rare earths Business
 
 ## Core model

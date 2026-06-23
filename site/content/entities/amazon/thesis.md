@@ -1,3 +1,7 @@
+---
+title: "Amazon Thesis"
+---
+
 # Amazon Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "Copper Risks"
+---
+
 # Copper Risks
 
 ## Major risks

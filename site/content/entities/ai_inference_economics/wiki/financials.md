@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Financials"
+---
+
 # AI inference economics Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Robot sensors Thesis"
+---
+
 # Robot sensors Thesis
 
 ## Bearish thesis

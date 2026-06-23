@@ -1,3 +1,7 @@
+---
+title: "Intel Sources"
+---
+
 # Intel Sources
 
 ## Bootstrap source list

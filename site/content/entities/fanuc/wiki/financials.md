@@ -1,3 +1,7 @@
+---
+title: "FANUC Financials"
+---
+
 # FANUC Financials
 
 ## Reporting structure / KPI lens

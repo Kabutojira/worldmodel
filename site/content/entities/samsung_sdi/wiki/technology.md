@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Technology"
+---
+
 # Samsung SDI Technology
 
 ## Technical / system bottlenecks

@@ -1,3 +1,7 @@
+---
+title: "BYD Thesis"
+---
+
 # BYD Thesis
 
 ## Bearish thesis

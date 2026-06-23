@@ -1,3 +1,7 @@
+---
+title: "VR/AR market Thesis"
+---
+
 # VR/AR market Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "Arm People"
+---
+
 # Arm People
 
 ## Key people / governance nodes

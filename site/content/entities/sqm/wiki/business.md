@@ -1,3 +1,7 @@
+---
+title: "SQM Business"
+---
+
 # SQM Business
 
 ## Core model

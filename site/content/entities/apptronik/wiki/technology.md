@@ -1,3 +1,7 @@
+---
+title: "Apptronik Technology"
+---
+
 # Apptronik Technology
 
 ## Technical / system bottlenecks

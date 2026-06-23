@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Thesis"
+---
+
 # Sam Altman Thesis
 
 ## Bearish thesis

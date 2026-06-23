@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Technology"
+---
+
 # Humanoid robots Technology
 
 ## Technical / system bottlenecks

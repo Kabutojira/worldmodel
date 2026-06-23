@@ -1,3 +1,7 @@
+---
+title: "Robot sensors People"
+---
+
 # Robot sensors People
 
 ## Key people / governance nodes

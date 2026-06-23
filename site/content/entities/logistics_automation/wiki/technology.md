@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Technology"
+---
+
 # Logistics automation Technology
 
 ## Technical / system bottlenecks

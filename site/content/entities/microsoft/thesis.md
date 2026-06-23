@@ -1,3 +1,7 @@
+---
+title: "Microsoft Thesis"
+---
+
 # Microsoft Thesis
 
 ## Bearish thesis

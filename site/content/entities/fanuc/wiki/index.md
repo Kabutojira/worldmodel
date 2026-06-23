@@ -1,3 +1,7 @@
+---
+title: "FANUC"
+---
+
 # FANUC
 
 ## Overview

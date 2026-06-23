@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Sources"
+---
+
 # Samsung SDI Sources
 
 ## Bootstrap source list

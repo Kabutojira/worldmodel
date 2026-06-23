@@ -1,3 +1,7 @@
+---
+title: "AMD People"
+---
+
 # AMD People
 
 ## Key people / governance nodes

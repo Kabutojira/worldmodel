@@ -1,3 +1,7 @@
+---
+title: "Uranium Market"
+---
+
 # Uranium Market
 
 ## Market map

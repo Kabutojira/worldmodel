@@ -1,3 +1,7 @@
+---
+title: "Cobalt Thesis"
+---
+
 # Cobalt Thesis
 
 ## Bearish thesis

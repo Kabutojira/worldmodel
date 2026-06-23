@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market Market"
+---
+
 # Cloud infrastructure market Market
 
 ## Market map

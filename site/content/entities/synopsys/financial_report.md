@@ -1,3 +1,7 @@
+---
+title: "Synopsys Financial Report"
+---
+
 # Synopsys Financial Report
 
 ## Entity summary

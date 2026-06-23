@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Technology"
+---
+
 # Rockwell Automation Technology
 
 ## Technical / system bottlenecks

@@ -1,3 +1,7 @@
+---
+title: "Arm Financials"
+---
+
 # Arm Financials
 
 ## Reporting structure / KPI lens

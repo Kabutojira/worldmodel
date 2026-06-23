@@ -1,3 +1,7 @@
+---
+title: "Electric vehicle market"
+---
+
 # Electric vehicle market
 
 ## Summary
@@ -40,6 +44,7 @@ Electric vehicle market is tracked as a system-level node because Core Tesla dem
 
 ## Latest reports
 
+- [[entities/ev_market/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/ev_market/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/ev_market/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

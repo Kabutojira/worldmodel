@@ -1,3 +1,7 @@
+---
+title: "Lisa Su People"
+---
+
 # Lisa Su People
 
 ## Key people / governance nodes

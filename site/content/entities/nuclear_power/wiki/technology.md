@@ -1,3 +1,7 @@
+---
+title: "Nuclear power Technology"
+---
+
 # Nuclear power Technology
 
 ## Technical / system bottlenecks

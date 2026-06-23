@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Business"
+---
+
 # Sam Altman Business
 
 ## Core model

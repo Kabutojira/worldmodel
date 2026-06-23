@@ -1,3 +1,7 @@
+---
+title: "Electric vehicle market Thesis"
+---
+
 # Electric vehicle market Thesis
 
 ## Bearish thesis

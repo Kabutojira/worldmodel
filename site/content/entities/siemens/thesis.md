@@ -1,3 +1,7 @@
+---
+title: "Siemens Thesis"
+---
+
 # Siemens Thesis
 
 ## Bearish thesis

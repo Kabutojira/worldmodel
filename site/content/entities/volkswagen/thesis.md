@@ -1,3 +1,7 @@
+---
+title: "Volkswagen Thesis"
+---
+
 # Volkswagen Thesis
 
 ## Bearish thesis

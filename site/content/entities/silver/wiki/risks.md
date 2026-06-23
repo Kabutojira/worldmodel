@@ -1,3 +1,7 @@
+---
+title: "Silver Risks"
+---
+
 # Silver Risks
 
 ## Major risks

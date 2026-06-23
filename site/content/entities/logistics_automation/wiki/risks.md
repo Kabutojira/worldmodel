@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Risks"
+---
+
 # Logistics automation Risks
 
 ## Major risks

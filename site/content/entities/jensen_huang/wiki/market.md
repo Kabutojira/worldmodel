@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang Market"
+---
+
 # Jensen Huang Market
 
 ## Market map

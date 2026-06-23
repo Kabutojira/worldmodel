@@ -1,3 +1,7 @@
+---
+title: "AWS Thesis"
+---
+
 # AWS Thesis
 
 ## Bearish thesis

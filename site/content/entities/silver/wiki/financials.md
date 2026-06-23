@@ -1,3 +1,7 @@
+---
+title: "Silver Financials"
+---
+
 # Silver Financials
 
 ## Reporting structure / KPI lens

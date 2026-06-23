@@ -1,3 +1,7 @@
+---
+title: "Nickel People"
+---
+
 # Nickel People
 
 ## Key people / governance nodes

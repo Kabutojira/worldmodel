@@ -1,3 +1,7 @@
+---
+title: "Nuclear power Market"
+---
+
 # Nuclear power Market
 
 ## Market map

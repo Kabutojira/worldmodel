@@ -1,3 +1,7 @@
+---
+title: "Micron People"
+---
+
 # Micron People
 
 ## Key people / governance nodes

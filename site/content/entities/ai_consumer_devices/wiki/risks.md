@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Risks"
+---
+
 # AI consumer devices Risks
 
 ## Major risks

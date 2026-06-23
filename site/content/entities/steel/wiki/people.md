@@ -1,3 +1,7 @@
+---
+title: "Steel People"
+---
+
 # Steel People
 
 ## Key people / governance nodes

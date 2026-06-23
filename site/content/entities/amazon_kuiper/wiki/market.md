@@ -1,3 +1,7 @@
+---
+title: "Amazon Kuiper Market"
+---
+
 # Amazon Kuiper Market
 
 ## Market map

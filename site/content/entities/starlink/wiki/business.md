@@ -1,3 +1,7 @@
+---
+title: "Starlink Business"
+---
+
 # Starlink Business
 
 ## Core model

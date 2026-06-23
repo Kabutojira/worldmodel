@@ -1,3 +1,7 @@
+---
+title: "Industrial automation People"
+---
+
 # Industrial automation People
 
 ## Key people / governance nodes

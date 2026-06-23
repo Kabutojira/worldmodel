@@ -1,3 +1,7 @@
+---
+title: "Aluminum Business"
+---
+
 # Aluminum Business
 
 ## Core model

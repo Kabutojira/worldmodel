@@ -1,3 +1,7 @@
+---
+title: "AMD Financials"
+---
+
 # AMD Financials
 
 ## Reporting structure / KPI lens

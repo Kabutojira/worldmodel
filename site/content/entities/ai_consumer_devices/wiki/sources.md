@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Sources"
+---
+
 # AI consumer devices Sources
 
 ## Bootstrap source list

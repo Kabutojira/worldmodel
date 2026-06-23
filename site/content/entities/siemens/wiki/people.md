@@ -1,3 +1,7 @@
+---
+title: "Siemens People"
+---
+
 # Siemens People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics Financials"
+---
+
 # Boston Dynamics Financials
 
 ## Reporting structure / KPI lens

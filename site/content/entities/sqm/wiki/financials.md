@@ -1,3 +1,7 @@
+---
+title: "SQM Financials"
+---
+
 # SQM Financials
 
 ## Reporting structure / KPI lens

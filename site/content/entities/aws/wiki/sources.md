@@ -1,3 +1,7 @@
+---
+title: "AWS Sources"
+---
+
 # AWS Sources
 
 ## Bootstrap source list

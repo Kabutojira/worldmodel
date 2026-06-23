@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Sources"
+---
+
 # Dario Amodei Sources
 
 ## Bootstrap source list

@@ -1,3 +1,7 @@
+---
+title: "EV charging infrastructure"
+---
+
 # EV charging infrastructure
 
 ## Summary
@@ -21,6 +25,7 @@ EV charging infrastructure is tracked as a system-level node because EV adoption
 
 ## Latest reports
 
+- [[entities/charging_infrastructure/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/charging_infrastructure/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/charging_infrastructure/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

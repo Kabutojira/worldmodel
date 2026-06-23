@@ -1,3 +1,7 @@
+---
+title: "Wind power Financial Report"
+---
+
 # Wind power Financial Report
 
 ## Entity summary

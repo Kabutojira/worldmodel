@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Risks"
+---
+
 # AI inference economics Risks
 
 ## Major risks

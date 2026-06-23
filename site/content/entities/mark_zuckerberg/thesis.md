@@ -1,3 +1,7 @@
+---
+title: "Mark Zuckerberg Thesis"
+---
+
 # Mark Zuckerberg Thesis
 
 ## Bearish thesis

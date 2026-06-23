@@ -1,3 +1,7 @@
+---
+title: "FANUC People"
+---
+
 # FANUC People
 
 ## Key people / governance nodes

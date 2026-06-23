@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI"
+---
+
 # Samsung SDI
 
 ## Summary

@@ -1,3 +1,7 @@
+---
+title: "Starlink Thesis"
+---
+
 # Starlink Thesis
 
 ## Bearish thesis

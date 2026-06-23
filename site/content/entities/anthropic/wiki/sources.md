@@ -1,3 +1,7 @@
+---
+title: "Anthropic Sources"
+---
+
 # Anthropic Sources
 
 ## Bootstrap source list

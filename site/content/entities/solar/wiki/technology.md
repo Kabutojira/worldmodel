@@ -1,3 +1,7 @@
+---
+title: "Solar energy Technology"
+---
+
 # Solar energy Technology
 
 ## Technical / system bottlenecks

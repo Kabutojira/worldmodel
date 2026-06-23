@@ -1,3 +1,7 @@
+---
+title: "Rare earths Sources"
+---
+
 # Rare earths Sources
 
 ## Bootstrap source list

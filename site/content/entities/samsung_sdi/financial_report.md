@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Financial Report"
+---
+
 # Samsung SDI Financial Report
 
 ## Entity summary

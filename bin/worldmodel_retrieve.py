@@ -17,6 +17,7 @@ from worldmodel_common import (
     SOURCE_HISTORY_HEADER,
     SOURCE_REGISTRY_HEADER,
     SUBSTACK_WATCHLIST_HEADER,
+    X_POST_IMPORT_HEADER,
     canonicalize_url,
     iso_date,
     now_utc,
@@ -208,6 +209,8 @@ def source_type_for_issuer_url(url: str) -> str:
     lower = url.lower()
     if any(token in lower for token in ("investor", "shareholder", "annual-report", "quarterly", "presentation", "presentations")):
         return "investor_relations"
+    if any(token in lower for token in ("newsroom", "press", "blog", "/news", "news/")):
+        return "official_post"
     return "official_site"
 
 
@@ -550,6 +553,14 @@ def load_substack_watchlist_rows() -> list[dict[str, str]]:
     return read_csv(watchlist_path)
 
 
+def load_x_post_import_rows() -> list[dict[str, str]]:
+    import_path = ROOT / ".worldmodel" / "x_post_import.csv"
+    if not import_path.exists():
+        return []
+    validate_header(import_path, X_POST_IMPORT_HEADER)
+    return read_csv(import_path)
+
+
 def load_substack_registry_candidates(entity: dict[str, object], registry_rows: list[dict[str, str]], limit_per_feed: int = 3) -> list[dict[str, object]]:
     terms = entity_terms(entity)
     results: list[dict[str, object]] = []
@@ -700,7 +711,52 @@ def build_registry_profile_candidates(entity: dict[str, object], registry_rows: 
     return results
 
 
-def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[str, str]]) -> list[dict[str, object]]:
+def build_x_post_import_candidates(entity: dict[str, object], registry_rows: list[dict[str, str]], import_rows: list[dict[str, str]]) -> list[dict[str, object]]:
+    if not import_rows:
+        return []
+    registry_by_id = {
+        str(row.get("source_id", "")).strip(): row
+        for row in registry_rows
+        if str(row.get("platform", "")).strip().lower() == "x"
+    }
+    results: list[dict[str, object]] = []
+    for row in import_rows:
+        source_id = str(row.get("source_id", "")).strip()
+        registry_row = registry_by_id.get(source_id, {})
+        if registry_row and not registry_matches_entity(registry_row, entity):
+            continue
+        account_url = canonicalize_url(str(row.get("account_url", "")).strip())
+        if not registry_row:
+            for candidate in registry_rows:
+                if str(candidate.get("platform", "")).strip().lower() != "x":
+                    continue
+                candidate_url = canonicalize_url(str(candidate.get("url", "")).strip())
+                if candidate_url and account_url and candidate_url == account_url:
+                    registry_row = candidate
+                    break
+            if registry_row and not registry_matches_entity(registry_row, entity):
+                continue
+        post_url = canonicalize_url(str(row.get("post_url", "")).strip())
+        if "/status/" not in post_url:
+            continue
+        source_name = str(registry_row.get("name", "")).strip() or source_id or account_url or "X"
+        source_type = str(registry_row.get("source_type", "")).strip() or "x_post"
+        title = str(row.get("title", "")).strip() or f"{source_name} X post"
+        notes_parts = [registry_note(registry_row), str(row.get("notes", "")).strip()]
+        notes = "; ".join(part for part in notes_parts if part)
+        results.append({
+            "source_id": source_id or str(registry_row.get("source_id", "")).strip(),
+            "title": title,
+            "source_name": source_name,
+            "source_type": source_type,
+            "url": post_url,
+            "published_at": str(row.get("published_at", "")).strip(),
+            "notes": notes,
+        })
+    return results
+
+
+def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[str, str]], x_post_import_rows: list[dict[str, str]] | None = None) -> list[dict[str, object]]:
     slug = str(entity["slug"])
     name = str(entity["name"])
     ticker = str(entity.get("ticker", "")).strip()
@@ -708,7 +764,8 @@ def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[st
     seeds: list[dict[str, object]] = []
     if entity_type in {"company", "private_company", "supplier", "customer"}:
         seeds.extend(discover_issuer_website_candidates(entity))
-        if not any(str(seed.get("source_type", "")) == "investor_relations" for seed in seeds):
+        should_add_fallback_ir = entity_type == "company" and bool(ticker)
+        if should_add_fallback_ir and not any(str(seed.get("source_type", "")) == "investor_relations" for seed in seeds):
             seeds.append(
                 {
                     "title": f"{name} Investor Relations",
@@ -728,6 +785,7 @@ def build_seed_candidates(entity: dict[str, object], registry_rows: list[dict[st
         seeds.extend(build_seeking_alpha_candidates(name, ticker))
     seeds.extend(build_registry_profile_candidates(entity, registry_rows))
     seeds.extend(load_substack_registry_candidates(entity, registry_rows))
+    seeds.extend(build_x_post_import_candidates(entity, registry_rows, x_post_import_rows or []))
     return seeds
 
 
@@ -888,11 +946,12 @@ def main() -> int:
     existing_log = load_existing_source_log()
     existing_history = load_source_history()
     transcript_index = load_transcript_index()
+    x_post_import_rows = load_x_post_import_rows()
     payload = {"generated_at": now_utc(), "run_date": iso_date(), "entities": []}
     for entity in selected_entities:
         slug = str(entity["slug"])
         candidates: list[dict[str, object]] = []
-        for seed in build_seed_candidates(entity, registry_rows):
+        for seed in build_seed_candidates(entity, registry_rows, x_post_import_rows):
             seed["entity_slug"] = slug
             seed["entity_name"] = entity["name"]
             seed["search_keywords"] = entity.get("search_keywords", [])

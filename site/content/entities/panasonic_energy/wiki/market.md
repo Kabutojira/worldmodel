@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Market"
+---
+
 # Panasonic Energy Market
 
 ## Market map

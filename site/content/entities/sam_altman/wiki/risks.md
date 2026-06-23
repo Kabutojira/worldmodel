@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Risks"
+---
+
 # Sam Altman Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "AMD Technology"
+---
+
 # AMD Technology
 
 ## Technical / system bottlenecks

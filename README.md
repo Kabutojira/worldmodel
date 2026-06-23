@@ -64,6 +64,8 @@ Columns:
 
 Current tracked examples include The Limiting Factor, SemiAnalysis, Fabricated Knowledge, Interconnects AI, Volts, Commodity Context, and selected X accounts.
 
+If you have a compliant X export path, you can also seed concrete post URLs via `.worldmodel/x_post_import.csv` with header `source_id,account_url,post_url,title,published_at,notes`. Retrieval will merge those imported posts with the X account metadata already defined in `data/source_registry.csv`.
+
 ## Public site
 
 The GitHub Pages site is built from repository content via Quartz.

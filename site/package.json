@@ -9,8 +9,8 @@
     "postinstall": "node ./scripts/sync-quartz.mjs",
     "prepare-content": "python3 ../bin/worldmodel_render_site.py --clean --strict --content-dir ./content --graph-json ./content/worldmodel_graph.json",
     "patch-plugins": "node ./scripts/patch-quartz-plugins.mjs",
-    "build": "npm run patch-plugins && quartz build",
-    "serve": "npm run patch-plugins && quartz build --serve"
+    "build": "npm run patch-plugins && quartz build --concurrency 1",
+    "serve": "npm run patch-plugins && quartz build --serve --concurrency 1"
   },
   "dependencies": {
     "@jackyzha0/quartz": "github:jackyzha0/quartz#v5",

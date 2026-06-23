@@ -1,3 +1,7 @@
+---
+title: "Sundar Pichai Thesis"
+---
+
 # Sundar Pichai Thesis
 
 ## Bearish thesis

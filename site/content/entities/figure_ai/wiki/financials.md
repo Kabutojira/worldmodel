@@ -1,3 +1,7 @@
+---
+title: "Figure AI Financials"
+---
+
 # Figure AI Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Lisa Su Technology"
+---
+
 # Lisa Su Technology
 
 ## Technical / system bottlenecks

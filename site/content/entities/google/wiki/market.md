@@ -1,3 +1,7 @@
+---
+title: "Google / Alphabet Market"
+---
+
 # Google / Alphabet Market
 
 ## Market map

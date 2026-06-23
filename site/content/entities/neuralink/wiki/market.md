@@ -1,3 +1,7 @@
+---
+title: "Neuralink Market"
+---
+
 # Neuralink Market
 
 ## Market map

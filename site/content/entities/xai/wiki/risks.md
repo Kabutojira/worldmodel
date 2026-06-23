@@ -1,3 +1,7 @@
+---
+title: "xAI Risks"
+---
+
 # xAI Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics Market"
+---
+
 # Boston Dynamics Market
 
 ## Market map

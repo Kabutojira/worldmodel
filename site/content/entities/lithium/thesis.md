@@ -1,3 +1,7 @@
+---
+title: "Lithium Thesis"
+---
+
 # Lithium Thesis
 
 ## Bearish thesis

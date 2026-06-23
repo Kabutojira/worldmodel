@@ -1,3 +1,7 @@
+---
+title: "Nuclear power Financial Report"
+---
+
 # Nuclear power Financial Report
 
 ## Entity summary

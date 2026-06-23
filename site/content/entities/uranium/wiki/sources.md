@@ -1,3 +1,7 @@
+---
+title: "Uranium Sources"
+---
+
 # Uranium Sources
 
 ## Bootstrap source list

@@ -1,3 +1,7 @@
+---
+title: "OpenAI People"
+---
+
 # OpenAI People
 
 ## Key people / governance nodes

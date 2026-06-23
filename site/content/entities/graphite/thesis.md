@@ -1,3 +1,7 @@
+---
+title: "Graphite Thesis"
+---
+
 # Graphite Thesis
 
 ## Bearish thesis

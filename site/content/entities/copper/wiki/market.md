@@ -1,3 +1,7 @@
+---
+title: "Copper Market"
+---
+
 # Copper Market
 
 ## Market map

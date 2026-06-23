@@ -1,3 +1,7 @@
+---
+title: "Synopsys Financials"
+---
+
 # Synopsys Financials
 
 ## Reporting structure / KPI lens

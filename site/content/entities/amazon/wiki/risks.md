@@ -1,3 +1,7 @@
+---
+title: "Amazon Risks"
+---
+
 # Amazon Risks
 
 ## Major risks

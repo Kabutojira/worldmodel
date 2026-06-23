@@ -1,3 +1,7 @@
+---
+title: "Agility Robotics People"
+---
+
 # Agility Robotics People
 
 ## Key people / governance nodes

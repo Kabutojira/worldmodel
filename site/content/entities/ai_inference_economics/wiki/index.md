@@ -1,3 +1,7 @@
+---
+title: "AI inference economics"
+---
+
 # AI inference economics
 
 ## Overview

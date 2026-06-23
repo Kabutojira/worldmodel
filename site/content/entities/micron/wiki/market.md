@@ -1,3 +1,7 @@
+---
+title: "Micron Market"
+---
+
 # Micron Market
 
 ## Market map

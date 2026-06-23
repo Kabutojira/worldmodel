@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos Market"
+---
+
 # Jeff Bezos Market
 
 ## Market map

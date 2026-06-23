@@ -1,3 +1,7 @@
+---
+title: "Graphite Financials"
+---
+
 # Graphite Financials
 
 ## Reporting structure / KPI lens

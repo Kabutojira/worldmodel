@@ -1,3 +1,7 @@
+---
+title: "AI data centers Thesis"
+---
+
 # AI data centers Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "ABB Robotics People"
+---
+
 # ABB Robotics People
 
 ## Key people / governance nodes

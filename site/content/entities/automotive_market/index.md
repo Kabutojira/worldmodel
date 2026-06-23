@@ -1,3 +1,7 @@
+---
+title: "Automotive market"
+---
+
 # Automotive market
 
 ## Summary
@@ -33,6 +37,7 @@ Automotive market is tracked as a system-level node because Tracks EV share shif
 
 ## Latest reports
 
+- [[entities/automotive_market/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/automotive_market/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/automotive_market/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

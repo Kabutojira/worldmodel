@@ -1,3 +1,7 @@
+---
+title: "Robot actuators Financial Report"
+---
+
 # Robot actuators Financial Report
 
 ## Entity summary

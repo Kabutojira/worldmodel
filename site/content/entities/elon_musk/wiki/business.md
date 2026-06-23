@@ -1,3 +1,7 @@
+---
+title: "Elon Musk Business"
+---
+
 # Elon Musk Business
 
 ## Core model

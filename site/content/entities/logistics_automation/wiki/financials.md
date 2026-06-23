@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Financials"
+---
+
 # Logistics automation Financials
 
 ## Reporting structure / KPI lens

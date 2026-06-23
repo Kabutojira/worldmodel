@@ -1,3 +1,7 @@
+---
+title: "EV charging infrastructure Thesis"
+---
+
 # EV charging infrastructure Thesis
 
 ## Bearish thesis

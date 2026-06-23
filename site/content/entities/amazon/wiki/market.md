@@ -1,3 +1,7 @@
+---
+title: "Amazon Market"
+---
+
 # Amazon Market
 
 ## Market map

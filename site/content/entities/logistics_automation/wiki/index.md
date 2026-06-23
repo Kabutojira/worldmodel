@@ -1,3 +1,7 @@
+---
+title: "Logistics automation"
+---
+
 # Logistics automation
 
 ## Overview

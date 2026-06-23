@@ -1,3 +1,7 @@
+---
+title: "Energy Business"
+---
+
 # Energy Business
 
 ## Core model

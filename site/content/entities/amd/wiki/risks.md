@@ -1,3 +1,7 @@
+---
+title: "AMD Risks"
+---
+
 # AMD Risks
 
 ## Major risks

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T04:19:16Z",
+  "generated_at": "2026-06-23T04:24:41Z",
   "nodes": [
     {
       "id": "abb_robotics",
@@ -583,6 +583,14 @@
       "type": "page",
       "priority": "",
       "url": "/worldmodel/entities/reports/daily/report_2026-06-22/",
+      "exists": false
+    },
+    {
+      "id": "reports/daily/report_2026-06-23",
+      "label": "reports/daily/report_2026-06-23",
+      "type": "page",
+      "priority": "",
+      "url": "/worldmodel/entities/reports/daily/report_2026-06-23/",
       "exists": false
     },
     {
@@ -19581,6 +19589,14 @@
     },
     {
       "source": "index",
+      "target": "reports/daily/report_2026-06-23",
+      "type": "wikilink",
+      "importance": "",
+      "why": "Derived from wikilink between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "index",
       "target": "robotaxi_autonomy",
       "type": "wikilink",
       "importance": "",
@@ -23373,38 +23389,6 @@
     },
     {
       "source": "reports",
-      "target": "openai",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "oracle",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "panasonic_energy",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "rare_earths",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
       "target": "reports/daily/report_2026-06-20",
       "type": "wikilink",
       "importance": "",
@@ -23429,31 +23413,7 @@
     },
     {
       "source": "reports",
-      "target": "robot_actuators",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "robotaxi_autonomy",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "rocket_lab",
-      "type": "wikilink",
-      "importance": "",
-      "why": "Derived from wikilink between generated site pages.",
-      "evidence_url": ""
-    },
-    {
-      "source": "reports",
-      "target": "sam_altman",
+      "target": "reports/daily/report_2026-06-23",
       "type": "wikilink",
       "importance": "",
       "why": "Derived from wikilink between generated site pages.",
@@ -23854,6 +23814,22 @@
     {
       "source": "reports/daily/report_2026-06-22",
       "target": "reports/daily/reports/daily/report_2026-06-22",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-23",
+      "target": "reports/daily/reports/daily/../../data/source_history.csv",
+      "type": "related",
+      "importance": "",
+      "why": "Derived from markdown link between generated site pages.",
+      "evidence_url": ""
+    },
+    {
+      "source": "reports/daily/report_2026-06-23",
+      "target": "reports/daily/reports/daily/../../data/source_log.csv",
       "type": "related",
       "importance": "",
       "why": "Derived from markdown link between generated site pages.",

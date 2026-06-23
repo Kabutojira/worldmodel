@@ -1,3 +1,7 @@
+---
+title: "SK hynix Technology"
+---
+
 # SK hynix Technology
 
 ## Technical / system bottlenecks

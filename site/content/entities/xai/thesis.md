@@ -1,3 +1,7 @@
+---
+title: "xAI Thesis"
+---
+
 # xAI Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "Tesla People"
+---
+
 # Tesla People
 
 ## Key people / governance nodes

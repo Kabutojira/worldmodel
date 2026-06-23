@@ -1,3 +1,7 @@
+---
+title: "Satellite internet"
+---
+
 # Satellite internet
 
 ## Overview

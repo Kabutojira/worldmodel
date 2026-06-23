@@ -1,3 +1,7 @@
+---
+title: "Digital advertising market People"
+---
+
 # Digital advertising market People
 
 ## Key people / governance nodes

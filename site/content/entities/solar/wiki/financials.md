@@ -1,3 +1,7 @@
+---
+title: "Solar energy Financials"
+---
+
 # Solar energy Financials
 
 ## Reporting structure / KPI lens

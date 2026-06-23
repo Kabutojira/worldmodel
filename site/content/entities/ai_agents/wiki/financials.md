@@ -1,3 +1,7 @@
+---
+title: "AI agents Financials"
+---
+
 # AI agents Financials
 
 ## Reporting structure / KPI lens

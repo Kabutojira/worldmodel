@@ -1,3 +1,7 @@
+---
+title: "Neuralink Risks"
+---
+
 # Neuralink Risks
 
 ## Major risks

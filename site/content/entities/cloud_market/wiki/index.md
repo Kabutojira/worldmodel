@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market"
+---
+
 # Cloud infrastructure market
 
 ## Overview

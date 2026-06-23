@@ -1,3 +1,7 @@
+---
+title: "Industrial automation"
+---
+
 # Industrial automation
 
 ## Overview

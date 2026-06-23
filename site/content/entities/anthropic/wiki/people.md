@@ -1,3 +1,7 @@
+---
+title: "Anthropic People"
+---
+
 # Anthropic People
 
 ## Key people / governance nodes

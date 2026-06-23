@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics Risks"
+---
+
 # Boston Dynamics Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "AI agents Business"
+---
+
 # AI agents Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Tesla Financials"
+---
+
 # Tesla Financials
 
 ## Reporting structure / KPI lens

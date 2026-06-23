@@ -1,3 +1,7 @@
+---
+title: "Rocket Lab Thesis"
+---
+
 # Rocket Lab Thesis
 
 ## Bearish thesis

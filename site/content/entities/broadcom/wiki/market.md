@@ -1,3 +1,7 @@
+---
+title: "Broadcom Market"
+---
+
 # Broadcom Market
 
 ## Market map

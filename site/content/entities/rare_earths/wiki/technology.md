@@ -1,3 +1,7 @@
+---
+title: "Rare earths Technology"
+---
+
 # Rare earths Technology
 
 ## Technical / system bottlenecks

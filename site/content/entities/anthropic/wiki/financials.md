@@ -1,3 +1,7 @@
+---
+title: "Anthropic Financials"
+---
+
 # Anthropic Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Arm Financial Report"
+---
+
 # Arm Financial Report
 
 ## Entity summary

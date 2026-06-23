@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Business"
+---
+
 # Logistics automation Business
 
 ## Core model

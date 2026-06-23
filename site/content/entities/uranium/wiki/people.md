@@ -1,3 +1,7 @@
+---
+title: "Uranium People"
+---
+
 # Uranium People
 
 ## Key people / governance nodes

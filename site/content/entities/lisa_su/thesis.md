@@ -1,3 +1,7 @@
+---
+title: "Lisa Su Thesis"
+---
+
 # Lisa Su Thesis
 
 ## Bearish thesis

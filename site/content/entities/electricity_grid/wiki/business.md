@@ -1,3 +1,7 @@
+---
+title: "Electricity grid Business"
+---
+
 # Electricity grid Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Intel People"
+---
+
 # Intel People
 
 ## Key people / governance nodes

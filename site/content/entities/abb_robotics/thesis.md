@@ -1,3 +1,7 @@
+---
+title: "ABB Robotics Thesis"
+---
+
 # ABB Robotics Thesis
 
 ## Bearish thesis

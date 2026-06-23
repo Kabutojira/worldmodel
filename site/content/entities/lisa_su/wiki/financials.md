@@ -1,3 +1,7 @@
+---
+title: "Lisa Su Financials"
+---
+
 # Lisa Su Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Solar energy Risks"
+---
+
 # Solar energy Risks
 
 ## Major risks

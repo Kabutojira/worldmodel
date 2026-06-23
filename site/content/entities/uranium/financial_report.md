@@ -1,3 +1,7 @@
+---
+title: "Uranium Financial Report"
+---
+
 # Uranium Financial Report
 
 ## Entity summary

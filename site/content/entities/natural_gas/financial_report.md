@@ -1,3 +1,7 @@
+---
+title: "Natural gas Financial Report"
+---
+
 # Natural gas Financial Report
 
 ## Entity summary

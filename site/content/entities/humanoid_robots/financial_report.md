@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Financial Report"
+---
+
 # Humanoid robots Financial Report
 
 ## Entity summary

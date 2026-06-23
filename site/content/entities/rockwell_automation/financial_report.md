@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Financial Report"
+---
+
 # Rockwell Automation Financial Report
 
 ## Entity summary

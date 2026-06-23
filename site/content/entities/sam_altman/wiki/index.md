@@ -1,3 +1,7 @@
+---
+title: "Sam Altman"
+---
+
 # Sam Altman
 
 ## Overview

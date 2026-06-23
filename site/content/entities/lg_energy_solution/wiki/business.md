@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Business"
+---
+
 # LG Energy Solution Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "ASML Financials"
+---
+
 # ASML Financials
 
 ## Reporting structure / KPI lens

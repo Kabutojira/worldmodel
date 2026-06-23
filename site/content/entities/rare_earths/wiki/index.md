@@ -1,3 +1,7 @@
+---
+title: "Rare earths"
+---
+
 # Rare earths
 
 ## Overview

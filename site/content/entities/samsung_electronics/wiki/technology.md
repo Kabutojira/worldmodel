@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Technology"
+---
+
 # Samsung Electronics Technology
 
 ## Technical / system bottlenecks

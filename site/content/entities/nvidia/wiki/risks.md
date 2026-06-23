@@ -1,3 +1,7 @@
+---
+title: "Nvidia Risks"
+---
+
 # Nvidia Risks
 
 ## Major risks

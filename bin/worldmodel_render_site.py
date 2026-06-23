@@ -121,9 +121,36 @@ def repo_markdown_to_site_markdown(text: str, source_rel: Path) -> str:
     return MD_LINK_RE.sub(replace_md, text)
 
 
-def write_markdown(dest: Path, content: str, counters: dict[str, int]) -> None:
+def yaml_quote(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def extract_title(text: str) -> str:
+    frontmatter_match = re.match(r"^---\n(.*?)\n---\n", text, flags=re.DOTALL)
+    if frontmatter_match:
+        title_match = re.search(r"^title:\s*(.+)$", frontmatter_match.group(1), flags=re.MULTILINE)
+        if title_match:
+            return title_match.group(1).strip().strip('"\'')
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            return stripped[2:].strip()
+    return ""
+
+
+def ensure_title_frontmatter(content: str, title: str | None = None) -> str:
+    text = content.lstrip("\ufeff")
+    if re.match(r"^---\n.*?\n---\n", text, flags=re.DOTALL):
+        return text.rstrip() + "\n"
+    resolved_title = (title or extract_title(text)).strip()
+    if not resolved_title:
+        return text.rstrip() + "\n"
+    return f"---\ntitle: {yaml_quote(resolved_title)}\n---\n\n{text.rstrip()}\n"
+
+
+def write_markdown(dest: Path, content: str, counters: dict[str, int], title: str | None = None) -> None:
     ensure_dir(dest.parent)
-    dest.write_text(content.rstrip() + "\n", encoding="utf-8")
+    dest.write_text(ensure_title_frontmatter(content, title), encoding="utf-8")
     counters["generated_files"] += 1
 
 
@@ -131,7 +158,8 @@ def copy_repo_markdown(repo_path: Path, content_dir: Path, counters: dict[str, i
     rel = repo_path.relative_to(ROOT)
     dest = content_dir / rel
     text = repo_markdown_to_site_markdown(repo_path.read_text(encoding="utf-8"), rel)
-    write_markdown(dest, text, counters)
+    fallback_title = repo_path.stem.replace("_", " ").replace("-", " ").title()
+    write_markdown(dest, text, counters, title=extract_title(text) or fallback_title)
     counters["source_files"] += 1
 
 

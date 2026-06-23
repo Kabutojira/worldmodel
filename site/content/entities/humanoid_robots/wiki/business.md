@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Business"
+---
+
 # Humanoid robots Business
 
 ## Core model

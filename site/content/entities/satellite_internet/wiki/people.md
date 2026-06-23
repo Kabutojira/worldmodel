@@ -1,3 +1,7 @@
+---
+title: "Satellite internet People"
+---
+
 # Satellite internet People
 
 ## Key people / governance nodes

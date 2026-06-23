@@ -1,3 +1,7 @@
+---
+title: "Google / Alphabet Financial Report"
+---
+
 # Google / Alphabet Financial Report
 
 ## Entity summary

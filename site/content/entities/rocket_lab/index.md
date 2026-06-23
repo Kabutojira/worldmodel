@@ -1,3 +1,7 @@
+---
+title: "Rocket Lab"
+---
+
 # Rocket Lab
 
 ## Summary
@@ -21,6 +25,7 @@ Rocket Lab is tracked because Public comparable for space launch and systems. Bo
 
 ## Latest reports
 
+- [[entities/rocket_lab/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/rocket_lab/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/rocket_lab/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

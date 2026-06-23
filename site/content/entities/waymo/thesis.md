@@ -1,3 +1,7 @@
+---
+title: "Waymo Thesis"
+---
+
 # Waymo Thesis
 
 ## Bearish thesis

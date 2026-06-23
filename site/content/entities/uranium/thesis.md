@@ -1,3 +1,7 @@
+---
+title: "Uranium Thesis"
+---
+
 # Uranium Thesis
 
 ## Bearish thesis

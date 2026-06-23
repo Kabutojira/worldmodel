@@ -1,3 +1,7 @@
+---
+title: "Nickel Financial Report"
+---
+
 # Nickel Financial Report
 
 ## Entity summary

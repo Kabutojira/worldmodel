@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics Thesis"
+---
+
 # Boston Dynamics Thesis
 
 ## Bearish thesis

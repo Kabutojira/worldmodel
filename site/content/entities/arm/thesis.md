@@ -1,3 +1,7 @@
+---
+title: "Arm Thesis"
+---
+
 # Arm Thesis
 
 ## Bearish thesis

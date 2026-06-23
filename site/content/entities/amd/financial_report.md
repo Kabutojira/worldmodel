@@ -1,3 +1,7 @@
+---
+title: "AMD Financial Report"
+---
+
 # AMD Financial Report
 
 ## Entity summary

@@ -1,3 +1,7 @@
+---
+title: "Anthropic Risks"
+---
+
 # Anthropic Risks
 
 ## Major risks

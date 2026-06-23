@@ -1,3 +1,7 @@
+---
+title: "Energy Financials"
+---
+
 # Energy Financials
 
 ## Reporting structure / KPI lens

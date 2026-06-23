@@ -1,3 +1,7 @@
+---
+title: "Broadcom People"
+---
+
 # Broadcom People
 
 ## Key people / governance nodes

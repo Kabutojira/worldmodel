@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution"
+---
+
 # LG Energy Solution
 
 ## Overview

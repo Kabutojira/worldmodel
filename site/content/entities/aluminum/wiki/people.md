@@ -1,3 +1,7 @@
+---
+title: "Aluminum People"
+---
+
 # Aluminum People
 
 ## Key people / governance nodes

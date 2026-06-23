@@ -1,3 +1,7 @@
+---
+title: "Lithium Business"
+---
+
 # Lithium Business
 
 ## Core model

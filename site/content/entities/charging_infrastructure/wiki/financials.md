@@ -1,3 +1,7 @@
+---
+title: "EV charging infrastructure Financials"
+---
+
 # EV charging infrastructure Financials
 
 ## Reporting structure / KPI lens

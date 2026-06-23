@@ -1,3 +1,7 @@
+---
+title: "Oracle Financial Report"
+---
+
 # Oracle Financial Report
 
 ## Entity summary

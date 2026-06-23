@@ -1,3 +1,7 @@
+---
+title: "Unitree Robotics"
+---
+
 # Unitree Robotics
 
 ## Summary
@@ -19,6 +23,7 @@ Unitree Robotics is tracked because Low-cost Chinese robotics signal. Bootstrap 
 
 ## Latest reports
 
+- [[entities/unitree_robotics/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/unitree_robotics/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/unitree_robotics/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

@@ -1,3 +1,7 @@
+---
+title: "Robot actuators"
+---
+
 # Robot actuators
 
 ## Summary
@@ -21,6 +25,7 @@ Robot actuators is tracked as a system-level node because Critical hardware bott
 
 ## Latest reports
 
+- [[entities/robot_actuators/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/robot_actuators/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/robot_actuators/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

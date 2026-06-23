@@ -1,3 +1,7 @@
+---
+title: "Zoox Financials"
+---
+
 # Zoox Financials
 
 ## Reporting structure / KPI lens

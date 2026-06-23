@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Risks"
+---
+
 # Rockwell Automation Risks
 
 ## Major risks

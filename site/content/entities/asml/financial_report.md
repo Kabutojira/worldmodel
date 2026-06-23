@@ -1,3 +1,7 @@
+---
+title: "ASML Financial Report"
+---
+
 # ASML Financial Report
 
 ## Entity summary

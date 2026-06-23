@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics Technology"
+---
+
 # Boston Dynamics Technology
 
 ## Technical / system bottlenecks

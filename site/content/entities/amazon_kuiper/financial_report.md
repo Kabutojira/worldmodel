@@ -1,3 +1,7 @@
+---
+title: "Amazon Kuiper Financial Report"
+---
+
 # Amazon Kuiper Financial Report
 
 ## Entity summary

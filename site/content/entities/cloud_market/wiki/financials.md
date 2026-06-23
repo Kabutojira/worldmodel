@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market Financials"
+---
+
 # Cloud infrastructure market Financials
 
 ## Reporting structure / KPI lens

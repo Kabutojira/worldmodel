@@ -1,3 +1,7 @@
+---
+title: "Rocket Lab Financials"
+---
+
 # Rocket Lab Financials
 
 ## Reporting structure / KPI lens

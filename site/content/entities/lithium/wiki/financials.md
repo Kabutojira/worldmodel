@@ -1,3 +1,7 @@
+---
+title: "Lithium Financials"
+---
+
 # Lithium Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Electricity grid Financials"
+---
+
 # Electricity grid Financials
 
 ## Reporting structure / KPI lens

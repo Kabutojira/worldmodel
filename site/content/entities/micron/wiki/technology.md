@@ -1,3 +1,7 @@
+---
+title: "Micron Technology"
+---
+
 # Micron Technology
 
 ## Technical / system bottlenecks

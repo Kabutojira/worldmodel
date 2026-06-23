@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics"
+---
+
 # Samsung Electronics
 
 ## Overview

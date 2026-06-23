@@ -1,3 +1,7 @@
+---
+title: "Graphite Financial Report"
+---
+
 # Graphite Financial Report
 
 ## Entity summary

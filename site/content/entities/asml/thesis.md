@@ -1,3 +1,7 @@
+---
+title: "ASML Thesis"
+---
+
 # ASML Thesis
 
 ## Bearish thesis

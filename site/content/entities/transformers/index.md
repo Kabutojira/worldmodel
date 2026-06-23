@@ -1,3 +1,7 @@
+---
+title: "Power transformers"
+---
+
 # Power transformers
 
 ## Summary
@@ -23,6 +27,7 @@ Power transformers is tracked as a system-level node because Grid expansion bott
 
 ## Latest reports
 
+- [[entities/transformers/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/transformers/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/transformers/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

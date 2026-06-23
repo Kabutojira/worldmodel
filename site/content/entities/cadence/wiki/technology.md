@@ -1,3 +1,7 @@
+---
+title: "Cadence Technology"
+---
+
 # Cadence Technology
 
 ## Technical / system bottlenecks

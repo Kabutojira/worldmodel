@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots"
+---
+
 # Humanoid robots
 
 ## Overview

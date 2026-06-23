@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation"
+---
+
 # Rockwell Automation
 
 ## Overview

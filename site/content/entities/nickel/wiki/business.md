@@ -1,3 +1,7 @@
+---
+title: "Nickel Business"
+---
+
 # Nickel Business
 
 ## Core model

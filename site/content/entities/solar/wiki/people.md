@@ -1,3 +1,7 @@
+---
+title: "Solar energy People"
+---
+
 # Solar energy People
 
 ## Key people / governance nodes

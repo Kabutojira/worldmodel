@@ -1,3 +1,7 @@
+---
+title: "Aluminum Market"
+---
+
 # Aluminum Market
 
 ## Market map

@@ -1,3 +1,7 @@
+---
+title: "Mark Zuckerberg"
+---
+
 # Mark Zuckerberg
 
 ## Summary
@@ -18,6 +22,7 @@ Mark Zuckerberg is tracked as a key-person and strategy connector because Key pe
 
 ## Latest reports
 
+- [[entities/mark_zuckerberg/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/mark_zuckerberg/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/mark_zuckerberg/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

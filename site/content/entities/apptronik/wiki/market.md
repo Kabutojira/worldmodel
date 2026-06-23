@@ -1,3 +1,7 @@
+---
+title: "Apptronik Market"
+---
+
 # Apptronik Market
 
 ## Market map

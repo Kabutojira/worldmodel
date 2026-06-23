@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos Thesis"
+---
+
 # Jeff Bezos Thesis
 
 ## Bearish thesis

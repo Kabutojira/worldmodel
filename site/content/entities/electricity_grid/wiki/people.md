@@ -1,3 +1,7 @@
+---
+title: "Electricity grid People"
+---
+
 # Electricity grid People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Thesis"
+---
+
 # Humanoid robots Thesis
 
 ## Bearish thesis

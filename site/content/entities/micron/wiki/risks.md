@@ -1,3 +1,7 @@
+---
+title: "Micron Risks"
+---
+
 # Micron Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Synopsys Thesis"
+---
+
 # Synopsys Thesis
 
 ## Bearish thesis

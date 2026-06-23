@@ -1,3 +1,7 @@
+---
+title: "Automotive market Financials"
+---
+
 # Automotive market Financials
 
 ## Reporting structure / KPI lens

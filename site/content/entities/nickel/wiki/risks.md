@@ -1,3 +1,7 @@
+---
+title: "Nickel Risks"
+---
+
 # Nickel Risks
 
 ## Major risks

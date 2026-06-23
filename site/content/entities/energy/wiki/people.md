@@ -1,3 +1,7 @@
+---
+title: "Energy People"
+---
+
 # Energy People
 
 ## Key people / governance nodes

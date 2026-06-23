@@ -1,3 +1,7 @@
+---
+title: "AWS Market"
+---
+
 # AWS Market
 
 ## Market map

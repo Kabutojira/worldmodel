@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos People"
+---
+
 # Jeff Bezos People
 
 ## Key people / governance nodes

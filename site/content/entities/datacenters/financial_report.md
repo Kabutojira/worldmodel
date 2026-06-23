@@ -1,3 +1,7 @@
+---
+title: "AI data centers Financial Report"
+---
+
 # AI data centers Financial Report
 
 ## Entity summary

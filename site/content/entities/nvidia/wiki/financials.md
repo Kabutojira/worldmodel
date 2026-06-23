@@ -1,3 +1,7 @@
+---
+title: "Nvidia Financials"
+---
+
 # Nvidia Financials
 
 ## Reporting structure / KPI lens

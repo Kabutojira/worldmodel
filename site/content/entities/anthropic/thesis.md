@@ -1,3 +1,7 @@
+---
+title: "Anthropic Thesis"
+---
+
 # Anthropic Thesis
 
 ## Bearish thesis

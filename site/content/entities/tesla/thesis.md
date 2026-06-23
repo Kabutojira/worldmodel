@@ -1,3 +1,7 @@
+---
+title: "Tesla Thesis"
+---
+
 # Tesla Thesis
 
 ## Bearish thesis

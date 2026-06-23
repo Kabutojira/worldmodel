@@ -1,3 +1,7 @@
+---
+title: "Volkswagen Business"
+---
+
 # Volkswagen Business
 
 ## Core model

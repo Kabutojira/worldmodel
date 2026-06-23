@@ -1,3 +1,7 @@
+---
+title: "AI data centers Risks"
+---
+
 # AI data centers Risks
 
 ## Major risks

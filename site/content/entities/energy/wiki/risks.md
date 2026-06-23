@@ -1,3 +1,7 @@
+---
+title: "Energy Risks"
+---
+
 # Energy Risks
 
 ## Major risks

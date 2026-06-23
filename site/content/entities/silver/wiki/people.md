@@ -1,3 +1,7 @@
+---
+title: "Silver People"
+---
+
 # Silver People
 
 ## Key people / governance nodes

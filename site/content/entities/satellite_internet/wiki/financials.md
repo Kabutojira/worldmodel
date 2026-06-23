@@ -1,3 +1,7 @@
+---
+title: "Satellite internet Financials"
+---
+
 # Satellite internet Financials
 
 ## Reporting structure / KPI lens

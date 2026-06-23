@@ -1,3 +1,7 @@
+---
+title: "Figure AI Market"
+---
+
 # Figure AI Market
 
 ## Market map

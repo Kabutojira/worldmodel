@@ -1,3 +1,7 @@
+---
+title: "OpenAI Risks"
+---
+
 # OpenAI Risks
 
 ## Major risks

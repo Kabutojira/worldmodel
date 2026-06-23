@@ -1,3 +1,7 @@
+---
+title: "Apptronik Business"
+---
+
 # Apptronik Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Robot actuators Thesis"
+---
+
 # Robot actuators Thesis
 
 ## Bearish thesis

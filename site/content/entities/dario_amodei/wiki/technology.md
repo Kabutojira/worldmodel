@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Technology"
+---
+
 # Dario Amodei Technology
 
 ## Technical / system bottlenecks

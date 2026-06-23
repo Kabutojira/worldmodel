@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy People"
+---
+
 # Panasonic Energy People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Lithium Financial Report"
+---
+
 # Lithium Financial Report
 
 ## Entity summary

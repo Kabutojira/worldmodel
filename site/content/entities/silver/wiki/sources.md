@@ -1,3 +1,7 @@
+---
+title: "Silver Sources"
+---
+
 # Silver Sources
 
 ## Bootstrap source list

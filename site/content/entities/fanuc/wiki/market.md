@@ -1,3 +1,7 @@
+---
+title: "FANUC Market"
+---
+
 # FANUC Market
 
 ## Market map

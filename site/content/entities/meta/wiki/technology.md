@@ -1,3 +1,7 @@
+---
+title: "Meta Technology"
+---
+
 # Meta Technology
 
 ## Technical / system bottlenecks

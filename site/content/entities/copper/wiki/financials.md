@@ -1,3 +1,7 @@
+---
+title: "Copper Financials"
+---
+
 # Copper Financials
 
 ## Reporting structure / KPI lens

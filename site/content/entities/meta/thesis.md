@@ -1,3 +1,7 @@
+---
+title: "Meta Thesis"
+---
+
 # Meta Thesis
 
 ## Bearish thesis

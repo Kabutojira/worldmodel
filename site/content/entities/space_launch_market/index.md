@@ -1,3 +1,7 @@
+---
+title: "Space launch market"
+---
+
 # Space launch market
 
 ## Summary
@@ -22,6 +26,7 @@ Space launch market is tracked as a system-level node because SpaceX core extern
 
 ## Latest reports
 
+- [[entities/space_launch_market/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/space_launch_market/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/space_launch_market/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

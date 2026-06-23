@@ -1,3 +1,7 @@
+---
+title: "Digital advertising market Technology"
+---
+
 # Digital advertising market Technology
 
 ## Technical / system bottlenecks

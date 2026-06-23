@@ -1,3 +1,7 @@
+---
+title: "xAI Sources"
+---
+
 # xAI Sources
 
 ## Bootstrap source list

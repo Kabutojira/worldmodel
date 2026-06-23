@@ -1,3 +1,7 @@
+---
+title: "FANUC Financial Report"
+---
+
 # FANUC Financial Report
 
 ## Entity summary

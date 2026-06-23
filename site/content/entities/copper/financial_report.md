@@ -1,3 +1,7 @@
+---
+title: "Copper Financial Report"
+---
+
 # Copper Financial Report
 
 ## Entity summary

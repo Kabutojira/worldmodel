@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Technology"
+---
+
 # LG Energy Solution Technology
 
 ## Technical / system bottlenecks

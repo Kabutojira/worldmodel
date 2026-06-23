@@ -1,3 +1,7 @@
+---
+title: "Natural gas Thesis"
+---
+
 # Natural gas Thesis
 
 ## Bearish thesis

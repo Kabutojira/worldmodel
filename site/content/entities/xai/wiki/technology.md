@@ -1,3 +1,7 @@
+---
+title: "xAI Technology"
+---
+
 # xAI Technology
 
 ## Technical / system bottlenecks

@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Financial Report"
+---
+
 # AI consumer devices Financial Report
 
 ## Entity summary

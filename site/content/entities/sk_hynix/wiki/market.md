@@ -1,3 +1,7 @@
+---
+title: "SK hynix Market"
+---
+
 # SK hynix Market
 
 ## Market map

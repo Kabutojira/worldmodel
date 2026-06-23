@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Thesis"
+---
+
 # AI consumer devices Thesis
 
 ## Bearish thesis

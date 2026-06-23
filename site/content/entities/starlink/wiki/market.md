@@ -1,3 +1,7 @@
+---
+title: "Starlink Market"
+---
+
 # Starlink Market
 
 ## Market map

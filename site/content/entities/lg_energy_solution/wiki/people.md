@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution People"
+---
+
 # LG Energy Solution People
 
 ## Key people / governance nodes

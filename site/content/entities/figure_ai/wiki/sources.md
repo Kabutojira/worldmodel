@@ -1,3 +1,7 @@
+---
+title: "Figure AI Sources"
+---
+
 # Figure AI Sources
 
 ## Bootstrap source list

@@ -1,3 +1,7 @@
+---
+title: "Solar energy"
+---
+
 # Solar energy
 
 ## Overview

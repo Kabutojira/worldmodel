@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Market"
+---
+
 # LG Energy Solution Market
 
 ## Market map

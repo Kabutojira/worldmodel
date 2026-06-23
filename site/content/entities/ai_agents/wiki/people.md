@@ -1,3 +1,7 @@
+---
+title: "AI agents People"
+---
+
 # AI agents People
 
 ## Key people / governance nodes

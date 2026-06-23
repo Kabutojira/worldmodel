@@ -1,3 +1,7 @@
+---
+title: "Google / Alphabet Business"
+---
+
 # Google / Alphabet Business
 
 ## Core model

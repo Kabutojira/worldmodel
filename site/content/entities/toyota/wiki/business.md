@@ -1,3 +1,7 @@
+---
+title: "Toyota Business"
+---
+
 # Toyota Business
 
 ## Core model

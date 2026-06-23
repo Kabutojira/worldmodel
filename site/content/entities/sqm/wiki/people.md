@@ -1,3 +1,7 @@
+---
+title: "SQM People"
+---
+
 # SQM People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Siemens Financial Report"
+---
+
 # Siemens Financial Report
 
 ## Entity summary

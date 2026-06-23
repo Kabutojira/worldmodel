@@ -1,3 +1,7 @@
+---
+title: "Rare earths Financial Report"
+---
+
 # Rare earths Financial Report
 
 ## Entity summary

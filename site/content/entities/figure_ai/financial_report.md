@@ -1,3 +1,7 @@
+---
+title: "Figure AI Financial Report"
+---
+
 # Figure AI Financial Report
 
 ## Entity summary

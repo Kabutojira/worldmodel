@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei"
+---
+
 # Dario Amodei
 
 ## Overview

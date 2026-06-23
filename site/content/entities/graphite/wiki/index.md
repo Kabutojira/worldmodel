@@ -1,3 +1,7 @@
+---
+title: "Graphite"
+---
+
 # Graphite
 
 ## Overview

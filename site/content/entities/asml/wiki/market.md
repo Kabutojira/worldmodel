@@ -1,3 +1,7 @@
+---
+title: "ASML Market"
+---
+
 # ASML Market
 
 ## Market map

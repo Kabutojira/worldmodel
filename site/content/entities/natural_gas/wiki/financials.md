@@ -1,3 +1,7 @@
+---
+title: "Natural gas Financials"
+---
+
 # Natural gas Financials
 
 ## Reporting structure / KPI lens

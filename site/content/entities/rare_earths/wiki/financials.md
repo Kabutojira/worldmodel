@@ -1,3 +1,7 @@
+---
+title: "Rare earths Financials"
+---
+
 # Rare earths Financials
 
 ## Reporting structure / KPI lens

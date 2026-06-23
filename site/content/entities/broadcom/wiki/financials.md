@@ -1,3 +1,7 @@
+---
+title: "Broadcom Financials"
+---
+
 # Broadcom Financials
 
 ## Reporting structure / KPI lens

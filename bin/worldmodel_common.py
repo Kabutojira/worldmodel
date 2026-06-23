@@ -41,6 +41,9 @@ DAILY_RUNS_HEADER = [
 SUBSTACK_WATCHLIST_HEADER = [
     "publication","feed_url","keywords","status","last_checked_at","notes",
 ]
+X_POST_IMPORT_HEADER = [
+    "source_id","account_url","post_url","title","published_at","notes",
+]
 SOURCE_HISTORY_HEADER = [
     "history_key","source_id","entity_slug","title","source_name","source_type","url",
     "first_seen_at","last_seen_at","last_selected_at","last_used_at","times_seen",

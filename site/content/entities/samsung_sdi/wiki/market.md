@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Market"
+---
+
 # Samsung SDI Market
 
 ## Market map

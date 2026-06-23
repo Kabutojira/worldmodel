@@ -1,3 +1,7 @@
+---
+title: "Satellite internet Business"
+---
+
 # Satellite internet Business
 
 ## Core model

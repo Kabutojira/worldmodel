@@ -1,3 +1,7 @@
+---
+title: "SK hynix Business"
+---
+
 # SK hynix Business
 
 ## Core model

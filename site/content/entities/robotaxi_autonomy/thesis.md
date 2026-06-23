@@ -1,3 +1,7 @@
+---
+title: "Robotaxi and autonomy Thesis"
+---
+
 # Robotaxi and autonomy Thesis
 
 ## Bearish thesis

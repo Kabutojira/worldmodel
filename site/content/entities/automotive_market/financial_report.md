@@ -1,3 +1,7 @@
+---
+title: "Automotive market Financial Report"
+---
+
 # Automotive market Financial Report
 
 ## Entity summary

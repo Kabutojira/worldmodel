@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Thesis"
+---
+
 # Samsung SDI Thesis
 
 ## Bearish thesis

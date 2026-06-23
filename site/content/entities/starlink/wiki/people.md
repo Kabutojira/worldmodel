@@ -1,3 +1,7 @@
+---
+title: "Starlink People"
+---
+
 # Starlink People
 
 ## Key people / governance nodes

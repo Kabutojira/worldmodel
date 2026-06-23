@@ -1,3 +1,7 @@
+---
+title: "Robot sensors Financial Report"
+---
+
 # Robot sensors Financial Report
 
 ## Entity summary

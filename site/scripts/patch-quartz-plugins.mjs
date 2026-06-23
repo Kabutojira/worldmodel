@@ -52,6 +52,41 @@ const replacements = [
     }
 `,
   },
+  {
+    relativePath: ".quartz/plugins/graph/src/components/scripts/graph.inline.ts",
+    presentMarker: "function inferDisplayTitle(details, fallback)",
+    oldString: `      var nodes = [];
+      var nodeMap = new Map();
+      neighbourhood.forEach(function (url) {
+        var isTag = url.startsWith("tags/");
+        var text = isTag ? "#" + url.substring(5) : data.get(url)?.title || url;
+        var nodeTags = isTag ? [] : data.get(url)?.tags || [];
+`,
+    newString: `      function inferDisplayTitle(details, fallback) {
+        var explicitTitle = (details && details.title ? String(details.title) : "").trim();
+        if (explicitTitle) return explicitTitle;
+        var content = details && details.content ? String(details.content) : "";
+        if (!content) return fallback;
+        var lines = content.split(/\r?\n/).map(function (line) {
+          return line.trim();
+        });
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i];
+          if (!line || line === "---") continue;
+          if (line.toLowerCase().startsWith("title:")) continue;
+          return line.replace(/^#+\s*/, "");
+        }
+        return fallback;
+      }
+
+      var nodes = [];
+      var nodeMap = new Map();
+      neighbourhood.forEach(function (url) {
+        var isTag = url.startsWith("tags/");
+        var text = isTag ? "#" + url.substring(5) : inferDisplayTitle(data.get(url), url);
+        var nodeTags = isTag ? [] : data.get(url)?.tags || [];
+`,
+  },
 ]
 
 let applied = 0
@@ -63,7 +98,7 @@ for (const replacement of replacements) {
   }
 
   const current = readFileSync(target, "utf8")
-  if (current.includes(replacement.newString)) {
+  if ((replacement.presentMarker && current.includes(replacement.presentMarker)) || current.includes(replacement.newString)) {
     console.log(`Quartz plugin patch already present: ${replacement.relativePath}`)
     continue
   }

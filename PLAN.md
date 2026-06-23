@@ -479,7 +479,7 @@ When maintenance changes are needed:
 
 ## Next steps to make the project better
 
-- Add direct X/Twitter post retrieval or a compliant import path so high-signal accounts can provide more than profile-level candidate URLs.
+- Add an automated, compliant collector that refreshes `.worldmodel/x_post_import.csv` from allowed exports or API access so X account coverage no longer depends on manual post URL seeding.
 
 ## Initial `index.md` seed
 

@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Financials"
+---
+
 # Sam Altman Financials
 
 ## Reporting structure / KPI lens

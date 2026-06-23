@@ -1,3 +1,7 @@
+---
+title: "Micron Financials"
+---
+
 # Micron Financials
 
 ## Reporting structure / KPI lens

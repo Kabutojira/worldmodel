@@ -1,3 +1,7 @@
+---
+title: "Synopsys Risks"
+---
+
 # Synopsys Risks
 
 ## Major risks

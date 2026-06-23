@@ -1,3 +1,7 @@
+---
+title: "Solar energy Financial Report"
+---
+
 # Solar energy Financial Report
 
 ## Entity summary

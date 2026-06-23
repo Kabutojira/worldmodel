@@ -1,3 +1,7 @@
+---
+title: "Graphite Business"
+---
+
 # Graphite Business
 
 ## Core model

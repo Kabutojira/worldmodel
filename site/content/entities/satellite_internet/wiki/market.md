@@ -1,3 +1,7 @@
+---
+title: "Satellite internet Market"
+---
+
 # Satellite internet Market
 
 ## Market map

@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Financial Report"
+---
+
 # Logistics automation Financial Report
 
 ## Entity summary

@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics Business"
+---
+
 # Boston Dynamics Business
 
 ## Core model

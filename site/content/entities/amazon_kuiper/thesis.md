@@ -1,3 +1,7 @@
+---
+title: "Amazon Kuiper Thesis"
+---
+
 # Amazon Kuiper Thesis
 
 ## Bearish thesis

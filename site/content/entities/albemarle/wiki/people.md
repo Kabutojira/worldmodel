@@ -1,3 +1,7 @@
+---
+title: "Albemarle People"
+---
+
 # Albemarle People
 
 ## Key people / governance nodes

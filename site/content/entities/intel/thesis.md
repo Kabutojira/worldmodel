@@ -1,3 +1,7 @@
+---
+title: "Intel Thesis"
+---
+
 # Intel Thesis
 
 ## Bearish thesis

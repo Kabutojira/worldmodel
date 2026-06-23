@@ -1,3 +1,7 @@
+---
+title: "Wind power Business"
+---
+
 # Wind power Business
 
 ## Core model

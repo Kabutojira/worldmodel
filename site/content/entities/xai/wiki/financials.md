@@ -1,3 +1,7 @@
+---
+title: "xAI Financials"
+---
+
 # xAI Financials
 
 ## Reporting structure / KPI lens

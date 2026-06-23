@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Technology"
+---
+
 # AI inference economics Technology
 
 ## Technical / system bottlenecks

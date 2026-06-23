@@ -1,3 +1,7 @@
+---
+title: "Amazon People"
+---
+
 # Amazon People
 
 ## Key people / governance nodes

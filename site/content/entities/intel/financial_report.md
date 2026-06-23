@@ -1,3 +1,7 @@
+---
+title: "Intel Financial Report"
+---
+
 # Intel Financial Report
 
 ## Entity summary

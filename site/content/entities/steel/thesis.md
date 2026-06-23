@@ -1,3 +1,7 @@
+---
+title: "Steel Thesis"
+---
+
 # Steel Thesis
 
 ## Bearish thesis

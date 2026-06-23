@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Risks"
+---
+
 # LG Energy Solution Risks
 
 ## Major risks

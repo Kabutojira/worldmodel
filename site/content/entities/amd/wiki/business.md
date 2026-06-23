@@ -1,3 +1,7 @@
+---
+title: "AMD Business"
+---
+
 # AMD Business
 
 ## Core model

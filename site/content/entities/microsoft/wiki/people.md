@@ -1,3 +1,7 @@
+---
+title: "Microsoft People"
+---
+
 # Microsoft People
 
 ## Key people / governance nodes

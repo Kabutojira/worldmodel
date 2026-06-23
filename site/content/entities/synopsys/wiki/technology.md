@@ -1,3 +1,7 @@
+---
+title: "Synopsys Technology"
+---
+
 # Synopsys Technology
 
 ## Technical / system bottlenecks

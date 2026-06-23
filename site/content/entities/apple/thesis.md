@@ -1,3 +1,7 @@
+---
+title: "Apple Thesis"
+---
+
 # Apple Thesis
 
 ## Bearish thesis

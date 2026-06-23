@@ -1,3 +1,7 @@
+---
+title: "Solar energy"
+---
+
 # Solar energy
 
 ## Summary
@@ -27,6 +31,7 @@ Solar energy is tracked as a system-level node because Renewable supply side for
 
 ## Latest reports
 
+- [[entities/solar/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/solar/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/solar/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

@@ -1,3 +1,7 @@
+---
+title: "Aluminum Technology"
+---
+
 # Aluminum Technology
 
 ## Technical / system bottlenecks

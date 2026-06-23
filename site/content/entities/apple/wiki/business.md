@@ -1,3 +1,7 @@
+---
+title: "Apple Business"
+---
+
 # Apple Business
 
 ## Core model

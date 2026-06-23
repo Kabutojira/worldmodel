@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Technology"
+---
+
 # AI consumer devices Technology
 
 ## Technical / system bottlenecks

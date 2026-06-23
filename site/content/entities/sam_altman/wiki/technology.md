@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Technology"
+---
+
 # Sam Altman Technology
 
 ## Technical / system bottlenecks

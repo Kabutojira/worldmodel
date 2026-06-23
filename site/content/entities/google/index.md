@@ -1,3 +1,7 @@
+---
+title: "Google / Alphabet"
+---
+
 # Google / Alphabet
 
 ## Summary
@@ -39,6 +43,7 @@ Google / Alphabet is tracked because AI, search, cloud, TPU, autonomy, ads. Boot
 
 ## Latest reports
 
+- [[entities/google/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/google/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/google/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

@@ -1,3 +1,7 @@
+---
+title: "SK hynix Financial Report"
+---
+
 # SK hynix Financial Report
 
 ## Entity summary

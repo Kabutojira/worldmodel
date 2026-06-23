@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Technology"
+---
+
 # Industrial automation Technology
 
 ## Technical / system bottlenecks

@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Thesis"
+---
+
 # Rockwell Automation Thesis
 
 ## Bearish thesis

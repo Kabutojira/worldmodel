@@ -1,3 +1,7 @@
+---
+title: "ABB Robotics Technology"
+---
+
 # ABB Robotics Technology
 
 ## Technical / system bottlenecks

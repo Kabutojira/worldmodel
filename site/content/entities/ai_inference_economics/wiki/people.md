@@ -1,3 +1,7 @@
+---
+title: "AI inference economics People"
+---
+
 # AI inference economics People
 
 ## Key people / governance nodes

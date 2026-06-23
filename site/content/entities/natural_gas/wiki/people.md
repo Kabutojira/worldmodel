@@ -1,3 +1,7 @@
+---
+title: "Natural gas People"
+---
+
 # Natural gas People
 
 ## Key people / governance nodes

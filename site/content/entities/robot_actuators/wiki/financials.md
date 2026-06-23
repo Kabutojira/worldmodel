@@ -1,3 +1,7 @@
+---
+title: "Robot actuators Financials"
+---
+
 # Robot actuators Financials
 
 ## Reporting structure / KPI lens

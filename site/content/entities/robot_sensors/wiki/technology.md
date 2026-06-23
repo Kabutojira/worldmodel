@@ -1,3 +1,7 @@
+---
+title: "Robot sensors Technology"
+---
+
 # Robot sensors Technology
 
 ## Technical / system bottlenecks

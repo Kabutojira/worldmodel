@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos Technology"
+---
+
 # Jeff Bezos Technology
 
 ## Technical / system bottlenecks

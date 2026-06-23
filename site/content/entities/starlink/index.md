@@ -1,3 +1,7 @@
+---
+title: "Starlink"
+---
+
 # Starlink
 
 ## Summary
@@ -23,6 +27,7 @@ Starlink is tracked because SpaceX revenue engine and global communications infr
 
 ## Latest reports
 
+- [[entities/starlink/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/starlink/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/starlink/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

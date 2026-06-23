@@ -1,3 +1,7 @@
+---
+title: "Lithium People"
+---
+
 # Lithium People
 
 ## Key people / governance nodes

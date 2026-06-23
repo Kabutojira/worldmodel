@@ -1,3 +1,7 @@
+---
+title: "Micron Financial Report"
+---
+
 # Micron Financial Report
 
 ## Entity summary

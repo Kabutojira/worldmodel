@@ -1,3 +1,7 @@
+---
+title: "Nickel Market"
+---
+
 # Nickel Market
 
 ## Market map

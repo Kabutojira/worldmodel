@@ -1,3 +1,7 @@
+---
+title: "Battery energy storage Financial Report"
+---
+
 # Battery energy storage Financial Report
 
 ## Entity summary

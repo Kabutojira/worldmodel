@@ -1,3 +1,7 @@
+---
+title: "xAI Financial Report"
+---
+
 # xAI Financial Report
 
 ## Entity summary

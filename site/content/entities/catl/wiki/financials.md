@@ -1,3 +1,7 @@
+---
+title: "CATL Financials"
+---
+
 # CATL Financials
 
 ## Reporting structure / KPI lens

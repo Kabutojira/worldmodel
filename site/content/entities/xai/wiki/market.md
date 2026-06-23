@@ -1,3 +1,7 @@
+---
+title: "xAI Market"
+---
+
 # xAI Market
 
 ## Market map

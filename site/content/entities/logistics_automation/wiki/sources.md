@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Sources"
+---
+
 # Logistics automation Sources
 
 ## Bootstrap source list

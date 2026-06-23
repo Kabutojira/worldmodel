@@ -1,3 +1,7 @@
+---
+title: "Oracle Thesis"
+---
+
 # Oracle Thesis
 
 ## Bearish thesis

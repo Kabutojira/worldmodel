@@ -1,3 +1,7 @@
+---
+title: "Anthropic Financial Report"
+---
+
 # Anthropic Financial Report
 
 ## Entity summary

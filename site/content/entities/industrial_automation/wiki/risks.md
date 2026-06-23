@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Risks"
+---
+
 # Industrial automation Risks
 
 ## Major risks

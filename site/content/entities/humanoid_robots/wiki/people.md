@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots People"
+---
+
 # Humanoid robots People
 
 ## Key people / governance nodes

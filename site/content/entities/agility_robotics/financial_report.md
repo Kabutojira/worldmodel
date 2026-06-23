@@ -1,3 +1,7 @@
+---
+title: "Agility Robotics Financial Report"
+---
+
 # Agility Robotics Financial Report
 
 ## Entity summary

@@ -1,3 +1,7 @@
+---
+title: "Microsoft Financial Report"
+---
+
 # Microsoft Financial Report
 
 ## Entity summary

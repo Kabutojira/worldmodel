@@ -1,3 +1,7 @@
+---
+title: "Synopsys Business"
+---
+
 # Synopsys Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Financials"
+---
+
 # Panasonic Energy Financials
 
 ## Reporting structure / KPI lens

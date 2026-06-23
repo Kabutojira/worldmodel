@@ -1,3 +1,7 @@
+---
+title: "xAI People"
+---
+
 # xAI People
 
 ## Key people / governance nodes

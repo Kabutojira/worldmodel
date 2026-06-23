@@ -1,3 +1,7 @@
+---
+title: "Graphite Market"
+---
+
 # Graphite Market
 
 ## Market map

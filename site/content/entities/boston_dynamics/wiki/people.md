@@ -1,3 +1,7 @@
+---
+title: "Boston Dynamics People"
+---
+
 # Boston Dynamics People
 
 ## Key people / governance nodes

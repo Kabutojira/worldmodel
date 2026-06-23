@@ -1,3 +1,7 @@
+---
+title: "Copper Technology"
+---
+
 # Copper Technology
 
 ## Technical / system bottlenecks

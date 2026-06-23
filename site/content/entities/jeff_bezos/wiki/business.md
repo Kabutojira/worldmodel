@@ -1,3 +1,7 @@
+---
+title: "Jeff Bezos Business"
+---
+
 # Jeff Bezos Business
 
 ## Core model

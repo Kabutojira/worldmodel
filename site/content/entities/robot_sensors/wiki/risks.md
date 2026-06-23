@@ -1,3 +1,7 @@
+---
+title: "Robot sensors Risks"
+---
+
 # Robot sensors Risks
 
 ## Major risks

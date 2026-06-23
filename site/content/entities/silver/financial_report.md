@@ -1,3 +1,7 @@
+---
+title: "Silver Financial Report"
+---
+
 # Silver Financial Report
 
 ## Entity summary

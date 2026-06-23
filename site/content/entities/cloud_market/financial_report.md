@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market Financial Report"
+---
+
 # Cloud infrastructure market Financial Report
 
 ## Entity summary

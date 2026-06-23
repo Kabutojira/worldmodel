@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang People"
+---
+
 # Jensen Huang People
 
 ## Key people / governance nodes

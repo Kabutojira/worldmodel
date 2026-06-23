@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Market"
+---
+
 # Humanoid robots Market
 
 ## Market map

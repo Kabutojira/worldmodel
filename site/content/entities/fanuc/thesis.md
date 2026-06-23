@@ -1,3 +1,7 @@
+---
+title: "FANUC Thesis"
+---
+
 # FANUC Thesis
 
 ## Bearish thesis

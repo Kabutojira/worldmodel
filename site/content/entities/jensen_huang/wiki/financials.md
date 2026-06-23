@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang Financials"
+---
+
 # Jensen Huang Financials
 
 ## Reporting structure / KPI lens

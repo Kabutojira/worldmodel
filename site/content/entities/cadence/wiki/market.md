@@ -1,3 +1,7 @@
+---
+title: "Cadence Market"
+---
+
 # Cadence Market
 
 ## Market map

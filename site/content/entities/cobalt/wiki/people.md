@@ -1,3 +1,7 @@
+---
+title: "Cobalt People"
+---
+
 # Cobalt People
 
 ## Key people / governance nodes

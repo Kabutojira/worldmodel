@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Financials"
+---
+
 # Samsung Electronics Financials
 
 ## Reporting structure / KPI lens

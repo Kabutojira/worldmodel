@@ -1,3 +1,7 @@
+---
+title: "Tesla Market"
+---
+
 # Tesla Market
 
 ## Market map

@@ -1,3 +1,7 @@
+---
+title: "Nickel Financials"
+---
+
 # Nickel Financials
 
 ## Reporting structure / KPI lens

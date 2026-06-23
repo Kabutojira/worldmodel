@@ -1,3 +1,7 @@
+---
+title: "Battery energy storage"
+---
+
 # Battery energy storage
 
 ## Overview

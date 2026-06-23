@@ -1,3 +1,7 @@
+---
+title: "Humanoid robots Risks"
+---
+
 # Humanoid robots Risks
 
 ## Major risks

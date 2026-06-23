@@ -1,3 +1,7 @@
+---
+title: "Elon Musk Market"
+---
+
 # Elon Musk Market
 
 ## Market map

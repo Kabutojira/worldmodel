@@ -1,3 +1,7 @@
+---
+title: "Sundar Pichai Financial Report"
+---
+
 # Sundar Pichai Financial Report
 
 ## Entity summary

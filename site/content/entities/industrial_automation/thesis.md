@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Thesis"
+---
+
 # Industrial automation Thesis
 
 ## Bearish thesis

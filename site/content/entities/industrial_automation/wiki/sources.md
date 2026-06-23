@@ -1,3 +1,7 @@
+---
+title: "Industrial automation Sources"
+---
+
 # Industrial automation Sources
 
 ## Bootstrap source list

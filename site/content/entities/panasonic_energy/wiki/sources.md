@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Sources"
+---
+
 # Panasonic Energy Sources
 
 ## Bootstrap source list

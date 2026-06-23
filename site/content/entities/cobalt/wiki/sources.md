@@ -1,3 +1,7 @@
+---
+title: "Cobalt Sources"
+---
+
 # Cobalt Sources
 
 ## Bootstrap source list

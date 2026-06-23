@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics People"
+---
+
 # Samsung Electronics People
 
 ## Key people / governance nodes

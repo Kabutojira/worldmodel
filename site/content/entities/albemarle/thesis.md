@@ -1,3 +1,7 @@
+---
+title: "Albemarle Thesis"
+---
+
 # Albemarle Thesis
 
 ## Bearish thesis

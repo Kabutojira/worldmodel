@@ -1,3 +1,7 @@
+---
+title: "Battery energy storage Risks"
+---
+
 # Battery energy storage Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Market"
+---
+
 # Dario Amodei Market
 
 ## Market map

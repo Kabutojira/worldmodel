@@ -1,3 +1,7 @@
+---
+title: "Apptronik Thesis"
+---
+
 # Apptronik Thesis
 
 ## Bearish thesis

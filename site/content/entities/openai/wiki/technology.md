@@ -1,3 +1,7 @@
+---
+title: "OpenAI Technology"
+---
+
 # OpenAI Technology
 
 ## Technical / system bottlenecks

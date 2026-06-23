@@ -1,3 +1,7 @@
+---
+title: "Telecom market Thesis"
+---
+
 # Telecom market Thesis
 
 ## Bearish thesis

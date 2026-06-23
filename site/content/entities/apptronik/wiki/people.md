@@ -1,3 +1,7 @@
+---
+title: "Apptronik People"
+---
+
 # Apptronik People
 
 ## Key people / governance nodes

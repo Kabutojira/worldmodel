@@ -1,3 +1,7 @@
+---
+title: "Natural gas"
+---
+
 # Natural gas
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+title: "Robot actuators Risks"
+---
+
 # Robot actuators Risks
 
 ## Major risks

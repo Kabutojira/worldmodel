@@ -1,3 +1,7 @@
+---
+title: "Anthropic Business"
+---
+
 # Anthropic Business
 
 ## Core model

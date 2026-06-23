@@ -1,3 +1,7 @@
+---
+title: "Synopsys People"
+---
+
 # Synopsys People
 
 ## Key people / governance nodes

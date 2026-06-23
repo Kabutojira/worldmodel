@@ -1,3 +1,7 @@
+---
+title: "AMD Thesis"
+---
+
 # AMD Thesis
 
 ## Bearish thesis

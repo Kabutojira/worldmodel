@@ -1,3 +1,7 @@
+---
+title: "US-China chip controls Thesis"
+---
+
 # US-China chip controls Thesis
 
 ## Bearish thesis

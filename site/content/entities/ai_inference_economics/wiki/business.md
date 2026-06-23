@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Business"
+---
+
 # AI inference economics Business
 
 ## Core model

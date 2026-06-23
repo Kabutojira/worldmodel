@@ -1,3 +1,7 @@
+---
+title: "SQM Financial Report"
+---
+
 # SQM Financial Report
 
 ## Entity summary

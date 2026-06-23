@@ -1,3 +1,7 @@
+---
+title: "Cadence People"
+---
+
 # Cadence People
 
 ## Key people / governance nodes

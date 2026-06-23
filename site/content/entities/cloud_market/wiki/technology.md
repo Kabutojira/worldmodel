@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market Technology"
+---
+
 # Cloud infrastructure market Technology
 
 ## Technical / system bottlenecks

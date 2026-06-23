@@ -1,3 +1,7 @@
+---
+title: "Cobalt Financials"
+---
+
 # Cobalt Financials
 
 ## Reporting structure / KPI lens

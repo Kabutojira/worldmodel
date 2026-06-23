@@ -1,3 +1,7 @@
+---
+title: "Oil Thesis"
+---
+
 # Oil Thesis
 
 ## Bearish thesis

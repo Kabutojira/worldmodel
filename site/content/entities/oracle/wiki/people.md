@@ -1,3 +1,7 @@
+---
+title: "Oracle People"
+---
+
 # Oracle People
 
 ## Key people / governance nodes

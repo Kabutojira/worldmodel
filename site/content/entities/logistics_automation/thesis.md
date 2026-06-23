@@ -1,3 +1,7 @@
+---
+title: "Logistics automation Thesis"
+---
+
 # Logistics automation Thesis
 
 ## Bearish thesis

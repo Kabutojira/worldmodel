@@ -1,3 +1,7 @@
+---
+title: "AI inference economics Financial Report"
+---
+
 # AI inference economics Financial Report
 
 ## Entity summary

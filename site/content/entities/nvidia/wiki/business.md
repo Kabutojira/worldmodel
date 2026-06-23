@@ -1,3 +1,7 @@
+---
+title: "Nvidia Business"
+---
+
 # Nvidia Business
 
 ## Core model

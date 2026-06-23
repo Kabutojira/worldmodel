@@ -1,3 +1,7 @@
+---
+title: "Oracle Risks"
+---
+
 # Oracle Risks
 
 ## Major risks

@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Financial Report"
+---
+
 # Sam Altman Financial Report
 
 ## Entity summary

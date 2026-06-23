@@ -1,3 +1,7 @@
+---
+title: "Nvidia Financial Report"
+---
+
 # Nvidia Financial Report
 
 ## Entity summary

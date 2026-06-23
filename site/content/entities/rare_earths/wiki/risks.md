@@ -1,3 +1,7 @@
+---
+title: "Rare earths Risks"
+---
+
 # Rare earths Risks
 
 ## Major risks

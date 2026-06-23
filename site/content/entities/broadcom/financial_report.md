@@ -1,3 +1,7 @@
+---
+title: "Broadcom Financial Report"
+---
+
 # Broadcom Financial Report
 
 ## Entity summary

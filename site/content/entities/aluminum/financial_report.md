@@ -1,3 +1,7 @@
+---
+title: "Aluminum Financial Report"
+---
+
 # Aluminum Financial Report
 
 ## Entity summary

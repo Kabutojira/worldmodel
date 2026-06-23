@@ -1,3 +1,7 @@
+---
+title: "Amazon"
+---
+
 # Amazon
 
 ## Overview

@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang Business"
+---
+
 # Jensen Huang Business
 
 ## Core model

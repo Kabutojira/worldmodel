@@ -1,3 +1,7 @@
+---
+title: "OpenAI Financials"
+---
+
 # OpenAI Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "Defense space market People"
+---
+
 # Defense space market People
 
 ## Key people / governance nodes

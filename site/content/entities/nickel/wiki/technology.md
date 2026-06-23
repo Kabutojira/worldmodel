@@ -1,3 +1,7 @@
+---
+title: "Nickel Technology"
+---
+
 # Nickel Technology
 
 ## Technical / system bottlenecks

@@ -1,3 +1,7 @@
+---
+title: "Robot sensors Market"
+---
+
 # Robot sensors Market
 
 ## Market map

@@ -1,3 +1,7 @@
+---
+title: "Nickel"
+---
+
 # Nickel
 
 ## Summary
@@ -19,6 +23,7 @@ Nickel is tracked as a key input and pricing signal because Battery and stainles
 
 ## Latest reports
 
+- [[entities/nickel/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/nickel/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/nickel/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

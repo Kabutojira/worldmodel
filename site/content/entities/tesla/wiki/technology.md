@@ -1,3 +1,7 @@
+---
+title: "Tesla Technology"
+---
+
 # Tesla Technology
 
 ## Technical / system bottlenecks

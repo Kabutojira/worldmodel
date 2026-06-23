@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices People"
+---
+
 # AI consumer devices People
 
 ## Key people / governance nodes

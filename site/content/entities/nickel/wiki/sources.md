@@ -1,3 +1,7 @@
+---
+title: "Nickel Sources"
+---
+
 # Nickel Sources
 
 ## Bootstrap source list

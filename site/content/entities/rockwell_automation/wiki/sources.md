@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Sources"
+---
+
 # Rockwell Automation Sources
 
 ## Bootstrap source list

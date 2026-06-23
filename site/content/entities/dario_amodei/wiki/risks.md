@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Risks"
+---
+
 # Dario Amodei Risks
 
 ## Major risks

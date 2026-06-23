@@ -1,3 +1,7 @@
+---
+title: "Neuralink Financials"
+---
+
 # Neuralink Financials
 
 ## Reporting structure / KPI lens

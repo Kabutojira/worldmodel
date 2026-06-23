@@ -1,3 +1,7 @@
+---
+title: "Neuralink Technology"
+---
+
 # Neuralink Technology
 
 ## Technical / system bottlenecks

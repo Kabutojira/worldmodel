@@ -1,3 +1,7 @@
+---
+title: "Lisa Su Financial Report"
+---
+
 # Lisa Su Financial Report
 
 ## Entity summary

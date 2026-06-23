@@ -1,3 +1,7 @@
+---
+title: "AI data centers Market"
+---
+
 # AI data centers Market
 
 ## Market map

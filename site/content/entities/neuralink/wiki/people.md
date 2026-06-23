@@ -1,3 +1,7 @@
+---
+title: "Neuralink People"
+---
+
 # Neuralink People
 
 ## Key people / governance nodes

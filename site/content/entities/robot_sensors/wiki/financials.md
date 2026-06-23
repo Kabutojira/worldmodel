@@ -1,3 +1,7 @@
+---
+title: "Robot sensors Financials"
+---
+
 # Robot sensors Financials
 
 ## Reporting structure / KPI lens

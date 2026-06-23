@@ -1,3 +1,7 @@
+---
+title: "Agility Robotics Thesis"
+---
+
 # Agility Robotics Thesis
 
 ## Bearish thesis

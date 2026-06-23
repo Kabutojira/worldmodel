@@ -1,3 +1,7 @@
+---
+title: "AMD Market"
+---
+
 # AMD Market
 
 ## Market map

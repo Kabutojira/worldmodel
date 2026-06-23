@@ -1,3 +1,7 @@
+---
+title: "AWS Technology"
+---
+
 # AWS Technology
 
 ## Technical / system bottlenecks

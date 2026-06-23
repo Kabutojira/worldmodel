@@ -1,3 +1,7 @@
+---
+title: "Rocket Lab Financial Report"
+---
+
 # Rocket Lab Financial Report
 
 ## Entity summary

@@ -1,3 +1,7 @@
+---
+title: "Cobalt Risks"
+---
+
 # Cobalt Risks
 
 ## Major risks

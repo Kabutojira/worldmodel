@@ -1,3 +1,7 @@
+---
+title: "Google / Alphabet Financials"
+---
+
 # Google / Alphabet Financials
 
 ## Reporting structure / KPI lens

@@ -1,3 +1,7 @@
+---
+title: "FANUC Technology"
+---
+
 # FANUC Technology
 
 ## Technical / system bottlenecks

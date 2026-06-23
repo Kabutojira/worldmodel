@@ -1,3 +1,7 @@
+---
+title: "Rare earths Market"
+---
+
 # Rare earths Market
 
 ## Market map

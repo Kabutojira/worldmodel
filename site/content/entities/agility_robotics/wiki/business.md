@@ -1,3 +1,7 @@
+---
+title: "Agility Robotics Business"
+---
+
 # Agility Robotics Business
 
 ## Core model

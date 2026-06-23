@@ -1,3 +1,7 @@
+---
+title: "Sam Altman Sources"
+---
+
 # Sam Altman Sources
 
 ## Bootstrap source list

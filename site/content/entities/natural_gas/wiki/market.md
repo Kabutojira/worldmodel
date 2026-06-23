@@ -1,3 +1,7 @@
+---
+title: "Natural gas Market"
+---
+
 # Natural gas Market
 
 ## Market map

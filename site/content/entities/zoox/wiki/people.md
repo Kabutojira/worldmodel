@@ -1,3 +1,7 @@
+---
+title: "Zoox People"
+---
+
 # Zoox People
 
 ## Key people / governance nodes

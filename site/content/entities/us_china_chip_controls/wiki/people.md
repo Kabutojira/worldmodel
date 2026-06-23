@@ -1,3 +1,7 @@
+---
+title: "US-China chip controls People"
+---
+
 # US-China chip controls People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "SQM Market"
+---
+
 # SQM Market
 
 ## Market map

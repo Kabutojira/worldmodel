@@ -1,3 +1,7 @@
+---
+title: "Microsoft Business"
+---
+
 # Microsoft Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Volkswagen People"
+---
+
 # Volkswagen People
 
 ## Key people / governance nodes

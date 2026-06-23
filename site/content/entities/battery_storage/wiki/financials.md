@@ -1,3 +1,7 @@
+---
+title: "Battery energy storage Financials"
+---
+
 # Battery energy storage Financials
 
 ## Reporting structure / KPI lens

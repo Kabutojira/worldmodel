@@ -1,3 +1,7 @@
+---
+title: "Intel Market"
+---
+
 # Intel Market
 
 ## Market map

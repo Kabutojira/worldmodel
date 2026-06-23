@@ -1,3 +1,7 @@
+---
+title: "Figure AI People"
+---
+
 # Figure AI People
 
 ## Key people / governance nodes

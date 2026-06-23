@@ -1,3 +1,7 @@
+---
+title: "Neuralink Business"
+---
+
 # Neuralink Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "Apptronik Financial Report"
+---
+
 # Apptronik Financial Report
 
 ## Entity summary

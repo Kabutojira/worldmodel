@@ -1,3 +1,7 @@
+---
+title: "Amazon Financials"
+---
+
 # Amazon Financials
 
 ## Reporting structure / KPI lens

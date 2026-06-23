@@ -1,3 +1,7 @@
+---
+title: "Sam Altman People"
+---
+
 # Sam Altman People
 
 ## Key people / governance nodes

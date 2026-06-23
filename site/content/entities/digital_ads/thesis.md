@@ -1,3 +1,7 @@
+---
+title: "Digital advertising market Thesis"
+---
+
 # Digital advertising market Thesis
 
 ## Bearish thesis

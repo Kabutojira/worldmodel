@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Business"
+---
+
 # Samsung Electronics Business
 
 ## Core model

@@ -1,3 +1,7 @@
+---
+title: "SK hynix Risks"
+---
+
 # SK hynix Risks
 
 ## Major risks

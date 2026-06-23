@@ -1,3 +1,7 @@
+---
+title: "Power transformers Financials"
+---
+
 # Power transformers Financials
 
 ## Reporting structure / KPI lens

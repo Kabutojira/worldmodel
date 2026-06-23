@@ -1,3 +1,7 @@
+---
+title: "Amazon Kuiper Business"
+---
+
 # Amazon Kuiper Business
 
 ## Core model

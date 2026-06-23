@@ -1,3 +1,7 @@
+---
+title: "SK hynix People"
+---
+
 # SK hynix People
 
 ## Key people / governance nodes

@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang Thesis"
+---
+
 # Jensen Huang Thesis
 
 ## Bearish thesis

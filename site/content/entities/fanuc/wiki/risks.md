@@ -1,3 +1,7 @@
+---
+title: "FANUC Risks"
+---
+
 # FANUC Risks
 
 ## Major risks

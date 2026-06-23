@@ -1,3 +1,7 @@
+---
+title: "LG Energy Solution Financials"
+---
+
 # LG Energy Solution Financials
 
 ## Reporting structure / KPI lens

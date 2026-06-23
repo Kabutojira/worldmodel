@@ -1,3 +1,7 @@
+---
+title: "Jensen Huang Technology"
+---
+
 # Jensen Huang Technology
 
 ## Technical / system bottlenecks

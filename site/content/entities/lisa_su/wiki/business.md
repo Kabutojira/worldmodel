@@ -1,3 +1,7 @@
+---
+title: "Lisa Su Business"
+---
+
 # Lisa Su Business
 
 ## Core model

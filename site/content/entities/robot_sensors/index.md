@@ -1,3 +1,7 @@
+---
+title: "Robot sensors"
+---
+
 # Robot sensors
 
 ## Summary

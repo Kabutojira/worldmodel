@@ -1,3 +1,7 @@
+---
+title: "Natural gas Business"
+---
+
 # Natural gas Business
 
 ## Core model

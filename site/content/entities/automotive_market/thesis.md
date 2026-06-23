@@ -1,3 +1,7 @@
+---
+title: "Automotive market Thesis"
+---
+
 # Automotive market Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "AMD Sources"
+---
+
 # AMD Sources
 
 ## Bootstrap source list

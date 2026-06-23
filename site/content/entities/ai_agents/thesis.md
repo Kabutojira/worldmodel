@@ -1,3 +1,7 @@
+---
+title: "AI agents Thesis"
+---
+
 # AI agents Thesis
 
 ## Bearish thesis

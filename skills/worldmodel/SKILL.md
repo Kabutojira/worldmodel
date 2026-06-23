@@ -48,7 +48,16 @@ Current adapters include:
   - Substack feeds;
   - YouTube channels;
   - X profile watchlists;
+- optional compliant X post import from `.worldmodel/x_post_import.csv` so retrieval can surface concrete post URLs when a separate export step is available;
 - deterministic source-state tracking in `data/source_history.csv` so already-seen and already-used sources are not repeatedly surfaced as new work.
+
+`x_post_import.csv` header:
+
+```csv
+source_id,account_url,post_url,title,published_at,notes
+```
+
+Use `source_id` values from `data/source_registry.csv`. Keep the file under `.worldmodel/` so only URLs, timestamps, and short notes are cached locally rather than committed as article-like content.
 
 ### 2b. Fetch local YouTube transcript cache
 

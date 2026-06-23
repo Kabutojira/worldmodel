@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Financial Report"
+---
+
 # Samsung Electronics Financial Report
 
 ## Entity summary

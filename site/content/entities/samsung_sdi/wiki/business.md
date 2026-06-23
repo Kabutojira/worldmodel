@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI Business"
+---
+
 # Samsung SDI Business
 
 ## Core model

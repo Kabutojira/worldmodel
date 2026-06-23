@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market"
+---
+
 # Cloud infrastructure market
 
 ## Summary
@@ -25,6 +29,7 @@ Cloud infrastructure market is tracked as a system-level node because Tracks clo
 
 ## Latest reports
 
+- [[entities/cloud_market/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/cloud_market/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/cloud_market/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

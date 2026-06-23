@@ -1,3 +1,7 @@
+---
+title: "AI data centers Sources"
+---
+
 # AI data centers Sources
 
 ## Bootstrap source list

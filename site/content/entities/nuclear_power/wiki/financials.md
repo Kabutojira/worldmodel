@@ -1,3 +1,7 @@
+---
+title: "Nuclear power Financials"
+---
+
 # Nuclear power Financials
 
 ## Reporting structure / KPI lens

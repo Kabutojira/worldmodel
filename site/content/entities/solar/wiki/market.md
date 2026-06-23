@@ -1,3 +1,7 @@
+---
+title: "Solar energy Market"
+---
+
 # Solar energy Market
 
 ## Market map

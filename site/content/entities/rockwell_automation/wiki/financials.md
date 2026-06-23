@@ -1,3 +1,7 @@
+---
+title: "Rockwell Automation Financials"
+---
+
 # Rockwell Automation Financials
 
 ## Reporting structure / KPI lens

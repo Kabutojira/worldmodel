@@ -12,6 +12,7 @@ SOURCE_QUALITY = {
     "filing_index": 1.0,
     "sec_companyfacts": 1.0,
     "sec_filing": 1.0,
+    "official_post": 0.95,
     "official_site": 0.9,
     "earnings_transcript": 0.9,
     "earnings_release": 1.0,
@@ -24,11 +25,66 @@ SOURCE_QUALITY = {
     "substack_feed_error": 0.1,
     "youtube_transcript": 0.75,
     "youtube_video": 0.55,
+    "youtube_channel_error": 0.0,
+    "primary_x": 0.3,
+    "expert_x": 0.35,
+    "analyst_x": 0.35,
+    "aggregator_x": 0.15,
     "technical_x": 0.45,
     "data_x": 0.45,
     "news": 0.5,
     "x_post": 0.3,
 }
+
+ANALYSIS_READY_TYPES = {
+    "sec_filing",
+    "sec_companyfacts",
+    "earnings_transcript",
+    "earnings_release",
+    "investor_presentation",
+    "delivery_update",
+    "official_post",
+    "substack_post",
+    "youtube_transcript",
+    "youtube_video",
+    "seeking_alpha",
+    "trade_publication",
+    "deep_dive",
+}
+
+DISCOVERY_ONLY_TYPES = {
+    "investor_relations",
+    "filing_index",
+    "official_site",
+    "primary_x",
+    "expert_x",
+    "analyst_x",
+    "aggregator_x",
+    "technical_x",
+    "data_x",
+}
+
+ERROR_TYPES = {
+    "youtube_channel_error",
+    "substack_feed_error",
+}
+
+
+def synthesis_score(candidate: dict[str, object]) -> float:
+    source_type = str(candidate.get("source_type", "")).strip()
+    processing = str(candidate.get("processing_state", "")).strip()
+    if source_type in ERROR_TYPES:
+        return 0.0
+    score = 0.3
+    if source_type in ANALYSIS_READY_TYPES:
+        score += 0.6
+    elif source_type in DISCOVERY_ONLY_TYPES:
+        score -= 0.15
+    if processing == "not_synthesized":
+        score += 0.15
+    elif processing == "logged_unprocessed":
+        score -= 0.1
+    return max(0.0, min(score, 1.0))
 
 
 def score_relevance(candidate: dict[str, object], entity_name: str) -> float:
@@ -48,14 +104,17 @@ def score_relevance(candidate: dict[str, object], entity_name: str) -> float:
 
 
 def score_recency(candidate: dict[str, object]) -> float:
+    source_type = str(candidate.get("source_type", ""))
     processing = str(candidate.get("processing_state", ""))
     discovery = str(candidate.get("discovery_state", ""))
+    if source_type in ERROR_TYPES:
+        return 0.0
     if processing == "fully_synthesized" or candidate.get("already_processed"):
         return 0.2
     if processing == "logged_unprocessed":
-        return 0.6
+        return 0.35
     if discovery == "already_logged" or candidate.get("already_logged"):
-        return 0.5
+        return 0.4
     return 0.9
 
 
@@ -116,26 +175,38 @@ def main() -> int:
             quality = SOURCE_QUALITY.get(candidate.get("source_type"), 0.5)
             relevance = score_relevance(candidate, entity.get("name", ""))
             recency = score_recency(candidate)
-            final = quality * 0.45 + relevance * 0.35 + recency * 0.20
+            synthesis = synthesis_score(candidate)
+            final = quality * 0.35 + relevance * 0.25 + recency * 0.15 + synthesis * 0.25
             record = dict(candidate)
             record.update({
                 "quality_score": round(quality, 3),
                 "relevance_score": round(relevance, 3),
                 "recency_score": round(recency, 3),
+                "synthesis_score": round(synthesis, 3),
                 "final_score": round(final, 3),
             })
             scored.append(record)
         scored.sort(key=lambda row: (-row["final_score"], row["url"]))
         selected, skipped = [], []
         seen_hashes = set()
+        selected_analysis_ready = 0
         for item in scored:
             if item["hash"] in seen_hashes:
                 item["skip_reason"] = "duplicate hash"
                 skipped.append(item)
                 continue
             seen_hashes.add(item["hash"])
+            source_type = str(item.get("source_type", ""))
             if item.get("processing_state") == "fully_synthesized" or item.get("already_processed"):
                 item["skip_reason"] = "already used in update"
+                skipped.append(item)
+                continue
+            if source_type in ERROR_TYPES:
+                item["skip_reason"] = "fetch/transcript error placeholder"
+                skipped.append(item)
+                continue
+            if source_type in DISCOVERY_ONLY_TYPES and selected_analysis_ready >= 3:
+                item["skip_reason"] = "discovery-only candidate; richer sources already selected"
                 skipped.append(item)
                 continue
             if len(selected) >= args.limit_per_entity:
@@ -143,11 +214,13 @@ def main() -> int:
                 skipped.append(item)
                 continue
             item["selection_reason"] = (
-                f"top-ranked by quality/relevance/recency; "
+                f"top-ranked by quality/relevance/recency/synthesis readiness; "
                 f"discovery_state={item.get('discovery_state', 'unknown')}; "
                 f"processing_state={item.get('processing_state', 'unknown')}"
             )
             selected.append(item)
+            if source_type in ANALYSIS_READY_TYPES:
+                selected_analysis_ready += 1
         ranked["entities"].append({
             "slug": entity.get("slug"),
             "name": entity.get("name"),

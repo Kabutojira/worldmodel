@@ -1,3 +1,7 @@
+---
+title: "Electric vehicle market Financials"
+---
+
 # Electric vehicle market Financials
 
 ## Reporting structure / KPI lens

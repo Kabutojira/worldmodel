@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Financials"
+---
+
 # AI consumer devices Financials
 
 ## Reporting structure / KPI lens

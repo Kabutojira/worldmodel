@@ -1,3 +1,7 @@
+---
+title: "Micron Thesis"
+---
+
 # Micron Thesis
 
 ## Bearish thesis

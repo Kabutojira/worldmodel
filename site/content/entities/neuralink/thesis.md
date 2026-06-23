@@ -1,3 +1,7 @@
+---
+title: "Neuralink Thesis"
+---
+
 # Neuralink Thesis
 
 ## Bearish thesis

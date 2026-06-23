@@ -1,3 +1,7 @@
+---
+title: "Nvidia Market"
+---
+
 # Nvidia Market
 
 ## Market map

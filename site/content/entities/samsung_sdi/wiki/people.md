@@ -1,3 +1,7 @@
+---
+title: "Samsung SDI People"
+---
+
 # Samsung SDI People
 
 ## Key people / governance nodes

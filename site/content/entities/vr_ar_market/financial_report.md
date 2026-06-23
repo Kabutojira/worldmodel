@@ -1,3 +1,7 @@
+---
+title: "VR/AR market Financial Report"
+---
+
 # VR/AR market Financial Report
 
 ## Entity summary

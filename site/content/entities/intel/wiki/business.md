@@ -1,3 +1,7 @@
+---
+title: "Intel Business"
+---
+
 # Intel Business
 
 ## Core model

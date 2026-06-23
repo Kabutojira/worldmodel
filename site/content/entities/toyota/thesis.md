@@ -1,3 +1,7 @@
+---
+title: "Toyota Thesis"
+---
+
 # Toyota Thesis
 
 ## Bearish thesis

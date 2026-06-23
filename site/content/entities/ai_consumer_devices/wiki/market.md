@@ -1,3 +1,7 @@
+---
+title: "AI consumer devices Market"
+---
+
 # AI consumer devices Market
 
 ## Market map

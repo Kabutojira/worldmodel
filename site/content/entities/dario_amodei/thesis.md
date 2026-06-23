@@ -1,3 +1,7 @@
+---
+title: "Dario Amodei Thesis"
+---
+
 # Dario Amodei Thesis
 
 ## Bearish thesis

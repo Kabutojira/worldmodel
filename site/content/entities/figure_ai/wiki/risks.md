@@ -1,3 +1,7 @@
+---
+title: "Figure AI Risks"
+---
+
 # Figure AI Risks
 
 ## Major risks

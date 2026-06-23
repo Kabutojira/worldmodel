@@ -1,3 +1,7 @@
+---
+title: "Solar energy Business"
+---
+
 # Solar energy Business
 
 ## Core model

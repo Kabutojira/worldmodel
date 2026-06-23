@@ -1,3 +1,7 @@
+---
+title: "TSMC Thesis"
+---
+
 # TSMC Thesis
 
 ## Bearish thesis

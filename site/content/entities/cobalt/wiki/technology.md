@@ -1,3 +1,7 @@
+---
+title: "Cobalt Technology"
+---
+
 # Cobalt Technology
 
 ## Technical / system bottlenecks

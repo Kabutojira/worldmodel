@@ -1,3 +1,7 @@
+---
+title: "Intel Technology"
+---
+
 # Intel Technology
 
 ## Technical / system bottlenecks

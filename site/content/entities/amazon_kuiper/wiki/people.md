@@ -1,3 +1,7 @@
+---
+title: "Amazon Kuiper People"
+---
+
 # Amazon Kuiper People
 
 ## Key people / governance nodes

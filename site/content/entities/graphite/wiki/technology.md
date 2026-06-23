@@ -1,3 +1,7 @@
+---
+title: "Graphite Technology"
+---
+
 # Graphite Technology
 
 ## Technical / system bottlenecks

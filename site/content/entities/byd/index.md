@@ -1,3 +1,7 @@
+---
+title: "BYD"
+---
+
 # BYD
 
 ## Summary
@@ -25,6 +29,7 @@ BYD is tracked because Tesla's most important EV and battery competitor. Bootstr
 
 ## Latest reports
 
+- [[entities/byd/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/byd/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/byd/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 

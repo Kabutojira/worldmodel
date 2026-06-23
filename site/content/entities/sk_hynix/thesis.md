@@ -1,3 +1,7 @@
+---
+title: "SK hynix Thesis"
+---
+
 # SK hynix Thesis
 
 ## Bearish thesis

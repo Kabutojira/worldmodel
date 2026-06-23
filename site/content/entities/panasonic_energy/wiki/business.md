@@ -1,3 +1,7 @@
+---
+title: "Panasonic Energy Business"
+---
+
 # Panasonic Energy Business
 
 ## Core model

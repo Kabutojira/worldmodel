@@ -1,3 +1,7 @@
+---
+title: "Samsung Electronics Market"
+---
+
 # Samsung Electronics Market
 
 ## Market map

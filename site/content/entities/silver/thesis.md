@@ -1,3 +1,7 @@
+---
+title: "Silver Thesis"
+---
+
 # Silver Thesis
 
 ## Bearish thesis

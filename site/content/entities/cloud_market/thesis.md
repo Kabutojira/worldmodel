@@ -1,3 +1,7 @@
+---
+title: "Cloud infrastructure market Thesis"
+---
+
 # Cloud infrastructure market Thesis
 
 ## Bearish thesis

@@ -1,3 +1,7 @@
+---
+title: "TSMC"
+---
+
 # TSMC
 
 ## Summary
@@ -33,6 +37,7 @@ TSMC is tracked because Critical semiconductor manufacturing bottleneck. Bootstr
 
 ## Latest reports
 
+- [[entities/tsmc/daily_reports/report_2026-06-23|report_2026-06-23.md]]
 - [[entities/tsmc/daily_reports/report_2026-06-22|report_2026-06-22.md]]
 - [[entities/tsmc/daily_reports/report_2026-06-21|report_2026-06-21.md]]
 
